@@ -1,0 +1,739 @@
+test: ../collin_database/pic_test/3/glasses/pos_0/angle_1/IMG_5795.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_0/angle_2/IMG_5800.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_0/angle_3/IMG_5805.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_0/angle_4/IMG_5810.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_0/angle_5/IMG_5815.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_0/angle_6/IMG_5820.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_0/angle_7/IMG_5825.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_1/angle_1/IMG_5830.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_1/angle_2/IMG_5835.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_1/angle_3/IMG_5840.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_1/angle_4/IMG_5845.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_1/angle_5/IMG_5850.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/glasses/pos_1/angle_6/IMG_5855.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_1/angle_7/IMG_5860.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_2/angle_1/IMG_5865.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_2/angle_2/IMG_5870.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_2/angle_3/IMG_5875.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/glasses/pos_2/angle_4/IMG_5880.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_2/angle_5/IMG_5885.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_2/angle_6/IMG_5890.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_2/angle_7/IMG_5895.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_3/angle_1/IMG_5900.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_3/angle_2/IMG_5905.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_3/angle_3/IMG_5910.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_3/angle_4/IMG_5915.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_3/angle_5/IMG_5920.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_3/angle_6/IMG_5925.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_3/angle_7/IMG_5930.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_4/angle_1/IMG_5935.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_4/angle_2/IMG_5940.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_4/angle_3/IMG_5945.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_4/angle_4/IMG_5950.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_4/angle_5/IMG_5955.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_4/angle_6/IMG_5960.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/glasses/pos_4/angle_7/IMG_5965.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_0/angle_1/IMG_5970.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_0/angle_2/IMG_5975.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_0/angle_3/IMG_5979.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_0/angle_4/IMG_5983.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_0/angle_5/IMG_5988.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_0/angle_6/IMG_5993.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_0/angle_7/IMG_5998.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_1/angle_1/IMG_6003.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_1/angle_2/IMG_6008.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_1/angle_3/IMG_6013.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_1/angle_4/IMG_6018.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_1/angle_5/IMG_6023.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_1/angle_6/IMG_6028.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_1/angle_7/IMG_6033.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_2/angle_1/IMG_6038.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_2/angle_2/IMG_6043.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_2/angle_3/IMG_6048.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_2/angle_4/IMG_6053.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_2/angle_5/IMG_6058.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_2/angle_6/IMG_6063.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_2/angle_7/IMG_6068.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_3/angle_1/IMG_6073.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_3/angle_2/IMG_6078.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_3/angle_3/IMG_6083.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_3/angle_4/IMG_6088.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_3/angle_5/IMG_6093.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_3/angle_6/IMG_6098.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_3/angle_7/IMG_6103.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_4/angle_1/IMG_6108.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_4/angle_2/IMG_6113.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_4/angle_3/IMG_6118.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_4/angle_4/IMG_6123.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_4/angle_5/IMG_6128.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_4/angle_6/IMG_6133.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/hat/pos_4/angle_7/IMG_6138.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_0/angle_1/IMG_5618.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_0/angle_2/IMG_5623.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_0/angle_3/IMG_5628.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_0/angle_4/IMG_5633.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_0/angle_5/IMG_5638.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_0/angle_6/IMG_5643.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_0/angle_7/IMG_5648.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_1/angle_1/IMG_5653.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_1/angle_2/IMG_5658.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_1/angle_3/IMG_5662.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/vanilla/pos_1/angle_4/IMG_5667.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/vanilla/pos_1/angle_5/IMG_5672.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/vanilla/pos_1/angle_6/IMG_5677.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_1/angle_7/IMG_5682.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_2/angle_1/IMG_5688.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_2/angle_2/IMG_5693.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_2/angle_3/IMG_5698.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/vanilla/pos_2/angle_4/IMG_5703.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/vanilla/pos_2/angle_5/IMG_5708.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/vanilla/pos_2/angle_6/IMG_5713.JPG
+correct: 1
+total_faces: 1
+data: 
+[1, 1]
+test: ../collin_database/pic_test/3/vanilla/pos_2/angle_7/IMG_5718.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_3/angle_1/IMG_5723.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_3/angle_2/IMG_5728.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_3/angle_3/IMG_5733.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_3/angle_4/IMG_5738.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_3/angle_5/IMG_5743.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_3/angle_6/IMG_5748.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_3/angle_7/IMG_5753.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_4/angle_1/IMG_5758.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_4/angle_2/IMG_5763.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_4/angle_3/IMG_5768.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_4/angle_4/IMG_5773.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_4/angle_5/IMG_5778.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_4/angle_6/IMG_5783.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+test: ../collin_database/pic_test/3/vanilla/pos_4/angle_7/IMG_5788.JPG
+correct: 0
+total_faces: 0
+data: 
+[0, 0]
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 1
+total faces: 1
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 1
+total faces: 1
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 1
+total faces: 1
+correct: 1
+total faces: 1
+correct: 1
+total faces: 1
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 1
+total faces: 1
+correct: 1
+total faces: 1
+correct: 1
+total faces: 1
+correct: 1
+total faces: 1
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 0
+total faces: 0
+correct: 105
+TOTAL frames: 105
+TOTAL accuracy: 12.666666666666666
+TOTAL faces: 9

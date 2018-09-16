@@ -1,0 +1,155 @@
+main test script
+training on w
+
+tests
+
+light setting c
+% identified: 5.0
+% accuracy: 77.78
+light setting w
+% identified: 6.43
+% accuracy: 81.82
+light setting l
+% identified: 3.57
+% accuracy: 62.5
+light setting m
+% identified: 2.14
+% accuracy: 27.27
+light setting b
+% identified: 4.29
+% accuracy: 54.55
+
+training
+
+training on c
+
+tests
+
+light setting c
+% identified: 5.71
+% accuracy: 88.89
+light setting w
+% identified: 5.71
+% accuracy: 72.73
+light setting l
+% identified: 3.57
+% accuracy: 62.5
+light setting m
+% identified: 5.71
+% accuracy: 72.73
+light setting b
+% identified: 4.29
+% accuracy: 54.55
+
+training
+
+training on d
+
+tests
+
+light setting c
+% identified: 2.14
+% accuracy: 33.33
+light setting w
+% identified: 3.57
+% accuracy: 45.45
+light setting l
+% identified: 2.86
+% accuracy: 50.0
+light setting m
+% identified: 1.43
+% accuracy: 18.18
+light setting b
+% identified: 1.43
+% accuracy: 18.18
+
+training
+
+training on m
+
+tests
+
+light setting c
+% identified: 5.0
+% accuracy: 77.78
+light setting w
+% identified: 5.71
+% accuracy: 72.73
+light setting l
+% identified: 2.86
+% accuracy: 50.0
+light setting m
+% identified: 5.0
+% accuracy: 63.64
+light setting b
+% identified: 4.29
+% accuracy: 54.55
+
+training
+
+training on b
+
+tests
+
+light setting c
+% identified: 3.57
+% accuracy: 55.56
+light setting w
+% identified: 2.86
+% accuracy: 36.36
+light setting l
+% identified: 4.29
+% accuracy: 75.0
+light setting m
+% identified: 4.29
+% accuracy: 54.55
+light setting b
+% identified: 6.43
+% accuracy: 81.82
+
+training
+
+training on w+c
+
+tests
+
+light setting c
+% identified: 6.43
+% accuracy: 100.0
+light setting w
+% identified: 7.14
+% accuracy: 90.91
+light setting l
+% identified: 4.29
+% accuracy: 75.0
+light setting m
+% identified: 5.71
+% accuracy: 72.73
+light setting b
+% identified: 5.0
+% accuracy: 63.64
+
+training
+
+training on l+m+h
+
+tests
+
+light setting c
+% identified: 5.0
+% accuracy: 77.78
+light setting w
+% identified: 3.57
+% accuracy: 45.45
+light setting l
+% identified: 4.29
+% accuracy: 75.0
+light setting m
+% identified: 6.43
+% accuracy: 81.82
+light setting b
+% identified: 6.43
+% accuracy: 81.82
+
+training
+

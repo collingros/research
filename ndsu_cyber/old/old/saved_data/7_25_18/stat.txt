@@ -1,0 +1,5000 @@
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 57.57575757575758
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 55.35714285714286
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 69.00826446280992
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 66.37931034482759
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 55.625
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 31.132075471698112
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 17.647058823529413
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 50.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 43.75
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 25.190839694656486
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 55.18394648829431
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 42.05607476635514
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 33.33333333333333
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 50.526315789473685
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 57.54716981132076
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 59.46843853820598
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 66.00790513833992
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 20.792079207920793
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 56.507936507936506
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 45.0354609929078
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 35.27272727272727
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 35.78431372549019
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 41.48936170212766
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 20.577617328519857
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 14.44866920152091
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 1
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 66.96969696969697
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 70.23809523809523
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 60.74380165289256
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 56.03448275862068
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 60.9375
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 17.92452830188679
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 7.8431372549019605
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 50.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 22.65625
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 11.450381679389313
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 36.12040133779264
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 54.20560747663551
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 22.22222222222222
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 41.05263157894737
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 22.955974842767297
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 62.45847176079734
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 64.03162055335969
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 29.7029702970297
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 55.23809523809524
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 47.5177304964539
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 46.18181818181818
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 44.11764705882353
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 50.53191489361703
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 23.104693140794225
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 25.85551330798479
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 66.96969696969697
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 70.23809523809523
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 60.74380165289256
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 56.03448275862068
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 60.9375
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 17.92452830188679
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 7.8431372549019605
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 50.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 22.65625
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 11.450381679389313
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 36.12040133779264
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 54.20560747663551
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 22.22222222222222
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 41.05263157894737
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 22.955974842767297
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 62.45847176079734
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 64.03162055335969
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 29.7029702970297
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 55.23809523809524
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 47.5177304964539
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 46.18181818181818
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 44.11764705882353
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 50.53191489361703
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 23.104693140794225
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 25.85551330798479
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 19.090909090909093
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 15.773809523809524
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 35.53719008264463
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 18.67816091954023
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 16.25
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 34.90566037735849
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 15.686274509803921
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 50.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 28.90625
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 13.740458015267176
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 36.78929765886287
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 56.54205607476636
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 22.22222222222222
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 39.64912280701755
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 24.21383647798742
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 17.275747508305646
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 19.76284584980237
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 16.831683168316832
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 14.603174603174605
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 10.28368794326241
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 6.545454545454546
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 9.803921568627452
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 12.76595744680851
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 1.8050541516245486
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 4.562737642585551
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 0
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 66.36363636363637
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 64.58333333333334
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 62.8099173553719
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 58.333333333333336
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 65.9375
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 2.8301886792452833
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 3.9215686274509802
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 50.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 1.5625
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 0.0
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 27.09030100334448
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 33.177570093457945
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 5.555555555555555
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 27.368421052631582
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 16.666666666666664
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 48.837209302325576
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 45.059288537549406
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 14.85148514851485
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 35.55555555555556
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 34.751773049645394
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 51.272727272727266
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 48.529411764705884
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 62.23404255319149
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 32.49097472924188
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 26.23574144486692
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 1
+HIGH: 0
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 62.727272727272734
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 56.25
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 53.30578512396694
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 52.58620689655172
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 48.75
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 5.660377358490567
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 5.88235294117647
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 0.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 10.9375
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 12.977099236641221
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 60.86956521739131
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 45.794392523364486
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 66.66666666666666
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 57.54385964912281
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 67.9245283018868
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 49.501661129568106
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 52.17391304347826
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 21.782178217821784
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 44.12698412698413
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 39.71631205673759
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 45.09090909090909
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 44.6078431372549
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 62.76595744680851
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 31.046931407942242
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 30.038022813688215
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 0
+MED: 0
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 74.54545454545455
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 75.0
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 82.64462809917356
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 68.39080459770115
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 68.4375
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 7.547169811320755
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 5.88235294117647
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 50.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 4.6875
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 6.106870229007633
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 89.96655518394648
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 83.64485981308411
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 66.66666666666666
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 89.12280701754386
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 85.53459119496856
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 50.16611295681063
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 48.22134387351779
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 15.841584158415841
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 40.63492063492063
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 40.0709219858156
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 48.0
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 46.07843137254902
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 63.297872340425535
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 32.12996389891697
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 29.277566539923956
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 0
+COLD: 0
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 570
+DETECTED FACES: 330
+ACCURACY: 83.03030303030303
+VIDEO: ../database/test/collin_gros/cold.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 336
+ACCURACY: 88.09523809523809
+VIDEO: ../database/test/collin_gros/warm.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 533
+DETECTED FACES: 242
+ACCURACY: 85.9504132231405
+VIDEO: ../database/test/collin_gros/low.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 348
+ACCURACY: 81.60919540229885
+VIDEO: ../database/test/collin_gros/med.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 553
+DETECTED FACES: 320
+ACCURACY: 80.9375
+VIDEO: ../database/test/collin_gros/high.MP4
+TARGET: collin_gros
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/collin_gros/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 106
+ACCURACY: 18.867924528301888
+VIDEO: ../database/test/isaac_burton/cold.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 51
+ACCURACY: 7.8431372549019605
+VIDEO: ../database/test/isaac_burton/warm.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 2
+ACCURACY: 50.0
+VIDEO: ../database/test/isaac_burton/low.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 128
+ACCURACY: 25.78125
+VIDEO: ../database/test/isaac_burton/med.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 131
+ACCURACY: 6.870229007633588
+VIDEO: ../database/test/isaac_burton/high.MP4
+TARGET: isaac_burton
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/isaac_burton/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 299
+ACCURACY: 90.96989966555184
+VIDEO: ../database/test/marco_colasito/cold.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 555
+DETECTED FACES: 214
+ACCURACY: 87.38317757009347
+VIDEO: ../database/test/marco_colasito/warm.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 18
+ACCURACY: 72.22222222222221
+VIDEO: ../database/test/marco_colasito/low.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 285
+ACCURACY: 90.52631578947368
+VIDEO: ../database/test/marco_colasito/med.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 318
+ACCURACY: 86.47798742138365
+VIDEO: ../database/test/marco_colasito/high.MP4
+TARGET: marco_colasito
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/marco_colasito/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 301
+ACCURACY: 54.81727574750831
+VIDEO: ../database/test/nick_snell/cold.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 253
+ACCURACY: 55.73122529644269
+VIDEO: ../database/test/nick_snell/warm.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 101
+ACCURACY: 18.81188118811881
+VIDEO: ../database/test/nick_snell/low.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 315
+ACCURACY: 44.761904761904766
+VIDEO: ../database/test/nick_snell/med.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 282
+ACCURACY: 43.262411347517734
+VIDEO: ../database/test/nick_snell/high.MP4
+TARGET: nick_snell
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/nick_snell/high.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 275
+ACCURACY: 48.72727272727273
+VIDEO: ../database/test/william_clemons/cold.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/cold.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 510
+DETECTED FACES: 204
+ACCURACY: 48.529411764705884
+VIDEO: ../database/test/william_clemons/warm.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/warm.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 188
+ACCURACY: 64.8936170212766
+VIDEO: ../database/test/william_clemons/low.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/low.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 525
+DETECTED FACES: 277
+ACCURACY: 31.40794223826715
+VIDEO: ../database/test/william_clemons/med.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/med.MP4
+
+SF: 1.3
+TRAIN_SF: 1.1
+MN: 3
+TRAIN_MN: 5
+TOTAL FRAMES: 540
+DETECTED FACES: 263
+ACCURACY: 30.038022813688215
+VIDEO: ../database/test/william_clemons/high.MP4
+TARGET: william_clemons
+HEIGHT: 100
+RATIO: 1.5
+GLASSES: 0
+HAT: 0
+VANILLA: 1
+WARM: 1
+COLD: 1
+LOW: 1
+MED: 1
+HIGH: 1
+SHADOWS: 2
+PROFILES: 0
+ANGLED: 1
+CENTER: 1
+../database/test/william_clemons/high.MP4
+

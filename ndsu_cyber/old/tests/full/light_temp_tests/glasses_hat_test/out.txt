@@ -1,0 +1,386 @@
+main test script
+training on w
+
+tests
+
+cosmetic setting v
+light setting c
+% identified: 2.14
+% accuracy: 33.33
+light setting w
+% identified: 2.14
+% accuracy: 27.27
+light setting l
+% identified: 2.86
+% accuracy: 50.0
+light setting m
+% identified: 0.71
+% accuracy: 9.09
+light setting b
+% identified: 2.86
+% accuracy: 36.36
+cosmetic setting e
+light setting c
+% identified: 0.71
+% accuracy: 50.0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.71
+% accuracy: 50.0
+light setting b
+% identified: 0.0
+% accuracy: 0.0
+cosmetic setting f
+light setting c
+% identified: 0.0
+% accuracy: 0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0
+light setting b
+% identified: 0.0
+% accuracy: 0
+
+training
+
+training on c
+
+tests
+
+cosmetic setting v
+light setting c
+% identified: 4.29
+% accuracy: 66.67
+light setting w
+% identified: 1.43
+% accuracy: 18.18
+light setting l
+% identified: 1.43
+% accuracy: 25.0
+light setting m
+% identified: 1.43
+% accuracy: 18.18
+light setting b
+% identified: 3.57
+% accuracy: 45.45
+cosmetic setting e
+light setting c
+% identified: 0.71
+% accuracy: 50.0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0.0
+light setting b
+% identified: 0.0
+% accuracy: 0.0
+cosmetic setting f
+light setting c
+% identified: 0.0
+% accuracy: 0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0
+light setting b
+% identified: 0.0
+% accuracy: 0
+
+training
+
+training on d
+
+tests
+
+cosmetic setting v
+light setting c
+% identified: 2.14
+% accuracy: 33.33
+light setting w
+% identified: 2.14
+% accuracy: 27.27
+light setting l
+% identified: 1.43
+% accuracy: 25.0
+light setting m
+% identified: 1.43
+% accuracy: 18.18
+light setting b
+% identified: 2.86
+% accuracy: 36.36
+cosmetic setting e
+light setting c
+% identified: 1.43
+% accuracy: 100.0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 1.43
+% accuracy: 100.0
+light setting b
+% identified: 0.0
+% accuracy: 0.0
+cosmetic setting f
+light setting c
+% identified: 0.0
+% accuracy: 0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0
+light setting b
+% identified: 0.0
+% accuracy: 0
+
+training
+
+training on m
+
+tests
+
+cosmetic setting v
+light setting c
+% identified: 2.86
+% accuracy: 44.44
+light setting w
+% identified: 2.86
+% accuracy: 36.36
+light setting l
+% identified: 2.14
+% accuracy: 37.5
+light setting m
+% identified: 2.14
+% accuracy: 27.27
+light setting b
+% identified: 2.14
+% accuracy: 27.27
+cosmetic setting e
+light setting c
+% identified: 1.43
+% accuracy: 100.0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 1.43
+% accuracy: 100.0
+light setting b
+% identified: 0.71
+% accuracy: 100.0
+cosmetic setting f
+light setting c
+% identified: 0.0
+% accuracy: 0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0
+light setting b
+% identified: 0.0
+% accuracy: 0
+
+training
+
+training on b
+
+tests
+
+cosmetic setting v
+light setting c
+% identified: 3.57
+% accuracy: 55.56
+light setting w
+% identified: 2.86
+% accuracy: 36.36
+light setting l
+% identified: 1.43
+% accuracy: 25.0
+light setting m
+% identified: 2.86
+% accuracy: 36.36
+light setting b
+% identified: 1.43
+% accuracy: 18.18
+cosmetic setting e
+light setting c
+% identified: 1.43
+% accuracy: 100.0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.71
+% accuracy: 50.0
+light setting b
+% identified: 0.71
+% accuracy: 100.0
+cosmetic setting f
+light setting c
+% identified: 0.0
+% accuracy: 0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0
+light setting b
+% identified: 0.0
+% accuracy: 0
+
+training
+
+training on w+c
+
+tests
+
+cosmetic setting v
+light setting c
+% identified: 3.57
+% accuracy: 55.56
+light setting w
+% identified: 2.14
+% accuracy: 27.27
+light setting l
+% identified: 2.86
+% accuracy: 50.0
+light setting m
+% identified: 2.14
+% accuracy: 27.27
+light setting b
+% identified: 3.57
+% accuracy: 45.45
+cosmetic setting e
+light setting c
+% identified: 0.71
+% accuracy: 50.0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0.0
+light setting b
+% identified: 0.0
+% accuracy: 0.0
+cosmetic setting f
+light setting c
+% identified: 0.0
+% accuracy: 0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0
+light setting b
+% identified: 0.0
+% accuracy: 0
+
+training
+
+training on l+m+h
+
+tests
+
+cosmetic setting v
+light setting c
+% identified: 3.57
+% accuracy: 55.56
+light setting w
+% identified: 3.57
+% accuracy: 45.45
+light setting l
+% identified: 3.57
+% accuracy: 62.5
+light setting m
+% identified: 2.86
+% accuracy: 36.36
+light setting b
+% identified: 2.14
+% accuracy: 27.27
+cosmetic setting e
+light setting c
+% identified: 1.43
+% accuracy: 100.0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 1.43
+% accuracy: 100.0
+light setting b
+% identified: 0.71
+% accuracy: 100.0
+cosmetic setting f
+light setting c
+% identified: 0.0
+% accuracy: 0
+light setting w
+% identified: 0.0
+% accuracy: 0
+light setting l
+% identified: 0.0
+% accuracy: 0
+light setting m
+% identified: 0.0
+% accuracy: 0
+light setting b
+% identified: 0.0
+% accuracy: 0
+
+training
+

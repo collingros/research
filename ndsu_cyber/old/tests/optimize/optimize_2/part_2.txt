@@ -1,0 +1,5329 @@
+res test script
+res setting 75
+pos setting a
+lighting position 0
+all lighting
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.43
+% accuracy: 37.5
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 2.14
+% accuracy: 33.33
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.71
+% accuracy: 50.0
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 6.9
+% accuracy: 36.25
+light setting c
+% identified: 7.14
+% accuracy: 34.48
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 6.43
+% accuracy: 37.5
+light setting m
+% identified: 7.14
+% accuracy: 35.71
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.95
+% accuracy: 26.32
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 5.71
+% accuracy: 26.67
+light setting m
+% identified: 6.43
+% accuracy: 28.12
+light setting b
+% identified: 5.71
+% accuracy: 24.24
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 5.71
+% accuracy: 22.86
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting c
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.71
+% accuracy: 18.75
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 0.71
+% accuracy: 11.11
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 4.52
+% accuracy: 39.58
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 3.57
+% accuracy: 31.25
+light setting l
+% identified: 4.29
+% accuracy: 40.0
+light setting m
+% identified: 3.57
+% accuracy: 31.25
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 5.24
+% accuracy: 27.5
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 5.71
+% accuracy: 25.81
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 3.57
+% accuracy: 17.86
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.48
+% accuracy: 24.21
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 5.71
+% accuracy: 24.24
+light setting l
+% identified: 5.0
+% accuracy: 23.33
+light setting m
+% identified: 6.43
+% accuracy: 28.12
+light setting b
+% identified: 5.0
+% accuracy: 21.21
+res setting 300
+all lighting
+% identified: 5.48
+% accuracy: 24.47
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 5.71
+% accuracy: 22.86
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting w
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 4.52
+% accuracy: 39.58
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 4.29
+% accuracy: 37.5
+light setting b
+% identified: 4.29
+% accuracy: 35.29
+res setting 150
+all lighting
+% identified: 5.48
+% accuracy: 28.75
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 4.29
+% accuracy: 21.43
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.24
+% accuracy: 23.16
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 5.71
+% accuracy: 24.24
+light setting l
+% identified: 5.0
+% accuracy: 23.33
+light setting m
+% identified: 4.29
+% accuracy: 18.75
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.24
+% accuracy: 23.4
+light setting c
+% identified: 5.0
+% accuracy: 20.0
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 4.29
+% accuracy: 21.43
+light setting m
+% identified: 5.71
+% accuracy: 22.86
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 4.52
+% accuracy: 18.45
+light setting c
+% identified: 4.29
+% accuracy: 16.22
+light setting w
+% identified: 3.57
+% accuracy: 13.89
+light setting l
+% identified: 3.57
+% accuracy: 15.15
+light setting m
+% identified: 4.29
+% accuracy: 17.65
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting d
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 3.57
+% accuracy: 31.25
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 3.57
+% accuracy: 31.25
+light setting l
+% identified: 2.86
+% accuracy: 26.67
+light setting m
+% identified: 4.29
+% accuracy: 37.5
+light setting b
+% identified: 3.57
+% accuracy: 29.41
+res setting 150
+all lighting
+% identified: 4.76
+% accuracy: 25.0
+light setting c
+% identified: 2.86
+% accuracy: 13.79
+light setting w
+% identified: 5.71
+% accuracy: 25.81
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 5.0
+% accuracy: 25.0
+light setting b
+% identified: 4.29
+% accuracy: 21.43
+res setting 200
+all lighting
+% identified: 4.52
+% accuracy: 20.0
+light setting c
+% identified: 7.14
+% accuracy: 30.3
+light setting w
+% identified: 5.0
+% accuracy: 21.21
+light setting l
+% identified: 4.29
+% accuracy: 20.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 3.57
+% accuracy: 15.15
+res setting 300
+all lighting
+% identified: 4.76
+% accuracy: 21.28
+light setting c
+% identified: 5.71
+% accuracy: 22.86
+light setting w
+% identified: 4.29
+% accuracy: 16.67
+light setting l
+% identified: 4.29
+% accuracy: 21.43
+light setting m
+% identified: 5.0
+% accuracy: 20.0
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 6.43
+% accuracy: 24.32
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 4.29
+% accuracy: 17.65
+light setting b
+% identified: 7.14
+% accuracy: 27.78
+
+training
+
+light setting m
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.71
+% accuracy: 18.75
+light setting c
+% identified: 0.0
+% accuracy: 0.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 4.05
+% accuracy: 35.42
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 4.29
+% accuracy: 37.5
+light setting l
+% identified: 3.57
+% accuracy: 33.33
+light setting m
+% identified: 2.86
+% accuracy: 25.0
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 4.76
+% accuracy: 25.0
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 5.0
+% accuracy: 22.58
+light setting l
+% identified: 4.29
+% accuracy: 25.0
+light setting m
+% identified: 5.0
+% accuracy: 25.0
+light setting b
+% identified: 5.0
+% accuracy: 25.0
+res setting 200
+all lighting
+% identified: 4.29
+% accuracy: 18.95
+light setting c
+% identified: 7.14
+% accuracy: 30.3
+light setting w
+% identified: 5.71
+% accuracy: 24.24
+light setting l
+% identified: 2.86
+% accuracy: 13.33
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 4.29
+% accuracy: 18.18
+res setting 300
+all lighting
+% identified: 5.0
+% accuracy: 22.34
+light setting c
+% identified: 5.0
+% accuracy: 20.0
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 4.29
+% accuracy: 21.43
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 3.57
+% accuracy: 16.13
+res setting 500
+all lighting
+% identified: 4.76
+% accuracy: 19.42
+light setting c
+% identified: 4.29
+% accuracy: 16.22
+light setting w
+% identified: 5.0
+% accuracy: 19.44
+light setting l
+% identified: 3.57
+% accuracy: 15.15
+light setting m
+% identified: 5.0
+% accuracy: 20.59
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting b
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.0
+% accuracy: 0.0
+light setting w
+% identified: 0.0
+% accuracy: 0.0
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 3.57
+% accuracy: 31.25
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 3.57
+% accuracy: 31.25
+light setting l
+% identified: 3.57
+% accuracy: 33.33
+light setting m
+% identified: 2.86
+% accuracy: 25.0
+light setting b
+% identified: 4.29
+% accuracy: 35.29
+res setting 150
+all lighting
+% identified: 5.95
+% accuracy: 31.25
+light setting c
+% identified: 6.43
+% accuracy: 31.03
+light setting w
+% identified: 5.71
+% accuracy: 25.81
+light setting l
+% identified: 4.29
+% accuracy: 25.0
+light setting m
+% identified: 6.43
+% accuracy: 32.14
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.71
+% accuracy: 25.26
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 6.43
+% accuracy: 27.27
+light setting l
+% identified: 5.71
+% accuracy: 26.67
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 5.71
+% accuracy: 24.24
+res setting 300
+all lighting
+% identified: 5.48
+% accuracy: 24.47
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 5.71
+% accuracy: 22.86
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+lighting position 1
+all lighting
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.48
+% accuracy: 47.92
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.71
+% accuracy: 50.0
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 8.1
+% accuracy: 42.5
+light setting c
+% identified: 8.57
+% accuracy: 41.38
+light setting w
+% identified: 9.29
+% accuracy: 41.94
+light setting l
+% identified: 7.14
+% accuracy: 41.67
+light setting m
+% identified: 9.29
+% accuracy: 46.43
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 8.33
+% accuracy: 36.84
+light setting c
+% identified: 9.29
+% accuracy: 39.39
+light setting w
+% identified: 8.57
+% accuracy: 36.36
+light setting l
+% identified: 7.86
+% accuracy: 36.67
+light setting m
+% identified: 8.57
+% accuracy: 37.5
+light setting b
+% identified: 8.57
+% accuracy: 36.36
+res setting 300
+all lighting
+% identified: 7.38
+% accuracy: 32.98
+light setting c
+% identified: 9.29
+% accuracy: 37.14
+light setting w
+% identified: 9.29
+% accuracy: 36.11
+light setting l
+% identified: 6.43
+% accuracy: 32.14
+light setting m
+% identified: 8.57
+% accuracy: 34.29
+light setting b
+% identified: 7.14
+% accuracy: 32.26
+res setting 500
+all lighting
+% identified: 7.62
+% accuracy: 31.07
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 8.57
+% accuracy: 33.33
+light setting l
+% identified: 7.14
+% accuracy: 30.3
+light setting m
+% identified: 7.14
+% accuracy: 29.41
+light setting b
+% identified: 8.57
+% accuracy: 33.33
+
+training
+
+light setting c
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 3.81
+% accuracy: 33.33
+light setting c
+% identified: 2.14
+% accuracy: 25.0
+light setting w
+% identified: 5.71
+% accuracy: 50.0
+light setting l
+% identified: 2.86
+% accuracy: 26.67
+light setting m
+% identified: 5.71
+% accuracy: 50.0
+light setting b
+% identified: 2.86
+% accuracy: 23.53
+res setting 150
+all lighting
+% identified: 5.24
+% accuracy: 27.5
+light setting c
+% identified: 3.57
+% accuracy: 17.24
+light setting w
+% identified: 5.0
+% accuracy: 22.58
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 5.71
+% accuracy: 28.57
+light setting b
+% identified: 5.0
+% accuracy: 25.0
+res setting 200
+all lighting
+% identified: 5.0
+% accuracy: 22.11
+light setting c
+% identified: 6.43
+% accuracy: 27.27
+light setting w
+% identified: 5.71
+% accuracy: 24.24
+light setting l
+% identified: 4.29
+% accuracy: 20.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 5.0
+% accuracy: 21.21
+res setting 300
+all lighting
+% identified: 4.29
+% accuracy: 19.15
+light setting c
+% identified: 7.86
+% accuracy: 31.43
+light setting w
+% identified: 4.29
+% accuracy: 16.67
+light setting l
+% identified: 3.57
+% accuracy: 17.86
+light setting m
+% identified: 5.0
+% accuracy: 20.0
+light setting b
+% identified: 4.29
+% accuracy: 19.35
+res setting 500
+all lighting
+% identified: 5.24
+% accuracy: 21.36
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 5.71
+% accuracy: 22.22
+light setting l
+% identified: 3.57
+% accuracy: 15.15
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 6.43
+% accuracy: 25.0
+
+training
+
+light setting w
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.19
+% accuracy: 31.25
+light setting c
+% identified: 0.0
+% accuracy: 0.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 3.81
+% accuracy: 33.33
+light setting c
+% identified: 2.86
+% accuracy: 33.33
+light setting w
+% identified: 7.14
+% accuracy: 62.5
+light setting l
+% identified: 2.86
+% accuracy: 26.67
+light setting m
+% identified: 4.29
+% accuracy: 37.5
+light setting b
+% identified: 4.29
+% accuracy: 35.29
+res setting 150
+all lighting
+% identified: 5.48
+% accuracy: 28.75
+light setting c
+% identified: 7.14
+% accuracy: 34.48
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 4.29
+% accuracy: 25.0
+light setting m
+% identified: 5.71
+% accuracy: 28.57
+light setting b
+% identified: 6.43
+% accuracy: 32.14
+res setting 200
+all lighting
+% identified: 7.14
+% accuracy: 31.58
+light setting c
+% identified: 7.14
+% accuracy: 30.3
+light setting w
+% identified: 5.0
+% accuracy: 21.21
+light setting l
+% identified: 7.14
+% accuracy: 33.33
+light setting m
+% identified: 7.14
+% accuracy: 31.25
+light setting b
+% identified: 7.14
+% accuracy: 30.3
+res setting 300
+all lighting
+% identified: 6.43
+% accuracy: 28.72
+light setting c
+% identified: 8.57
+% accuracy: 34.29
+light setting w
+% identified: 7.86
+% accuracy: 30.56
+light setting l
+% identified: 6.43
+% accuracy: 32.14
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 6.9
+% accuracy: 28.16
+light setting c
+% identified: 8.57
+% accuracy: 32.43
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.0
+% accuracy: 21.21
+light setting m
+% identified: 7.14
+% accuracy: 29.41
+light setting b
+% identified: 8.57
+% accuracy: 33.33
+
+training
+
+light setting d
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.19
+% accuracy: 31.25
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 4.05
+% accuracy: 35.42
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 3.57
+% accuracy: 33.33
+light setting m
+% identified: 4.29
+% accuracy: 37.5
+light setting b
+% identified: 4.29
+% accuracy: 35.29
+res setting 150
+all lighting
+% identified: 6.9
+% accuracy: 36.25
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 7.86
+% accuracy: 35.48
+light setting l
+% identified: 6.43
+% accuracy: 37.5
+light setting m
+% identified: 7.14
+% accuracy: 35.71
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 7.14
+% accuracy: 31.58
+light setting c
+% identified: 8.57
+% accuracy: 36.36
+light setting w
+% identified: 6.43
+% accuracy: 27.27
+light setting l
+% identified: 7.86
+% accuracy: 36.67
+light setting m
+% identified: 6.43
+% accuracy: 28.12
+light setting b
+% identified: 7.14
+% accuracy: 30.3
+res setting 300
+all lighting
+% identified: 6.9
+% accuracy: 30.85
+light setting c
+% identified: 8.57
+% accuracy: 34.29
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 6.43
+% accuracy: 32.14
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 7.14
+% accuracy: 32.26
+res setting 500
+all lighting
+% identified: 5.95
+% accuracy: 24.27
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 7.86
+% accuracy: 30.56
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 6.43
+% accuracy: 25.0
+
+training
+
+light setting m
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.19
+% accuracy: 31.25
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 4.29
+% accuracy: 37.5
+light setting c
+% identified: 2.86
+% accuracy: 33.33
+light setting w
+% identified: 4.29
+% accuracy: 37.5
+light setting l
+% identified: 3.57
+% accuracy: 33.33
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 4.29
+% accuracy: 35.29
+res setting 150
+all lighting
+% identified: 6.9
+% accuracy: 36.25
+light setting c
+% identified: 7.14
+% accuracy: 34.48
+light setting w
+% identified: 7.14
+% accuracy: 32.26
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 7.62
+% accuracy: 33.68
+light setting c
+% identified: 7.86
+% accuracy: 33.33
+light setting w
+% identified: 8.57
+% accuracy: 36.36
+light setting l
+% identified: 7.14
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 34.38
+light setting b
+% identified: 7.86
+% accuracy: 33.33
+res setting 300
+all lighting
+% identified: 6.43
+% accuracy: 28.72
+light setting c
+% identified: 9.29
+% accuracy: 37.14
+light setting w
+% identified: 7.86
+% accuracy: 30.56
+light setting l
+% identified: 5.0
+% accuracy: 25.0
+light setting m
+% identified: 7.86
+% accuracy: 31.43
+light setting b
+% identified: 6.43
+% accuracy: 29.03
+res setting 500
+all lighting
+% identified: 6.19
+% accuracy: 25.24
+light setting c
+% identified: 7.14
+% accuracy: 27.03
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 6.43
+% accuracy: 27.27
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 6.43
+% accuracy: 25.0
+
+training
+
+light setting b
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.48
+% accuracy: 47.92
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.71
+% accuracy: 50.0
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.38
+% accuracy: 38.75
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 8.57
+% accuracy: 38.71
+light setting l
+% identified: 7.14
+% accuracy: 41.67
+light setting m
+% identified: 7.14
+% accuracy: 35.71
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 7.14
+% accuracy: 31.58
+light setting c
+% identified: 7.86
+% accuracy: 33.33
+light setting w
+% identified: 8.57
+% accuracy: 36.36
+light setting l
+% identified: 7.14
+% accuracy: 33.33
+light setting m
+% identified: 7.14
+% accuracy: 31.25
+light setting b
+% identified: 7.14
+% accuracy: 30.3
+res setting 300
+all lighting
+% identified: 6.67
+% accuracy: 29.79
+light setting c
+% identified: 10.0
+% accuracy: 40.0
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 5.0
+% accuracy: 25.0
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 7.86
+% accuracy: 35.48
+res setting 500
+all lighting
+% identified: 6.67
+% accuracy: 27.18
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 5.0
+% accuracy: 21.21
+light setting m
+% identified: 7.14
+% accuracy: 29.41
+light setting b
+% identified: 7.86
+% accuracy: 30.56
+
+training
+
+lighting position 2
+all lighting
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.19
+% accuracy: 31.25
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.71
+% accuracy: 50.0
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 8.1
+% accuracy: 42.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 7.86
+% accuracy: 35.48
+light setting l
+% identified: 7.14
+% accuracy: 41.67
+light setting m
+% identified: 9.29
+% accuracy: 46.43
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.9
+% accuracy: 30.53
+light setting c
+% identified: 7.86
+% accuracy: 33.33
+light setting w
+% identified: 7.86
+% accuracy: 33.33
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 7.14
+% accuracy: 31.25
+light setting b
+% identified: 7.14
+% accuracy: 30.3
+res setting 300
+all lighting
+% identified: 6.19
+% accuracy: 27.66
+light setting c
+% identified: 5.71
+% accuracy: 22.86
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting c
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.0
+% accuracy: 43.75
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 3.57
+% accuracy: 31.25
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 4.29
+% accuracy: 37.5
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 6.43
+% accuracy: 33.75
+light setting c
+% identified: 7.14
+% accuracy: 34.48
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 5.71
+% accuracy: 28.57
+light setting b
+% identified: 8.57
+% accuracy: 42.86
+res setting 200
+all lighting
+% identified: 6.67
+% accuracy: 29.47
+light setting c
+% identified: 7.14
+% accuracy: 30.3
+light setting w
+% identified: 6.43
+% accuracy: 27.27
+light setting l
+% identified: 7.14
+% accuracy: 33.33
+light setting m
+% identified: 6.43
+% accuracy: 28.12
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.71
+% accuracy: 25.53
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting w
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.19
+% accuracy: 31.25
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.0
+% accuracy: 43.75
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 6.43
+% accuracy: 56.25
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.0
+% accuracy: 41.18
+res setting 150
+all lighting
+% identified: 6.43
+% accuracy: 33.75
+light setting c
+% identified: 7.14
+% accuracy: 34.48
+light setting w
+% identified: 7.14
+% accuracy: 32.26
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 6.43
+% accuracy: 32.14
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 7.62
+% accuracy: 33.68
+light setting c
+% identified: 9.29
+% accuracy: 39.39
+light setting w
+% identified: 6.43
+% accuracy: 27.27
+light setting l
+% identified: 7.14
+% accuracy: 33.33
+light setting m
+% identified: 8.57
+% accuracy: 37.5
+light setting b
+% identified: 7.14
+% accuracy: 30.3
+res setting 300
+all lighting
+% identified: 7.14
+% accuracy: 31.91
+light setting c
+% identified: 8.57
+% accuracy: 34.29
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 6.43
+% accuracy: 32.14
+light setting m
+% identified: 7.86
+% accuracy: 31.43
+light setting b
+% identified: 7.14
+% accuracy: 32.26
+res setting 500
+all lighting
+% identified: 7.38
+% accuracy: 30.1
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 6.43
+% accuracy: 27.27
+light setting m
+% identified: 7.86
+% accuracy: 32.35
+light setting b
+% identified: 7.86
+% accuracy: 30.56
+
+training
+
+light setting d
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 3.81
+% accuracy: 33.33
+light setting c
+% identified: 5.0
+% accuracy: 58.33
+light setting w
+% identified: 4.29
+% accuracy: 37.5
+light setting l
+% identified: 4.29
+% accuracy: 40.0
+light setting m
+% identified: 3.57
+% accuracy: 31.25
+light setting b
+% identified: 3.57
+% accuracy: 29.41
+res setting 150
+all lighting
+% identified: 6.9
+% accuracy: 36.25
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 7.14
+% accuracy: 32.26
+light setting l
+% identified: 7.14
+% accuracy: 41.67
+light setting m
+% identified: 7.14
+% accuracy: 35.71
+light setting b
+% identified: 6.43
+% accuracy: 32.14
+res setting 200
+all lighting
+% identified: 5.95
+% accuracy: 26.32
+light setting c
+% identified: 8.57
+% accuracy: 36.36
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 5.71
+% accuracy: 26.67
+light setting m
+% identified: 6.43
+% accuracy: 28.12
+light setting b
+% identified: 5.71
+% accuracy: 24.24
+res setting 300
+all lighting
+% identified: 6.19
+% accuracy: 27.66
+light setting c
+% identified: 7.14
+% accuracy: 28.57
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 6.43
+% accuracy: 32.14
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.95
+% accuracy: 24.27
+light setting c
+% identified: 6.43
+% accuracy: 24.32
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.0
+% accuracy: 20.59
+light setting b
+% identified: 7.14
+% accuracy: 27.78
+
+training
+
+light setting m
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 4.52
+% accuracy: 39.58
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 3.57
+% accuracy: 31.25
+light setting b
+% identified: 5.0
+% accuracy: 41.18
+res setting 150
+all lighting
+% identified: 6.19
+% accuracy: 32.5
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 5.71
+% accuracy: 28.57
+res setting 200
+all lighting
+% identified: 7.38
+% accuracy: 32.63
+light setting c
+% identified: 7.86
+% accuracy: 33.33
+light setting w
+% identified: 8.57
+% accuracy: 36.36
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 8.57
+% accuracy: 37.5
+light setting b
+% identified: 7.14
+% accuracy: 30.3
+res setting 300
+all lighting
+% identified: 6.19
+% accuracy: 27.66
+light setting c
+% identified: 9.29
+% accuracy: 37.14
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.0
+% accuracy: 25.0
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 6.43
+% accuracy: 29.03
+res setting 500
+all lighting
+% identified: 6.19
+% accuracy: 25.24
+light setting c
+% identified: 6.43
+% accuracy: 24.32
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 6.43
+% accuracy: 27.27
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 6.43
+% accuracy: 25.0
+
+training
+
+light setting b
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+pos setting p
+lighting position 0
+all lighting
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting c
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting w
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting d
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting m
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting b
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+lighting position 1
+all lighting
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting c
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting w
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting d
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting m
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting b
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+lighting position 2
+all lighting
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting c
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting w
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting d
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting m
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting b
+subj pos setting p
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 7.14
+% accuracy: 37.5
+light setting c
+% identified: 7.86
+% accuracy: 37.93
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 7.86
+% accuracy: 39.29
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 6.19
+% accuracy: 27.37
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 6.43
+% accuracy: 30.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 6.43
+% accuracy: 25.71
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+pos setting a
+lighting position 0
+all lighting
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.43
+% accuracy: 37.5
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 2.14
+% accuracy: 33.33
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.71
+% accuracy: 50.0
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 6.9
+% accuracy: 36.25
+light setting c
+% identified: 7.14
+% accuracy: 34.48
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 6.43
+% accuracy: 37.5
+light setting m
+% identified: 7.14
+% accuracy: 35.71
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.95
+% accuracy: 26.32
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 7.14
+% accuracy: 30.3
+light setting l
+% identified: 5.71
+% accuracy: 26.67
+light setting m
+% identified: 6.43
+% accuracy: 28.12
+light setting b
+% identified: 5.71
+% accuracy: 24.24
+res setting 300
+all lighting
+% identified: 5.95
+% accuracy: 26.6
+light setting c
+% identified: 5.71
+% accuracy: 22.86
+light setting w
+% identified: 7.14
+% accuracy: 27.78
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting c
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.71
+% accuracy: 18.75
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 0.71
+% accuracy: 11.11
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 4.52
+% accuracy: 39.58
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 3.57
+% accuracy: 31.25
+light setting l
+% identified: 4.29
+% accuracy: 40.0
+light setting m
+% identified: 3.57
+% accuracy: 31.25
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 5.24
+% accuracy: 27.5
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 5.71
+% accuracy: 25.81
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 3.57
+% accuracy: 17.86
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.48
+% accuracy: 24.21
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 5.71
+% accuracy: 24.24
+light setting l
+% identified: 5.0
+% accuracy: 23.33
+light setting m
+% identified: 6.43
+% accuracy: 28.12
+light setting b
+% identified: 5.0
+% accuracy: 21.21
+res setting 300
+all lighting
+% identified: 5.48
+% accuracy: 24.47
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 5.71
+% accuracy: 22.86
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting w
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 4.52
+% accuracy: 39.58
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 4.29
+% accuracy: 37.5
+light setting b
+% identified: 4.29
+% accuracy: 35.29
+res setting 150
+all lighting
+% identified: 5.48
+% accuracy: 28.75
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 6.43
+% accuracy: 29.03
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 4.29
+% accuracy: 21.43
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.24
+% accuracy: 23.16
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 5.71
+% accuracy: 24.24
+light setting l
+% identified: 5.0
+% accuracy: 23.33
+light setting m
+% identified: 4.29
+% accuracy: 18.75
+light setting b
+% identified: 6.43
+% accuracy: 27.27
+res setting 300
+all lighting
+% identified: 5.24
+% accuracy: 23.4
+light setting c
+% identified: 5.0
+% accuracy: 20.0
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 4.29
+% accuracy: 21.43
+light setting m
+% identified: 5.71
+% accuracy: 22.86
+light setting b
+% identified: 5.71
+% accuracy: 25.81
+res setting 500
+all lighting
+% identified: 4.52
+% accuracy: 18.45
+light setting c
+% identified: 4.29
+% accuracy: 16.22
+light setting w
+% identified: 3.57
+% accuracy: 13.89
+light setting l
+% identified: 3.57
+% accuracy: 15.15
+light setting m
+% identified: 4.29
+% accuracy: 17.65
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting d
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 3.57
+% accuracy: 31.25
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 3.57
+% accuracy: 31.25
+light setting l
+% identified: 2.86
+% accuracy: 26.67
+light setting m
+% identified: 4.29
+% accuracy: 37.5
+light setting b
+% identified: 3.57
+% accuracy: 29.41
+res setting 150
+all lighting
+% identified: 4.76
+% accuracy: 25.0
+light setting c
+% identified: 2.86
+% accuracy: 13.79
+light setting w
+% identified: 5.71
+% accuracy: 25.81
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 5.0
+% accuracy: 25.0
+light setting b
+% identified: 4.29
+% accuracy: 21.43
+res setting 200
+all lighting
+% identified: 4.52
+% accuracy: 20.0
+light setting c
+% identified: 7.14
+% accuracy: 30.3
+light setting w
+% identified: 5.0
+% accuracy: 21.21
+light setting l
+% identified: 4.29
+% accuracy: 20.0
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 3.57
+% accuracy: 15.15
+res setting 300
+all lighting
+% identified: 4.76
+% accuracy: 21.28
+light setting c
+% identified: 5.71
+% accuracy: 22.86
+light setting w
+% identified: 4.29
+% accuracy: 16.67
+light setting l
+% identified: 4.29
+% accuracy: 21.43
+light setting m
+% identified: 5.0
+% accuracy: 20.0
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 6.43
+% accuracy: 24.32
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 4.29
+% accuracy: 17.65
+light setting b
+% identified: 7.14
+% accuracy: 27.78
+
+training
+
+light setting m
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.71
+% accuracy: 18.75
+light setting c
+% identified: 0.0
+% accuracy: 0.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 4.05
+% accuracy: 35.42
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 4.29
+% accuracy: 37.5
+light setting l
+% identified: 3.57
+% accuracy: 33.33
+light setting m
+% identified: 2.86
+% accuracy: 25.0
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 4.76
+% accuracy: 25.0
+light setting c
+% identified: 5.71
+% accuracy: 27.59
+light setting w
+% identified: 5.0
+% accuracy: 22.58
+light setting l
+% identified: 4.29
+% accuracy: 25.0
+light setting m
+% identified: 5.0
+% accuracy: 25.0
+light setting b
+% identified: 5.0
+% accuracy: 25.0
+res setting 200
+all lighting
+% identified: 4.29
+% accuracy: 18.95
+light setting c
+% identified: 7.14
+% accuracy: 30.3
+light setting w
+% identified: 5.71
+% accuracy: 24.24
+light setting l
+% identified: 2.86
+% accuracy: 13.33
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 4.29
+% accuracy: 18.18
+res setting 300
+all lighting
+% identified: 5.0
+% accuracy: 22.34
+light setting c
+% identified: 5.0
+% accuracy: 20.0
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 4.29
+% accuracy: 21.43
+light setting m
+% identified: 7.14
+% accuracy: 28.57
+light setting b
+% identified: 3.57
+% accuracy: 16.13
+res setting 500
+all lighting
+% identified: 4.76
+% accuracy: 19.42
+light setting c
+% identified: 4.29
+% accuracy: 16.22
+light setting w
+% identified: 5.0
+% accuracy: 19.44
+light setting l
+% identified: 3.57
+% accuracy: 15.15
+light setting m
+% identified: 5.0
+% accuracy: 20.59
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+light setting b
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.0
+% accuracy: 0.0
+light setting w
+% identified: 0.0
+% accuracy: 0.0
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 3.57
+% accuracy: 31.25
+light setting c
+% identified: 3.57
+% accuracy: 41.67
+light setting w
+% identified: 3.57
+% accuracy: 31.25
+light setting l
+% identified: 3.57
+% accuracy: 33.33
+light setting m
+% identified: 2.86
+% accuracy: 25.0
+light setting b
+% identified: 4.29
+% accuracy: 35.29
+res setting 150
+all lighting
+% identified: 5.95
+% accuracy: 31.25
+light setting c
+% identified: 6.43
+% accuracy: 31.03
+light setting w
+% identified: 5.71
+% accuracy: 25.81
+light setting l
+% identified: 4.29
+% accuracy: 25.0
+light setting m
+% identified: 6.43
+% accuracy: 32.14
+light setting b
+% identified: 7.14
+% accuracy: 35.71
+res setting 200
+all lighting
+% identified: 5.71
+% accuracy: 25.26
+light setting c
+% identified: 5.71
+% accuracy: 24.24
+light setting w
+% identified: 6.43
+% accuracy: 27.27
+light setting l
+% identified: 5.71
+% accuracy: 26.67
+light setting m
+% identified: 5.71
+% accuracy: 25.0
+light setting b
+% identified: 5.71
+% accuracy: 24.24
+res setting 300
+all lighting
+% identified: 5.48
+% accuracy: 24.47
+light setting c
+% identified: 6.43
+% accuracy: 25.71
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 28.57
+light setting m
+% identified: 5.71
+% accuracy: 22.86
+light setting b
+% identified: 5.0
+% accuracy: 22.58
+res setting 500
+all lighting
+% identified: 5.71
+% accuracy: 23.3
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 6.43
+% accuracy: 25.0
+light setting l
+% identified: 5.71
+% accuracy: 24.24
+light setting m
+% identified: 5.71
+% accuracy: 23.53
+light setting b
+% identified: 5.71
+% accuracy: 22.22
+
+training
+
+lighting position 1
+all lighting
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 1.43
+% accuracy: 50.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.0
+% accuracy: 0.0
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.48
+% accuracy: 47.92
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.0
+% accuracy: 43.75
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.71
+% accuracy: 50.0
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 8.1
+% accuracy: 42.5
+light setting c
+% identified: 8.57
+% accuracy: 41.38
+light setting w
+% identified: 9.29
+% accuracy: 41.94
+light setting l
+% identified: 7.14
+% accuracy: 41.67
+light setting m
+% identified: 9.29
+% accuracy: 46.43
+light setting b
+% identified: 7.86
+% accuracy: 39.29
+res setting 200
+all lighting
+% identified: 8.33
+% accuracy: 36.84
+light setting c
+% identified: 9.29
+% accuracy: 39.39
+light setting w
+% identified: 8.57
+% accuracy: 36.36
+light setting l
+% identified: 7.86
+% accuracy: 36.67
+light setting m
+% identified: 8.57
+% accuracy: 37.5
+light setting b
+% identified: 8.57
+% accuracy: 36.36
+res setting 300
+all lighting
+% identified: 7.38
+% accuracy: 32.98
+light setting c
+% identified: 9.29
+% accuracy: 37.14
+light setting w
+% identified: 9.29
+% accuracy: 36.11
+light setting l
+% identified: 6.43
+% accuracy: 32.14
+light setting m
+% identified: 8.57
+% accuracy: 34.29
+light setting b
+% identified: 7.14
+% accuracy: 32.26
+res setting 500
+all lighting
+% identified: 7.62
+% accuracy: 31.07
+light setting c
+% identified: 7.86
+% accuracy: 29.73
+light setting w
+% identified: 8.57
+% accuracy: 33.33
+light setting l
+% identified: 7.14
+% accuracy: 30.3
+light setting m
+% identified: 7.14
+% accuracy: 29.41
+light setting b
+% identified: 8.57
+% accuracy: 33.33
+
+training
+
+light setting c
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 0.95
+% accuracy: 25.0
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 0.71
+% accuracy: 33.33
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 1.43
+% accuracy: 22.22
+light setting b
+% identified: 0.71
+% accuracy: 25.0
+res setting 100
+all lighting
+% identified: 3.81
+% accuracy: 33.33
+light setting c
+% identified: 2.14
+% accuracy: 25.0
+light setting w
+% identified: 5.71
+% accuracy: 50.0
+light setting l
+% identified: 2.86
+% accuracy: 26.67
+light setting m
+% identified: 5.71
+% accuracy: 50.0
+light setting b
+% identified: 2.86
+% accuracy: 23.53
+res setting 150
+all lighting
+% identified: 5.24
+% accuracy: 27.5
+light setting c
+% identified: 3.57
+% accuracy: 17.24
+light setting w
+% identified: 5.0
+% accuracy: 22.58
+light setting l
+% identified: 5.0
+% accuracy: 29.17
+light setting m
+% identified: 5.71
+% accuracy: 28.57
+light setting b
+% identified: 5.0
+% accuracy: 25.0
+res setting 200
+all lighting
+% identified: 5.0
+% accuracy: 22.11
+light setting c
+% identified: 6.43
+% accuracy: 27.27
+light setting w

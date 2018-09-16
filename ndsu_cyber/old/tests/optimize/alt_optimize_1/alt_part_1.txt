@@ -1,0 +1,207 @@
+sf and mn test script
+current sf: 1.1
+current mn: 1
+all lighting
+
+tests
+
+current sf: 1.1
+current mn: 1
+all lighting
+% identified: 13.1
+% accuracy: 42.97
+current mn: 2
+all lighting
+% identified: 10.71
+% accuracy: 45.45
+current mn: 4
+all lighting
+% identified: 8.33
+% accuracy: 49.3
+current sf: 1.3
+current mn: 1
+all lighting
+% identified: 8.81
+% accuracy: 50.0
+current mn: 2
+all lighting
+% identified: 6.43
+% accuracy: 50.0
+current mn: 4
+all lighting
+% identified: 5.24
+% accuracy: 62.86
+
+training
+
+current mn: 2
+all lighting
+
+tests
+
+current sf: 1.1
+current mn: 1
+all lighting
+% identified: 12.38
+% accuracy: 40.62
+current mn: 2
+all lighting
+% identified: 10.48
+% accuracy: 44.44
+current mn: 4
+all lighting
+% identified: 8.33
+% accuracy: 49.3
+current sf: 1.3
+current mn: 1
+all lighting
+% identified: 8.81
+% accuracy: 50.0
+current mn: 2
+all lighting
+% identified: 6.43
+% accuracy: 50.0
+current mn: 4
+all lighting
+% identified: 5.24
+% accuracy: 62.86
+
+training
+
+current mn: 4
+all lighting
+
+tests
+
+current sf: 1.1
+current mn: 1
+all lighting
+% identified: 11.67
+% accuracy: 38.28
+current mn: 2
+all lighting
+% identified: 10.0
+% accuracy: 42.42
+current mn: 4
+all lighting
+% identified: 8.1
+% accuracy: 47.89
+current sf: 1.3
+current mn: 1
+all lighting
+% identified: 8.1
+% accuracy: 45.95
+current mn: 2
+all lighting
+% identified: 6.43
+% accuracy: 50.0
+current mn: 4
+all lighting
+% identified: 5.24
+% accuracy: 62.86
+
+training
+
+current sf: 1.3
+current mn: 1
+all lighting
+
+tests
+
+current sf: 1.1
+current mn: 1
+all lighting
+% identified: 11.9
+% accuracy: 39.06
+current mn: 2
+all lighting
+% identified: 10.0
+% accuracy: 42.42
+current mn: 4
+all lighting
+% identified: 8.33
+% accuracy: 49.3
+current sf: 1.3
+current mn: 1
+all lighting
+% identified: 8.81
+% accuracy: 50.0
+current mn: 2
+all lighting
+% identified: 6.43
+% accuracy: 50.0
+current mn: 4
+all lighting
+% identified: 5.24
+% accuracy: 62.86
+
+training
+
+current mn: 2
+all lighting
+
+tests
+
+current sf: 1.1
+current mn: 1
+all lighting
+% identified: 10.48
+% accuracy: 34.38
+current mn: 2
+all lighting
+% identified: 9.05
+% accuracy: 38.38
+current mn: 4
+all lighting
+% identified: 7.38
+% accuracy: 43.66
+current sf: 1.3
+current mn: 1
+all lighting
+% identified: 7.62
+% accuracy: 43.24
+current mn: 2
+all lighting
+% identified: 6.43
+% accuracy: 50.0
+current mn: 4
+all lighting
+% identified: 5.24
+% accuracy: 62.86
+
+training
+
+current mn: 4
+all lighting
+
+tests
+
+current sf: 1.1
+current mn: 1
+all lighting
+% identified: 10.71
+% accuracy: 35.16
+current mn: 2
+all lighting
+% identified: 9.05
+% accuracy: 38.38
+current mn: 4
+all lighting
+% identified: 7.62
+% accuracy: 45.07
+current sf: 1.3
+current mn: 1
+all lighting
+% identified: 8.1
+% accuracy: 45.95
+current mn: 2
+all lighting
+% identified: 6.43
+% accuracy: 50.0
+current mn: 4
+all lighting
+% identified: 5.24
+% accuracy: 62.86
+
+training
+

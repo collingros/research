@@ -1,0 +1,172 @@
+tiny setting changed!
+[1.1, 1, 'a']
+[1.1, 1, 'a', 13.1, 42.97]
+results recorded!
+tiny setting changed!
+[1.1, 1, 'a']
+[1.1, 2, 'a', 10.71, 45.45]
+results recorded!
+tiny setting changed!
+[1.1, 1, 'a']
+[1.1, 4, 'a', 8.33, 49.3]
+results recorded!
+tiny setting changed!
+[1.1, 1, 'a']
+[1.3, 1, 'a', 8.81, 50.0]
+results recorded!
+tiny setting changed!
+[1.1, 1, 'a']
+[1.3, 2, 'a', 6.43, 50.0]
+results recorded!
+tiny setting changed!
+[1.1, 1, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+results recorded!
+small setting changed! averaging results..
+[1.1, 2, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+new results recorded!
+tiny setting changed!
+[1.1, 2, 'a']
+[1.1, 1, 'a', 12.38, 40.62]
+results recorded!
+tiny setting changed!
+[1.1, 2, 'a']
+[1.1, 2, 'a', 10.48, 44.44]
+results recorded!
+tiny setting changed!
+[1.1, 2, 'a']
+[1.1, 4, 'a', 8.33, 49.3]
+results recorded!
+tiny setting changed!
+[1.1, 2, 'a']
+[1.3, 1, 'a', 8.81, 50.0]
+results recorded!
+tiny setting changed!
+[1.1, 2, 'a']
+[1.3, 2, 'a', 6.43, 50.0]
+results recorded!
+tiny setting changed!
+[1.1, 2, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+results recorded!
+small setting changed! averaging results..
+[1.1, 4, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+new results recorded!
+tiny setting changed!
+[1.1, 4, 'a']
+[1.1, 1, 'a', 11.67, 38.28]
+results recorded!
+tiny setting changed!
+[1.1, 4, 'a']
+[1.1, 2, 'a', 10.0, 42.42]
+results recorded!
+tiny setting changed!
+[1.1, 4, 'a']
+[1.1, 4, 'a', 8.1, 47.89]
+results recorded!
+tiny setting changed!
+[1.1, 4, 'a']
+[1.3, 1, 'a', 8.1, 45.95]
+results recorded!
+tiny setting changed!
+[1.1, 4, 'a']
+[1.3, 2, 'a', 6.43, 50.0]
+results recorded!
+tiny setting changed!
+[1.1, 4, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+results recorded!
+big setting changed! averaging results..
+[1.3, 4, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+new results recorded!
+small setting changed! averaging results..
+[1.3, 1, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+new results recorded!
+tiny setting changed!
+[1.3, 1, 'a']
+[1.1, 1, 'a', 11.9, 39.06]
+results recorded!
+tiny setting changed!
+[1.3, 1, 'a']
+[1.1, 2, 'a', 10.0, 42.42]
+results recorded!
+tiny setting changed!
+[1.3, 1, 'a']
+[1.1, 4, 'a', 8.33, 49.3]
+results recorded!
+tiny setting changed!
+[1.3, 1, 'a']
+[1.3, 1, 'a', 8.81, 50.0]
+results recorded!
+tiny setting changed!
+[1.3, 1, 'a']
+[1.3, 2, 'a', 6.43, 50.0]
+results recorded!
+tiny setting changed!
+[1.3, 1, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+results recorded!
+small setting changed! averaging results..
+[1.3, 2, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+new results recorded!
+tiny setting changed!
+[1.3, 2, 'a']
+[1.1, 1, 'a', 10.48, 34.38]
+results recorded!
+tiny setting changed!
+[1.3, 2, 'a']
+[1.1, 2, 'a', 9.05, 38.38]
+results recorded!
+tiny setting changed!
+[1.3, 2, 'a']
+[1.1, 4, 'a', 7.38, 43.66]
+results recorded!
+tiny setting changed!
+[1.3, 2, 'a']
+[1.3, 1, 'a', 7.62, 43.24]
+results recorded!
+tiny setting changed!
+[1.3, 2, 'a']
+[1.3, 2, 'a', 6.43, 50.0]
+results recorded!
+tiny setting changed!
+[1.3, 2, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+results recorded!
+small setting changed! averaging results..
+[1.3, 4, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+new results recorded!
+tiny setting changed!
+[1.3, 4, 'a']
+[1.1, 1, 'a', 10.71, 35.16]
+results recorded!
+tiny setting changed!
+[1.3, 4, 'a']
+[1.1, 2, 'a', 9.05, 38.38]
+results recorded!
+tiny setting changed!
+[1.3, 4, 'a']
+[1.1, 4, 'a', 7.62, 45.07]
+results recorded!
+tiny setting changed!
+[1.3, 4, 'a']
+[1.3, 1, 'a', 8.1, 45.95]
+results recorded!
+tiny setting changed!
+[1.3, 4, 'a']
+[1.3, 2, 'a', 6.43, 50.0]
+results recorded!
+tiny setting changed!
+[1.3, 4, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+results recorded!
+big setting changed! averaging results..
+[1.3, 4, 'a']
+[1.3, 4, 'a', 5.24, 62.86]
+new results recorded!

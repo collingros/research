@@ -1,0 +1,68 @@
+res test script
+res setting 75
+pos setting a
+lighting position 0
+all lighting
+including all subj pos
+
+tests
+
+res setting 75
+all lighting
+% identified: 1.43
+% accuracy: 37.5
+light setting c
+% identified: 0.71
+% accuracy: 25.0
+light setting w
+% identified: 1.43
+% accuracy: 66.67
+light setting l
+% identified: 0.71
+% accuracy: 33.33
+light setting m
+% identified: 2.14
+% accuracy: 33.33
+light setting b
+% identified: 1.43
+% accuracy: 50.0
+res setting 100
+all lighting
+% identified: 5.24
+% accuracy: 45.83
+light setting c
+% identified: 4.29
+% accuracy: 50.0
+light setting w
+% identified: 5.71
+% accuracy: 50.0
+light setting l
+% identified: 5.0
+% accuracy: 46.67
+light setting m
+% identified: 5.0
+% accuracy: 43.75
+light setting b
+% identified: 5.71
+% accuracy: 47.06
+res setting 150
+all lighting
+% identified: 6.9
+% accuracy: 36.25
+light setting c
+% identified: 7.14
+% accuracy: 34.48
+light setting w
+% identified: 7.86
+% accuracy: 35.48
+light setting l
+% identified: 5.71
+% accuracy: 33.33
+light setting m
+% identified: 4.29
+% accuracy: 21.43
+light setting b
+% identified: 5.71
+% accuracy: 28.57
+res setting 200
+all lighting
