@@ -278,10 +278,10 @@ sec = finish_time - start_time
 
 
 print("finished\t" + str(sec) + " secs\n")
-for k, v in C.items():
+for k, v in sorted(C.items()):
     print(str(k) + "\t" + str(v))
 print("\n")
-for k, v in data.items():
+for k, v in sorted(data.items()):
     print(str(k) + "\t" + str(v))
 print("total_imgs\t" + str(img_count))
 
