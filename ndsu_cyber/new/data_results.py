@@ -62,7 +62,7 @@ def show_results(tests, LENIENCY):
     total_imgs = tests[0].data["total_imgs"]
     best_tests = tests
     last_ids = []
-
+    tmp_tests = []
     # making worst possible outcomes for initial last_r and last_s
     last_s = tests[0].data["total_imgs"]
     last_r = 0
