@@ -36,6 +36,7 @@ def print_tests(tests, custom):
 
 def show_pics(tests):
     print("*BEGINNING OF SHOW_PICS*")
+    test_c = 1
     for test in tests:
         tmp_tests = []
         tmp_tests.append(test)
@@ -44,7 +45,7 @@ def show_pics(tests):
 
         img_c = 1
         for img in sorted(test.data["imgs"]):
-            img_name = "TEST #" + str(test.data["id"]) + "(" + str(img_c) + \
+            img_name = "TEST #" + str(test.data["id"]) + "(" + str(test_c) + \
                        "/" + str(len(tests)) + ")\tIMG #" + str(img_c) + \
                        "/" + str(len(test.data["imgs"]))
             cv2_img = cv2.imread(img, 0)
@@ -54,6 +55,8 @@ def show_pics(tests):
             cv2.destroyAllWindows()
 
             img_c += 1
+        test_c += 1
+
         input("RETURN FOR NEXT SET")
     print("*END OF SHOW_PICS*")
 
