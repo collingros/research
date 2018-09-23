@@ -51,9 +51,13 @@ def show_results(tests):
     ordered_acc = ordered_acc[-10:]
 
     print("tests with the highest accuracy (top 10: lowest to highest)")
+    test_c = 0
     for test in ordered_acc:
+        test_c += 1
+        print("test number " + str(test_c))
         for key, value in test.data.items():
-            print(key + ":\t" + value)
+            print(key + ":\t" + str(value))
+        input()
             
 
 
@@ -123,6 +127,14 @@ def add_data(tests, path):
         elif item.split("/")[-1] == "labels.pickle":
             new_test.data["labels"] = item_path
 
+    if new_test.reviewed_imgs < new_test.data["total_imgs"] and
+       new_test.accuracy = "0":
+        # "accuracy" only means # of faces detected / # of imgs skipped
+        # so if skipped is 0, and there are an unreasonable amount of
+        # faces detected, the accuracy is bad, this if is to correct the
+        # assumtion of a bad result by checking if # of faces detected
+        # is a reasonable number (300 is the total # of tests)
+        new_test.accuracy = 100
 
     tests.append(new_test)
 
