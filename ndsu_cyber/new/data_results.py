@@ -127,8 +127,8 @@ def add_data(tests, path):
         elif item.split("/")[-1] == "labels.pickle":
             new_test.data["labels"] = item_path
 
-    if (new_test.reviewed_imgs < new_test.data["total_imgs"] and
-        new_test.accuracy == "0"):
+    if (new_test.data["reviewed_imgs"] < new_test.data["total_imgs"] and
+        new_test.data["accuracy"] == 0):
         # "accuracy" only means # of faces detected / # of imgs skipped
         # so if skipped is 0, and there are an unreasonable amount of
         # faces detected, the accuracy is bad, this if is to correct the
