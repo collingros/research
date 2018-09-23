@@ -54,7 +54,7 @@ def show_results(tests):
         for key, value in test.data.items():
             print(key + ":\t" + str(value))
         input()
-    '''
+    
 
     acc = []
     while test_c < 10:
@@ -71,7 +71,7 @@ def show_results(tests):
             # set new max
                 new_max = test
         test_c += 1
-
+    '''
 
 def add_data(tests, path):
     new_test = Test()
