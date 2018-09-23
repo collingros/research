@@ -22,16 +22,32 @@ class Test:
                      }
 
 
-def print_tests(tests, custom):
-    print("*BEGINNING OF " + custom + "*")
-    for test in tests:
-        print("\t***DATA FOR TEST " + str(test.data["id"]) + "***")
+def print_tests(tests, custom, layout=0):
+                # purpose for layouts: to omit printing of long lists when
+                # unnecessary
+    omit_1 = ["path", "train", "stats", "labels", "imgs"]
 
-        for key, value in test.data.items():
-            print(str(key) + ":\t" + str(value))
+    if not layout:
+        print("*BEGINNING OF " + custom + "*")
+        for test in tests:
+            print("\t***DATA FOR TEST " + str(test.data["id"]) + "***")
 
-        print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***\n")
-    print("*END OF " + custom + "*")
+            for key, value in test.data.items():
+                print(str(key) + ":\t" + str(value))
+
+            print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***\n")
+        print("*END OF " + custom + "*")
+    elif layout == 1:
+        print("*BEGINNING OF " + custom + "*")
+        for test in tests:
+            print("\t***DATA FOR TEST " + str(test.data["id"]) + "***")
+
+            for key, value in test.data.items():
+                if key not in omit_1:
+                    print(str(key) + ":\t" + str(value))
+
+            print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***\n")
+        print("*END OF " + custom + "*")
 
 
 def show_pics(tests):
@@ -41,7 +57,7 @@ def show_pics(tests):
         tmp_tests = []
         tmp_tests.append(test)
         print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
-        print_tests(tmp_tests, "TEST #" + str(test.data["id"]))
+        print_tests(tmp_tests, "TEST #" + str(test.data["id"]), 1)
 
         img_c = 1
         for img in sorted(test.data["imgs"]):
