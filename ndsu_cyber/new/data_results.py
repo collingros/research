@@ -106,7 +106,10 @@ def add_data(tests, path):
                     elif line_c == 29:
                         new_test.data["reviewed_imgs"] = int(line_subs[-1])
                     elif line_c == 30:
-                        new_test.data["skipped_imgs"] = int(line_subs[-1])
+                        if line_subs[-1] == "skipped_is_0":
+                            new_test.data["skipped_imgs"] = 0
+                        else:
+                            new_test.data["skipped_imgs"] = int(line_subs[-1])
                     elif line_c == 31:
                         new_test.data["total_imgs"] = int(line_subs[-1])
                     
