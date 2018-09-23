@@ -72,7 +72,7 @@ def show_results(tests):
     last_r = 0
     # tests[0] should have the same total_imgs number as the rest
     while len(tests):
-        print("current test length: " + str(len(tests))
+        print("current test length: " + str(len(tests)))
         for test in tests:
             for key, value in test.data.items():
                 if key == "reviewed_imgs":
