@@ -29,7 +29,7 @@ def print_tests(tests, custom):
         for key, value in test.data.items():
             print(str(key) + ":\t" + str(value))
 
-        print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***")
+        print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***\n")
     print("*END OF " + custom + "*")
 
 
