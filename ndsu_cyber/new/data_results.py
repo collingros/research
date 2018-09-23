@@ -66,7 +66,7 @@ def add_data(tests, path):
     for item in os.listdir(path):
         item_path = path + "/" + item
 
-        #print("item:\t" + item_path)
+        print("item:\t" + item_path)
 
         if item == "scriptstat.txt":
             new_test.data["stats"] = item_path
