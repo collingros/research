@@ -74,35 +74,35 @@ def add_data(tests, path):
                     line_subs = line.strip("\n").split("\t")
 
                     # COMMENTING UNTIL TESTED DATA IS SORTED CORRECTLY!!!
-                    '''
+                    
                     if line_c == 1:
                         speed = line_subs[-1].split(" ")[0]
                         new_test.data["speed"] = float(speed)
-                        print("adding speed...")
-                        print(str(speed))
+                        #print("adding speed...")
+                        #print(str(speed))
                     elif line_c == 11:
                         new_test.data["cascade"] = line_subs[-1]
-                        print("adding cascade...")
-                        print(str(line_subs[-1]))
+                        #print("adding cascade...")
+                        #print(str(line_subs[-1]))
                     elif line_c == 15:
                         new_test.data["sf"] = float(line_subs[-1])
-                        print("adding sf...")
-                        print(str(line_subs[-1]))
+                        #print("adding sf...")
+                        #print(str(line_subs[-1]))
                     elif line_c == 19:
                         new_test.data["mn"] = int(line_subs[-1])
-                        print("adding mn...")
-                        print(str(line_subs[-1]))
+                        #print("adding mn...")
+                        #print(str(line_subs[-1]))
                     elif line_c == 9:
                         new_test.data["res"] = int(line_subs[-1])
-                        print("adding res...")
-                        print(str(line_subs[-1]))
+                        #print("adding res...")
+                        #print(str(line_subs[-1]))
                     elif line_c == 33:
                         new_test.data["accuracy"] = float(line_subs[-1])
-                        print("adding accuracy...")
-                        print(str(line_subs[-1]))
-                    '''
+                        #print("adding accuracy...")
+                        #print(str(line_subs[-1]))
+                    
 
-                    print("item_path: " + item_path)
+                    #print("item_path: " + item_path)
                     line_c += 1
 
         elif item.split(".")[1] == "JPG":
@@ -122,7 +122,7 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
     add_data(tests, result_path)
 
-print_tests(tests)
+#print_tests(tests)
 print("now show results")
 show_results(tests)
 
