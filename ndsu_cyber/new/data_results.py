@@ -79,7 +79,7 @@ def add_data(tests, path):
     new_test.data["path"] = path
 
     path_subs = path.split("/")
-    test_id = ''.join(filter(str.isdigit, path_subs[-1])
+    test_id = ''.join(filter(str.isdigit, path_subs[-1]))
     new_test.data["id"] = test_id
     # need a unique test id for differentiating tests, test num works
     # (test num is int at last part of path)
