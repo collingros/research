@@ -1,6 +1,6 @@
 import os
 from subprocess import call
-
+import cv2
 
 class Test:
     def __init__(self):
@@ -40,9 +40,12 @@ def show_pics(tests):
         print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
         img_c = 1
         for img in test.data["imgs"]:
-            input("\tRETURN FOR NEXT IMAGE")
-            print("IMG #" + str(img_c) + "/" + str(len(test.data["imgs"])))
-            call(["gpicview", img])
+            img_name = "IMG #" + str(img_c) + "/" + str(len(test.data["imgs"]))
+            cv2_img = cv2.imread(img, 0)
+            cv2.resize(cv2_img, (150, 100))
+            cv2.imshow(img_name, cv2_img)
+            cv2.waitKey(0)
+
             img_c += 1
         input("RETURN FOR NEXT SET")
     print("*END OF SHOW_PICS*")
