@@ -22,15 +22,13 @@ class Test:
 
 
 def print_tests(tests):
-    test_c = 1
     for test in tests:
-        print("\t**DATA FOR TEST " + str(test_c) + "**")
+        print("\t**DATA FOR TEST " + str(test.data["id"]) + "**")
 
         for key, value in test.data.items():
             print(str(key) + ":\t" + str(value))
 
-        print("\t**END OF DATA FOR TEST " + str(test_c) + "**")
-        test_c += 1  
+        print("\t**END OF DATA FOR TEST " + str(test.data["id"]) + "**")
 
 
 def show_results(tests):
@@ -87,8 +85,6 @@ def add_data(tests, path):
     for item in os.listdir(path):
         item_path = path + "/" + item
 
-        print("item:\t" + item_path)
-
         if item == "scriptstat.txt":
             new_test.data["stats"] = item_path
 
@@ -138,6 +134,7 @@ def add_data(tests, path):
         new_test.data["accuracy"] = new_test.data["reviewed_imgs"]
 
     tests.append(new_test)
+
 
 tests = []
 parent_dir = os.getcwd() + "/"
