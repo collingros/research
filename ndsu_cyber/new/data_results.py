@@ -123,5 +123,6 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
     add_data(tests, result_path)
 
 print_tests(tests)
-#show_results(tests)
+print("now show results")
+show_results(tests)
 
