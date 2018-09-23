@@ -1,6 +1,10 @@
 import os
 
 
+LENIENCY = 30
+# how much leniency should be given for accuracy results
+
+
 class Test:
     def __init__(self):
         self.data = {"path": "",
@@ -21,18 +25,23 @@ class Test:
                      }
 
 
-def print_tests(tests):
+def print_tests(tests, custom):
+    print("*BEGINNING OF " + custom + "*")
     for test in tests:
-        print("\t**DATA FOR TEST " + str(test.data["id"]) + "**")
+        print("\t***DATA FOR TEST " + str(test.data["id"]) + "***")
 
         for key, value in test.data.items():
             print(str(key) + ":\t" + str(value))
 
-        print("\t**END OF DATA FOR TEST " + str(test.data["id"]) + "**")
+        print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***")
+    print("*END OF " + custom + "*")
 
 
 def show_results(tests):
     '''
+    SHITTY, INEFFICIENT, NOT WHAT I WANT, but keeping it for now as
+    last resort (in case i'm too stupid to figure this out)
+
     ordered_acc = []
     last_acc = -1
     for test in tests:
@@ -52,10 +61,15 @@ def show_results(tests):
         for key, value in test.data.items():
             print(key + ":\t" + str(value))
         input()
-    
+    '''
 
-    acc = []
+    best_tests = []
     while test_c < 10:
+        last_r = 0
+        # making worst possible outcomes for initial last_r and last_s
+        last_s = tests[0].data["total_imgs"]
+        # tests[0] should have the same total_imgs number as the rest
+
         for test in tests:
             for key, value in test.items():
                 if key == "reviewed_imgs":
@@ -63,13 +77,19 @@ def show_results(tests):
                 elif key == "skipped_imgs":
                     skipped = value
 
-            if (reviewed <= 200 and reviewed >= last_r) and skipped <= 
-            # if the num of detected faces is about the same as the num
-            # of images and the current value is better than the last
-            # set new max
-                new_max = test
-        test_c += 1
-    '''
+            if (reviewed <= test.data["total_imgs"] + LENIENCY and
+                reviewed > last_r or skipped < last_s):
+                # if the num of detected faces is about the same as the num
+                # of images and the current value is better than the last
+                # set new max
+
+                last_r = reviewed
+                last_s = skipped
+                best_tests.append(test)
+
+    print_tests(best_tests, "BEST TESTS")
+
+
 
 def add_data(tests, path):
     new_test = Test()
@@ -143,6 +163,6 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
     add_data(tests, result_path)
 
-print_tests(tests)
-#show_results(tests)
+#print_tests(tests, "INITIAL RESULTS")
+show_results(tests)
 
