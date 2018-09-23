@@ -157,6 +157,6 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
     add_data(tests, result_path)
 
-leniency = input("leniency?\t")
+leniency = int(input("leniency?\t"))
 show_results(tests, leniency)
 
