@@ -166,19 +166,17 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
     add_data(tests, result_path)
 
-best_tests = show_results(tests, leniency)
+leniency = int(input("leniency:\t"))
 while 1:
     print("[1]:\tView \"Best\" test data")
     print("[2]:\tView \"All\" test data")
     print("[3]:\tView \"Best\" test images")
     choice = int(input())
-
+        show_results(tests, leniency)
     if choice == (1):
-        leniency = int(input("leniency?\t"))
+        
     elif choice == (2):
         print_tests(tests)
     elif choice == (3):
-        cshow_pics(best_tests)
-leniency = int(input("leniency?\t"))
-show_results(tests, leniency)
+        show_pics(best_tests)
 
