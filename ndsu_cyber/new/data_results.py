@@ -1,4 +1,5 @@
 import os
+from subprocess import call
 
 
 class Test:
@@ -33,32 +34,21 @@ def print_tests(tests, custom):
     print("*END OF " + custom + "*")
 
 
-def show_results(tests, LENIENCY):
-    '''
-    SHITTY, INEFFICIENT, NOT WHAT I WANT, but keeping it for now as
-    last resort (in case i'm too stupid to figure this out)
-
-    ordered_acc = []
-    last_acc = -1
+def show_pics(tests):
+    print("*BEGINNING OF SHOW_PICS*")
     for test in tests:
-        acc = test.data["accuracy"]
-        if last_acc == -1 and acc <= 100:
-            last_acc = acc
-        elif last_acc != -1 and acc > last_acc and acc <= 100:
-            ordered_acc.append(test)
+        print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
+        img_c = 1
+        for img in test.data["imgs"]:
+            input("\tRETURN FOR NEXT IMAGE")
+            print("IMG #" + str(img_c) "/" + str(len(test.data["imgs"])))
+            call(["gpicview", img])
+            img_c += 1
+        input("RETURN FOR NEXT SET")
+    print("*END OF SHOW_PICS*")
 
-    ordered_acc = ordered_acc[-10:]
 
-    print("tests with the highest accuracy (top 10: lowest to highest)")
-    test_c = 0
-    for test in ordered_acc:
-        test_c += 1
-        print("test number " + str(test_c))
-        for key, value in test.data.items():
-            print(key + ":\t" + str(value))
-        input()
-    '''
-
+def show_results(tests, LENIENCY):
     total_imgs = tests[0].data["total_imgs"]
     best_tests = tests
     last_ids = []
@@ -68,22 +58,12 @@ def show_results(tests, LENIENCY):
     last_r = 0
     # tests[0] should have the same total_imgs number as the rest
     while len(best_tests) > 10 and LENIENCY >= 0:
-        #print("current tests length: " + str(len(tests)))
         for test in best_tests:
-            #print("\ncurrent test id: " + str(test.data["id"]))
             for key, value in test.data.items():
                 if key == "reviewed_imgs":
                     reviewed = value
                 elif key == "skipped_imgs":
                     skipped = value
-
-            #print("if " + str(reviewed) + " <= " + str(total_imgs) +
-            #      " + " + str(LENIENCY) + " and")
-            #print(str(reviewed) + " > " + str(last_r) + " - " +
-            #      str(LENIENCY) + " and " +
-            #      str(skipped) + " < " + str(last_s) + " + " +
-            #      str(LENIENCY) + " and")
-            #print(str(test.data["id"]) + " not in " + str(last_ids))
 
             if ((reviewed <= total_imgs + LENIENCY) and
                 ((reviewed > last_r - LENIENCY) and
@@ -93,20 +73,16 @@ def show_results(tests, LENIENCY):
                 # of images and the current value is better than the last
                 # set new max
 
-                #print("PASSED IF")
                 last_ids.append(test.data["id"])
                 last_r = reviewed
                 last_s = skipped
                 tmp_tests.append(test)
-            else:
-                pass
-                #print("FAILED IF")
+
         best_tests = tmp_tests
         LENIENCY -= 1
 
-
     print_tests(best_tests, "BEST TESTS")
-
+    show_pics(best_tests)
 
 
 def add_data(tests, path):
@@ -181,6 +157,6 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
     add_data(tests, result_path)
 
-#print_tests(tests, "INITIAL RESULTS")
-show_results(tests, 30)
+leniency = input("leniency?\t")
+show_results(tests, leniency)
 
