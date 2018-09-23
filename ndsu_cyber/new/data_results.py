@@ -92,6 +92,7 @@ def show_results(tests):
                 last_r = reviewed
                 last_s = skipped
                 best_tests.append(test)
+                old_len = len(tests)
                 tests.remove(test)
         if old_len == cur_len:
             break
