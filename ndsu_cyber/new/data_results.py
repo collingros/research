@@ -87,9 +87,9 @@ def show_results(tests):
                   str(skipped) + " < " + str(last_s) + " and")
             print(str(test.data["id"]) + " not in " + str(last_ids))
 
-            if (reviewed <= total_imgs + LENIENCY and
-                reviewed > last_r or skipped < last_s and
-                test.data["id"] not in last_ids):
+            if ((reviewed <= total_imgs + LENIENCY) and
+                (reviewed > last_r or skipped < last_s) and
+                (test.data["id"] not in last_ids)):
                 # if the num of detected faces is about the same as the num
                 # of images and the current value is better than the last
                 # set new max
