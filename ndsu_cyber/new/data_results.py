@@ -83,12 +83,15 @@ def show_results(tests):
 
             print("if " + str(reviewed) + " <= " + str(total_imgs) +
                   " + " + str(LENIENCY) + " and")
-            print(str(reviewed) + " > " + str(last_r) + " or " +
-                  str(skipped) + " < " + str(last_s) + " and")
+            print(str(reviewed) + " > " + str(last_r) + " + " +
+                  str(LENIENCY) + " and " +
+                  str(skipped) + " < " + str(last_s) + " + " +
+                  str(LENIENCY) + " and")
             print(str(test.data["id"]) + " not in " + str(last_ids))
 
             if ((reviewed <= total_imgs + LENIENCY) and
-                (reviewed > last_r or skipped < last_s) and
+                ((reviewed > last_r - LENIENCY) and
+                 (skipped < last_s + LENIENCY)) and
                 (test.data["id"] not in last_ids)):
                 # if the num of detected faces is about the same as the num
                 # of images and the current value is better than the last
