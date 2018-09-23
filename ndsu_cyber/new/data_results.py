@@ -13,7 +13,10 @@ class Test:
                      "sf": 1,
                      "mn": -1,
                      "res": -1,
-                     "accuracy": -1.0
+                     "accuracy": -1.0,
+                     "total_imgs": 0,
+                     "reviewed_imgs": 0,
+                     "skipped_imgs": 0
                      }
 
 
@@ -80,19 +83,19 @@ def add_data(tests, path):
                         new_test.data["speed"] = float(speed)
                         #print("adding speed...")
                         #print(str(speed))
-                    elif line_c == 11:
+                    elif line_c == 5:
                         new_test.data["cascade"] = line_subs[-1]
                         #print("adding cascade...")
                         #print(str(line_subs[-1]))
-                    elif line_c == 15:
+                    elif line_c == 19:
                         new_test.data["sf"] = float(line_subs[-1])
                         #print("adding sf...")
                         #print(str(line_subs[-1]))
-                    elif line_c == 19:
+                    elif line_c == 15:
                         new_test.data["mn"] = int(line_subs[-1])
                         #print("adding mn...")
                         #print(str(line_subs[-1]))
-                    elif line_c == 9:
+                    elif line_c == 23:
                         new_test.data["res"] = int(line_subs[-1])
                         #print("adding res...")
                         #print(str(line_subs[-1]))
@@ -100,6 +103,12 @@ def add_data(tests, path):
                         new_test.data["accuracy"] = float(line_subs[-1])
                         #print("adding accuracy...")
                         #print(str(line_subs[-1]))
+                    elif line_c == 29:
+                        new_test.data["reviewed_imgs"] = int(line_subs[-1])
+                    elif line_c == 30:
+                        new_test.data["skipped_imgs"] = int(line_subs[-1])
+                    elif line_c == 31:
+                        new_test.data["total_imgs"] = int(line_subs[-1])
                     
 
                     #print("item_path: " + item_path)
