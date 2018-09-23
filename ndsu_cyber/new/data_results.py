@@ -64,16 +64,16 @@ def show_results(tests):
     '''
 
     total_imgs = tests[0].data["total_imgs"]
-    best_tests = []
+    best_tests = tests
     last_ids = []
 
     # making worst possible outcomes for initial last_r and last_s
     last_s = tests[0].data["total_imgs"]
     last_r = 0
     # tests[0] should have the same total_imgs number as the rest
-    while len(tests):
+    while LENIENCY != 0:
         print("current tests length: " + str(len(tests)))
-        for test in tests:
+        for test in best_tests:
             print("\ncurrent test id: " + str(test.data["id"]))
             for key, value in test.data.items():
                 if key == "reviewed_imgs":
@@ -101,10 +101,11 @@ def show_results(tests):
                 last_ids.append(test.data["id"])
                 last_r = reviewed
                 last_s = skipped
-                best_tests.append(test)
-                tests.remove(test)
+                tmp_tests.append(test)
             else:
                 print("FAILED IF")
+        best_tests = tmp_tests
+        LENIENCY -= 5
 
 
     print_tests(best_tests, "BEST TESTS")
