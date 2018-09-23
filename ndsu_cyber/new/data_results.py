@@ -37,12 +37,16 @@ def show_results(tests):
     last_acc = -1
     for test in tests:
         acc = test.data["accuracy"]
-        print("ACC IS " + str(acc))
+        print("acc: " + str(acc))
+        print("last_acc: " + str(last_acc))
         if last_acc == -1 and acc <= 100:
+            print("last_acc is -1 and acc <= 100")
             last_acc = acc
         elif last_acc != -1 and acc > last_acc and acc <= 100:
-            print("adding test!!")
+            print("adding test!")
             ordered_acc.append(test)
+        else:
+            print("failed all if")
 
     print("before cutoff")
     print(ordered_acc)
