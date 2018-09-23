@@ -44,7 +44,8 @@ def show_pics(tests):
             cv2_img = cv2.imread(img, 0)
             cv2.resize(cv2_img, (150, 100))
             cv2.imshow(img_name, cv2_img)
-            cv2.waitKey(0)
+            cv2.waitKey(1000)
+            cv2.destroyAllWindows()
 
             img_c += 1
         input("RETURN FOR NEXT SET")
