@@ -36,7 +36,7 @@ def print_tests(tests, custom, layout=0):
                 print(str(key) + ":\t" + str(value))
 
             print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***\n")
-        print("*END OF " + custom + "*")
+        print("*END OF " + custom + "*\n")
     elif layout == 1:
         print("*BEGINNING OF " + custom + "*")
         for test in tests:
@@ -47,7 +47,7 @@ def print_tests(tests, custom, layout=0):
                     print(str(key) + ":\t" + str(value))
 
             print("\t***END OF DATA FOR TEST " + str(test.data["id"]) + "***\n")
-        print("*END OF " + custom + "*")
+        print("*END OF " + custom + "*\n")
 
 
 def show_pics(tests):
