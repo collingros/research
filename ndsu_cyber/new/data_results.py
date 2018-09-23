@@ -171,10 +171,10 @@ while 1:
     print("[1]:\tView \"Best\" test data")
     print("[2]:\tView \"All\" test data")
     print("[3]:\tView \"Best\" test images")
+
     choice = int(input())
-        show_results(tests, leniency)
     if choice == (1):
-        
+        show_results(tests, leniency)
     elif choice == (2):
         print_tests(tests)
     elif choice == (3):
