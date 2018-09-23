@@ -48,15 +48,11 @@ def show_results(tests):
         else:
             print("failed all if")
 
-    print("before cutoff")
-    print(ordered_acc)
     ordered_acc = ordered_acc[-10:]
-    print("after cutoff")
-    print(ordered_acc)
 
     print("tests with the highest accuracy (top 10: lowest to highest)")
     for test in ordered_acc:
-        for key, value in test.items():
+        for key, value in test.data.items():
             print(key + ":\t" + value)
             
 
