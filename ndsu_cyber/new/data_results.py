@@ -39,7 +39,7 @@ def show_pics(tests):
     for test in tests:
         print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
         img_c = 1
-        for img in test.data["imgs"]:
+        for img in sorted(test.data["imgs"]):
             img_name = "IMG #" + str(img_c) + "/" + str(len(test.data["imgs"]))
             cv2_img = cv2.imread(img, 0)
             cv2.resize(cv2_img, (150, 100))
