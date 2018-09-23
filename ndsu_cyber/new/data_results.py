@@ -104,7 +104,7 @@ def add_data(tests, path):
                         #print(str(line_subs[-1]))
                     elif line_c == 33:
                         if line_subs[-1] == "skipped_is_0":
-                            new_test.data["accuracy"] = 100
+                            new_test.data["accuracy"] = 0
                         else:
                             new_test.data["accuracy"] = float(line_subs[-1])
                         #print("adding accuracy...")
