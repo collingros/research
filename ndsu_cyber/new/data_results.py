@@ -40,7 +40,7 @@ def show_pics(tests):
         tmp_tests = []
         tmp_tests.append(test)
         print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
-        print_tests(test)
+        print_tests(test, "TEST #str(test.data["id"]"))
 
         img_c = 1
         for img in sorted(test.data["imgs"]):
