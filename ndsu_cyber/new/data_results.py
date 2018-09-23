@@ -74,14 +74,14 @@ def show_results(tests):
     while len(tests):
         print("current tests length: " + str(len(tests)))
         for test in tests:
-            print("current test id: " + str(test.data["id"]))
+            print("\ncurrent test id: " + str(test.data["id"]))
             for key, value in test.data.items():
                 if key == "reviewed_imgs":
                     reviewed = value
                 elif key == "skipped_imgs":
                     skipped = value
 
-            print("if\t" + str(reviewed) + " <= " + str(total_imgs) +
+            print("if " + str(reviewed) + " <= " + str(total_imgs) +
                   " + " + str(LENIENCY) + " and")
             print(str(reviewed) + " > " + str(last_r) + " or " +
                   str(skipped) + " < " + str(last_s) + " and")
