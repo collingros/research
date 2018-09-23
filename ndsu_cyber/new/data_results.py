@@ -1,10 +1,6 @@
 import os
 
 
-LENIENCY = 30
-# how much leniency should be given for accuracy results
-
-
 class Test:
     def __init__(self):
         self.data = {"path": "",
@@ -37,7 +33,7 @@ def print_tests(tests, custom):
     print("*END OF " + custom + "*")
 
 
-def show_results(tests):
+def show_results(tests, LENIENCY):
     '''
     SHITTY, INEFFICIENT, NOT WHAT I WANT, but keeping it for now as
     last resort (in case i'm too stupid to figure this out)
@@ -185,5 +181,5 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
     add_data(tests, result_path)
 
 #print_tests(tests, "INITIAL RESULTS")
-show_results(tests)
+show_results(tests, 30)
 
