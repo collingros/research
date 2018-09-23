@@ -71,7 +71,9 @@ def show_results(tests):
     last_s = tests[0].data["total_imgs"]
     last_r = 0
     # tests[0] should have the same total_imgs number as the rest
+    old_len = -1
     while len(tests):
+        cur_len = len(tests)
         print("current test length: " + str(len(tests)))
         for test in tests:
             for key, value in test.data.items():
@@ -91,6 +93,8 @@ def show_results(tests):
                 last_s = skipped
                 best_tests.append(test)
                 tests.remove(test)
+        if old_len == cur_len:
+            break
 
     print_tests(best_tests, "BEST TESTS")
 
