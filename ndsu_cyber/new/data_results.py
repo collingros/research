@@ -83,7 +83,7 @@ def show_results(tests):
 
             print("if " + str(reviewed) + " <= " + str(total_imgs) +
                   " + " + str(LENIENCY) + " and")
-            print(str(reviewed) + " > " + str(last_r) + " + " +
+            print(str(reviewed) + " > " + str(last_r) + " - " +
                   str(LENIENCY) + " and " +
                   str(skipped) + " < " + str(last_s) + " + " +
                   str(LENIENCY) + " and")
