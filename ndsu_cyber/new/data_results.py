@@ -89,7 +89,7 @@ def show_results(tests):
                 # if the num of detected faces is about the same as the num
                 # of images and the current value is better than the last
                 # set new max
-                last_id.append(test.data["id"])
+                last_ids.append(test.data["id"])
                 last_r = reviewed
                 last_s = skipped
                 best_tests.append(test)
