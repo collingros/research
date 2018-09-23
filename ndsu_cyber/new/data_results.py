@@ -63,6 +63,7 @@ def show_results(tests):
         input()
     '''
 
+    total_imgs = tests[0].data["total_imgs"]
     best_tests = []
     test_c = 0
     while test_c < 10:
@@ -72,13 +73,13 @@ def show_results(tests):
         # tests[0] should have the same total_imgs number as the rest
 
         for test in tests:
-            for key, value in test.items():
+            for key, value in test.data.items():
                 if key == "reviewed_imgs":
                     reviewed = value
                 elif key == "skipped_imgs":
                     skipped = value
 
-            if (reviewed <= test.data["total_imgs"] + LENIENCY and
+            if (reviewed <= total_imgs + LENIENCY and
                 reviewed > last_r or skipped < last_s):
                 # if the num of detected faces is about the same as the num
                 # of images and the current value is better than the last
