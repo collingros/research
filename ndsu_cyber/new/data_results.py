@@ -44,8 +44,9 @@ def show_pics(tests):
 
         img_c = 1
         for img in sorted(test.data["imgs"]):
-            img_name = "TEST #" + str(test.data["id"]) + "\tIMG #" + \
-                       str(img_c) + "/" + str(len(test.data["imgs"]))
+            img_name = "TEST #" + str(test.data["id"]) + "(" + str(img_c) + \
+                       "/" + str(len(tests)) + ")\tIMG #" + str(img_c) + \
+                       "/" + str(len(test.data["imgs"]))
             cv2_img = cv2.imread(img, 0)
             cv2.resize(cv2_img, (150, 100))
             cv2.imshow(img_name, cv2_img)
