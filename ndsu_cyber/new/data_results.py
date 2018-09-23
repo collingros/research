@@ -71,31 +71,36 @@ def show_results(tests):
     last_s = tests[0].data["total_imgs"]
     last_r = 0
     # tests[0] should have the same total_imgs number as the rest
-    old_len = -1
     while len(tests):
-        cur_len = len(tests)
-        print("current test length: " + str(len(tests)))
+        print("current tests length: " + str(len(tests)))
         for test in tests:
+            print("current test id: " + str(test.data["id"]))
             for key, value in test.data.items():
                 if key == "reviewed_imgs":
                     reviewed = value
                 elif key == "skipped_imgs":
                     skipped = value
 
+            print("if\t" + str(reviewed) + " <= " + str(total_imgs) +
+                  " + " + str(LENIENCY) + " and")
+            print(str(reviewed) + " > " + str(last_r) + " or " +
+                  str(skipped) + " < " + str(last_s) + " and")
+            print(str(test.data["id"] " not in " str(last_ids))
             if (reviewed <= total_imgs + LENIENCY and
                 reviewed > last_r or skipped < last_s and
                 test.data["id"] not in last_ids):
                 # if the num of detected faces is about the same as the num
                 # of images and the current value is better than the last
                 # set new max
+
+                print("PASSED IF")
                 last_ids.append(test.data["id"])
                 last_r = reviewed
                 last_s = skipped
                 best_tests.append(test)
-                old_len = len(tests)
                 tests.remove(test)
-        if old_len == cur_len:
-            break
+            print("FAILED IF")
+
 
     print_tests(best_tests, "BEST TESTS")
 
