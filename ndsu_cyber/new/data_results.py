@@ -68,22 +68,22 @@ def show_results(tests, LENIENCY):
     last_r = 0
     # tests[0] should have the same total_imgs number as the rest
     while len(best_tests) > 10 and LENIENCY >= 0:
-        print("current tests length: " + str(len(tests)))
+        #print("current tests length: " + str(len(tests)))
         for test in best_tests:
-            print("\ncurrent test id: " + str(test.data["id"]))
+            #print("\ncurrent test id: " + str(test.data["id"]))
             for key, value in test.data.items():
                 if key == "reviewed_imgs":
                     reviewed = value
                 elif key == "skipped_imgs":
                     skipped = value
 
-            print("if " + str(reviewed) + " <= " + str(total_imgs) +
-                  " + " + str(LENIENCY) + " and")
-            print(str(reviewed) + " > " + str(last_r) + " - " +
-                  str(LENIENCY) + " and " +
-                  str(skipped) + " < " + str(last_s) + " + " +
-                  str(LENIENCY) + " and")
-            print(str(test.data["id"]) + " not in " + str(last_ids))
+            #print("if " + str(reviewed) + " <= " + str(total_imgs) +
+            #      " + " + str(LENIENCY) + " and")
+            #print(str(reviewed) + " > " + str(last_r) + " - " +
+            #      str(LENIENCY) + " and " +
+            #      str(skipped) + " < " + str(last_s) + " + " +
+            #      str(LENIENCY) + " and")
+            #print(str(test.data["id"]) + " not in " + str(last_ids))
 
             if ((reviewed <= total_imgs + LENIENCY) and
                 ((reviewed > last_r - LENIENCY) and
@@ -93,13 +93,14 @@ def show_results(tests, LENIENCY):
                 # of images and the current value is better than the last
                 # set new max
 
-                print("PASSED IF")
+                #print("PASSED IF")
                 last_ids.append(test.data["id"])
                 last_r = reviewed
                 last_s = skipped
                 tmp_tests.append(test)
             else:
-                print("FAILED IF")
+                pass
+                #print("FAILED IF")
         best_tests = tmp_tests
         LENIENCY -= 1
 
