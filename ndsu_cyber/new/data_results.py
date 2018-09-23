@@ -33,12 +33,6 @@ def print_tests(tests):
 
 
 def show_results(tests):
-    print("test data saved\nsort by:")
-    print("\t[1] Accuracy (<=100)\n\t[2] SF")
-    print("\t[3] MN\n\t[4] Resolution")
-    print("\t[5] Cascade\n\t")
-    choice = input()
-
     ordered_acc = []
     last_acc = -1
     for test in tests:
@@ -47,9 +41,14 @@ def show_results(tests):
         if last_acc == -1 and acc <= 100:
             last_acc = acc
         elif last_acc != -1 and acc > last_acc and acc <= 100:
+            print("adding test!!")
             ordered_acc.append(test)
 
+    print("before cutoff")
+    print(ordered_acc)
     ordered_acc = ordered_acc[-10:]
+    print("after cutoff")
+    print(ordered_acc)
 
     print("tests with the highest accuracy (top 10: lowest to highest)")
     for test in ordered_acc:
