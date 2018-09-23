@@ -65,12 +65,16 @@ def show_results(tests):
 
     total_imgs = tests[0].data["total_imgs"]
     best_tests = []
-    test_c = 0
-    while test_c < 10:
-        last_r = 0
-        # making worst possible outcomes for initial last_r and last_s
-        last_s = tests[0].data["total_imgs"]
-        # tests[0] should have the same total_imgs number as the rest
+    last_ids = []
+
+    # making worst possible outcomes for initial last_r and last_s
+    last_s = tests[0].data["total_imgs"]
+    last_r = 0
+    # tests[0] should have the same total_imgs number as the rest
+    while len(tests):
+
+
+
 
         for test in tests:
             for key, value in test.data.items():
@@ -80,15 +84,16 @@ def show_results(tests):
                     skipped = value
 
             if (reviewed <= total_imgs + LENIENCY and
-                reviewed > last_r or skipped < last_s):
+                reviewed > last_r or skipped < last_s and
+                test.data["id"] not in last_ids):
                 # if the num of detected faces is about the same as the num
                 # of images and the current value is better than the last
                 # set new max
-
+                last_id.append(test.data["id"])
                 last_r = reviewed
                 last_s = skipped
                 best_tests.append(test)
-        test_c += 1
+                tests.remove(test)
 
     print_tests(best_tests, "BEST TESTS")
 
