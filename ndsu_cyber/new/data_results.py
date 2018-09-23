@@ -37,14 +37,19 @@ def print_tests(tests, custom):
 def show_pics(tests):
     print("*BEGINNING OF SHOW_PICS*")
     for test in tests:
+        tmp_tests = []
+        tmp_tests.append(test)
         print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
+        print_tests(test)
+
         img_c = 1
         for img in sorted(test.data["imgs"]):
-            img_name = "IMG #" + str(img_c) + "/" + str(len(test.data["imgs"]))
+            img_name = "TEST #" + str(test.data["id"]) + "\tIMG #" + 
+                       str(img_c) + "/" + str(len(test.data["imgs"]))
             cv2_img = cv2.imread(img, 0)
             cv2.resize(cv2_img, (150, 100))
             cv2.imshow(img_name, cv2_img)
-            cv2.waitKey(20)
+            cv2.waitKey(50)
             cv2.destroyAllWindows()
 
             img_c += 1
@@ -161,6 +166,19 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
     add_data(tests, result_path)
 
+best_tests = show_results(tests, leniency)
+while 1:
+    print("[1]:\tView \"Best\" test data")
+    print("[2]:\tView \"All\" test data")
+    print("[3]:\tView \"Best\" test images")
+    choice = int(input())
+
+    if choice == (1):
+        leniency = int(input("leniency?\t"))
+    elif choice == (2):
+        print_tests(tests)
+    elif choice == (3):
+        cshow_pics(best_tests)
 leniency = int(input("leniency?\t"))
 show_results(tests, leniency)
 
