@@ -67,7 +67,7 @@ def show_results(tests, LENIENCY):
     last_s = tests[0].data["total_imgs"]
     last_r = 0
     # tests[0] should have the same total_imgs number as the rest
-    while LENIENCY != 0:
+    while len(best_tests) > 10 and LENIENCY >= 0:
         print("current tests length: " + str(len(tests)))
         for test in best_tests:
             print("\ncurrent test id: " + str(test.data["id"]))
@@ -101,7 +101,7 @@ def show_results(tests, LENIENCY):
             else:
                 print("FAILED IF")
         best_tests = tmp_tests
-        LENIENCY -= 5
+        LENIENCY -= 1
 
 
     print_tests(best_tests, "BEST TESTS")
