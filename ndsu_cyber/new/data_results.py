@@ -64,6 +64,7 @@ def show_results(tests):
     '''
 
     best_tests = []
+    test_c = 0
     while test_c < 10:
         last_r = 0
         # making worst possible outcomes for initial last_r and last_s
@@ -86,6 +87,7 @@ def show_results(tests):
                 last_r = reviewed
                 last_s = skipped
                 best_tests.append(test)
+        test_c += 1
 
     print_tests(best_tests, "BEST TESTS")
 
