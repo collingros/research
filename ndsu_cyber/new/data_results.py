@@ -100,7 +100,8 @@ def show_results(tests):
                 last_s = skipped
                 best_tests.append(test)
                 tests.remove(test)
-            print("FAILED IF")
+            else:
+                print("FAILED IF")
 
 
     print_tests(best_tests, "BEST TESTS")
