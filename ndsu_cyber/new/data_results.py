@@ -41,7 +41,7 @@ def show_pics(tests):
         img_c = 1
         for img in test.data["imgs"]:
             input("\tRETURN FOR NEXT IMAGE")
-            print("IMG #" + str(img_c) "/" + str(len(test.data["imgs"])))
+            print("IMG #" + str(img_c) + "/" + str(len(test.data["imgs"])))
             call(["gpicview", img])
             img_c += 1
         input("RETURN FOR NEXT SET")
