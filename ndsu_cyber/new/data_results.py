@@ -59,7 +59,7 @@ def show_pics(tests):
     while 1:
         choice = int(input())
         if choice == 1:
-            test_choice = int(input("\t\tEnter the specific test id:\t")
+            test_choice = int(input("\t\tEnter the specific test id:\t"))
             test_c = 1
             for test in tests:
                 if test.data["id"] != test_choice:
