@@ -77,7 +77,7 @@ def show_pics(tests):
     print("*END OF SHOW_PICS*")
 
 
-def show_results(tests, LENIENCY):
+def get_best(tests, LENIENCY):
     total_imgs = tests[0].data["total_imgs"]
     best_tests = tests
     last_ids = []
@@ -110,8 +110,7 @@ def show_results(tests, LENIENCY):
         best_tests = tmp_tests
         LENIENCY -= 1
 
-    print_tests(best_tests, "BEST TESTS")
-    show_pics(best_tests)
+    return best_tests
 
 
 def add_data(tests, path):
@@ -188,15 +187,18 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
 leniency = int(input("leniency:\t"))
 while 1:
+    print("\n\t*MAIN*\n
     print("[1]:\tView \"Best\" test data")
     print("[2]:\tView \"All\" test data")
     print("[3]:\tView \"Best\" test images")
 
     choice = int(input())
     if choice == (1):
-        show_results(tests, leniency)
+        best_tests = get_best(tests, leniency)
+        print_tests(best_tests)
     elif choice == (2):
         print_tests(tests)
     elif choice == (3):
+        best_tests = get_best(tests, leniency)
         show_pics(best_tests)
 
