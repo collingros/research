@@ -83,7 +83,7 @@ def show_pics(tests):
                     img_c += 1
                 test_c += 1
 
-                exit_c = input("PRESS ENTER FOR NEXT SET OR Q TO BREAK")
+                exit_c = input("PRESS ENTER FOR NEXT SET OR Q TO BREAK:\t")
                 if exit_c == "q":
                     break
 
@@ -109,7 +109,7 @@ def show_pics(tests):
                     img_c += 1
                 test_c += 1
 
-                exit_c = input("PRESS ENTER FOR NEXT SET OR Q TO BREAK")
+                exit_c = input("PRESS ENTER FOR NEXT SET OR Q TO BREAK:\t")
                 if exit_c == "q":
                     break
 
