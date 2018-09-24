@@ -187,7 +187,7 @@ for result_dir in sorted(os.listdir(parent_dir + "out/")):
 
 leniency = int(input("leniency:\t"))
 while 1:
-    print("\n\t*MAIN*\n
+    print("\n\t*MAIN*\n")
     print("[1]:\tView \"Best\" test data")
     print("[2]:\tView \"All\" test data")
     print("[3]:\tView \"Best\" test images")
