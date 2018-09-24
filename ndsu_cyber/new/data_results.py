@@ -23,6 +23,7 @@ class Test:
 
 
 def print_tests(tests, custom, layout=0):
+                # custom is just for clarity
                 # purpose for layouts: to omit printing of long lists when
                 # unnecessary
     omit_1 = ["path", "train", "stats", "labels", "imgs"]
@@ -195,9 +196,9 @@ while 1:
     choice = int(input())
     if choice == (1):
         best_tests = get_best(tests, leniency)
-        print_tests(best_tests)
+        print_tests(best_tests, "BEST TESTS")
     elif choice == (2):
-        print_tests(tests)
+        print_tests(tests, "ALL TESTS")
     elif choice == (3):
         best_tests = get_best(tests, leniency)
         show_pics(best_tests)
