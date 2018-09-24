@@ -53,28 +53,58 @@ def print_tests(tests, custom, layout=0):
 
 def show_pics(tests):
     print("*BEGINNING OF SHOW_PICS*")
-    test_c = 1
-    for test in tests:
-        tmp_tests = []
-        tmp_tests.append(test)
-        print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
-        print_tests(tmp_tests, "TEST #" + str(test.data["id"]), 1)
+    print("[1]:\tShow ONE specific test's images")
+    print("[2]:\tShow ALL tests' images")
+    print("[3]:\tExit")
+    while 1:
+        choice = int(input())
+        if choice == 1:
+            test_choice = int(input("\t\tEnter the specific test id:\t")
+            test_c = 1
+            for test in tests:
+                if test.data["id"] != test_choice:
+                    continue
+                tmp_tests = []
+                tmp_tests.append(test)
+                print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
+                print_tests(tmp_tests, "TEST #" + str(test.data["id"]), 1)
 
-        img_c = 1
-        for img in sorted(test.data["imgs"]):
-            img_name = "TEST #" + str(test.data["id"]) + "(" + str(test_c) + \
-                       "/" + str(len(tests)) + ")\tIMG #" + str(img_c) + \
-                       "/" + str(len(test.data["imgs"]))
-            cv2_img = cv2.imread(img, 0)
-            cv2.resize(cv2_img, (150, 100))
-            cv2.imshow(img_name, cv2_img)
-            cv2.waitKey(50)
-            cv2.destroyAllWindows()
+                img_c = 1
+                for img in sorted(test.data["imgs"]):
+                    cv2_img = cv2.imread(img, 0)
+                    cv2.resize(cv2_img, (150, 100))
+                    cv2.imshow(img_name, cv2_img)
+                    cv2.waitKey(50)
+                    cv2.destroyAllWindows()
 
-            img_c += 1
-        test_c += 1
+                    img_c += 1
+                test_c += 1
 
-        input("RETURN FOR NEXT SET")
+                input("PRESS ENTER FOR NEXT SET")
+
+        elif choice == 2:
+            test_c = 1
+            for test in tests:
+                tmp_tests = []
+                tmp_tests.append(test)
+                print("\t***PICTURES FOR TEST " + str(test.data["id"]) + "***")
+                print_tests(tmp_tests, "TEST #" + str(test.data["id"]), 1)
+
+                img_c = 1
+                for img in sorted(test.data["imgs"]):
+                    cv2_img = cv2.imread(img, 0)
+                    cv2.resize(cv2_img, (150, 100))
+                    cv2.imshow(img_name, cv2_img)
+                    cv2.waitKey(50)
+                    cv2.destroyAllWindows()
+
+                    img_c += 1
+                test_c += 1
+
+                input("PRESS ENTER FOR NEXT SET")
+
+        elif choice == 3:
+            break
     print("*END OF SHOW_PICS*")
 
 
@@ -192,6 +222,7 @@ while 1:
     print("[1]:\tView \"Best\" test data")
     print("[2]:\tView \"All\" test data")
     print("[3]:\tView \"Best\" test images")
+    print("[4]:\tExit")
 
     choice = int(input())
     if choice == (1):
@@ -202,4 +233,7 @@ while 1:
     elif choice == (3):
         best_tests = get_best(tests, leniency)
         show_pics(best_tests)
+    elif choice == (4):
+        break
+
 
