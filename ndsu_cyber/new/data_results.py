@@ -53,10 +53,10 @@ def print_tests(tests, custom, layout=0):
 
 def show_pics(tests):
     print("*BEGINNING OF SHOW_PICS*")
-    print("[1]:\tShow ONE specific test's images")
-    print("[2]:\tShow ALL tests' images")
-    print("[3]:\tExit")
     while 1:
+        print("[1]:\tShow ONE specific test's images")
+        print("[2]:\tShow ALL tests' images")
+        print("[3]:\tExit")
         choice = int(input())
         if choice == 1:
             test_choice = int(input("\t\tEnter the specific test id:\t"))
@@ -220,20 +220,23 @@ leniency = int(input("leniency:\t"))
 while 1:
     print("\n\t*MAIN*\n")
     print("[1]:\tView \"Best\" test data")
-    print("[2]:\tView \"All\" test data")
-    print("[3]:\tView \"Best\" test images")
-    print("[4]:\tExit")
+    print("[2]:\tView \"Best\" test images")
+    print("[3]:\tView \"All\" test data")
+    print("[4]:\tView \"All\" test images")
+    print("[5]:\tExit")
 
     choice = int(input())
     if choice == (1):
         best_tests = get_best(tests, leniency)
         print_tests(best_tests, "BEST TESTS")
-    elif choice == (2):
-        print_tests(tests, "ALL TESTS")
     elif choice == (3):
+        print_tests(tests, "ALL TESTS")
+    elif choice == (2):
         best_tests = get_best(tests, leniency)
         show_pics(best_tests)
-    elif choice == (4):
+    elif choice == (5):
         break
+    elif choice == (4):
+        show_pics(tests)
 
 
