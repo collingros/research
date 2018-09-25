@@ -7,14 +7,14 @@ import argparse
 import time
 
 
-def init(C):
+def init(SETTINGS):
     face_rec = cv2.face.LBPHFaceRecognizer_create()
-    cascade = cv2.CascadeClassifier(C["CASCADE"])
+    cascade = cv2.CascadeClassifier(SETTINGS["CASCADE"])
 
     try:
-        face_rec.read(C["TRAIN_DATA"])
+        face_rec.read(SETTINGS["TRAIN_DATA"])
     except:
-        print("error: \"" + C["TRAIN_DATA"] + "\" not found")
+        print("error: \"" + SETTINGS["TRAIN_DATA"] + "\" not found")
         print("\tyou need to run the trainer first!")
         exit()
 
@@ -30,7 +30,7 @@ def get_labels():
 
 
 def get_settings():
-    C = {
+    SETTINGS = {
     "SF":0,
     "MN":0,
     "TEST_HEIGHT":0,
@@ -79,58 +79,58 @@ def get_settings():
     args = parser.parse_args()
 
     if args.s: # SCALE FACTOR
-        C["SF"] = args.s
+        SETTINGS["SF"] = args.s
     if args.n: # MINIMUM NEIGHBORS
-        C["MN"] = args.n
+        SETTINGS["MN"] = args.n
     if args.p: # TEST HEIGHT
-        C["TEST_HEIGHT"] = args.p
+        SETTINGS["TEST_HEIGHT"] = args.p
     if args.t: # TARGET
-        C["TARGET"] = args.t
+        SETTINGS["TARGET"] = args.t
     if args.w: # INCLUDE WARM PICTURES?
-        C["WARM"] = args.w
+        SETTINGS["WARM"] = args.w
     if args.c: # INCLUDE COLD PICTURES?
-        C["COLD"] = args.c
+        SETTINGS["COLD"] = args.c
     if args.l: # INCLUDE LOW PICTURES?
-        C["LOW"] = args.l
+        SETTINGS["LOW"] = args.l
     if args.m: # INCLUDE MED PICTURES?
-        C["MED"] = args.m
+        SETTINGS["MED"] = args.m
     if args.b: # INCLUDE HIGH PICTURES?
-        C["HIGH"] = args.b
+        SETTINGS["HIGH"] = args.b
     if args.e: # INCLUDE GLASSES PICTURES?
-        C["GLASSES"] = args.e
+        SETTINGS["GLASSES"] = args.e
     if args.f: # INCLUDE HAT PICTURES?
-        C["HAT"] = args.f
+        SETTINGS["HAT"] = args.f
     if args.v: # INCLUDE VANILLA PICTURES?
-        C["VANILLA"] = args.v
+        SETTINGS["VANILLA"] = args.v
     if args.x: # INCLUDE PROFILES PICTURES?
-        C["PROFILES"] = args.x
+        SETTINGS["PROFILES"] = args.x
     if args.a: # INCLUDE ANGLED POS PICTURES?
-        C["ANGLED"] = args.a
+        SETTINGS["ANGLED"] = args.a
     if args.o: # INCLUDE CENTER POS PICTURES?
-        C["CENTER"] = args.o
+        SETTINGS["CENTER"] = args.o
     if args.g: # INCLUDE SHADOWS LIGHTING ANGLES?
-        C["SHADOWS"] = args.g
+        SETTINGS["SHADOWS"] = args.g
     if args.i: # INCLUDE CENTER LIGHTING ANGLES?
-        C["CENTER_SHADOW"] = args.i
+        SETTINGS["CENTER_SHADOW"] = args.i
     if args.j: # INCLUDE CENTER LIGHTING ANGLES?
-        C["BEARDS"] = args.j
+        SETTINGS["BEARDS"] = args.j
     #if args.z: # DATA FILE
-    #    C["DATA"] = args.z
+    #    SETTINGS["DATA"] = args.z
     # ASSUMING THAT THE DATAFILE IS IN "./train.yml"
-    C["TRAIN_DATA"] = "train.yml"
+    SETTINGS["TRAIN_DATA"] = "train.yml"
     # ASSUMING THAT THE PICTURES TO BE TESTED ARE IN "./test"
-    C["TEST_DIR"] = "train"
-    C["RATIO"] = 1.5
+    SETTINGS["TEST_DIR"] = "test"
+    SETTINGS["RATIO"] = 1.5
     if args.z:
-        C["CASCADE"] = args.z
+        SETTINGS["CASCADE"] = args.z
     if args.d: # CONFIDENCE CUTOFF THRESHOLD
-        C["CONF_CUTOFF"] = args.d
+        SETTINGS["CONF_CUTOFF"] = args.d
     if args.k:
-        C["OUT"] = args.k
+        SETTINGS["OUT"] = args.k
 
-    return C
+    return SETTINGS
 
-def save_face(x, y, w, h, pic, name, c, pic_path, C):
+def save_face(x, y, w, h, pic, name, c, pic_path, SETTINGS):
     font = cv2.FONT_HERSHEY_SIMPLEX
     color = (255, 0, 0)
     stroke = 2
@@ -139,9 +139,9 @@ def save_face(x, y, w, h, pic, name, c, pic_path, C):
     cv2.putText(pic, name, (x, y - 10), font,
                 1, (0, 0, 255), stroke, cv2.LINE_AA)
 
-    pic = cv2.resize(pic, (int(300 * C["RATIO"]), 300))
+    pic = cv2.resize(pic, (int(300 * SETTINGS["RATIO"]), 300))
 
-    string = os.getcwd() + "/" + C["OUT"] + "/" + name + str(c) + ".JPG"
+    string = os.getcwd() + "/" + SETTINGS["OUT"] + "/" + name + str(c) + ".JPG"
     cv2.imwrite(string, pic)
 
 def show_face(x, y, w, h, pic, name):
@@ -157,141 +157,137 @@ def show_face(x, y, w, h, pic, name):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-def add_face(pic_path, name, C, labels, dir_count, face_cascade, faces,
-             people, c):
+def guess(pic_path, name, SETTINGS, labels, dir_count, face_rec, cascade, faces,
+          people, c):
     pic = cv2.imread(pic_path, 0)
 
-    pic = cv2.resize(pic, (int(C["TEST_HEIGHT"] * C["RATIO"]),
-                     C["TEST_HEIGHT"]))
+    pic = cv2.resize(pic, (int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"]),
+                     SETTINGS["TEST_HEIGHT"]))
 
-    detected_faces = face_cascade.detectMultiScale(pic, scaleFactor = C["SF"],
-						                  minNeighbors = C["MN"]);
+    detected_faces = cascade.detectMultiScale(pic, scaleFactor=SETTINGS["SF"],
+						                           minNeighbors=SETTINGS["MN"]);
     if not len(detected_faces):
         data["skipped"] += 1
 
     # might want to delete for and
     # (x, y, w, h) = face[0]
+
+    #TODO: add a size restriction. clean up. <CDG>
+
     else:
         for (x, y, w, h) in detected_faces:
             data["reviewed"] += 1
             #show_face(x, y, w, h, pic, name)
 
-            save_face(x, y, w, h, pic, name, c, pic_path, C)
+            #save_face(x, y, w, h, pic, name, c, pic_path, SETTINGS)
 
             face = pic[y:y+h, x:x+w]
-            faces.append(face)
-            labels.append(dir_count)
+            label, conf = face_rec.predict(face)
+            guess = labels[label]
+
+            if name == guess:
+                data["c_names"] += 1
+            else:
+                data["w_names"] += 1
 
 
-def train_data(fr, cascade, data, C):
+def train_data(face_rec, cascade, data, SETTINGS):
     people = {}
-    labels = []
-    faces = []
+    labels = get_labels()
     dir_count = 0
-    c = 0
+    total_imgs = 0 # imgs found, including those that are ignored from
+                   # custom user input filters
     img_count = 0
 
-    dir_test = sorted(os.listdir(C["TEST_DIR"]))
+    dir_test = sorted(os.listdir(SETTINGS["TEST_DIR"]))
     for pic_owner in dir_test:
         name = pic_owner
-        pic_owner_path = C["TEST_DIR"] + "/" + pic_owner
+        pic_owner_path = SETTINGS["TEST_DIR"] + "/" + pic_owner
 
-        if pic_owner == "1" or pic_owner == "2" and not C["BEARDS"]:
+        if pic_owner == "1" or pic_owner == "2" and not SETTINGS["BEARDS"]:
             continue
 
         people[pic_owner] = dir_count
         pics = sorted(os.listdir(pic_owner_path))
-
         for pic_type in pics:
             dir_pos_path = pic_owner_path + "/" + pic_type
 
-            if pic_type == "glasses" and not C["GLASSES"]:
+            if pic_type == "glasses" and not SETTINGS["GLASSES"]:
                 continue
-
-            if pic_type == "hat" and not C["HAT"]:
+            if pic_type == "hat" and not SETTINGS["HAT"]:
                 continue
-
-            if pic_type == "vanilla" and not C["VANILLA"]:
+            if pic_type == "vanilla" and not SETTINGS["VANILLA"]:
                 continue
 
             dir_pos = sorted(os.listdir(dir_pos_path))
-
             for pos in dir_pos:
                 dir_angle_path = dir_pos_path + "/" + pos
 
-                if (pos == "pos_0" or pos == "pos_4") and not C["PROFILES"]:
+                if (pos == "pos_0" or pos == "pos_4") and not 
+                    SETTINGS["PROFILES"]:
                     continue
-
-                if (pos == "pos_1" or pos == "pos_3") and not C["ANGLED"]:
+                if (pos == "pos_1" or pos == "pos_3") and not
+                    SETTINGS["ANGLED"]:
                     continue
-
-                if pos == "pos_2" and not C["CENTER"]:
+                if pos == "pos_2" and not SETTINGS["CENTER"]:
                     continue
 
                 dir_angle = sorted(os.listdir(dir_angle_path))
-
                 for angle in dir_angle:
                     dir_img_path = dir_angle_path + "/" + angle
 
-                    if angle == "angle_4" and not C["CENTER_SHADOW"]:
+                    if angle == "angle_4" and not SETTINGS["CENTER_SHADOW"]:
                         continue
-
-                    if angle != "angle_4" and not C["SHADOWS"]:
+                    if angle != "angle_4" and not SETTINGS["SHADOWS"]:
                         continue
 
                     dir_img = sorted(os.listdir(dir_img_path))
-
-                    x = 0
+                    img_num = 0
                     for img in dir_img:
-                        c += 1
+                        total_imgs += 1
                         pic = ""
                         img_path = dir_img_path + "/" + img
 
-                        if x == 0 and C["WARM"]:
+                        if img_num == 0 and SETTINGS["WARM"]:
                             pic = img_path
-
-                        elif x == 1 and C["COLD"]:
+                        elif img_num == 1 and SETTINGS["COLD"]:
                             pic = img_path
-
-                        elif x == 2 and C["LOW"]:
+                        elif img_num == 2 and SETTINGS["LOW"]:
                             pic = img_path
-
-                        elif x == 3 and C["MED"]:
+                        elif img_num == 3 and SETTINGS["MED"]:
                             pic = img_path
-
-                        elif x == 4 and C["HIGH"]:
+                        elif img_num == 4 and SETTINGS["HIGH"]:
                             pic = img_path
 
                         if pic:
                             img_count += 1
-                            add_face(pic, name, C, labels, dir_count, cascade,
-                                     faces, people, c)
-                        x += 1
+                            guess(pic, name, SETTINGS, labels, dir_count, face_rec,
+                                  cascade, people, c)
+                        img_num += 1
         dir_count += 1
-    save_train(fr, faces, labels)
-    save_labels(people)
 
     return img_count
 
 data = {
     "skipped":0, # number of pictures skipped
     "reviewed":0, # number of pictures reviewed
+    "c_names":0, # number of correctly guessed images
+    "w_names":0, # number of wrongly guessed images
 }
-C = get_settings()
+SETTINGS = get_settings()
 
 start_time = time.time()
 
 face_rec, cascade = init()
 
-
-img_count = train_data(face_recognizer, cascade, data, C)
+img_count = train_data(face_rec, cascade, data, SETTINGS)
 
 finish_time = time.time()
 sec = finish_time - start_time
 
 
 print("finished\t" + str(sec) + " secs\n")
-for k, v in sorted(C.items()):
+for k, v in sorted(SETTINGS.items()):
     print(str(k) + "\t" + str(v))
 print("\n")
 for k, v in sorted(data.items()):
