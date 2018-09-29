@@ -28,7 +28,7 @@ def print_all(SETTINGS, data):
         print(str(k) + "\t" + str(v))
 
 
-def init(SETTINGS):
+def init(SETTINGS, data):
     cascade = SETTINGS["CASCADE"]
     data["face_rec"] = cv2.face.LBPHFaceRecognizer_create()
     data["cascade"] = cv2.CascadeClassifier(cascade)
