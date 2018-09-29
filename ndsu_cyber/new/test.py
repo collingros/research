@@ -263,6 +263,8 @@ def guess(SETTINGS, data, pic_path, name):
 
 
 def test_data(SETTINGS, data):
+    dir_count = 0
+
     dir_test = sorted(os.listdir(SETTINGS["TEST_DIR"]))
     for pic_owner in dir_test:
         name = pic_owner
@@ -326,6 +328,7 @@ def test_data(SETTINGS, data):
                             guess(SETTINGS, data, pic_path, name)
 
                         img_num += 1
+        dir_count += 1
 
 
 data = {

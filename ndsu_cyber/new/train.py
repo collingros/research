@@ -247,6 +247,8 @@ def add_face(SETTINGS, data, pic_path, name):
 
 
 def train_data(SETTINGS, data):
+    dir_count = 0
+
     train_dir = SETTINGS["TRAIN_DIR"]
     dir_test = sorted(os.listdir(train_dir))
     for pic_owner in dir_test:
@@ -312,6 +314,7 @@ def train_data(SETTINGS, data):
                             add_face(SETTINGS, data, pic_path, name)
 
                         img_num += 1
+        dir_count += 1
 
 
 data = {
