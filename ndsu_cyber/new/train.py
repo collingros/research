@@ -228,8 +228,8 @@ def add_face(SETTINGS, data, pic_path, name):
 
                 # for leniency on small variances between detected face
                 # measurements and theoretical face measurements
-                close_perc = 100 * ((adjusted_area - abs(adjusted_area -
-                             actual_area) / adjusted_area)
+                close_perc = (100 * ((adjusted_area - (abs(adjusted_area -
+                             actual_area) / adjusted_area))))
                 if close_perc < 80:
                     data["size_skipped"] += 1
                     continue
