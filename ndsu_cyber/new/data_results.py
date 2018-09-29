@@ -1,3 +1,10 @@
+# Collin Gros
+#
+# TODO:
+# debug
+# account for changes in scriptstat format and directory name changes
+# <CG>
+
 import os
 from subprocess import call
 import cv2

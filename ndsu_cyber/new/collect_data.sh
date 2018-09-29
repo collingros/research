@@ -14,11 +14,11 @@ do
             for res in 150 480 960 1920 3456
             do
                 ((dir_n++))
-                rm -r out/opt$dir_n
-                mkdir out/opt$dir_n
+                rm -r out/opt_$dir_n
+                mkdir out/opt_$dir_n
                 python3 train.py -s $sf -n $mn -p $res -l 1 -v 1 -o 1 -i 1 \
-                -z $casc -g 1 -a 1 -k out/opt$dir_n \
-                > ./out/opt$dir_n/scriptstat.txt
+                -z $casc -g 1 -a 1 -k out/opt_$dir_n \
+                > ./out/opt_$dir_n/scriptstat.txt
             done
         done
     done

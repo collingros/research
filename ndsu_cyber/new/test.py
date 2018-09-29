@@ -13,6 +13,10 @@
 # change testing script to account for extra settings
 # <CG>
 
+# IDEA:
+# only use first detected face, no others
+# <CG>
+
 import cv2
 import os
 import csv
@@ -22,26 +26,42 @@ import argparse
 import time
 
 
-def init(SETTINGS):
-    face_rec = cv2.face.LBPHFaceRecognizer_create()
-    cascade = cv2.CascadeClassifier(SETTINGS["CASCADE"])
+def print_all(SETTINGS, data):
+    for k, v in sorted(SETTINGS.items()):
+        print(str(k) + "\t" + str(v))
 
+    print("\n")
+
+    for k, v in sorted(data.items()):
+        print(str(k) + "\t" + str(v))
+
+
+def init(SETTINGS):
+    cascade = SETTINGS["CASCADE"]
+    data["cascade"] = cv2.CascadeClassifier(cascade)
+
+    face_rec = cv2.face.LBPHFaceRecognizer_create()
+    data["face_rec"] = face_rec
+
+    trained_data = SETTINGS["TRAIN_DATA"]
     try:
-        face_rec.read(SETTINGS["TRAIN_DATA"])
+        face_rec.read(trained_data)
     except:
-        print("error: \"" + SETTINGS["TRAIN_DATA"] + "\" not found")
+        print("error: \"" + trained_data + "\" not found")
         print("\tyou need to run the trainer first!")
         exit()
 
-    return face_rec, cascade
 
+def get_labels(SETTINGS, data):
+    filename = SETTINGS["LABELS"]
+    out_dir = SETTINGS["OUT"]
+    file_path = os.getcwd() + "/" + out_dir + "/" + filename
 
-def get_labels(filename):
-    with open(filename, "rb") as f:
+    with open(file_path, "rb") as f:
         og_labels = pickle.load(f)
-    labels = {v:k for k, v in og_labels.items()}
 
-    return labels
+    labels = {v:k for k, v in og_labels.items()}
+    data["labels"] = labels
 
 
 def get_settings():
@@ -71,7 +91,8 @@ def get_settings():
     # TRAIN_DATA, TEST_DIR, RATIO are not set by the user
     "TRAIN_DATA":"train.yml",
     "TEST_DIR":"test",
-    "RATIO":1.5
+    "RATIO":1.5,
+    "LABELS":"labels.pickle"
     }
 
     parser = argparse.ArgumentParser(description="testing LBPH")
@@ -151,26 +172,36 @@ def get_settings():
     return SETTINGS
 
 
-def save_face(x, y, w, h, pic, name, id, pic_path, SETTINGS):
+def save_face(SETTINGS, coords, pic, pic_path, name, id_num):
+    x = coords[0]
+    y = coords[1]
+    w = coords[2]
+    h = coords[3]
+    RED = (255, 0, 0)
+    GREEN = (0, 255, 0)
+    BLUE = (0, 0, 255)
     font = cv2.FONT_HERSHEY_SIMPLEX
     stroke = 2
+    line_type = cv2.LINE_AA
 
     # for drawing the rectangle around the person's face
-    cv2.rectangle(pic, (x, y), (x + w, y + h), (255, 0, 0), stroke)
+    cv2.rectangle(pic, (x, y), (x + w, y + h), RED, stroke)
 
-    # for drawing the persons' predicted name on the screen
+    # for drawing the persons' name on the screen
     cv2.putText(pic, name, (x, y - 10), font,
-                1, (0, 0, 255), stroke, cv2.LINE_AA)
+                1, BLUE, stroke, line_type)
 
     # for drawing area value on screen
     cv2.putText(pic, str(w * h), (x, y + h + 10), font,
-                1, (0, 255, 0), stroke, cv2.LINE_AA)
+                1, GREEN, stroke, line_type)
 
-    pic = cv2.resize(pic, (int(300 * SETTINGS["RATIO"]), 300))
+    ratio = SETTINGS["RATIO"]
+    pic = cv2.resize(pic, (int(300 * ratio), 300))
 
-    string = (os.getcwd() + "/" + SETTINGS["OUT"] + "/" + name +
-              str(id) + ".JPG")
-    cv2.imwrite(string, pic)
+    out_dir = SETTINGS["OUT"]
+    file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
+              str(id_num) + ".JPG")
+    cv2.imwrite(file_path, pic)
 
     # FOR SHOWING THE FACE ONLY:
     #   cv2.imshow("pic", pic)
@@ -178,7 +209,7 @@ def save_face(x, y, w, h, pic, name, id, pic_path, SETTINGS):
     #   cv2.destroyAllWindows()
 
 
-def guess(face_rec, cascade, data, SETTINGS, labels, pic_path, name):
+def guess(SETTINGS, data, pic_path, name):
     pic = cv2.imread(pic_path, 0)
 
     # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
@@ -186,6 +217,7 @@ def guess(face_rec, cascade, data, SETTINGS, labels, pic_path, name):
     resized_height = SETTINGS["TEST_HEIGHT"]
     pic = cv2.resize(pic, (resized_width, resized_height))
 
+    cascade = data["cascade"]
     detected_faces = cascade.detectMultiScale(pic, scaleFactor=SETTINGS["SF"],
 						                           minNeighbors=SETTINGS["MN"]);
     if not len(detected_faces):
@@ -194,6 +226,7 @@ def guess(face_rec, cascade, data, SETTINGS, labels, pic_path, name):
     else:
         data["total_faces"] += 1
 
+        # could potentially just use the first face detected, but nah
         for (x, y, w, h) in detected_faces:
             restrict_area = SETTINGS["RESTRICT_SIZE"]
             if restrict_area > 0:
@@ -210,22 +243,25 @@ def guess(face_rec, cascade, data, SETTINGS, labels, pic_path, name):
                     data["size_skipped"] += 1
                     continue
 
-        data["processed_faces"] += 1
+            data["processed_faces"] += 1
 
-        save_face(x, y, w, h, pic, guess, data["processed_faces"],
-                  pic_path, SETTINGS)
+            coords = [x, y, w, h]
+            id_num = data["processed_faces"]
+            save_face(SETTINGS, coords, pic, pic_path, name, id_num)
 
-        face = pic[y:y+h, x:x+w]
-        label, conf = face_rec.predict(face)
-        guess = labels[label]
+            face = pic[y:y+h, x:x+w]
+            label, conf = face_rec.predict(face)
 
-        if name == guess:
-            data["c_names"] += 1
-        else:
-            data["w_names"] += 1
+            labels = data["labels"]
+            guess = labels[label]
+
+            if name == guess:
+                data["c_names"][name] = conf
+            else:
+                data["w_names"][name] = conf
 
 
-def test_data(face_rec, cascade, data, SETTINGS, labels):
+def test_data(SETTINGS, data):
     dir_test = sorted(os.listdir(SETTINGS["TEST_DIR"]))
     for pic_owner in dir_test:
         name = pic_owner
@@ -286,7 +322,7 @@ def test_data(face_rec, cascade, data, SETTINGS, labels):
 
                         if pic_path:
                             data["reviewed"] += 1
-                            guess(face_rec, cascade, data, SETTINGS, labels, pic_path, name)
+                            guess(SETTINGS, data, pic_path, name)
 
                         img_num += 1
 
@@ -295,42 +331,28 @@ data = {
     "time":0,
     "skipped":0, # number of pictures where a face wasn't detected
     "reviewed":0, # number of pictures reviewed (filtered images)
-    "c_names":0, # number of correctly guessed images
-    "w_names":0, # number of wrongly guessed images
+    "c_names":{}, # each correctly id'd person and their confidence value
+    "w_names":{}, # each wrongly id'd person and their confidence value
     "total_faces":0, # total of detected faces (to tell if multiple are detected
                      # in a single image)
     "size_skipped":0, # detected faces skipped due to size restriction
-    "processed_faces":0 # number of faces predicted
+    "processed_faces":0, # number of faces predicted
+    "labels":[], # for id'ing each face from training data
+    "face_rec":cv2.face_LBPHFaceRecognizer, # for training data using LBPH
+    "cascade":cv2.CascadeClassifier # for detecting faces using a classifier
 }
 
 start_time = time.time()
 
 SETTINGS = get_settings()
-labels = get_labels(SETTINGS["LABELS"])
-face_rec, cascade = init(SETTINGS)
 
-test_data(face_rec, cascade, data, SETTINGS, labels)
+init(SETTINGS, data)
+get_labels(SETTINGS, data)
+
+test_data(SETTINGS, data)
 
 finish_time = time.time()
 data["time"] = finish_time - start_time
 
-# ** CHANGED HOW OUTPUT LOOKS: WILL NEED TO EDIT THE DATA_RESULTS.PY FILE **
-for k, v in sorted(SETTINGS.items()):
-    print(str(k) + "\t" + str(v))
+print_all(SETTINGS, data)
 
-print("\n")
-
-for k, v in sorted(data.items()):
-    print(str(k) + "\t" + str(v))
-
-# MOVE TO DATA_RESULTS.PY
-
-# if extra faces were detected, total_faces will be greater than reviewed
-#face_diff = abs(data["reviewed"] - data["total_faces"])
-# if too little faces were detected, total_faces will be less than reviewed
-#if data["total_faces"] > data["reviewed"]:
-#    print("extra_faces\t" + str(face_diff))
-#elif data["total_faces"] < data["reviewed"]:
-#    print("extra_faces\t" + str(face_diff))
-#else:
-#    print("extra_faces\t" + str(0))
