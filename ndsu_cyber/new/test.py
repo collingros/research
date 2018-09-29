@@ -36,7 +36,7 @@ def print_all(SETTINGS, data):
         print(str(k) + "\t" + str(v))
 
 
-def init(SETTINGS):
+def init(SETTINGS, data):
     cascade = SETTINGS["CASCADE"]
     data["cascade"] = cv2.CascadeClassifier(cascade)
 
@@ -90,6 +90,7 @@ def get_settings():
 
     # TRAIN_DATA, TEST_DIR, RATIO are not set by the user
     "TRAIN_DATA":"train.yml",
+    "TRAIN_DIR":"train",
     "TEST_DIR":"test",
     "RATIO":1.5,
     "LABELS":"labels.pickle"
@@ -237,8 +238,8 @@ def guess(SETTINGS, data, pic_path, name):
 
                 # for leniency on small variances between detected face
                 # measurements and theoretical face measurements
-                close_perc = 100 * ((adjusted_area - abs(adjusted_area -
-                             actual_area) / adjusted_area)
+                close_perc = (100 * ((adjusted_area - (abs(adjusted_area -
+                             actual_area) / adjusted_area))))
                 if close_perc < 80:
                     data["size_skipped"] += 1
                     continue
