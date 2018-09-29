@@ -265,10 +265,11 @@ def guess(SETTINGS, data, pic_path, name):
 def test_data(SETTINGS, data):
     dir_count = 0
 
-    dir_test = sorted(os.listdir(SETTINGS["TEST_DIR"]))
+    test_dir = SETTINGS["TEST_DIR"]
+    dir_test = sorted(os.listdir(test_dir))
     for pic_owner in dir_test:
         name = pic_owner
-        pic_owner_path = SETTINGS["TEST_DIR"] + "/" + pic_owner
+        pic_owner_path = test_dir + "/" + pic_owner
 
         if pic_owner == "1" or pic_owner == "2" and not SETTINGS["BEARDS"]:
             continue

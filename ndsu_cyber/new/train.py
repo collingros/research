@@ -253,7 +253,7 @@ def train_data(SETTINGS, data):
     dir_test = sorted(os.listdir(train_dir))
     for pic_owner in dir_test:
         name = pic_owner
-        pic_owner_path = SETTINGS["TEST_DIR"] + "/" + pic_owner
+        pic_owner_path = train_dir + "/" + pic_owner
 
         if pic_owner == "1" or pic_owner == "2" and not SETTINGS["BEARDS"]:
             continue
