@@ -1,10 +1,3 @@
-# Collin Gros
-#
-# TODO:
-# finish updating train.py (this file) with the new SETTINGS options
-# from test.py (at the bottom)
-# <CG>
-
 import cv2
 import os
 import csv
@@ -28,6 +21,7 @@ def get_settings():
     "SF":0,
     "MN":0,
     "TEST_HEIGHT":0,
+    "TARGET":"",
     "WARM":0,
     "COLD":0,
     "LOW":0,
@@ -41,16 +35,9 @@ def get_settings():
     "CENTER":0,
     "CASCADE":"",
     "CONF_CUTOFF":0,
-    "SHADOWS":0,
+    "SHADOWS":0, # added for training
     "CENTER_SHADOW":0,
-    "BEARDS":0,
-    "OUT":"",
-    "RESTRICT_SIZE":0,
-
-    # TRAIN_DATA, TEST_DIR, RATIO are not set by the user
-    "TRAIN_DATA":"train.yml",
-    "TEST_DIR":"test",
-    "RATIO":1.5
+    "BEARDS":0
     }
 
     parser = argparse.ArgumentParser(description="testing LBPH")
@@ -75,7 +62,6 @@ def get_settings():
     parser.add_argument("-i", help="include center lighting angle", type=int)
     parser.add_argument("-j", help="include people with large beards", type=int)
     parser.add_argument("-k", help="pic out dir", type=str)
-    parser.add_argument("-q", help="enable size restriction (pixels)", type=int)
 
     args = parser.parse_args()
 
@@ -85,6 +71,8 @@ def get_settings():
         SETTINGS["MN"] = args.n
     if args.p: # TEST HEIGHT
         SETTINGS["TEST_HEIGHT"] = args.p
+    if args.t: # TARGET
+        SETTINGS["TARGET"] = args.t
     if args.w: # INCLUDE WARM PICTURES?
         SETTINGS["WARM"] = args.w
     if args.c: # INCLUDE COLD PICTURES?
@@ -113,49 +101,49 @@ def get_settings():
         SETTINGS["CENTER_SHADOW"] = args.i
     if args.j: # INCLUDE CENTER LIGHTING ANGLES?
         SETTINGS["BEARDS"] = args.j
-    if args.z: # CASCADE FILE, HAAR OR LBPH (XML)
+    #if args.z: # DATA FILE
+    #    SETTINGS["DATA"] = args.z
+    # ASSUMING THAT THE DATAFILE IS IN "./train.yml"
+    SETTINGS["TRAIN_DATA"] = "train.yml"
+    # ASSUMING THAT THE PICTURES TO BE TESTED ARE IN "./test"
+    SETTINGS["TEST_DIR"] = "train"
+    SETTINGS["RATIO"] = 1.5
+    if args.z:
         SETTINGS["CASCADE"] = args.z
     if args.d: # CONFIDENCE CUTOFF THRESHOLD
         SETTINGS["CONF_CUTOFF"] = args.d
-    if args.k: # DIRECTORY TO SAVE CAPTURED FACES TO
+    if args.k:
         SETTINGS["OUT"] = args.k
-    if args.q: # SIZE RESTRICTION ON DETECTED FACE AREA
-               # (GOAL IS TO TRY TO MINIMIZE FALSE POSITIVES)
-
-               # MAKE SURE TO SET RESTRICT_SIZE RELATIVE TO
-               # WHAT YOU THINK THE AREA OF A FACE WOULD BE
-               # AT 100 x 150 RESOLUTION (e.g., 30)
-        SETTINGS["RESTRICT_SIZE"] = args.q
 
     return SETTINGS
 
-
-def save_face(x, y, w, h, pic, name, id, pic_path, SETTINGS):
+def save_face(x, y, w, h, pic, name, total_imgs, pic_path, SETTINGS):
     font = cv2.FONT_HERSHEY_SIMPLEX
+    color = (255, 0, 0)
     stroke = 2
 
-    # for drawing the rectangle around the person's face
     cv2.rectangle(pic, (x, y), (x + w, y + h), (255, 0, 0), stroke)
-
-    # for drawing the persons' predicted name on the screen
     cv2.putText(pic, name, (x, y - 10), font,
                 1, (0, 0, 255), stroke, cv2.LINE_AA)
-
-    # for drawing area value on screen
-    cv2.putText(pic, str(w * h), (x, y + h + 10), font,
-                1, (0, 255, 0), stroke, cv2.LINE_AA)
 
     pic = cv2.resize(pic, (int(300 * SETTINGS["RATIO"]), 300))
 
     string = (os.getcwd() + "/" + SETTINGS["OUT"] + "/" + name +
-              str(id) + ".JPG")
+              str(total_imgs) + ".JPG")
     cv2.imwrite(string, pic)
 
-    # FOR SHOWING THE FACE ONLY:
-    #   cv2.imshow("pic", pic)
-    #   cv2.waitKey(0)
-    #   cv2.destroyAllWindows()
+def show_face(x, y, w, h, pic, name):
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    color = (255, 0, 0)
+    stroke = 2
 
+    cv2.rectangle(pic, (x, y), (x + w, y + h), (255, 0, 0), stroke)
+    cv2.putText(pic, name, (x, y - 10), font,
+                1, (0, 0, 255), stroke, cv2.LINE_AA)
+
+    cv2.imshow("pic", pic)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 def add_face(pic_path, name, SETTINGS, labels, dir_count, cascade, faces,
              people, total_imgs):
@@ -184,7 +172,6 @@ def add_face(pic_path, name, SETTINGS, labels, dir_count, cascade, faces,
 
             save_face(x, y, w, h, pic, name, total_imgs, pic_path, SETTINGS)
 
-            # ** WHAT MAKES TRAIN UNIQUE AS TO TEST
             face = pic[y:y+h, x:x+w]
             faces.append(face)
             labels.append(dir_count)
@@ -305,194 +292,3 @@ try:
 except:
     print("skipped_is_0")
 
-# TEST.PY
-import cv2
-import os
-import csv
-import pickle
-import numpy as np
-import argparse
-import time
-
-
-def init(SETTINGS):
-    face_rec = cv2.face.LBPHFaceRecognizer_create()
-    cascade = cv2.CascadeClassifier(SETTINGS["CASCADE"])
-
-    try:
-        face_rec.read(SETTINGS["TRAIN_DATA"])
-    except:
-        print("error: \"" + SETTINGS["TRAIN_DATA"] + "\" not found")
-        print("\tyou need to run the trainer first!")
-        exit()
-
-    return face_rec, cascade
-
-
-def get_labels(filename):
-    with open(filename, "rb") as f:
-        og_labels = pickle.load(f)
-    labels = {v:k for k, v in og_labels.items()}
-
-    return labels
-
-
-
-
-
-def guess(face_rec, cascade, data, SETTINGS, labels, pic_path, name):
-    pic = cv2.imread(pic_path, 0)
-
-    # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
-    resized_width = int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"])
-    resized_height = SETTINGS["TEST_HEIGHT"]
-    pic = cv2.resize(pic, (resized_width, resized_height))
-
-    detected_faces = cascade.detectMultiScale(pic, scaleFactor=SETTINGS["SF"],
-						                           minNeighbors=SETTINGS["MN"]);
-    if not len(detected_faces):
-        data["skipped"] += 1
-
-    else:
-        data["total_faces"] += 1
-
-        for (x, y, w, h) in detected_faces:
-            restrict_area = SETTINGS["RESTRICT_SIZE"]
-            if restrict_area > 0:
-                # we have to adjust area according to the height ratio
-                # adjusted_area = (res_height / ratio_height)^2 * restrict_area
-                actual_area = w * h
-                adjusted_area = pow((resized_height / 100), 2) * restrict_area
-
-                # for leniency on small variances between detected face
-                # measurements and theoretical face measurements
-                close_perc = 100 * ((adjusted_area - abs(adjusted_area -
-                             actual_area) / adjusted_area)
-                if close_perc < 80:
-                    data["size_skipped"] += 1
-                    continue
-
-        data["processed_faces"] += 1
-
-        save_face(x, y, w, h, pic, guess, data["processed_faces"],
-                  pic_path, SETTINGS)
-
-        face = pic[y:y+h, x:x+w]
-        label, conf = face_rec.predict(face)
-        guess = labels[label]
-
-        if name == guess:
-            data["c_names"] += 1
-        else:
-            data["w_names"] += 1
-
-
-def test_data(face_rec, cascade, data, SETTINGS, labels):
-    dir_test = sorted(os.listdir(SETTINGS["TEST_DIR"]))
-    for pic_owner in dir_test:
-        name = pic_owner
-        pic_owner_path = SETTINGS["TEST_DIR"] + "/" + pic_owner
-
-        if pic_owner == "1" or pic_owner == "2" and not SETTINGS["BEARDS"]:
-            continue
-
-        pics = sorted(os.listdir(pic_owner_path))
-        for pic_type in pics:
-            dir_pos_path = pic_owner_path + "/" + pic_type
-
-            if pic_type == "glasses" and not SETTINGS["GLASSES"]:
-                continue
-            if pic_type == "hat" and not SETTINGS["HAT"]:
-                continue
-            if pic_type == "vanilla" and not SETTINGS["VANILLA"]:
-                continue
-
-            dir_pos = sorted(os.listdir(dir_pos_path))
-            for pos in dir_pos:
-                dir_angle_path = dir_pos_path + "/" + pos
-
-                if ((pos == "pos_0" or pos == "pos_4") and not
-                    SETTINGS["PROFILES"]):
-                    continue
-                if ((pos == "pos_1" or pos == "pos_3") and not
-                    SETTINGS["ANGLED"]):
-                    continue
-                if pos == "pos_2" and not SETTINGS["CENTER"]:
-                    continue
-
-                dir_angle = sorted(os.listdir(dir_angle_path))
-                for angle in dir_angle:
-                    dir_img_path = dir_angle_path + "/" + angle
-
-                    if angle == "angle_4" and not SETTINGS["CENTER_SHADOW"]:
-                        continue
-                    if angle != "angle_4" and not SETTINGS["SHADOWS"]:
-                        continue
-
-                    dir_img = sorted(os.listdir(dir_img_path))
-                    img_num = 0
-                    for img in dir_img:
-                        pic_path = ""
-                        img_path = dir_img_path + "/" + img
-
-                        if img_num == 0 and SETTINGS["WARM"]:
-                            pic_path = img_path
-                        elif img_num == 1 and SETTINGS["COLD"]:
-                            pic_path = img_path
-                        elif img_num == 2 and SETTINGS["LOW"]:
-                            pic_path = img_path
-                        elif img_num == 3 and SETTINGS["MED"]:
-                            pic_path = img_path
-                        elif img_num == 4 and SETTINGS["HIGH"]:
-                            pic_path = img_path
-
-                        if pic_path:
-                            data["reviewed"] += 1
-                            guess(face_rec, cascade, data, SETTINGS, labels, pic_path, name)
-
-                        img_num += 1
-
-
-data = {
-    "time":0,
-    "skipped":0, # number of pictures where a face wasn't detected
-    "reviewed":0, # number of pictures reviewed (filtered images)
-    "c_names":0, # number of correctly guessed images
-    "w_names":0, # number of wrongly guessed images
-    "total_faces":0, # total of detected faces (to tell if multiple are detected
-                     # in a single image)
-    "size_skipped":0, # detected faces skipped due to size restriction
-    "processed_faces":0 # number of faces predicted
-}
-
-start_time = time.time()
-
-SETTINGS = get_settings()
-labels = get_labels(SETTINGS["LABELS"])
-face_rec, cascade = init(SETTINGS)
-
-test_data(face_rec, cascade, data, SETTINGS, labels)
-
-finish_time = time.time()
-data["time"] = finish_time - start_time
-
-# ** CHANGED HOW OUTPUT LOOKS: WILL NEED TO EDIT THE DATA_RESULTS.PY FILE **
-for k, v in sorted(SETTINGS.items()):
-    print(str(k) + "\t" + str(v))
-
-print("\n")
-
-for k, v in sorted(data.items()):
-    print(str(k) + "\t" + str(v))
-
-# MOVE TO DATA_RESULTS.PY
-
-# if extra faces were detected, total_faces will be greater than reviewed
-#face_diff = abs(data["reviewed"] - data["total_faces"])
-# if too little faces were detected, total_faces will be less than reviewed
-#if data["total_faces"] > data["reviewed"]:
-#    print("extra_faces\t" + str(face_diff))
-#elif data["total_faces"] < data["reviewed"]:
-#    print("extra_faces\t" + str(face_diff))
-#else:
-#    print("extra_faces\t" + str(0))
