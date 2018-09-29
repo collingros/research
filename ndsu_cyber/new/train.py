@@ -270,11 +270,11 @@ def train_data(SETTINGS, data):
             for pos in dir_pos:
                 dir_angle_path = dir_pos_path + "/" + pos
 
-                if (pos == "pos_0" or pos == "pos_4") and not
-                    SETTINGS["PROFILES"]:
+                if ((pos == "pos_0" or pos == "pos_4") and not
+                    SETTINGS["PROFILES"]):
                     continue
-                if (pos == "pos_1" or pos == "pos_3") and not
-                    SETTINGS["ANGLED"]:
+                if ((pos == "pos_1" or pos == "pos_3") and not
+                    SETTINGS["ANGLED"]):
                     continue
                 if pos == "pos_2" and not SETTINGS["CENTER"]:
                     continue
