@@ -205,16 +205,19 @@ def save_face(SETTINGS, coords, pic_path, name, id_num):
 
 
 def add_face(SETTINGS, data, pic_path, name):
-    pic = cv2.imread(pic_path, 0) # opens in grayscale
+    color_pic = cv2.imread(pic_path, 1) # opens in color
+    gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
 
     # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
     resized_width = int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"])
     resized_height = SETTINGS["TEST_HEIGHT"]
-    pic = cv2.resize(pic, (resized_width, resized_height))
+    color_pic = cv2.resize(pic, (resized_width, resized_height))
+    gray_pic = cv2.resize(pic, (resized_width, resized_height))
 
     cascade = data["cascade"]
-    detected_faces = cascade.detectMultiScale(pic, scaleFactor=SETTINGS["SF"],
-						                           minNeighbors=SETTINGS["MN"]);
+    detected_faces = cascade.detectMultiScale(gray_pic,
+                                              scaleFactor=SETTINGS["SF"],
+					                          minNeighbors=SETTINGS["MN"]);
     if not len(detected_faces):
         data["skipped"] += 1
 
