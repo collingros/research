@@ -3,6 +3,7 @@
 # TODO:
 # debug
 # change runscript and data parser to account for output format changes
+# fix line thinness on high res output images
 # <CG>
 
 # IDEA:
@@ -175,10 +176,17 @@ def get_settings():
 
 
 def save_face(SETTINGS, coords, pic, name, id_num):
-    x = coords[0]
-    y = coords[1]
-    w = coords[2]
-    h = coords[3]
+    ratio = SETTINGS["RATIO"]
+    origin_height = SETTINGS["TEST_HEIGHT"]
+    origin_width = int(origin_height * SETTINGS["RATIO"])
+    resized_height = 300
+    resized_width = int(resized_height * ratio)
+
+    x = coords[0] * (resized_width / origin_width)
+    y = coords[1] * (resized_height / origin_height)
+    w = coords[2] * (resized_width / origin_width)
+    h = coords[3] * (resized_height / origin_height)
+
     BLUE = (255, 0, 0)
     GREEN = (0, 255, 0)
     RED = (0, 0, 255)
@@ -186,7 +194,6 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     stroke = 2
     line_type = cv2.LINE_AA
 
-    ratio = SETTINGS["RATIO"]
 
     # for drawing the rectangle around the person's face
     cv2.rectangle(pic, (x, y), (x + w, y + h), BLUE, stroke)
@@ -217,8 +224,9 @@ def add_face(SETTINGS, data, pic_path, name, dir_count):
     gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
 
     # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
-    resized_width = int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"])
+    ratio = SETTINGS["RATIO"]
     resized_height = SETTINGS["TEST_HEIGHT"]
+    resized_width = int(resized_height * ratio)
     color_pic = cv2.resize(color_pic, (resized_width, resized_height))
     gray_pic = cv2.resize(gray_pic, (resized_width, resized_height))
 
