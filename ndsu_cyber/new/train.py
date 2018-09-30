@@ -182,25 +182,11 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     resized_height = 300
     resized_width = int(resized_height * ratio)
 
-    print("coords: ")
-    print(coords)
-    quo = resized_width / origin_width
-    print("quo: " + str(quo))
-    print("int(stuff):")
     x = int(coords[0] * (resized_width / origin_width))
-    print(x)
     y = int(coords[1] * (resized_height / origin_height))
     w = int(coords[2] * (resized_width / origin_width))
     h = int(coords[3] * (resized_height / origin_height))
-
     resized = [x, y, w, h]
-    print("resized: ")
-    print(resized)
-    #x = coords[0]
-    #y = coords[1]
-    #w = coords[2]
-    #h = coords[3]
-
 
     BLUE = (255, 0, 0)
     GREEN = (0, 255, 0)
@@ -228,9 +214,9 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     cv2.imwrite(file_path, pic)
 
     # FOR SHOWING THE FACE ONLY:
-    #   cv2.imshow("pic", pic)
-    #   cv2.waitKey(0)
-    #   cv2.destroyAllWindows()
+    cv2.imshow("pic", pic)
+    cv2.waitKey(50)
+    cv2.destroyAllWindows()
 
 
 def add_face(SETTINGS, data, pic_path, name, dir_count):
