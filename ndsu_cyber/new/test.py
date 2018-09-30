@@ -55,12 +55,12 @@ def init(SETTINGS, data):
     print("cwd")
     print(os.getcwd())
     trained_data = out_dir + "/" + SETTINGS["TRAIN_DATA"]
-    try:
-        face_rec.read(trained_data)
-    except:
-        print("error: \"" + trained_data + "\" not found")
-        print("\tyou need to run the trainer first!")
-        exit()
+    #try:
+    face_rec.read(trained_data)
+    #except:
+    #    print("error: \"" + trained_data + "\" not found")
+    #    print("\tyou need to run the trainer first!")
+    #    exit()
 
 
 def get_labels(SETTINGS, data):
