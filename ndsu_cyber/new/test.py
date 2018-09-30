@@ -295,7 +295,7 @@ def guess(SETTINGS, data, pic_path, name):
             else:
                 data["w_names"][name] = conf
 
-            save_face(SETTINGS, coords, color_pic, name, id_num, conf, corr)
+            save_face(SETTINGS, coords, color_pic, guess, id_num, conf, corr)
 
 
 def test_data(SETTINGS, data):
