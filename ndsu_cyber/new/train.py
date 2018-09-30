@@ -209,6 +209,7 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     stroke = 2
     line_type = cv2.LINE_AA
 
+    pic = cv2.resize(pic, (int(300 * ratio), 300))
 
     # for drawing the rectangle around the person's face
     cv2.rectangle(pic, (x, y), (x + w, y + h), BLUE, stroke)
@@ -220,8 +221,6 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     # for drawing area value on screen
     cv2.putText(pic, str(w * h), (x, y + h + 10), font,
                 0.5, GREEN, stroke, line_type)
-
-    pic = cv2.resize(pic, (int(300 * ratio), 300))
 
     out_dir = SETTINGS["OUT"]
     file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
