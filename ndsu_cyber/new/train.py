@@ -247,7 +247,7 @@ def add_face(SETTINGS, data, pic_path, name):
             id_num = data["processed_faces"]
             save_face(SETTINGS, coords, pic_path, name, id_num)
 
-            face = pic[y:y+h, x:x+w]
+            face = gray_pic[y:y+h, x:x+w]
             data["faces"].append(face)
             data["labels"].append(name)
 
