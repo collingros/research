@@ -164,8 +164,7 @@ def get_settings():
     return SETTINGS
 
 
-def save_face(SETTINGS, coords, pic_path, name, id_num):
-    pic = cv2.imread(pic_path, 1) # opens in color
+def save_face(SETTINGS, coords, color_pic, name, id_num):
     x = coords[0]
     y = coords[1]
     w = coords[2]
@@ -245,7 +244,7 @@ def add_face(SETTINGS, data, pic_path, name):
 
             coords = [x, y, w, h]
             id_num = data["processed_faces"]
-            save_face(SETTINGS, coords, pic_path, name, id_num)
+            save_face(SETTINGS, coords, color_pic, name, id_num)
 
             face = gray_pic[y:y+h, x:x+w]
             data["faces"].append(face)
