@@ -183,11 +183,11 @@ def save_face(SETTINGS, coords, pic, name, id_num):
 
     # for drawing the persons' name on the screen
     cv2.putText(pic, name, (x, y - 10), font,
-                1, RED, stroke, line_type)
+                0.5, RED, stroke, line_type)
 
     # for drawing area value on screen
     cv2.putText(pic, str(w * h), (x, y + h + 10), font,
-                1, GREEN, stroke, line_type)
+                0.5, GREEN, stroke, line_type)
 
     pic = cv2.resize(pic, (int(300 * ratio), 300))
 
