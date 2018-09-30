@@ -164,7 +164,8 @@ def get_settings():
     return SETTINGS
 
 
-def save_face(SETTINGS, coords, pic, pic_path, name, id_num):
+def save_face(SETTINGS, coords, pic_path, name, id_num):
+    pic = cv2.imread(pic_path, 1) # opens in color
     x = coords[0]
     y = coords[1]
     w = coords[2]
@@ -202,7 +203,7 @@ def save_face(SETTINGS, coords, pic, pic_path, name, id_num):
 
 
 def add_face(SETTINGS, data, pic_path, name):
-    pic = cv2.imread(pic_path, 0)
+    pic = cv2.imread(pic_path, 0) # opens in grayscale
 
     # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
     resized_width = int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"])
@@ -239,7 +240,7 @@ def add_face(SETTINGS, data, pic_path, name):
 
             coords = [x, y, w, h]
             id_num = data["processed_faces"]
-            save_face(SETTINGS, coords, pic, pic_path, name, id_num)
+            save_face(SETTINGS, coords, pic_path, name, id_num)
 
             face = pic[y:y+h, x:x+w]
             data["faces"].append(face)
