@@ -169,28 +169,27 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     y = coords[1]
     w = coords[2]
     h = coords[3]
-    RED = (255, 0, 0)
+    BLUE = (255, 0, 0)
     GREEN = (0, 255, 0)
-    BLUE = (0, 0, 255)
+    RED = (0, 0, 255)
     font = cv2.FONT_HERSHEY_SIMPLEX
     stroke = 2
     line_type = cv2.LINE_AA
 
     ratio = SETTINGS["RATIO"]
-    pic = cv2.resize(pic, (int(300 * ratio), 300))
-
 
     # for drawing the rectangle around the person's face
-    cv2.rectangle(pic, (x, y), (x + w, y + h), RED, stroke)
+    cv2.rectangle(pic, (x, y), (x + w, y + h), BLUE, stroke)
 
     # for drawing the persons' name on the screen
     cv2.putText(pic, name, (x, y - 10), font,
-                1, BLUE, stroke, line_type)
+                1, RED, stroke, line_type)
 
     # for drawing area value on screen
     cv2.putText(pic, str(w * h), (x, y + h + 10), font,
                 1, GREEN, stroke, line_type)
 
+    pic = cv2.resize(pic, (int(300 * ratio), 300))
 
     out_dir = SETTINGS["OUT"]
     file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
