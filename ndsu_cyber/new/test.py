@@ -173,33 +173,42 @@ def get_settings():
     return SETTINGS
 
 
-def save_face(SETTINGS, coords, pic_path, name, id_num):
-    pic = cv2.imread(pic_path, 1) # opens in color
+def save_face(SETTINGS, coords, pic, name, id_num):
     x = coords[0]
     y = coords[1]
     w = coords[2]
     h = coords[3]
-    RED = (255, 0, 0)
+    BLUE = (255, 0, 0)
     GREEN = (0, 255, 0)
-    BLUE = (0, 0, 255)
+    RED = (0, 0, 255)
     font = cv2.FONT_HERSHEY_SIMPLEX
     stroke = 2
     line_type = cv2.LINE_AA
 
     ratio = SETTINGS["RATIO"]
-    pic = cv2.resize(pic, (int(300 * ratio), 300))
-
 
     # for drawing the rectangle around the person's face
-    cv2.rectangle(pic, (x, y), (x + w, y + h), RED, stroke)
+    cv2.rectangle(pic, (x, y), (x + w, y + h), BLUE, stroke)
 
     # for drawing the persons' name on the screen
     cv2.putText(pic, name, (x, y - 10), font,
-                1, BLUE, stroke, line_type)
+                0.5, RED, stroke, line_type)
 
     # for drawing area value on screen
     cv2.putText(pic, str(w * h), (x, y + h + 10), font,
-                1, GREEN, stroke, line_type)
+                0.5, GREEN, stroke, line_type)
+
+    pic = cv2.resize(pic, (int(300 * ratio), 300))
+
+    out_dir = SETTINGS["OUT"]
+    file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
+              str(id_num) + ".JPG")
+    cv2.imwrite(file_path, pic)
+
+    # FOR SHOWING THE FACE ONLY:
+    #   cv2.imshow("pic", pic)
+    #   cv2.waitKey(0)
+    #   cv2.destroyAllWindows()
 
 
     out_dir = SETTINGS["OUT"]
@@ -214,16 +223,19 @@ def save_face(SETTINGS, coords, pic_path, name, id_num):
 
 
 def guess(SETTINGS, data, pic_path, name):
-    pic = cv2.imread(pic_path, 0) # opens in grayscale
+    color_pic = cv2.imread(pic_path, 1) # opens in color
+    gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
 
     # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
     resized_width = int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"])
     resized_height = SETTINGS["TEST_HEIGHT"]
-    pic = cv2.resize(pic, (resized_width, resized_height))
+    color_pic = cv2.resize(color_pic, (resized_width, resized_height))
+    gray_pic = cv2.resize(gray_pic, (resized_width, resized_height))
 
     cascade = data["cascade"]
-    detected_faces = cascade.detectMultiScale(pic, scaleFactor=SETTINGS["SF"],
-						                           minNeighbors=SETTINGS["MN"]);
+    detected_faces = cascade.detectMultiScale(gray_pic,
+                                              scaleFactor=SETTINGS["SF"],
+					                          minNeighbors=SETTINGS["MN"]);
     if not len(detected_faces):
         data["skipped"] += 1
 
@@ -251,9 +263,10 @@ def guess(SETTINGS, data, pic_path, name):
 
             coords = [x, y, w, h]
             id_num = data["processed_faces"]
-            save_face(SETTINGS, coords, pic_path, name, id_num)
+            save_face(SETTINGS, coords, color_pic, name, id_num)
 
-            face = pic[y:y+h, x:x+w]
+            face_rec = data["face_rec"]
+            face = gray_pic[y:y+h, x:x+w]
             label, conf = face_rec.predict(face)
 
             labels = data["labels"]

@@ -248,7 +248,7 @@ def add_face(SETTINGS, data, pic_path, name):
 
             face = gray_pic[y:y+h, x:x+w]
             data["faces"].append(face)
-            data["labels"].append(name)
+            data["labels"].append(int(name))
 
 
 def train_data(SETTINGS, data):
