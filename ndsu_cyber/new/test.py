@@ -52,6 +52,8 @@ def init(SETTINGS, data):
     data["face_rec"] = face_rec
 
     out_dir = SETTINGS["OUT"]
+    print("cwd")
+    print(os.getcwd())
     trained_data = out_dir + "/" + SETTINGS["TRAIN_DATA"]
     try:
         face_rec.read(trained_data)
