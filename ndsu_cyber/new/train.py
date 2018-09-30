@@ -187,6 +187,12 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     #w = int(coords[2] * (resized_width / origin_width))
     #h = int(coords[3] * (resized_height / origin_height))
 
+    x = coords[0]
+    y = coords[1]
+    w = coords[2]
+    h = coords[3]
+
+
     BLUE = (255, 0, 0)
     GREEN = (0, 255, 0)
     RED = (0, 0, 255)
