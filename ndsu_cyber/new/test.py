@@ -50,7 +50,8 @@ def init(SETTINGS, data):
 
     face_rec = cv2.face.LBPHFaceRecognizer_create()
     data["face_rec"] = face_rec
-
+    print("oslistdir")
+    print(sorted(os.listdir(SETTINGS["OUT"])))
     trained_data = SETTINGS["TRAIN_DATA"]
     try:
         face_rec.read(trained_data)
