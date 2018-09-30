@@ -52,15 +52,13 @@ def init(SETTINGS, data):
     data["face_rec"] = face_rec
 
     out_dir = SETTINGS["OUT"]
-    print("cwd")
-    print(os.getcwd())
     trained_data = out_dir + "/" + SETTINGS["TRAIN_DATA"]
-    #try:
-    face_rec.read(trained_data)
-    #except:
-    #    print("error: \"" + trained_data + "\" not found")
-    #    print("\tyou need to run the trainer first!")
-    #    exit()
+    try:
+        face_rec.read(trained_data)
+    except:
+        print("error: \"" + trained_data + "\" not found")
+        print("\tyou need to run the trainer first!")
+        exit()
 
 
 def get_labels(SETTINGS, data):
@@ -225,7 +223,7 @@ def save_face(SETTINGS, coords, pic, name, id_num, conf, corr):
 
     # TESTING ONLY
     # for drawing confidence value on screen
-    cv2.putText(pic, str(conf), (x, y + h + 10), font,
+    cv2.putText(pic, str(conf), (x + w, y + h + 10), font,
                 0.5, PURP, stroke, line_type)
 
     out_dir = SETTINGS["OUT"]
