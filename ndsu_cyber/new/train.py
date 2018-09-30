@@ -164,7 +164,7 @@ def get_settings():
     return SETTINGS
 
 
-def save_face(SETTINGS, coords, color_pic, name, id_num):
+def save_face(SETTINGS, coords, pic, name, id_num):
     x = coords[0]
     y = coords[1]
     w = coords[2]
