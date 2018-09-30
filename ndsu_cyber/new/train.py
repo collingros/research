@@ -18,6 +18,15 @@ import argparse
 import time
 
 
+
+def dump(data):
+    data["cascade"] = None
+    data["face_rec"] = None
+    data["faces"] = []
+    data["labels"] = []
+    data["people"] = {}
+
+
 def print_all(SETTINGS, data):
     for k, v in sorted(SETTINGS.items()):
         print(str(k) + "\t" + str(v))
@@ -203,7 +212,7 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     #   cv2.destroyAllWindows()
 
 
-def add_face(SETTINGS, data, pic_path, name):
+def add_face(SETTINGS, data, pic_path, name, dir_count):
     color_pic = cv2.imread(pic_path, 1) # opens in color
     gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
 
@@ -248,7 +257,7 @@ def add_face(SETTINGS, data, pic_path, name):
 
             face = gray_pic[y:y+h, x:x+w]
             data["faces"].append(face)
-            data["labels"].append(int(name))
+            data["labels"].append(int(dir_count))
 
 
 def train_data(SETTINGS, data):
@@ -316,7 +325,7 @@ def train_data(SETTINGS, data):
 
                         if pic_path:
                             data["reviewed"] += 1
-                            add_face(SETTINGS, data, pic_path, name)
+                            add_face(SETTINGS, data, pic_path, name, dir_count)
 
                         img_num += 1
         dir_count += 1
@@ -345,10 +354,12 @@ init(SETTINGS, data)
 train_data(SETTINGS, data)
 
 finish_time = time.time()
-data["time"] = finish_time - start_time
+data["time"] = round((finish_time - start_time), 2)
 
 save_labels(SETTINGS, data)
 save_train(SETTINGS, data)
+
+dump(data) # need to empty the arrs/dicts for clean printing of important stats
 
 print_all(SETTINGS, data)
 
