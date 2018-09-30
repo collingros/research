@@ -184,8 +184,11 @@ def save_face(SETTINGS, coords, pic, name, id_num):
 
     print("coords: ")
     print(coords)
-
+    quo = resized_width / origin_width
+    print("quo: " + quo)
+    print("int(stuff):")
     x = int(coords[0] * (resized_width / origin_width))
+    print(x)
     y = int(coords[1] * (resized_height / origin_height))
     w = int(coords[2] * (resized_width / origin_width))
     h = int(coords[3] * (resized_height / origin_height))
