@@ -44,11 +44,12 @@ def save_labels(SETTINGS, data):
         pickle.dump(people, f)
 
 
-def save_train(SETTINGS, data, face_rec):
+def save_train(SETTINGS, data):
     faces = data["faces"]
     labels = data["labels"]
     filename = SETTINGS["TRAIN_DATA"]
     out_dir = SETTINGS["OUT"]
+    face_rec = data["face_rec"]
     file_path = os.getcwd() + "/" + out_dir + "/" + filename
 
     face_rec.train(faces, np.array(labels))
@@ -347,7 +348,7 @@ finish_time = time.time()
 data["time"] = finish_time - start_time
 
 save_labels(SETTINGS, data)
-save_train(SETTINGS, data, face_rec)
+save_train(SETTINGS, data)
 
 print_all(SETTINGS, data)
 
