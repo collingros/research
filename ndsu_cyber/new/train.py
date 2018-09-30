@@ -211,8 +211,8 @@ def add_face(SETTINGS, data, pic_path, name):
     # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
     resized_width = int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"])
     resized_height = SETTINGS["TEST_HEIGHT"]
-    color_pic = cv2.resize(pic, (resized_width, resized_height))
-    gray_pic = cv2.resize(pic, (resized_width, resized_height))
+    color_pic = cv2.resize(color_pic, (resized_width, resized_height))
+    gray_pic = cv2.resize(gray_pic, (resized_width, resized_height))
 
     cascade = data["cascade"]
     detected_faces = cascade.detectMultiScale(gray_pic,
