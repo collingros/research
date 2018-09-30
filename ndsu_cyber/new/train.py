@@ -19,7 +19,6 @@ import argparse
 import time
 
 
-
 def dump(data):
     data["cascade"] = None
     data["face_rec"] = None

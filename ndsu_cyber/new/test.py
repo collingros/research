@@ -26,6 +26,14 @@ import argparse
 import time
 
 
+def dump(data):
+    data["cascade"] = None
+    data["face_rec"] = None
+    data["faces"] = []
+    data["labels"] = []
+    data["people"] = {}
+
+
 def print_all(SETTINGS, data):
     for k, v in sorted(SETTINGS.items()):
         print(str(k) + "\t" + str(v))
@@ -173,24 +181,38 @@ def get_settings():
     return SETTINGS
 
 
-def save_face(SETTINGS, coords, pic, name, id_num):
-    x = coords[0]
-    y = coords[1]
-    w = coords[2]
-    h = coords[3]
+def save_face(SETTINGS, coords, pic, name, id_num, conf, corr):
+    ratio = SETTINGS["RATIO"]
+    origin_height = SETTINGS["TEST_HEIGHT"]
+    origin_width = int(origin_height * SETTINGS["RATIO"])
+    resized_height = 300
+    resized_width = int(resized_height * ratio)
+
+    x = int(coords[0] * (resized_width / origin_width))
+    y = int(coords[1] * (resized_height / origin_height))
+    w = int(coords[2] * (resized_width / origin_width))
+    h = int(coords[3] * (resized_height / origin_height))
+    resized = [x, y, w, h]
+
     BLUE = (255, 0, 0)
     GREEN = (0, 255, 0)
+    PURP = (255, 0, 255)
     RED = (0, 0, 255)
     font = cv2.FONT_HERSHEY_SIMPLEX
     stroke = 2
     line_type = cv2.LINE_AA
 
-    ratio = SETTINGS["RATIO"]
+    pic = cv2.resize(pic, (int(300 * ratio), 300))
 
     # for drawing the rectangle around the person's face
     cv2.rectangle(pic, (x, y), (x + w, y + h), BLUE, stroke)
 
     # for drawing the persons' name on the screen
+    draw_color = (255, 255, 255)
+    if corr:
+        draw_color = GREEN
+    else:
+        draw_color = RED
     cv2.putText(pic, name, (x, y - 10), font,
                 0.5, RED, stroke, line_type)
 
@@ -198,7 +220,10 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     cv2.putText(pic, str(w * h), (x, y + h + 10), font,
                 0.5, GREEN, stroke, line_type)
 
-    pic = cv2.resize(pic, (int(300 * ratio), 300))
+    # TESTING ONLY
+    # for drawing confidence value on screen
+    cv2.putText(pic, str(conf), (x, y + h + 10), font,
+                0.5, PURP, stroke, line_type)
 
     out_dir = SETTINGS["OUT"]
     file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
@@ -206,20 +231,9 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     cv2.imwrite(file_path, pic)
 
     # FOR SHOWING THE FACE ONLY:
-    #   cv2.imshow("pic", pic)
-    #   cv2.waitKey(0)
-    #   cv2.destroyAllWindows()
-
-
-    out_dir = SETTINGS["OUT"]
-    file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
-              str(id_num) + ".JPG")
-    cv2.imwrite(file_path, pic)
-
-    # FOR SHOWING THE FACE ONLY:
-    #   cv2.imshow("pic", pic)
-    #   cv2.waitKey(0)
-    #   cv2.destroyAllWindows()
+    cv2.imshow("pic", pic)
+    cv2.waitKey(50)
+    cv2.destroyAllWindows()
 
 
 def guess(SETTINGS, data, pic_path, name):
@@ -227,8 +241,9 @@ def guess(SETTINGS, data, pic_path, name):
     gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
 
     # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
-    resized_width = int(SETTINGS["TEST_HEIGHT"] * SETTINGS["RATIO"])
+    ratio = SETTINGS["RATIO"]
     resized_height = SETTINGS["TEST_HEIGHT"]
+    resized_width = int(resized_height * ratio)
     color_pic = cv2.resize(color_pic, (resized_width, resized_height))
     gray_pic = cv2.resize(gray_pic, (resized_width, resized_height))
 
@@ -263,7 +278,6 @@ def guess(SETTINGS, data, pic_path, name):
 
             coords = [x, y, w, h]
             id_num = data["processed_faces"]
-            save_face(SETTINGS, coords, color_pic, name, id_num)
 
             face_rec = data["face_rec"]
             face = gray_pic[y:y+h, x:x+w]
@@ -272,15 +286,18 @@ def guess(SETTINGS, data, pic_path, name):
             labels = data["labels"]
             guess = labels[label]
 
+            # correct flag
+            corr = 0
             if name == guess:
+                corr = 1
                 data["c_names"][name] = conf
             else:
                 data["w_names"][name] = conf
 
+            save_face(SETTINGS, coords, color_pic, name, id_num, conf, corr)
+
 
 def test_data(SETTINGS, data):
-    dir_count = 0
-
     test_dir = SETTINGS["TEST_DIR"]
     dir_test = sorted(os.listdir(test_dir))
     for pic_owner in dir_test:
@@ -345,7 +362,6 @@ def test_data(SETTINGS, data):
                             guess(SETTINGS, data, pic_path, name)
 
                         img_num += 1
-        dir_count += 1
 
 
 data = {
