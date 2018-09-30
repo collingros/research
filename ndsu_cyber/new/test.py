@@ -215,7 +215,7 @@ def save_face(SETTINGS, coords, pic, name, id_num, conf, corr):
     else:
         draw_color = RED
     cv2.putText(pic, name, (x, y - 10), font,
-                0.5, RED, stroke, line_type)
+                0.5, draw_color, stroke, line_type)
 
     # for drawing area value on screen
     cv2.putText(pic, str(w * h), (x, y + h + 10), font,
@@ -233,7 +233,7 @@ def save_face(SETTINGS, coords, pic, name, id_num, conf, corr):
 
     # FOR SHOWING THE FACE ONLY:
     cv2.imshow("pic", pic)
-    cv2.waitKey(50)
+    cv2.waitKey(500)
     cv2.destroyAllWindows()
 
 
@@ -286,6 +286,12 @@ def guess(SETTINGS, data, pic_path, name):
 
             labels = data["labels"]
             guess = labels[label]
+
+            print("LABEL: " + str(label))
+            print("LABELS:")
+            print(labels)
+            print("GUESS: " + str(guess))
+            print("CONF: " + str(conf))
 
             # correct flag
             corr = 0
