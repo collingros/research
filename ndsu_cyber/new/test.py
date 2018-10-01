@@ -2,15 +2,12 @@
 #
 # TODO:
 # change data_results.py, to account for different printing,
-# move stuff at bottom
+#
+# fix c_names and w_names being dicts
 #
 # figure out how to make a good estimate for a face area
 # for each position of each subject
 #
-# add a show_face function, so that a face with a box around
-# it will be shown, but the face will not be saved in a file
-#
-# change testing script to account for extra settings
 # <CG>
 
 # IDEA:
@@ -237,6 +234,18 @@ def save_face(SETTINGS, coords, pic, guess, name, id_num, conf, corr):
     #cv2.destroyAllWindows()
 
 
+# create new array containing an array of confidence values if one doesnt
+# exist already
+# determine if the name of the key is c_names or w_names and append
+# accordingly
+def add_resultant(data, name, conf):
+    try:
+        data[name][0].append(conf)
+        data[name][1] += 1
+    except:
+        data[name] = [[], 0]
+
+
 def guess(SETTINGS, data, pic_path, name):
     color_pic = cv2.imread(pic_path, 1) # opens in color
     gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
@@ -292,9 +301,15 @@ def guess(SETTINGS, data, pic_path, name):
             conf = round(conf, 2)
             if name == guess:
                 corr = 1
+                # FIXME:
+                # c_names and w_names being dictionaries is  problematic
+                # as a dictionary can't have duplicate keys...
                 data["c_names"][name] = conf
+                #data["c_names"][name].append(conf)
+                #add_resultant(data, name, conf)
             else:
                 data["w_names"][name] = conf
+                #data["w_names"][name].append(conf)
 
             save_face(SETTINGS, coords, color_pic, guess, name,
                       id_num, conf, corr)
