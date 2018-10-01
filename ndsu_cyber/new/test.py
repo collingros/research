@@ -1,9 +1,9 @@
 # Collin Gros
 #
 # TODO:
-# change data_results.py, to account for different printing,
+# debug
 #
-# fix c_names and w_names being dicts
+# change data_results.py, to account for different printing,
 #
 # figure out how to make a good estimate for a face area
 # for each position of each subject
@@ -26,9 +26,7 @@ import time
 def dump(data):
     data["cascade"] = None
     data["face_rec"] = None
-    data["faces"] = []
     data["labels"] = []
-    data["people"] = {}
 
 
 def print_all(SETTINGS, data):
@@ -238,12 +236,12 @@ def save_face(SETTINGS, coords, pic, guess, name, id_num, conf, corr):
 # exist already
 # determine if the name of the key is c_names or w_names and append
 # accordingly
-def add_resultant(data, name, conf):
+def add_resultant(data, result, name, conf):
     try:
-        data[name][0].append(conf)
-        data[name][1] += 1
+        data[result][name][0].append(conf)
+        data[result][name][1] += 1
     except:
-        data[name] = [[], 0]
+        data[result][name] = [[], 0]
 
 
 def guess(SETTINGS, data, pic_path, name):
@@ -301,15 +299,9 @@ def guess(SETTINGS, data, pic_path, name):
             conf = round(conf, 2)
             if name == guess:
                 corr = 1
-                # FIXME:
-                # c_names and w_names being dictionaries is  problematic
-                # as a dictionary can't have duplicate keys...
-                data["c_names"][name] = conf
-                #data["c_names"][name].append(conf)
-                #add_resultant(data, name, conf)
+                add_resultant(data, "c_names", name, conf)
             else:
-                data["w_names"][name] = conf
-                #data["w_names"][name].append(conf)
+                add_resultant(data, "w_names", name, conf)
 
             save_face(SETTINGS, coords, color_pic, guess, name,
                       id_num, conf, corr)
@@ -409,5 +401,6 @@ test_data(SETTINGS, data)
 finish_time = time.time()
 data["time"] = finish_time - start_time
 
-print_all(SETTINGS, data)
+dump(data)
 
+print_all(SETTINGS, data)
