@@ -289,6 +289,7 @@ def guess(SETTINGS, data, pic_path, name):
 
             # correct flag
             corr = 0
+            conf = round(conf, 2)
             if name == guess:
                 corr = 1
                 data["c_names"][name] = conf
