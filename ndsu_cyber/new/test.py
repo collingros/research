@@ -287,12 +287,6 @@ def guess(SETTINGS, data, pic_path, name):
             labels = data["labels"]
             guess = labels[label]
 
-            print("LABEL: " + str(label))
-            print("LABELS:")
-            print(labels)
-            print("GUESS: " + str(guess))
-            print("CONF: " + str(conf))
-
             # correct flag
             corr = 0
             if name == guess:
