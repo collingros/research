@@ -182,7 +182,7 @@ def get_settings():
     return SETTINGS
 
 
-def save_face(SETTINGS, coords, pic, name, id_num, conf, corr):
+def save_face(SETTINGS, coords, pic, guess, name, id_num, conf, corr):
     ratio = SETTINGS["RATIO"]
     origin_height = SETTINGS["TEST_HEIGHT"]
     origin_width = int(origin_height * SETTINGS["RATIO"])
@@ -214,7 +214,7 @@ def save_face(SETTINGS, coords, pic, name, id_num, conf, corr):
         draw_color = GREEN
     else:
         draw_color = RED
-    cv2.putText(pic, name, (x, y - 10), font,
+    cv2.putText(pic, guess, (x, y - 10), font,
                 0.5, draw_color, stroke, line_type)
 
     # for drawing area value on screen
@@ -296,7 +296,8 @@ def guess(SETTINGS, data, pic_path, name):
             else:
                 data["w_names"][name] = conf
 
-            save_face(SETTINGS, coords, color_pic, guess, id_num, conf, corr)
+            save_face(SETTINGS, coords, color_pic, guess, name,
+                      id_num, conf, corr)
 
 
 def test_data(SETTINGS, data):
