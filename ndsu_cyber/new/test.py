@@ -232,9 +232,9 @@ def save_face(SETTINGS, coords, pic, name, id_num, conf, corr):
     cv2.imwrite(file_path, pic)
 
     # FOR SHOWING THE FACE ONLY:
-    cv2.imshow("pic", pic)
-    cv2.waitKey(500)
-    cv2.destroyAllWindows()
+    #cv2.imshow("pic", pic)
+    #cv2.waitKey(500)
+    #cv2.destroyAllWindows()
 
 
 def guess(SETTINGS, data, pic_path, name):
