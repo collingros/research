@@ -5,13 +5,13 @@
 # test on low
 
 dir_n=0
-for casc in "lbph_frontal.xml"
+for casc in "lbph_frontal.xml" "haar_default.xml"
 do
-    for sf in 1.01
+    for sf in 1.01 1.05 1.1 1.2 1.3 1.5
     do
-        for mn in 1
+        for mn in 1 3 5 7 10
         do
-            for res in 720
+            for res in 150 480 960 1920 3456
             do
                 ((dir_n++))
                 rm -r out2/opt_$dir_n
