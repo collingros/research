@@ -213,9 +213,9 @@ def save_face(SETTINGS, coords, pic, name, id_num):
     cv2.imwrite(file_path, pic)
 
     # FOR SHOWING THE FACE ONLY:
-    cv2.imshow("pic", pic)
-    cv2.waitKey(50)
-    cv2.destroyAllWindows()
+    #cv2.imshow("pic", pic)
+    #cv2.waitKey(50)
+    #cv2.destroyAllWindows()
 
 
 def add_face(SETTINGS, data, pic_path, name, dir_count):
