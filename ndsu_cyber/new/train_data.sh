@@ -14,7 +14,8 @@ do
             for res in 150 480 960 1920 3456
             do
                 ((dir_n++))
-                rm -r out/opt_$dir_n
+                rm -r out
+                mkdir out
                 mkdir out/opt_$dir_n
 
                 python3 train.py -s $sf -n $mn -p $res -l 1 -v 1 -o 1 -i 1 \

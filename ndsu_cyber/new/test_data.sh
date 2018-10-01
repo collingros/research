@@ -4,6 +4,11 @@
 # train on low
 # test on low
 
+# FIXME:
+# ONLY TESTS ON SAME SETTING TRAINING SET
+# ALL RESULTS WILL BE CORRECT
+
+
 dir_n=0
 for casc in "lbph_frontal.xml" "haar_default.xml"
 do
@@ -14,7 +19,8 @@ do
             for res in 150 480 960 1920 3456
             do
                 ((dir_n++))
-                rm -r out2/opt_$dir_n
+                rm -r out2
+                mkdir out2
                 mkdir out2/opt_$dir_n
 
                 cp out/opt_$dir_n/train.yml out2/opt_$dir_n/train.yml

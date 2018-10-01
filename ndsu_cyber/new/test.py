@@ -3,7 +3,40 @@
 # TODO:
 # debug
 #
-# change data_results.py, to account for different printing,
+#
+# alright so here's a problem:
+#       if i test using training data created from the same settings,
+#       i get 100% success rate, 0 distance difference (conf)
+#
+#       if i don't, i'll get different values, however:
+#       there are many different trained sets. i can't test with all 300
+#       because it would take a million year
+#
+#       what i should do is
+#       a:
+#       get the results from the trained data FIRST (best 10)
+#       test with the same images it was trained with)
+#
+#       or b:
+#       get the results from the trained data FIRST (best 10)
+#       test with different images OF THE SAME TYPE, but different lighting
+#       or angles?
+#       --problem with that is that i wouldn't get true results regarding
+#       if a setting is shit or not.
+#
+#       or c:
+#       get the results from the trained data FIRST (best 10)
+#       test using frames of the testing VIDEOS from the video test set
+#       --problem with that is that the videos aren't perfect
+#         though, that doesn't really matter considering i'm using the same
+#         videos for testing
+#
+#       i will get different results, however, because different settings
+#       were used for training and testing..
+#
+#
+# change data_results.py, to account for different printing and add different
+# calculations for determining if a setting is shitty or not
 #
 # figure out how to make a good estimate for a face area
 # for each position of each subject
