@@ -1,3 +1,36 @@
+# Collin Gros
+#
+# to parse data output from training and testing sessions
+# (currently, to get the best training data and use it for testing f.r. acc)
+#
+# context:
+#   every test was ran with some different setting than the previous
+#   in scriptstat.txt:
+#        split into two parts:
+#           1. all-caps output are the specific test settings the test was ran
+#              with ("filters")
+#           2. lowercase output are the results from the test:
+#                   processed_faces is the number of FACES detected in total
+#
+#                   reviewed is the number of IMGS looked at in total
+#
+#                   size_skipped is the number of images skipped as a result of
+#                   an experimental method to attempt to find false faces from
+#                   a comparison between "face area" and the detected "face"
+#
+#                   skipped is the number of images skipped because no face was
+#                   detected
+#
+#                   time is the total amount of time it took to process (sec)
+#
+#                   total_faces is the number of IMGS with at least one face
+#                   detected
+#
+# TODO:
+# debug
+# fix fixme's
+# run test on training sets to get results for testing sets
+#
 import os
 import cv2
 from subprocess import call
@@ -42,10 +75,54 @@ def disp_imgs(tests):
             cv2.destroyAllWindows()
 
 
-def get_best(tests, perf):
-    if perf == "1":
-        for test in tests:
-            test_dir = test.gen_data["path"]
+def avg_test(tests, perf):
+    # show avg result from tests by SF, MN, RES, or other things
+    pass
+
+
+def get_best(tests, LENIENCY):
+    # simply get the top 10 best results
+
+    total_imgs = tests[0].data["results"]["reviewed"]
+    # (same total amount of images looked at for all our tests)
+    best_tests = tests
+    last_ids = []
+    tmp_tests = []
+
+#   starting with worst case scenarios
+    last_s = total_imgs
+    last_p = 0
+
+#   FIXME
+#   in its current state, this loop will perform a sort only to the first 10
+#   tests, meaning the last test in best_tests will have the best value of
+#   the reviewed tests, however, the last test in best_tests may not be the
+#   best test in ALL of the tests. the loop halts after 10 are chosen.
+    while len(best_tests) > 10 and LENIENCY >= 0:
+        for test in best_tests:
+            for key, value in test.data.items():
+                if key == "processed_faces":
+                    processed = value
+                elif key == "skipped":
+                    skipped = value
+
+            if ((processed <= total_imgs + LENIENCY) and
+               ((processed > last_p - LENIENCY) and
+               (skipped < last_s + LENIENCY)) and
+               (test.gen_data["id"] not in last_ids)):
+               # if the num of processed faces is about the same as the total
+               # num of images and the current values are better than the last
+               # set new max
+
+                last_ids.append(test.gen_data["id"])
+                last_p = processed
+                last_s = skipped
+                tmp_tests.append(test)
+
+        best_tests = tmp_tests
+        LENIENCY -= 1
+
+    return best_tests
 
 
 def add_test(tests, test_dir_path, id_num):
@@ -86,10 +163,20 @@ def add_test(tests, test_dir_path, id_num):
             new_test.gen_data["imgs"].append(item_path)
 
 
-SET = input("Enter \"out\" for the training data, and \"out2\" otherwise: ")
+user_input = {
+    "SET":"",
+    "LENIENCY":""
+}
+
+for key, value in user_input.items():
+    value = input("Enter \"{0}\"".format(key))
+
+SET = user_input["SET"]
+LENIENCY = user_input["LENIENCY"]
+
+stat_dir_path = os.getcwd() + "/" + SET
 
 # stat_dir = /home/surv/git/research/ndsu_cyber/new/SET (out or out2)
-stat_dir_path = os.getcwd() + "/" + SET
 
 id_num = 0
 tests = []
@@ -99,7 +186,7 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
     add_test(tests, test_dir_path, id_num)
     id_num += 1
 
-best_tests = get_best(tests)
+best_tests = get_best(tests, LENIENCY)
 
 print_tests(best_tests)
 disp_imgs(best_tests)
