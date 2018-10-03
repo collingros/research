@@ -1,16 +1,46 @@
 # Collin Gros
 #
 # TODO:
-# change data_results.py, to account for different printing,
-# move stuff at bottom
+# debug
+#
+#
+# alright so here's a problem:
+#       if i test using training data created from the same settings,
+#       i get 100% success rate, 0 distance difference (conf)
+#
+#       if i don't, i'll get different values, however:
+#       there are many different trained sets. i can't test with all 300
+#       because it would take a million year
+#
+#       what i should do is
+#       a:
+#       get the results from the trained data FIRST (best 10)
+#       test with the same images it was trained with)
+#
+#       or b:
+#       get the results from the trained data FIRST (best 10)
+#       test with different images OF THE SAME TYPE, but different lighting
+#       or angles?
+#       --problem with that is that i wouldn't get true results regarding
+#       if a setting is shit or not.
+#
+#       or c:
+#       get the results from the trained data FIRST (best 10)
+#       test using frames of the testing VIDEOS from the video test set
+#       --problem with that is that the videos aren't perfect
+#         though, that doesn't really matter considering i'm using the same
+#         videos for testing
+#
+#       i will get different results, however, because different settings
+#       were used for training and testing..
+#
+#
+# change data_results.py, to account for different printing and add different
+# calculations for determining if a setting is shitty or not
 #
 # figure out how to make a good estimate for a face area
 # for each position of each subject
 #
-# add a show_face function, so that a face with a box around
-# it will be shown, but the face will not be saved in a file
-#
-# change testing script to account for extra settings
 # <CG>
 
 # IDEA:
@@ -29,9 +59,7 @@ import time
 def dump(data):
     data["cascade"] = None
     data["face_rec"] = None
-    data["faces"] = []
     data["labels"] = []
-    data["people"] = {}
 
 
 def print_all(SETTINGS, data):
@@ -237,6 +265,18 @@ def save_face(SETTINGS, coords, pic, guess, name, id_num, conf, corr):
     #cv2.destroyAllWindows()
 
 
+# create new array containing an array of confidence values if one doesnt
+# exist already
+# determine if the name of the key is c_names or w_names and append
+# accordingly
+def add_resultant(data, result, name, conf):
+    try:
+        data[result][name][0].append(conf)
+        data[result][name][1] += 1
+    except:
+        data[result][name] = [[], 0]
+
+
 def guess(SETTINGS, data, pic_path, name):
     color_pic = cv2.imread(pic_path, 1) # opens in color
     gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
@@ -292,9 +332,9 @@ def guess(SETTINGS, data, pic_path, name):
             conf = round(conf, 2)
             if name == guess:
                 corr = 1
-                data["c_names"][name] = conf
+                add_resultant(data, "c_names", name, conf)
             else:
-                data["w_names"][name] = conf
+                add_resultant(data, "w_names", name, conf)
 
             save_face(SETTINGS, coords, color_pic, guess, name,
                       id_num, conf, corr)
@@ -394,5 +434,6 @@ test_data(SETTINGS, data)
 finish_time = time.time()
 data["time"] = finish_time - start_time
 
-print_all(SETTINGS, data)
+dump(data)
 
+print_all(SETTINGS, data)
