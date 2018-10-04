@@ -83,7 +83,7 @@ def avg_test(tests, perf):
 def get_best(tests, LENIENCY):
     # simply get the top 10 best results
 
-    total_imgs = tests[0].data["results"]["reviewed"]
+    total_imgs = int(tests[0].data["results"]["reviewed"])
     # (same total amount of images looked at for all our tests)
     best_tests = tests
     last_ids = []
