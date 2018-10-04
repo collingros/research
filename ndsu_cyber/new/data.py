@@ -169,10 +169,10 @@ user_input = {
 }
 
 for key, value in user_input.items():
-    value = input("Enter \"{0}\"".format(key))
+    value = input("Enter \"{0}\"\t:".format(key))
 
-SET = user_input["SET:\t"]
-LENIENCY = user_input["LENIENCY:\t"]
+SET = user_input["SET"]
+LENIENCY = user_input["LENIENCY"]
 
 stat_dir_path = os.getcwd() + "/" + SET
 
