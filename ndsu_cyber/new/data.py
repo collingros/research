@@ -180,6 +180,7 @@ stat_dir_path = os.getcwd() + "/" + SET
 
 id_num = 0
 tests = []
+print("stat_dir_path:\t{0}".format(stat_dir_path))
 for test_dir in sorted(os.listdir(stat_dir_path)):
     print("test_dir:\t{0}".format(test_dir))
     test_dir_path = stat_dir_path + "/" + test_dir
