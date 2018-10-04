@@ -55,14 +55,13 @@ class Test:
 def print_tests(tests):
     for test in tests:
         test_id = test.gen_data["id"]
-        print("TEST:\t{0}".format(test_id))
+        path = test.gen_data["path"]
+        print("\nTEST:\t{0}\nPATH:\t{1}".format(test_id, path))
 
-        for key, value in test.gen_data.items():
-            print("{0}:\t{1}".format(key, value))
-
-        print("\n")
         for key, value in test.data.items():
-            print("{0}:\t{1}".format(key, value))
+            print("{0}".format(key))
+            for key_2, value_2 in test.value.items():
+                print("\t{0}:\t{1}".format(key_2, value_2))
 
 
 def disp_imgs(tests):
