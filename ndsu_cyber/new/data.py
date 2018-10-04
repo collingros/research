@@ -170,6 +170,7 @@ user_input = {
 
 for key, value in user_input.items():
     value = input("Enter \"{0}\":\t".format(key))
+    user_input[key] = value
 
 SET = user_input["SET"]
 LENIENCY = user_input["LENIENCY"]
