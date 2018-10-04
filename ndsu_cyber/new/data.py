@@ -92,6 +92,8 @@ def get_best(tests, LENIENCY):
 #   starting with worst case scenarios
     last_s = total_imgs
     last_p = 0
+    processed = 0
+    skipped = 0
 
 #   FIXME
 #   in its current state, this loop will perform a sort only to the first 10
@@ -102,6 +104,7 @@ def get_best(tests, LENIENCY):
         for test in best_tests:
             for key, value in test.data.items():
                 if key == "processed_faces":
+                    print("assigned process")
                     processed = value
                 elif key == "skipped":
                     skipped = value
