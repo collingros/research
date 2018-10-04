@@ -60,7 +60,7 @@ def print_tests(tests):
 
         for key, value in test.data.items():
             print("{0}".format(key))
-            for key_2, value_2 in test.key.items():
+            for key_2, value_2 in test.data.key.items():
                 print("\t{0}:\t{1}".format(key_2, value_2))
 
 
