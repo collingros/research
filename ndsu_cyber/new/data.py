@@ -169,7 +169,7 @@ user_input = {
 }
 
 for key, value in user_input.items():
-    value = input("Enter \"{0}\"\t:".format(key))
+    value = input("Enter \"{0}\":\t".format(key))
 
 SET = user_input["SET"]
 LENIENCY = user_input["LENIENCY"]
@@ -181,6 +181,7 @@ stat_dir_path = os.getcwd() + "/" + SET
 id_num = 0
 tests = []
 for test_dir in sorted(os.listdir(stat_dir_path)):
+    print("test_dir:\t{0}".format(test_dir))
     test_dir_path = stat_dir_path + "/" + test_dir
 
     add_test(tests, test_dir_path, id_num)
