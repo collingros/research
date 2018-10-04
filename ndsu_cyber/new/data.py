@@ -193,8 +193,11 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
 
 best_tests = get_best(tests, LENIENCY)
 
+print("**ALL TESTS**")
+print_tests(tests)
+print("**BEST TESTS**")
 print_tests(best_tests)
-disp_imgs(best_tests)
+#disp_imgs(best_tests)
 
 
 
