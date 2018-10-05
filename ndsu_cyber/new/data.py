@@ -115,6 +115,7 @@ def get_best(tests, LENIENCY):
                # set new max
 
                 last_ids.append(test.gen_data["id"])
+                print(last_ids)
                 last_p = processed
                 last_s = skipped
                 best_tests.append(test)
