@@ -102,9 +102,9 @@ def get_best(tests, LENIENCY):
         for test in tests:
             for key, value in test.data["results"].items():
                 if key == "processed_faces":
-                    processed = value
+                    processed = int(value)
                 elif key == "skipped":
-                    skipped = value
+                    skipped = int(value)
 
             if ((processed <= total_imgs + LENIENCY) and
                ((processed > last_p - LENIENCY) and
