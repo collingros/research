@@ -84,9 +84,8 @@ def get_best(tests, LENIENCY):
 
     total_imgs = int(tests[0].data["results"]["reviewed"])
     # (same total amount of images looked at for all our tests)
-    best_tests = tests
+    best_tests = []
     last_ids = []
-    tmp_tests = []
 
 #   starting with worst case scenarios
     last_s = total_imgs
@@ -99,11 +98,10 @@ def get_best(tests, LENIENCY):
 #   tests, meaning the last test in best_tests will have the best value of
 #   the reviewed tests, however, the last test in best_tests may not be the
 #   best test in ALL of the tests. the loop halts after 10 are chosen.
-    while len(best_tests) > 10 and LENIENCY >= 0:
-        for test in best_tests:
-            for key, value in test.data.items():
+    while len(best_tests) != len(tests):
+        for test in tests:
+            for key, value in test.data["results"].items():
                 if key == "processed_faces":
-                    print("assigned process")
                     processed = value
                 elif key == "skipped":
                     skipped = value
@@ -119,10 +117,8 @@ def get_best(tests, LENIENCY):
                 last_ids.append(test.gen_data["id"])
                 last_p = processed
                 last_s = skipped
-                tmp_tests.append(test)
+                best_tests.append(test)
 
-        best_tests = tmp_tests
-        LENIENCY -= 1
 
     return best_tests
 
@@ -193,9 +189,9 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
 
 best_tests = get_best(tests, LENIENCY)
 
-print("**ALL TESTS**")
-print_tests(tests)
-print("**BEST TESTS**")
+#print("**ALL TESTS**")
+#print_tests(tests)
+#print("**BEST TESTS**")
 print_tests(best_tests)
 #disp_imgs(best_tests)
 
