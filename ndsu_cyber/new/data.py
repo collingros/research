@@ -120,9 +120,6 @@ def get_best(tests, LENIENCY):
                 last_p = processed
                 last_s = skipped
                 best_tests.append(test)
-            else:
-                print("time:\t{0:.2f}".format(time.time() % 60))
-
 
     return best_tests
 
