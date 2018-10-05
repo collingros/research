@@ -99,27 +99,26 @@ def get_best(tests, LENIENCY):
 #   tests, meaning the last test in best_tests will have the best value of
 #   the reviewed tests, however, the last test in best_tests may not be the
 #   best test in ALL of the tests. the loop halts after 10 are chosen.
-    while len(best_tests) != len(tests):
-        for test in tests:
-            for key, value in test.data["results"].items():
-                if key == "processed_faces":
-                    processed = int(value)
-                elif key == "skipped":
-                    skipped = int(value)
+    for test in tests:
+        for key, value in test.data["results"].items():
+            if key == "processed_faces":
+                processed = int(value)
+            elif key == "skipped":
+                skipped = int(value)
 
-            if ((processed <= total_imgs + LENIENCY) and
-               ((processed > last_p - LENIENCY) and
-               (skipped < last_s + LENIENCY)) and
-               (test.gen_data["id"] not in last_ids)):
-               # if the num of processed faces is about the same as the total
-               # num of images and the current values are better than the last
-               # set new max
+        if ((processed <= total_imgs + LENIENCY) and
+           ((processed > last_p - LENIENCY) and
+           (skipped < last_s + LENIENCY)) and
+           (test.gen_data["id"] not in last_ids)):
+           # if the num of processed faces is about the same as the total
+           # num of images and the current values are better than the last
+           # set new max
 
-                last_ids.append(test.gen_data["id"])
-                print(last_ids)
-                last_p = processed
-                last_s = skipped
-                best_tests.append(test)
+            last_ids.append(test.gen_data["id"])
+            print(last_ids)
+            last_p = processed
+            last_s = skipped
+            best_tests.append(test)
 
     return best_tests
 
