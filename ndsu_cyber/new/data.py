@@ -37,6 +37,17 @@ from subprocess import call
 import time
 
 
+class Avg:
+    def __init__(self, filter_key, filter_value):
+        self.filter_key = filter_key
+        self.filter_value = filter_value
+        self.avgs = {
+                "perc_img_detect":0,
+                "perc_skip":0,
+                "perc_detect":0
+            }
+
+
 class Test:
     def __init__(self):
         self.gen_data = {
@@ -81,45 +92,10 @@ def disp_imgs(tests):
 def print_sort_tests(tests):
     # average result from each setting
     # tested: variable settings
-    vars = {
-        # average values
-        # NOTE: remember when calculating, only allow one var
-        # to change. SF 1.01 to mn 1, SF 1.05 to mn 1, etc.
-        "sf":{
-            "1.01":{
-                "perc_img_detect":0,
-                "perc_skip":0,
-                "perc_detect":0
-            }
-            "1.05":0,
-            "1.1":0,
-            "1.2":0,
-            "1.3":0,
-            "1.5":0
-        },
-        "avg_mn":{
-            "1":0,
-            "3":0,
-            "5":0,
-            "7":0,
-            "10":0
-        },
-        "avg_res":{
-            "150":0,
-            "480":0,
-            "960":0,
-            "1920":0,
-            "3456":0
-        },
-        "avg_casc":{
-            "lbph_frontal.xml":0,
-            "haar_default.xml":0
-        }
-    }
-        new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
-        new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
-        new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
-
+    # average values
+    # NOTE: remember when calculating, only allow one var
+    # to change. SF 1.01 to mn 1, SF 1.05 to mn 1, etc.
+    avgs = []
     var_keys = ["sf", "mn", "test_height", "cascade"]
     for test in tests:
         for f_key, f_value in test.data["filters"].items():
@@ -129,10 +105,19 @@ def print_sort_tests(tests):
                     perc_skip = test.gen_data["perc_skip"]
                     perc_detect = test.gen_data["perc_detect"]
 
-                    vars[f_key][f_value]["perc_img_detect"] = perc_img_detect
-                    vars[f_key][f_value]["perc_skip"] = perc_skip
-                    vars[f_key][f_value]["perc_detect"] = perc_detect
+                    new_avg = Avg(f_key, f_value)
+                    new_avg.avgs["perc_img_detect"] = perc_img_detect
+                    new_avg.avgs["perc_skip"] = perc_skip
+                    new_avg.avgs["perc_detect"] = perc_detect
 
+                    avgs.append(new_avg)
+
+    num = 0
+    for avg in avgs:
+        print("avg {0}:".format(num))
+        print(avg)
+
+        num += 1
 
 
 def get_best(tests, LENIENCY):
