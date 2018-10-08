@@ -78,7 +78,7 @@ def disp_imgs(tests):
             cv2.destroyAllWindows()
 
 
-def print_sort_tests(tests, LENIENCY):
+def print_sort_tests(tests):
     # average result from each setting
     filters = {}
     # initializing avgs dict by assigning it every key and val from
