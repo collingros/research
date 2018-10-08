@@ -87,8 +87,10 @@ def print_sort_tests(tests):
         # to change. SF 1.01 to mn 1, SF 1.05 to mn 1, etc.
         "sf":{
             "1.01":{
-                "":0,
-            },
+                "perc_img_detect":0,
+                "perc_skip":0,
+                "perc_detect":0
+            }
             "1.05":0,
             "1.1":0,
             "1.2":0,
@@ -114,13 +116,23 @@ def print_sort_tests(tests):
             "haar_default.xml":0
         }
     }
+        new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
+        new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
+        new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
 
     var_keys = ["sf", "mn", "test_height", "cascade"]
     for test in tests:
         for f_key, f_value in test.data["filters"].items():
             for v_key, v_value in vars.items():
                 if f_key == v_key:
-                    pass
+                    perc_img_detect = test.gen_data["perc_img_detect"]
+                    perc_skip = test.gen_data["perc_skip"]
+                    perc_detect = test.gen_data["perc_detect"]
+
+                    vars[f_key][f_value]["perc_img_detect"] = perc_img_detect
+                    vars[f_key][f_value]["perc_skip"] = perc_skip
+                    vars[f_key][f_value]["perc_detect"] = perc_detect
+
 
 
 def get_best(tests, LENIENCY):
