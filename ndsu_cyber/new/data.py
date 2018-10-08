@@ -85,8 +85,10 @@ def print_sort_tests(tests):
         # average values
         # NOTE: remember when calculating, only allow one var
         # to change. SF 1.01 to mn 1, SF 1.05 to mn 1, etc.
-        "avg_sf":{
-            "1.01":0,
+        "sf":{
+            "1.01":{
+                "":0,
+            },
             "1.05":0,
             "1.1":0,
             "1.2":0,
@@ -112,19 +114,13 @@ def print_sort_tests(tests):
             "haar_default.xml":0
         }
     }
-    # initializing avgs dict by assigning it every key and val from
-    # the first test in the list
+
     var_keys = ["sf", "mn", "test_height", "cascade"]
     for test in tests:
-        for key, value in test.data["filters"].items():
-            if value == "1" and key in var_keys:
-                perc_img_detect = test.gen_data["perc_img_detect"]
-                perc_skip = test.gen_data["perc_skip"]
-                perc_detect = test.gen_data["perc_detect"]
-
-                vars["
-
-    print("filters:")
+        for f_key, f_value in test.data["filters"].items():
+            for v_key, v_value in vars.items():
+                if f_key == v_key:
+                    pass
 
 
 def get_best(tests, LENIENCY):
