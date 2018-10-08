@@ -170,18 +170,17 @@ def add_test(tests, test_dir_path, id_num):
         elif ext == "JPG":
             new_test.gen_data["imgs"].append(item_path)
 
-    print(new_test.data["results"])
+    if len(new_test) > 0:
+        processed = int(new_test.data["results"]["processed_faces"])
+        reviewed = int(new_test.data["results"]["reviewed"])
+        total_faces = int(new_test.data["results"]["total_faces"])
+        skipped = int(new_test.data["results"]["skipped"])
 
-    processed = int(new_test.data["results"]["processed_faces"])
-    reviewed = int(new_test.data["results"]["reviewed"])
-    total_faces = int(new_test.data["results"]["total_faces"])
-    skipped = int(new_test.data["results"]["skipped"])
+        new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
+        new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
+        new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
 
-    new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
-    new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
-    new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
-
-    tests.append(new_test)
+        tests.append(new_test)
 
 
 user_input = {
