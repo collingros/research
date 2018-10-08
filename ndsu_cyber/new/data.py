@@ -84,7 +84,7 @@ def print_sort_tests(tests):
     # initializing avgs dict by assigning it every key and val from
     # the first test in the list
     for key, value in tests[0].data["filters"].items():
-            avgs[key] = 0
+            filters[key] = 0
 
     print("filters:")
     print(filters)
