@@ -43,7 +43,10 @@ class Test:
                 # general data: file paths
                 "imgs":[],
                 "path":"",
-                "id":-1
+                "id":-1,
+                "perc_detect":0,
+                "perc_skip":0,
+                "perc_img_detect":0
             }
 
         self.data = {
@@ -75,9 +78,16 @@ def disp_imgs(tests):
             cv2.destroyAllWindows()
 
 
-def avg_test(tests, perf):
-    # show avg result from tests by SF, MN, RES, or other things
-    pass
+def print_sort_tests(tests, LENIENCY):
+    # average result from each setting
+    filters = {}
+    # initializing avgs dict by assigning it every key and val from
+    # the first test in the list
+    for key, value in tests[0].data["filters"].items():
+            avgs[key] = 0
+
+    print("filters:")
+    print(filters)
 
 
 def get_best(tests, LENIENCY):
@@ -160,6 +170,15 @@ def add_test(tests, test_dir_path, id_num):
         elif ext == "JPG":
             new_test.gen_data["imgs"].append(item_path)
 
+    processed = new_test.data["results"]["processed_faces"]
+    reviewed = new_test.data["results"]["reviewed"]
+    total_faces = new_test.data["results"]["total_faces"]
+    skipped = new_test.data["results"]["skipped"]
+
+    new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
+    new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
+    new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
+
     tests.append(new_test)
 
 
@@ -187,12 +206,14 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
     add_test(tests, test_dir_path, id_num)
     id_num += 1
 
-best_tests = get_best(tests, LENIENCY)
+print_sort_tests(tests)
+
+#best_tests = get_best(tests, LENIENCY)
 
 #print("**ALL TESTS**")
 #print_tests(tests)
 #print("**BEST TESTS**")
-print_tests(best_tests)
+#print_tests(best_tests)
 #disp_imgs(best_tests)
 
 
