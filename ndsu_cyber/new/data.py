@@ -170,7 +170,7 @@ def add_test(tests, test_dir_path, id_num):
         elif ext == "JPG":
             new_test.gen_data["imgs"].append(item_path)
 
-    if len(new_test) > 0:
+    if len(new_test.data["results"]) > 0:
         processed = int(new_test.data["results"]["processed_faces"])
         reviewed = int(new_test.data["results"]["reviewed"])
         total_faces = int(new_test.data["results"]["total_faces"])
