@@ -229,6 +229,7 @@ def add_test(tests, test_dir_path, id_num):
         total_faces = int(new_test.data["results"]["total_faces"])
         skipped = int(new_test.data["results"]["skipped"])
 
+        print("total_faces: {0}\treviewed: {1}".format(total_faces, reviewed))
         new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
         new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
         new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
