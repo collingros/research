@@ -91,7 +91,9 @@ def add_avg(avg_dict, test, perc):
                                            avg_dict[a_key][f_value]))
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
-                    print("initializing new avg \"{0}\"".format(avg_perc))
+                    print("initializing new avg \"{0}\""
+                          "for {1} and {2}"
+                          "".format(avg_perc, a_key, f_value))
                     avg_dict[a_key][f_value] = 0
                     avg_dict[a_key][f_value] += avg_perc
 
