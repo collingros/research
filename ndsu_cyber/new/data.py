@@ -80,6 +80,7 @@ def disp_imgs(tests):
 
 def add_avg(avg_dict, test, perc):
     for f_key, f_value in test.data["filters"].items():
+        print("**ID: {0}**".format(test.gen_data["id"]))
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
