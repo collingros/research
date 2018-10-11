@@ -105,7 +105,7 @@ def init_avg():
 def print_avg(avg):
     for type, t_dict in avg.items():
         for key, value in t_dict.items():
-            print("\t{0}{1}:\t{2}".format(type, key, value))
+            print("\t{0}: {1}:\t{2}".format(type, key, value))
 
 
 def calc_avg(avg, num):
