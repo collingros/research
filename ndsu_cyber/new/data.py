@@ -82,7 +82,7 @@ def add_avg(avg_dict, test, perc):
     for f_key, f_value in test.data["filters"].items():
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
-                avg_perc = test.gen_data[perc]
+                avg_perc = round(test.gen_data[perc], 2)
 
                 try:
                     avg_dict[a_key][f_value] += avg_perc
