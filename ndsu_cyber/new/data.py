@@ -86,7 +86,8 @@ def add_avg(avg_dict, test, perc, num, LENIENCY):
 
                 if avg_perc > LENIENCY and perc == "perc_detect":
                     return num
-                print("avg_perc: {0}".format(avg_perc))
+
+                print("avg_perc: {0}\tnum: {1}".format(avg_perc, num))
 
                 try:
                     avg_dict[a_key][f_value] += avg_perc
