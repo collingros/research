@@ -87,7 +87,7 @@ def add_avg(avg_dict, test, perc):
                 try:
                     print("adding new avg \"{0}\" to old avg"
                           "\"{1}\"".format(avg_perc,
-                                           avg_dict[a_key][f_value]
+                                           avg_dict[a_key][f_value]))
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
                     print("initializing new avg \"{0}\"".format(avg_perc))
