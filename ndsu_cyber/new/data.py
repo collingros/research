@@ -142,10 +142,10 @@ def print_sort_tests(tests):
 
         num += 1
 
-    sort(sf_vals)
-    sort(mn_vals)
-    sort(heights)
-    sort(cascades)
+    sf_vals.sort()
+    mn_vals.sort()
+    heights.sort()
+    cascades.sort()
 
     num = 0
     for val in sf_vals:
