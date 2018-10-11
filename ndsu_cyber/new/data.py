@@ -78,24 +78,24 @@ def disp_imgs(tests):
             cv2.destroyAllWindows()
 
 
-def add_avg(avg_dict, test, perc):
-    n = 0
+def add_avg(avg_dict, test, perc, num, LENIENCY):
     for f_key, f_value in test.data["filters"].items():
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
                 print("avg_perc: {0}".format(avg_perc))
-#                if avg_perc > LENIENCY and perc == "perc_detect":
-#                    pass
-#                if avg_perc > LENIENCY and f_key == "perc_img_detect":
-#                    pass
+
+                if avg_perc > LENIENCY and perc == "perc_detect":
+                    return num
+
                 try:
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
                     avg_dict[a_key][f_value] = 0
                     avg_dict[a_key][f_value] += avg_perc
 
-    n += 1
+    num += 1
+    return num
 
 
 def init_avg():
@@ -122,7 +122,7 @@ def calc_avg(avg, num):
             avg[type][key] = avged_val
 
 
-def print_sort_tests(tests):
+def print_sort_tests(tests, LENIENCY):
     # average result from each setting
     detect_avg = init_avg()
     img_avg = init_avg()
@@ -130,11 +130,10 @@ def print_sort_tests(tests):
 
     n_tests = 0
     for test in tests:
-        add_avg(detect_avg, test, "perc_detect")
-        add_avg(img_avg, test, "perc_img_detect")
-        add_avg(skip_avg, test, "perc_skip")
+        n_tests = add_avg(detect_avg, test, "perc_detect", n_tests, LENIENCY)
+        n_tests = add_avg(img_avg, test, "perc_img_detect", n_tests, LENIENCY)
+        n_tests = add_avg(skip_avg, test, "perc_skip", n_tests, LENIENCY)
 
-        n_tests += 1
 
     calc_avg(detect_avg, n_tests)
     calc_avg(img_avg, n_tests)
@@ -272,7 +271,7 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
     add_test(tests, test_dir_path, id_num)
     id_num += 1
 
-print_sort_tests(tests)
+print_sort_tests(tests, LENIENCY)
 
 #best_tests = get_best(tests, LENIENCY)
 
