@@ -115,7 +115,14 @@ def print_sort_tests(tests):
 
     num = 0
     for avg in avgs:
-        print("avg {0}:".format(num))
+        for key, value in avg.avgs:
+            img_detect = avg.avgs["perc_img_detect"]
+            skip = avg.avgs["perc_skip"]
+            detect = avg.avgs["perc_detect"]
+
+            print("avg {0}\timg_detect: {1}\tskip: {2}\tdetect: {3}"
+                  "".format(num, img_detect, skip, detect))
+
         print(avg)
 
         num += 1
