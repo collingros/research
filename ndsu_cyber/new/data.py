@@ -103,8 +103,9 @@ def init_avg():
 
 
 def print_avg(avg):
-    for key, value in avg.items():
-        print("\t{0}:\t{1}".format(key, value))
+    for type, t_dict in avg.items():
+        for key, value in t_dict.items():
+            print("\t{0}:\t{1}".format(key, value))
 
 
 def print_sort_tests(tests):
