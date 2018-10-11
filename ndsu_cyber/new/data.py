@@ -81,11 +81,9 @@ def disp_imgs(tests):
 def add_avg(avg_dict, test, perc):
     for f_key, f_value in test.data["filters"].items():
         for a_key, a_value in avg_dict.items():
-            print("f_key: {0}\ta_key: {1}".format(f_key, a_key))
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
 
-                print("avg_perc after round: {0}".format(avg_perc))
                 try:
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
@@ -107,7 +105,7 @@ def init_avg():
 def print_avg(avg):
     for type, t_dict in avg.items():
         for key, value in t_dict.items():
-            print("\t{0}:\t{1}".format(key, value))
+            print("\t{0}{1}:\t{2}".format(type, key, value))
 
 
 def calc_avg(avg, num):
