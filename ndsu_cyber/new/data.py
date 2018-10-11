@@ -258,7 +258,7 @@ for key, value in user_input.items():
     user_input[key] = value
 
 SET = user_input["SET"]
-LENIENCY = int(user_input["LENIENCY"])
+LENIENCY = float(user_input["LENIENCY"])
 
 stat_dir_path = os.getcwd() + "/" + SET
 
