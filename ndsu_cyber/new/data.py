@@ -100,7 +100,7 @@ def print_sort_tests(tests):
     var_keys = ["sf", "mn", "test_height", "cascade"]
     for test in tests:
         for f_key, f_value in test.data["filters"].items():
-            for v_key, v_value in var_keys.items():
+            for v_key in var_keys:
                 if f_key == v_key:
                     perc_img_detect = test.gen_data["perc_img_detect"]
                     perc_skip = test.gen_data["perc_skip"]
