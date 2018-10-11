@@ -115,7 +115,7 @@ def print_sort_tests(tests):
 
     num = 0
     for avg in avgs:
-        for key, value in avg.avgs:
+        for key, value in avg.avgs.items():
             img_detect = avg.avgs["perc_img_detect"]
             skip = avg.avgs["perc_skip"]
             detect = avg.avgs["perc_detect"]
