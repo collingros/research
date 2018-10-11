@@ -85,8 +85,12 @@ def add_avg(avg_dict, test, perc):
                 avg_perc = round(test.gen_data[perc], 2)
 
                 try:
+                    print("adding new avg \"{0}\" to old avg"
+                          "\"{1}\"".format(avg_perc,
+                                           avg_dict[a_key][f_value]
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
+                    print("initializing new avg \"{0}\"".format(avg_perc))
                     avg_dict[a_key][f_value] = 0
                     avg_dict[a_key][f_value] += avg_perc
 
