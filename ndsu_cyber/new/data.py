@@ -78,7 +78,7 @@ def disp_imgs(tests):
             cv2.destroyAllWindows()
 
 
-def add_avg(avg_dict, test, perc, num):
+def add_avg(avg_dict, test, perc):
     for f_key, f_value in test.data["filters"].items():
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
