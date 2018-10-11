@@ -41,6 +41,7 @@ class Avg:
     def __init__(self, filter_key, filter_value):
         self.filter_key = filter_key
         self.filter_value = filter_value
+
         self.avgs = {
                 "perc_img_detect":0,
                 "perc_skip":0,
@@ -99,7 +100,7 @@ def print_sort_tests(tests):
     var_keys = ["sf", "mn", "test_height", "cascade"]
     for test in tests:
         for f_key, f_value in test.data["filters"].items():
-            for v_key, v_value in vars.items():
+            for v_key, v_value in var_keys.items():
                 if f_key == v_key:
                     perc_img_detect = test.gen_data["perc_img_detect"]
                     perc_skip = test.gen_data["perc_skip"]
