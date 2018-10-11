@@ -83,7 +83,7 @@ def add_avg(avg_dict, test, perc, num):
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
-                print("avg_perc for test {0}: {1}".format(num, avg_perc))
+
                 try:
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
@@ -123,9 +123,9 @@ def print_sort_tests(tests):
 
     n_tests = 0
     for test in tests:
-        add_avg(detect_avg, test, "perc_detect", n_tests)
-        add_avg(img_avg, test, "perc_img_detect", n_tests)
-        add_avg(skip_avg, test, "perc_skip", n_tests)
+        add_avg(detect_avg, test, "perc_detect")
+        add_avg(img_avg, test, "perc_img_detect")
+        add_avg(skip_avg, test, "perc_skip")
 
         n_tests += 1
 
