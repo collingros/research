@@ -129,13 +129,13 @@ def print_sort_tests(tests):
             skip = avg.avgs["perc_skip"]
             detect = avg.avgs["perc_detect"]
 
-            if key == "sf":
+            if avg.filter_key == "sf":
                 sf_vals.append(detect)
-            elif key == "mn":
+            elif avg.filter_key == "mn":
                 mn_vals.append(detect)
-            elif key == "test_height":
+            elif avg.filter_key == "test_height":
                 heights.append(detect)
-            elif key == "cascade":
+            elif avg.filter_key == "cascade":
                 cascades.append(detect)
 
 #            print("avg {0}\timg_detect: {1}\tskip: {2}\tdetect: {3}"
