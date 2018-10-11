@@ -110,16 +110,30 @@ def print_avg(avg):
             print("\t{0}:\t{1}".format(key, value))
 
 
+def calc_avg(avg, num):
+    for type, t_dict in avg.items():
+        for key, value in t_dict.items():
+            avged_val = round((value / num), 2)
+            avg[type][key] = avged_val
+
+
 def print_sort_tests(tests):
     # average result from each setting
     detect_avg = init_avg()
     img_avg = init_avg()
     skip_avg = init_avg()
 
+    n_tests = 0
     for test in tests:
         add_avg(detect_avg, test, "perc_detect")
         add_avg(img_avg, test, "perc_img_detect")
         add_avg(skip_avg, test, "perc_skip")
+
+        n_tests += 1
+
+    calc_avg(detect_avg, n_tests)
+    calc_avg(img_avg, n_tests)
+    calc_avg(skip_avg, n_tests)
 
     print("detect_avg:")
     print_avg(detect_avg)
