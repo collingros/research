@@ -97,6 +97,7 @@ def add_avg(avg_dict, test, perc):
                     avg_dict[a_key][f_value] = 0
                     avg_dict[a_key][f_value] += avg_perc
 
+                print("new value: {0}".format(avg_dict[a_key][f_value]))
 
 def init_avg():
     avg = {
