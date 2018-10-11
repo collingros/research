@@ -79,16 +79,23 @@ def disp_imgs(tests):
 
 
 def add_avg(avg_dict, test, perc):
+    n = 0
     for f_key, f_value in test.data["filters"].items():
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
-
+                print("avg_perc: {0}".format(avg_perc))
+#                if avg_perc > LENIENCY and perc == "perc_detect":
+#                    pass
+#                if avg_perc > LENIENCY and f_key == "perc_img_detect":
+#                    pass
                 try:
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
                     avg_dict[a_key][f_value] = 0
                     avg_dict[a_key][f_value] += avg_perc
+
+    n += 1
 
 
 def init_avg():
@@ -231,7 +238,11 @@ def add_test(tests, test_dir_path, id_num):
 
         print("processed: {0}\treviewed: {1}".format(processed, reviewed))
         new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
+
+        print("total_faces: {0}".format(total_faces))
         new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
+
+        print("processed: {0}".format(processed))
         new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
 
         tests.append(new_test)
