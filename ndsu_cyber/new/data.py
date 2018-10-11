@@ -131,8 +131,13 @@ def print_sort_tests(tests):
 
     n_tests = 0
     for test in tests:
+        print("add avg: detect_avg")
         add_avg(detect_avg, test, "perc_detect")
+
+        print("add avg: img_detect")
         add_avg(img_avg, test, "perc_img_detect")
+
+        print("add avg: skip")
         add_avg(skip_avg, test, "perc_skip")
 
         n_tests += 1
