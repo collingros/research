@@ -83,10 +83,10 @@ def add_avg(avg_dict, test, perc, num, LENIENCY):
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
-                print("avg_perc: {0}".format(avg_perc))
 
                 if avg_perc > LENIENCY and perc == "perc_detect":
                     return num
+                print("avg_perc: {0}".format(avg_perc))
 
                 try:
                     avg_dict[a_key][f_value] += avg_perc
