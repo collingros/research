@@ -37,18 +37,6 @@ from subprocess import call
 import time
 
 
-class Avg:
-    def __init__(self, filter_key, filter_value):
-        self.filter_key = filter_key
-        self.filter_value = filter_value
-
-        self.avgs = {
-                "perc_img_detect":0,
-                "perc_skip":0,
-                "perc_detect":0
-            }
-
-
 class Test:
     def __init__(self):
         self.gen_data = {
@@ -90,69 +78,54 @@ def disp_imgs(tests):
             cv2.destroyAllWindows()
 
 
+def add_avg(avg_dict, test, perc):
+    for f_key, f_value in test.data["filters"].items():
+        for a_key, a_value in avg_dict.items():
+            if f_key == a_key:
+                avg_perc = test.gen_data[perc]
+
+                try:
+                    avg_dict[a_key][f_value] += avg_perc
+                except: # initialize value if not already initialized
+                    avg_dict[a_key][f_value] = 0
+                    avg_dict[a_key][f_value] += avg_perc
+
+
+def init_avg():
+    avg = {
+        "sf":{},
+        "mn":{},
+        "test_height":{},
+        "cascade":{}
+    }
+
+    return avg
+
+
+def print_avg(avg):
+    for key, value in avg.items():
+        print("\t{0}:\t{1}".format(key, value))
+
+
 def print_sort_tests(tests):
     # average result from each setting
-    # tested: variable settings
-    # average values
-    # NOTE: remember when calculating, only allow one var
-    # to change. SF 1.01 to mn 1, SF 1.05 to mn 1, etc.
+    detect_avg = init_avg()
+    img_avg = init_avg()
+    skip_avg = init_avg()
 
-    choice = 0
-
-    avgs = []
-    var_keys = ["sf", "mn", "test_height", "cascade"]
     for test in tests:
-        for f_key, f_value in test.data["filters"].items():
-            for v_key in var_keys:
-                if f_key == v_key:
-                    perc_img_detect = test.gen_data["perc_img_detect"]
-                    perc_skip = test.gen_data["perc_skip"]
-                    perc_detect = test.gen_data["perc_detect"]
+        add_avg(detect_avg, test, "perc_detect")
+        add_avg(img_avg, test, "perc_img_detect")
+        add_avg(skip_avg, test, "perc_skip")
 
-                    new_avg = Avg(f_key, f_value)
-                    new_avg.avgs["perc_img_detect"] = perc_img_detect
-                    new_avg.avgs["perc_skip"] = perc_skip
-                    new_avg.avgs["perc_detect"] = perc_detect
+    print("detect_avg:")
+    print_avg(detect_avg)
 
-                    avgs.append(new_avg)
+    print("\nimg_avg:")
+    print_avg(img_avg)
 
-    sf_vals = []
-    mn_vals = []
-    heights = []
-    cascades = []
-
-    num = 0
-    for avg in avgs:
-        for key, value in avg.avgs.items():
-            print("key: {0}\tvalue: {1}".format(key, value))
-            img_detect = avg.avgs["perc_img_detect"]
-            skip = avg.avgs["perc_skip"]
-            detect = avg.avgs["perc_detect"]
-
-            if avg.filter_key == "sf":
-                sf_vals.append(detect)
-            elif avg.filter_key == "mn":
-                mn_vals.append(detect)
-            elif avg.filter_key == "test_height":
-                heights.append(detect)
-            elif avg.filter_key == "cascade":
-                cascades.append(detect)
-
-#            print("avg {0}\timg_detect: {1}\tskip: {2}\tdetect: {3}"
-#                  "".format(num, img_detect, skip, detect))
-
-        num += 1
-
-    sf_vals.sort()
-    mn_vals.sort()
-    heights.sort()
-    cascades.sort()
-
-    num = 0
-    for val in sf_vals:
-        print("val: {0}\tdetect: {1}".format(num, val))
-
-        num += 1
+    print("\nskip_avg:")
+    print_avg(skip_avg)
 
 
 def get_best(tests, LENIENCY):
