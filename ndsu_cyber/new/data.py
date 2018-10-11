@@ -96,6 +96,9 @@ def print_sort_tests(tests):
     # average values
     # NOTE: remember when calculating, only allow one var
     # to change. SF 1.01 to mn 1, SF 1.05 to mn 1, etc.
+
+    choice = 0
+
     avgs = []
     var_keys = ["sf", "mn", "test_height", "cascade"]
     for test in tests:
@@ -113,17 +116,35 @@ def print_sort_tests(tests):
 
                     avgs.append(new_avg)
 
-    num = 0
+    sf_vals, mn_vals, heights, cascades = []
     for avg in avgs:
         for key, value in avg.avgs.items():
             img_detect = avg.avgs["perc_img_detect"]
             skip = avg.avgs["perc_skip"]
             detect = avg.avgs["perc_detect"]
 
-            print("avg {0}\timg_detect: {1}\tskip: {2}\tdetect: {3}"
-                  "".format(num, img_detect, skip, detect))
+            if key == "sf":
+                sf_vals.append(detect)
+            elif key == "mn":
+                mn_vals.append(detect)
+            elif key == "test_height":
+                heights.append(detect)
+            elif key == "cascade":
+                cascades.append(detect)
 
-        print(avg)
+#            print("avg {0}\timg_detect: {1}\tskip: {2}\tdetect: {3}"
+#                  "".format(num, img_detect, skip, detect))
+
+        num += 1
+
+    sort(sf_vals)
+    sort(mn_vals)
+    sort(heights)
+    sort(cascades)
+
+    num = 0
+    for val in sf_vals:
+        print("val: {0}\tdetect: {1}".format(num, val))
 
         num += 1
 
