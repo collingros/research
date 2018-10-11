@@ -116,7 +116,10 @@ def print_sort_tests(tests):
 
                     avgs.append(new_avg)
 
-    sf_vals, mn_vals, heights, cascades = []
+    sf_vals = []
+    mn_vals = []
+    heights = []
+    cascades = []
     for avg in avgs:
         for key, value in avg.avgs.items():
             img_detect = avg.avgs["perc_img_detect"]
