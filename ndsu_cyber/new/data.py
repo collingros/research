@@ -80,24 +80,16 @@ def disp_imgs(tests):
 
 def add_avg(avg_dict, test, perc):
     for f_key, f_value in test.data["filters"].items():
-        print("**ID: {0}**".format(test.gen_data["id"]))
         for a_key, a_value in avg_dict.items():
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
 
                 try:
-                    print("adding new avg \"{0}\" to old avg"
-                          "\"{1}\"".format(avg_perc,
-                                           avg_dict[a_key][f_value]))
                     avg_dict[a_key][f_value] += avg_perc
                 except: # initialize value if not already initialized
-                    print("initializing new avg \"{0}\""
-                          "for {1} and {2}"
-                          "".format(avg_perc, a_key, f_value))
                     avg_dict[a_key][f_value] = 0
                     avg_dict[a_key][f_value] += avg_perc
 
-                print("new value: {0}".format(avg_dict[a_key][f_value]))
 
 def init_avg():
     avg = {
@@ -131,13 +123,8 @@ def print_sort_tests(tests):
 
     n_tests = 0
     for test in tests:
-        print("add avg: detect_avg")
         add_avg(detect_avg, test, "perc_detect")
-
-        print("add avg: img_detect")
         add_avg(img_avg, test, "perc_img_detect")
-
-        print("add avg: skip")
         add_avg(skip_avg, test, "perc_skip")
 
         n_tests += 1
