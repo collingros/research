@@ -125,6 +125,7 @@ def calc_avg(avg, num):
 
 def selection_sort(tests, result_type):
     # result type: processed, skipped or detected_imgs
+    '''
     sorted_tests = []
     tmp_tests = tests
     test_count = 0
@@ -142,6 +143,12 @@ def selection_sort(tests, result_type):
                                                        tests[test_count])
             tmp_count += 1
         test_count += 1
+
+    return tests
+    '''
+
+    tests.sort(key=lambda test: test.data["results"][result_type],
+               reverse=False)
 
     return tests
 
@@ -299,6 +306,7 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
 #print_sort_tests_2(tests)
 #best_tests = get_best(tests, LENIENCY)
 new_tests = selection_sort(tests, "processed_faces")
+print_tests(new_tests)
 #print("**ALL TESTS**")
 #print_tests(tests)
 #print("**BEST TESTS**")
