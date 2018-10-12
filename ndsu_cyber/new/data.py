@@ -57,6 +57,8 @@ class Test:
 
 
 def print_tests(tests):
+    filter_vars = ["sf", "mn", "test_height", "cascade"]
+    result_vars = ["processed_faces", "skipped", "total_faces"]
     for test in tests:
         test_id = test.gen_data["id"]
         path = test.gen_data["path"]
@@ -65,7 +67,8 @@ def print_tests(tests):
         for key, value in test.data.items():
             print("{0}".format(key))
             for key_2, value_2 in test.data[key].items():
-                print("\t{0}:\t{1}".format(key_2, value_2))
+                if key_2 in result_vars or key_2 in filter_vars:
+                    print("\t{0}:\t{1}".format(key_2, value_2))
 
 
 def disp_imgs(tests):
