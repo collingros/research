@@ -127,19 +127,21 @@ def selection_sort(tests, result_type):
     # result type: processed, skipped or detected_imgs
     sorted_tests = []
     tmp_tests = tests
+    test_count = 0
     for test in tests:
         tmp_tests.remove(test)
 
         max_val = test.data["results"][result_type]
-        max_i = tests.index(test)
 
-
+        tmp_count = 0
         for tmp_test in tmp_tests:
             curr_val = tmp_test.data["results"][result_type]
 
             if curr_val > max_val:
-                tests[test], tests[tmp_test] = (tests[tmp_test],
-                                                tests[test])
+                tests[test_count], tests[tmp_count] = (tests[tmp_count],
+                                                       tests[test_count])
+            tmp_count += 1
+        test_count += 1
 
     return tests
 
