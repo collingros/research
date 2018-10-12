@@ -84,8 +84,8 @@ def add_avg(avg_dict, test, perc, num, LENIENCY):
             if f_key == a_key:
                 avg_perc = round(test.gen_data[perc], 2)
 
-                if avg_perc > LENIENCY and perc == "perc_detect":
-                    return num
+#                if avg_perc > LENIENCY and perc == "perc_detect":
+#                    return num
 
                 print("avg_perc: {0}\tnum: {1}".format(avg_perc, num))
 
@@ -121,6 +121,25 @@ def calc_avg(avg, num):
         for key, value in t_dict.items():
             avged_val = round((value / num), 2)
             avg[type][key] = avged_val
+
+
+def selection_sort(tests, result_type):
+    # result type: processed, skipped or detected_imgs
+    sorted_tests = []
+    tmp_tests = tests
+    for test in tests:
+        tmp_tests.remove(test)
+        max_test = test
+        max_val = tests[max_test].gen_data["results"][result_type]
+
+
+        for tmp_test in tmp_tests:
+            curr_val = tests[tmp_test].gen_data["results"][result_type]
+            if curr_val > max_val:
+                tests[max_test], tests[tmp_test] = (tests[tmp_test],
+                                                    tests[max_test])
+
+    return tests
 
 
 def print_sort_tests(tests, LENIENCY):
@@ -236,13 +255,13 @@ def add_test(tests, test_dir_path, id_num):
         total_faces = int(new_test.data["results"]["total_faces"])
         skipped = int(new_test.data["results"]["skipped"])
 
-        print("skipped: {0}\treviewed: {1}".format(skipped, reviewed))
+#        print("skipped: {0}\treviewed: {1}".format(skipped, reviewed))
         new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
 
-        print("total_faces: {0}".format(total_faces))
+#        print("total_faces: {0}".format(total_faces))
         new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
 
-        print("processed: {0}".format(processed))
+#        print("processed: {0}".format(processed))
         new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
 
         tests.append(new_test)
@@ -273,11 +292,11 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
     id_num += 1
 
 #print_sort_tests(tests, LENIENCY)
-
+#print_sort_tests_2(tests)
 #best_tests = get_best(tests, LENIENCY)
-
+new_tests = selection_sort(tests, "processed_faces")
 #print("**ALL TESTS**")
-print_tests(tests)
+#print_tests(tests)
 #print("**BEST TESTS**")
 #print_tests(best_tests)
 #disp_imgs(best_tests)
