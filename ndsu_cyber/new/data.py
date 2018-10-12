@@ -57,7 +57,7 @@ class Test:
 
 
 def print_tests(tests):
-    filter_vars = ["sf", "mn", "test_height", "cascade"]
+    filter_vars = ["sf", "mn", "test_height"]
     result_vars = ["processed_faces", "skipped", "total_faces"]
     for test in tests:
         test_id = test.gen_data["id"]
@@ -151,7 +151,7 @@ def selection_sort(tests, result_type):
     return tests
     '''
 
-    tests.sort(key=lambda test: test.data["results"][result_type],
+    tests.sort(key=lambda test: int(test.data["results"][result_type]),
                reverse=False)
 
     return tests
