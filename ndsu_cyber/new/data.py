@@ -131,7 +131,7 @@ def selection_sort(tests, result_type):
         tmp_tests.remove(test)
 
         max_test = test
-        max_test_i = tests.index(max_test)
+        max_test_i = tests.index(test)
 
         max_val = max_test.gen_data["results"][result_type]
 
