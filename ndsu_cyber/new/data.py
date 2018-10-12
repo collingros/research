@@ -272,12 +272,12 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
     add_test(tests, test_dir_path, id_num)
     id_num += 1
 
-print_sort_tests(tests, LENIENCY)
+#print_sort_tests(tests, LENIENCY)
 
 #best_tests = get_best(tests, LENIENCY)
 
 #print("**ALL TESTS**")
-#print_tests(tests)
+print_tests(tests)
 #print("**BEST TESTS**")
 #print_tests(best_tests)
 #disp_imgs(best_tests)
