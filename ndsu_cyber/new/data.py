@@ -56,30 +56,29 @@ class Test:
             }
 
 
-def print_tests(tests):
+def print_test(test):
     filter_vars = ["sf", "mn", "test_height"]
     result_vars = ["processed_faces", "skipped", "total_faces"]
-    for test in tests:
-        test_id = test.gen_data["id"]
-        path = test.gen_data["path"]
-        print("\nTEST:\t{0}\nPATH:\t{1}".format(test_id, path))
 
-        for key, value in test.data.items():
-            print("{0}".format(key))
-            for key_2, value_2 in test.data[key].items():
-                if key_2 in result_vars or key_2 in filter_vars:
-                    print("\t{0}:\t\t{1}".format(key_2, value_2))
-            print("\n\n")
+    test_id = test.gen_data["id"]
+    path = test.gen_data["path"]
+    print("\nTEST:\t{0}\nPATH:\t{1}".format(test_id, path))
+
+    for key, value in test.data.items():
+        print("{0}".format(key))
+        for key_2, value_2 in test.data[key].items():
+            if key_2 in result_vars or key_2 in filter_vars:
+                print("\t{0}:\t\t{1}".format(key_2, value_2))
+        print("\n\n")
 
 
-def disp_imgs(tests):
-    for test in tests:
-        test_id = test.gen_data["id"]
-        for img in test.gen_data["imgs"]:
-            loaded_img = cv2.imread(img, 1)
-            cv2.imshow("TEST:\t{0}".format(test_id), loaded_img)
-            cv2.waitKey(50)
-            cv2.destroyAllWindows()
+def disp_imgs(test):
+    test_id = test.gen_data["id"]
+    for img in test.gen_data["imgs"]:
+        loaded_img = cv2.imread(img, 1)
+        cv2.imshow("TEST:\t{0}".format(test_id), loaded_img)
+        cv2.waitKey(50)
+        cv2.destroyAllWindows()
 
 
 def add_avg(avg_dict, test, perc, num, LENIENCY):
@@ -310,7 +309,17 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
 #print_sort_tests_2(tests)
 #best_tests = get_best(tests, LENIENCY)
 new_tests = selection_sort(tests, "processed_faces")
-print_tests(new_tests)
+while True:
+    for test in new_tests:
+        print_test(test)
+
+    print("select test ID to disp images")
+    choice = int(input("\t"))
+
+    for test in new_tests:
+        if test.gen_data["id"] == choice:
+            disp_imgs(test)
+
 #print("**ALL TESTS**")
 #print_tests(tests)
 #print("**BEST TESTS**")
