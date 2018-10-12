@@ -68,7 +68,7 @@ def print_tests(tests):
             print("{0}".format(key))
             for key_2, value_2 in test.data[key].items():
                 if key_2 in result_vars or key_2 in filter_vars:
-                    print("\t{0}:\t{1}".format(key_2, value_2))
+                    print("\t{0}:\t\t{1}\n".format(key_2, value_2))
 
 
 def disp_imgs(tests):
