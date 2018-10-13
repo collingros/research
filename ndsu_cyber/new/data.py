@@ -167,8 +167,8 @@ while True:
         processed = test.data["results"]["processed_faces"]
         actual = test.data["results"]["reviewed"]
 
-        if processed > actual + LENIENCY or
-           processed < actual - LENIENCY:
+        if (processed > actual + LENIENCY or
+            processed < actual - LENIENCY):
             # bad test results, according to leniency
             continue
 
