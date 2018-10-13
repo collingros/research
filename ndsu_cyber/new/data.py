@@ -149,7 +149,7 @@ for key, value in user_input.items():
     user_input[key] = value
 
 SET = user_input["SET"]
-LENIENCY = float(user_input["LENIENCY"])
+LENIENCY = int(user_input["LENIENCY"])
 
 stat_dir_path = os.getcwd() + "/" + SET
 
@@ -164,8 +164,8 @@ for test_dir in sorted(os.listdir(stat_dir_path)):
 new_tests = test_sort(tests, "processed_faces")
 while True:
     for test in new_tests:
-        processed = test.data["results"]["processed_faces"]
-        actual = test.data["results"]["reviewed"]
+        processed = int(test.data["results"]["processed_faces"])
+        actual = int(test.data["results"]["reviewed"])
 
         if (processed > actual + LENIENCY or
             processed < actual - LENIENCY):
