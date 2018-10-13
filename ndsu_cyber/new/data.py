@@ -81,6 +81,111 @@ def disp_imgs(test):
         cv2.destroyAllWindows()
 
 
+def test_sort(tests, result_type):
+    tests.sort(key=lambda test: int(test.data["results"][result_type]),
+               reverse=False)
+
+    return tests
+
+
+
+
+def add_test(tests, test_dir_path, id_num):
+    new_test = Test()
+    new_test.gen_data["path"] = test_dir
+    new_test.gen_data["id"] = id_num
+
+    for item in sorted(os.listdir(test_dir_path)):
+        item_path = test_dir_path + "/" + item
+        item_substr = item.split(".")
+
+        # file extension
+        ext = item_substr[-1]
+
+        if ext == "txt":
+            with open(item_path, "r") as stats:
+                # stats file is split in two sections: results and filters
+                filters = 1
+                for line in stats:
+                    line_subs = line.strip("\n").split("\t")
+                    key = line_subs[0]
+
+                    if key.islower():
+                        # the options in the stat file are uppercase when
+                        # dealing with filters, lowercase otherwise
+                        filters = 0
+
+                    key = key.lower()
+                    value = line_subs[-1]
+
+                    if filters:
+                        new_test.data["filters"][key] = value
+                    else:
+                        new_test.data["results"][key] = value
+
+        elif ext == "JPG":
+            new_test.gen_data["imgs"].append(item_path)
+
+    if len(new_test.data["results"]) > 0:
+        processed = int(new_test.data["results"]["processed_faces"])
+        reviewed = int(new_test.data["results"]["reviewed"])
+        total_faces = int(new_test.data["results"]["total_faces"])
+        skipped = int(new_test.data["results"]["skipped"])
+
+        new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
+        new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
+        new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
+
+        tests.append(new_test)
+
+
+user_input = {
+    "SET":"",
+    "LENIENCY":""
+}
+
+for key, value in user_input.items():
+    value = input("Enter \"{0}\":\t".format(key))
+    user_input[key] = value
+
+SET = user_input["SET"]
+LENIENCY = float(user_input["LENIENCY"])
+
+stat_dir_path = os.getcwd() + "/" + SET
+
+id_num = 0
+tests = []
+for test_dir in sorted(os.listdir(stat_dir_path)):
+    test_dir_path = stat_dir_path + "/" + test_dir
+
+    add_test(tests, test_dir_path, id_num)
+    id_num += 1
+
+new_tests = test_sort(tests, "processed_faces")
+while True:
+    for test in new_tests:
+        processed = test.data["results"]["processed_faces"]
+        actual = test.data["results"]["reviewed"]
+
+        if processed > actual + LENIENCY or
+           processed < actual - LENIENCY:
+            # bad test results, according to leniency
+            continue
+
+        print_test(test)
+
+    print("select test ID to disp images")
+    choice = int(input("\t"))
+
+    for test in new_tests:
+        if test.gen_data["id"] == choice:
+            disp_imgs(test)
+
+
+# GRAVEYARD
+# old methods that are too complicated / retarded to use
+
+'''
 def add_avg(avg_dict, test, perc, num, LENIENCY):
     for f_key, f_value in test.data["filters"].items():
         for a_key, a_value in avg_dict.items():
@@ -126,63 +231,6 @@ def calc_avg(avg, num):
             avg[type][key] = avged_val
 
 
-def selection_sort(tests, result_type):
-    # result type: processed, skipped or detected_imgs
-    '''
-    sorted_tests = []
-    tmp_tests = tests
-    test_count = 0
-    for test in tests:
-        tmp_tests.remove(test)
-
-        max_val = test.data["results"][result_type]
-
-        tmp_count = 0
-        for tmp_test in tmp_tests:
-            curr_val = tmp_test.data["results"][result_type]
-
-            if curr_val > max_val:
-                tests[test_count], tests[tmp_count] = (tests[tmp_count],
-                                                       tests[test_count])
-            tmp_count += 1
-        test_count += 1
-
-    return tests
-    '''
-
-    tests.sort(key=lambda test: int(test.data["results"][result_type]),
-               reverse=False)
-
-    return tests
-
-
-def print_sort_tests(tests, LENIENCY):
-    # average result from each setting
-    detect_avg = init_avg()
-    img_avg = init_avg()
-    skip_avg = init_avg()
-
-    n_tests = 0
-    for test in tests:
-        n_tests = add_avg(detect_avg, test, "perc_detect", n_tests, LENIENCY)
-        n_tests = add_avg(img_avg, test, "perc_img_detect", n_tests, LENIENCY)
-        n_tests = add_avg(skip_avg, test, "perc_skip", n_tests, LENIENCY)
-
-
-    calc_avg(detect_avg, n_tests)
-    calc_avg(img_avg, n_tests)
-    calc_avg(skip_avg, n_tests)
-
-    print("detect_avg:")
-    print_avg(detect_avg)
-
-    print("\nimg_avg:")
-    print_avg(img_avg)
-
-    print("\nskip_avg:")
-    print_avg(skip_avg)
-
-
 def get_best(tests, LENIENCY):
     # simply get the top 10 best results
 
@@ -225,110 +273,32 @@ def get_best(tests, LENIENCY):
 
     return best_tests
 
+def print_sort_tests(tests, LENIENCY):
+    # average result from each setting
+    detect_avg = init_avg()
+    img_avg = init_avg()
+    skip_avg = init_avg()
 
-def add_test(tests, test_dir_path, id_num):
-    new_test = Test()
-    new_test.gen_data["path"] = test_dir
-    new_test.gen_data["id"] = id_num
-
-    for item in sorted(os.listdir(test_dir_path)):
-        # item_path: /home/surv/git/research/ndsu_cyber/new/SET/opt_$dir_n/"item"
-        item_path = test_dir_path + "/" + item
-        item_substr = item.split(".")
-
-        # file extension
-        ext = item_substr[-1]
-
-        if ext == "txt":
-            with open(item_path, "r") as stats:
-                # stats file is split in two sections: results and filters
-                filters = 1
-                for line in stats:
-                    line_subs = line.strip("\n").split("\t")
-                    key = line_subs[0]
-
-                    if key.islower():
-                        # the options in the stat file are uppercase when
-                        # dealing with filters, lowercase otherwise
-                        filters = 0
-
-                    key = key.lower()
-                    value = line_subs[-1]
-
-                    if filters:
-                        new_test.data["filters"][key] = value
-                    else:
-                        new_test.data["results"][key] = value
-
-        elif ext == "JPG":
-            new_test.gen_data["imgs"].append(item_path)
-
-    if len(new_test.data["results"]) > 0:
-        processed = int(new_test.data["results"]["processed_faces"])
-        reviewed = int(new_test.data["results"]["reviewed"])
-        total_faces = int(new_test.data["results"]["total_faces"])
-        skipped = int(new_test.data["results"]["skipped"])
-
-#        print("skipped: {0}\treviewed: {1}".format(skipped, reviewed))
-        new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
-
-#        print("total_faces: {0}".format(total_faces))
-        new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
-
-#        print("processed: {0}".format(processed))
-        new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
-
-        tests.append(new_test)
+    n_tests = 0
+    for test in tests:
+        n_tests = add_avg(detect_avg, test, "perc_detect", n_tests, LENIENCY)
+        n_tests = add_avg(img_avg, test, "perc_img_detect", n_tests, LENIENCY)
+        n_tests = add_avg(skip_avg, test, "perc_skip", n_tests, LENIENCY)
 
 
-user_input = {
-    "SET":"",
-    "LENIENCY":""
-}
+    calc_avg(detect_avg, n_tests)
+    calc_avg(img_avg, n_tests)
+    calc_avg(skip_avg, n_tests)
 
-for key, value in user_input.items():
-    value = input("Enter \"{0}\":\t".format(key))
-    user_input[key] = value
+    print("detect_avg:")
+    print_avg(detect_avg)
 
-SET = user_input["SET"]
-LENIENCY = float(user_input["LENIENCY"])
+    print("\nimg_avg:")
+    print_avg(img_avg)
 
-stat_dir_path = os.getcwd() + "/" + SET
-
-# stat_dir = /home/surv/git/research/ndsu_cyber/new/SET (out or out2)
-
-id_num = 0
-tests = []
-for test_dir in sorted(os.listdir(stat_dir_path)):
-    test_dir_path = stat_dir_path + "/" + test_dir
-
-    add_test(tests, test_dir_path, id_num)
-    id_num += 1
-
-#print_sort_tests(tests, LENIENCY)
-#print_sort_tests_2(tests)
-#best_tests = get_best(tests, LENIENCY)
-new_tests = selection_sort(tests, "processed_faces")
-while True:
-    for test in new_tests:
-        print_test(test)
-
-    print("select test ID to disp images")
-    choice = int(input("\t"))
-
-    for test in new_tests:
-        if test.gen_data["id"] == choice:
-            disp_imgs(test)
-
-#print("**ALL TESTS**")
-#print_tests(tests)
-#print("**BEST TESTS**")
-#print_tests(best_tests)
-#disp_imgs(best_tests)
-
-
-
-
+    print("\nskip_avg:")
+    print_avg(skip_avg)
+'''
 
 
 
