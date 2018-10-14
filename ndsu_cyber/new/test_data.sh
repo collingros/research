@@ -9,7 +9,7 @@
 # ALL RESULTS WILL BE CORRECT
 
 dir_n=""
-for train_dir in "opt_151" "opt_202" "opt_17" "opt_1" "opt_172" "opt_27"
+for train_dir in "151" "202" "17" "1" "172" "27"
 do
     for casc in "lbph_frontal.xml" "haar_default.xml"
     do
