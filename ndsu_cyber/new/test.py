@@ -407,6 +407,14 @@ def test_data(SETTINGS, data):
                         img_num += 1
 
 
+def count_vals(my_dict):
+    conf_c = 0
+    for key, value in my_dict.items():
+        conf_c += len(value)
+
+    return conf_c
+
+
 data = {
     "time":0,
     "skipped":0, # number of pictures where a face wasn't detected
@@ -436,8 +444,9 @@ test_data(SETTINGS, data)
 finish_time = time.time()
 data["time"] = finish_time - start_time
 
-data["num_c"] = len(data["c_names"])
-data["num_w"] = len(data["w_names"])
+
+data["num_c"] = count_vals(data["c_names"])
+data["num_w"] = count_vals(data["w_names"])
 
 dump(data)
 
