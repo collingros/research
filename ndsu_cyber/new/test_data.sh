@@ -8,9 +8,13 @@
 # ONLY TESTS ON SAME SETTING TRAINING SET
 # ALL RESULTS WILL BE CORRECT
 
-dir_n=""
+rm -r out2
+mkdir out2
+
+dir_n=0
 for train_dir in "151" "202" "17" "1" "172" "27"
 do
+    mkdir out2/data_$train_dir
     for casc in "lbph_frontal.xml" "haar_default.xml"
     do
         for sf in 1.01 1.05 1.1 1.2 1.3 1.5
@@ -19,17 +23,16 @@ do
             do
                 for res in 150 480 960 1920 3456
                 do
-                    dir_n=$train_dir
-                    rm -r out2
-                    mkdir out2
-                    mkdir out2/opt_$dir_n
+                    ((dir_n++))
+                    mkdir out2/data_$train_dir/opt_$dir_n
 
-                    cp out/opt_$dir_n/train.yml out2/opt_$dir_n/train.yml
-                    cp out/opt_$dir_n/labels.pickle out2/opt_$dir_n/labels.pickle
+                    cur_dir=out2/data_$train_dir/opt_$dir_n
+                    cp out/opt_$train_dir/train.yml $cur_dir/train.yml
+                    cp out/opt_$dir_n/labels.pickle $cur_dir/labels.pickle
 
                     python3 test.py -s $sf -n $mn -p $res -l 1 -v 1 -o 1 -i 1 \
-                    -z $casc -g 1 -a 1 -k out2/opt_$dir_n \
-                    > ./out2/opt_$dir_n/scriptstat.txt
+                    -z $casc -g 1 -a 1 -k $cur_dir \
+                    > $cur_dir/scriptstat.txt
                 done
             done
         done
