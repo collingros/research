@@ -408,11 +408,11 @@ def test_data(SETTINGS, data):
 
 
 def count_vals(my_dict):
-    conf_c = 0
-    for key, value in my_dict.items():
-        conf_c += len(value)
+    num = 0
+    for person, data_list in my_dict.items():
+        num += data_list[1]
 
-    return conf_c
+    return num
 
 
 data = {
