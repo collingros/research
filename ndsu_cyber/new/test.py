@@ -419,7 +419,9 @@ data = {
     "processed_faces":0, # number of faces predicted
     "labels":[], # for id'ing each face from training data
     "face_rec":cv2.face_LBPHFaceRecognizer, # for training data using LBPH
-    "cascade":cv2.CascadeClassifier # for detecting faces using a classifier
+    "cascade":cv2.CascadeClassifier, # for detecting faces using a classifier
+    "num_c":0,
+    "num_w":0
 }
 
 start_time = time.time()
@@ -433,6 +435,9 @@ test_data(SETTINGS, data)
 
 finish_time = time.time()
 data["time"] = finish_time - start_time
+
+data["num_c"] = len(data["c_names"])
+data["num_w"] = len(data["w_names"])
 
 dump(data)
 
