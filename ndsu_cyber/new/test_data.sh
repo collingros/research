@@ -11,9 +11,10 @@
 rm -r out2
 mkdir out2
 
-dir_n=0
 for train_dir in "151" "202" "17" "1" "172" "27"
 do
+    dir_n=0
+
     mkdir out2/data_$train_dir
     for casc in "lbph_frontal.xml" "haar_default.xml"
     do
@@ -28,7 +29,7 @@ do
 
                     cur_dir=out2/data_$train_dir/opt_$dir_n
                     cp out/opt_$train_dir/train.yml $cur_dir/train.yml
-                    cp out/opt_$dir_n/labels.pickle $cur_dir/labels.pickle
+                    cp out/opt_$train_dir/labels.pickle $cur_dir/labels.pickle
 
                     python3 test.py -s $sf -n $mn -p $res -l 1 -v 1 -o 1 -i 1 \
                     -z $casc -g 1 -a 1 -k $cur_dir \
