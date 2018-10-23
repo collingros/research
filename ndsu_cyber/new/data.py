@@ -4,6 +4,9 @@
 # (currently, to get the best training data and use it for testing f.r. acc)
 #
 # context:
+
+#   FOR TRAINING OPTIMIZATION:
+
 #   every test was ran with some different setting than the previous
 #   in scriptstat.txt:
 #        split into two parts:
@@ -26,10 +29,22 @@
 #                   total_faces is the number of IMGS with at least one face
 #                   detected
 #
+#   FOR TESTING OPTIMIZATION:
+#
+#   tests structured just like training optimization,
+#   the scriptstat file is different:
+#
+#       c_names: dict with key as username and value as an array containing
+#                the confidences of each prediction, as well as the num of
+#                confidences in that array - NOTE - the fact that there is
+#                an element with someone's name means that the person
+#                has one prediction already. ('11':[[],0] still means one
+#                prediction took place)
+#
 # TODO:
 # debug
 # fix fixme's
-# run test on training sets to get results for testing sets
+# support for test.py results
 #
 import os
 import cv2
@@ -88,8 +103,6 @@ def test_sort(tests, result_type):
     return tests
 
 
-
-
 def add_test(tests, test_dir_path, id_num):
     new_test = Test()
     new_test.gen_data["path"] = test_dir
@@ -139,27 +152,45 @@ def add_test(tests, test_dir_path, id_num):
         tests.append(new_test)
 
 
-user_input = {
-    "SET":"",
-    "LENIENCY":""
-}
+def get_tests(SET, IS_TEST, TRAINED_DIR):
+    tests = {}
 
-for key, value in user_input.items():
-    value = input("Enter \"{0}\":\t".format(key))
-    user_input[key] = value
+    if IS_TEST:
+        data_dir_path = os.getcwd() + "/" + SET
 
-SET = user_input["SET"]
-LENIENCY = int(user_input["LENIENCY"])
+        for data_dir in sorted(os.listdir(data_dir_path)):
+            stat_dir_path = os.getcwd() + "/" + data_dir
 
-stat_dir_path = os.getcwd() + "/" + SET
+            tests[data_dir] = []
+            id_num = 0
+            for test_dir in sorted(os.listdir(stat_dir_path)):
+                test_dir_path = stat_dir_path + "/" + test_dir
 
-id_num = 0
-tests = []
-for test_dir in sorted(os.listdir(stat_dir_path)):
-    test_dir_path = stat_dir_path + "/" + test_dir
+                add_test(tests[data_dir], test_dir_path, id_num)
+                id_num += 1
+    else:
+        stat_dir_path = os.getcwd() + "/" + SET
 
-    add_test(tests, test_dir_path, id_num)
-    id_num += 1
+        tests[""] = []
+        id_num = 0
+        for test_dir in sorted(os.listdir(stat_dir_path)):
+            test_dir_path = stat_dir_path + "/" + test_dir
+
+            add_test(tests[""], test_dir_path, id_num)
+            id_num += 1
+
+    return tests
+
+
+SET = "out2"
+LENIENCY = 30
+
+IS_TEST = True
+# is the output from running test.py? the dir format and scripstat is then
+# different
+
+tests = get_tests(SET, IS_TEST, TRAINED_DIR)
+# ** NOW A DICTIONARY **
 
 new_tests = test_sort(tests, "processed_faces")
 while True:
@@ -180,138 +211,4 @@ while True:
     for test in new_tests:
         if test.gen_data["id"] == choice:
             disp_imgs(test)
-
-
-# GRAVEYARD
-# old methods that are too complicated / retarded to use
-
-'''
-def add_avg(avg_dict, test, perc, num, LENIENCY):
-    for f_key, f_value in test.data["filters"].items():
-        for a_key, a_value in avg_dict.items():
-            if f_key == a_key:
-                avg_perc = round(test.gen_data[perc], 2)
-
-#                if avg_perc > LENIENCY and perc == "perc_detect":
-#                    return num
-
-                print("avg_perc: {0}\tnum: {1}".format(avg_perc, num))
-
-                try:
-                    avg_dict[a_key][f_value] += avg_perc
-                except: # initialize value if not already initialized
-                    avg_dict[a_key][f_value] = 0
-                    avg_dict[a_key][f_value] += avg_perc
-
-    num += 1
-    return num
-
-
-def init_avg():
-    avg = {
-        "sf":{},
-        "mn":{},
-        "test_height":{},
-        "cascade":{}
-    }
-
-    return avg
-
-
-def print_avg(avg):
-    for type, t_dict in avg.items():
-        for key, value in t_dict.items():
-            print("\t{0}: {1}:\t{2}".format(type, key, value))
-
-
-def calc_avg(avg, num):
-    for type, t_dict in avg.items():
-        for key, value in t_dict.items():
-            avged_val = round((value / num), 2)
-            avg[type][key] = avged_val
-
-
-def get_best(tests, LENIENCY):
-    # simply get the top 10 best results
-
-    total_imgs = int(tests[0].data["results"]["reviewed"])
-    # (same total amount of images looked at for all our tests)
-    best_tests = []
-    last_ids = []
-
-#   starting with worst case scenarios
-    last_s = total_imgs
-    last_p = 0
-    processed = 0
-    skipped = 0
-
-#   FIXME
-#   in its current state, this loop will perform a sort only to the first 10
-#   tests, meaning the last test in best_tests will have the best value of
-#   the reviewed tests, however, the last test in best_tests may not be the
-#   best test in ALL of the tests. the loop halts after 10 are chosen.
-    for test in tests:
-        for key, value in test.data["results"].items():
-            if key == "processed_faces":
-                processed = int(value)
-            elif key == "skipped":
-                skipped = int(value)
-
-        if ((processed <= total_imgs + LENIENCY) and
-           ((processed > last_p - LENIENCY) and
-           (skipped < last_s + LENIENCY)) and
-           (test.gen_data["id"] not in last_ids)):
-           # if the num of processed faces is about the same as the total
-           # num of images and the current values are better than the last
-           # set new max
-
-            last_ids.append(test.gen_data["id"])
-            print(last_ids)
-            last_p = processed
-            last_s = skipped
-            best_tests.append(test)
-
-    return best_tests
-
-def print_sort_tests(tests, LENIENCY):
-    # average result from each setting
-    detect_avg = init_avg()
-    img_avg = init_avg()
-    skip_avg = init_avg()
-
-    n_tests = 0
-    for test in tests:
-        n_tests = add_avg(detect_avg, test, "perc_detect", n_tests, LENIENCY)
-        n_tests = add_avg(img_avg, test, "perc_img_detect", n_tests, LENIENCY)
-        n_tests = add_avg(skip_avg, test, "perc_skip", n_tests, LENIENCY)
-
-
-    calc_avg(detect_avg, n_tests)
-    calc_avg(img_avg, n_tests)
-    calc_avg(skip_avg, n_tests)
-
-    print("detect_avg:")
-    print_avg(detect_avg)
-
-    print("\nimg_avg:")
-    print_avg(img_avg)
-
-    print("\nskip_avg:")
-    print_avg(skip_avg)
-'''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
