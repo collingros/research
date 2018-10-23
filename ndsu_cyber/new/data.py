@@ -184,7 +184,7 @@ class Test:
         self.gen_data["id"] = id_num
 
         for item in sorted(os.listdir(path)):
-            item_path = test_dir_path + "/" + item
+            item_path = path + "/" + item
             item_substr = item.split(".")
 
             ext = item_substr[-1]
