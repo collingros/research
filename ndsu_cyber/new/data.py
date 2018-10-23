@@ -213,6 +213,8 @@ class Test:
             elif ext == "JPG":
                 self.gen_data["imgs"].append(item_path)
 
+IS_TEST = bool(input("is this test.py output?"))
+stats = Statistics(IS_TEST)
 
 
 '''
