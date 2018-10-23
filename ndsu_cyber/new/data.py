@@ -79,6 +79,8 @@ class Statistics:
         self.IS_TEST = IS_TEST
         self.tests = init_tests()
 
+        for test in self.tests:
+            test.print_test()
 
     def init_tests(self):
         tests = {}
@@ -117,7 +119,8 @@ class Statistics:
 
         tests.append(new_test)
 
-        
+
+
 
 
 class Test:
@@ -147,6 +150,31 @@ class Test:
                 "filters":{},
                 "results":{}
             }
+
+
+    def print_test(self):
+        filter_vars = ["sf", "mn", "test_height"]
+        result_vars = ["total_faces"]
+
+        test_id = self.gen_data["id"]
+        path = self.gen_data["path"]
+        print("\nTEST:\t{0}\nPATH:\t{1}".format(test_id, path))
+
+        for key, value in test.data.items():
+            print("{0}".format(key))
+            for key_2, value_2 in test.data[key].items():
+                if key_2 in result_vars or key_2 in filter_vars:
+                    print("\t{0}:\t\t{1}".format(key_2, value_2))
+            print("\n\n")
+
+
+    def disp_imgs(self):
+        test_id = self.gen_data["id"]
+        for img in self.gen_data["imgs"]:
+            loaded_img = cv2.imread(img, 1)
+            cv2.imshow("TEST:\t{0}".format(test_id), loaded_img)
+            cv2.waitKey(50)
+            cv2.destroyAllWindows()
 
 
     def fill(self, path, id_num):
