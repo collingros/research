@@ -79,8 +79,11 @@ class Statistics:
         self.IS_TEST = IS_TEST
         self.tests = self.init_tests()
 
-        if not (len(tests)):
+        if not (len(self.tests)):
             print("no tests")
+        else:
+            print("expert")
+
         for test in self.tests:
             test.print_test()
 
