@@ -77,7 +77,7 @@ class Statistics:
         # data, not trained data
 
         self.IS_TEST = IS_TEST
-        self.tests = init_tests()
+        self.tests = self.init_tests()
 
         if not (len(tests)):
             print("no tests")
@@ -213,7 +213,7 @@ class Test:
             elif ext == "JPG":
                 self.gen_data["imgs"].append(item_path)
 
-IS_TEST = bool(input("is this test.py output?"))
+IS_TEST = bool(input("is this test.py output (True/False)?:\t"))
 stats = Statistics(IS_TEST)
 
 
