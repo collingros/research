@@ -341,4 +341,5 @@ while True:
     for test in new_tests:
         if test.gen_data["id"] == choice:
             disp_imgs(test)
+'''
 
