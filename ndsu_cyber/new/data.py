@@ -51,7 +51,7 @@ import cv2
 from subprocess import call
 import time
 
-
+'''
 class Test:
     def __init__(self):
         self.gen_data = {
@@ -61,8 +61,86 @@ class Test:
                 "id":-1,
                 "perc_detect":0,
                 "perc_skip":0,
-                "perc_img_detect":0
+                "perc_img_detect":0,
+                "num_c":0
             }
+
+        self.data = {
+                # scriptstat.txt statistics
+                "filters":{},
+                "results":{}
+            }
+'''
+class Statistics:
+    def __init__(self, IS_TEST):
+        # IS_TEST: True if the folder we want to view stats of is from tested
+        # data, not trained data
+
+        self.IS_TEST = IS_TEST
+        self.tests = init_tests()
+
+
+    def init_tests(self):
+        tests = {}
+
+        if self.IS_TEST:
+            data_dir_path = os.getcwd() + "/" + "out2"
+
+            for data_dir in sorted(os.listdir(data_dir_path)):
+                test_dir_path = os.getcwd() + "/" + data_dir
+
+                tests[data_dir] = []
+                id_num = 0
+                for test_dir in sorted(os.listdir(test_dir_path)):
+                    stat_dir_path = test_dir_path + "/" + test_dir
+
+                    self.add_test(tests[data_dir], stat_dir_path, id_num)
+                    id_num += 1
+        else:
+            test_dir_path = os.getcwd() + "/" + "out"
+
+            tests["TRAIN"] = []
+            id_num = 0
+            for test_dir in sorted(os.listdir(test_dir_path)):
+                stat_dir_path = test_dir_path + "/" + test_dir
+
+                self.add_test(tests["TRAIN"], stat_dir_path, id_num, IS_TEST)
+                id_num += 1
+
+        return tests
+
+
+    def add_test(self, tests, path, id_num):
+        new_test = Test(self.IS_TEST)
+
+        new_test.fill(path, id_num)
+
+        tests.append(new_test)
+
+        
+
+
+class Test:
+    def __init__(self, IS_TEST):
+        # IS_TEST: should the scriptstat.txt file have the expected format
+        # for train.py output or test.py output? IS_TEST = test.py
+        self.IS_TEST = IS_TEST
+        if self.IS_TEST:
+            self.gen_data = {
+                    # general data
+                    "imgs":[],
+                    "path":"",
+                    "id":-1,
+                    "num_c":0,
+                    "num_w":0
+                }
+        else:
+            self.gen_data = {
+                    "imgs":[],
+                    "path":"",
+                    "id":-1
+                }
+
 
         self.data = {
                 # scriptstat.txt statistics
@@ -71,6 +149,43 @@ class Test:
             }
 
 
+    def fill(self, path, id_num):
+        self.gen_data["path"] = path
+        self.gen_data["id"] = id_num
+
+        for item in sorted(os.listdir(path)):
+            item_path = test_dir_path + "/" + item
+            item_substr = item.split(".")
+
+            ext = item_substr[-1]
+            # file extension
+
+            if ext == "txt":
+                with open(item_path, "r") as stats:
+                    filters = 1
+                    for line in stats:
+                        line_subs = line.strip("\n").split("\t")
+                        key = line_subs[0]
+
+                        if key.islower():
+                            # the options in the stat file are uppercase when
+                            # dealing with filters, lowercase otherwise
+                            filters = 0
+
+                        key = key.lower()
+                        value = line_subs[-1]
+
+                        if filters:
+                            self.data["filters"][key] = value
+                        else:
+                            self.data["results"][key] = value
+
+            elif ext == "JPG":
+                self.gen_data["imgs"].append(item_path)
+
+
+
+'''
 def print_test(test):
     filter_vars = ["sf", "mn", "test_height"]
     result_vars = ["processed_faces", "skipped", "total_faces"]
@@ -96,14 +211,23 @@ def disp_imgs(test):
         cv2.destroyAllWindows()
 
 
-def test_sort(tests, result_type):
-    tests.sort(key=lambda test: int(test.data["results"][result_type]),
-               reverse=False)
+def test_sort(tests, IS_TEST):
+    # change test_sort arg2 to processed_faces for trained data, otherwise,
+    # keep at c_names
+    if IS_TEST:
+        tests.sort(key=lambda test: int(
+                   test.data["results"]["c_names"]
+                   ),
+                   reverse=False)
+    else:
+        tests.sort(key=lambda test: int(
+                   test.data["results"]["processed_faces"]),
+                   reverse=False)
 
     return tests
 
 
-def add_test(tests, test_dir_path, id_num):
+def add_test(tests, test_dir_path, id_num, IS_TEST):
     new_test = Test()
     new_test.gen_data["path"] = test_dir
     new_test.gen_data["id"] = id_num
@@ -149,6 +273,9 @@ def add_test(tests, test_dir_path, id_num):
         new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
         new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
 
+    if 
+
+
         tests.append(new_test)
 
 
@@ -159,24 +286,24 @@ def get_tests(SET, IS_TEST, TRAINED_DIR):
         data_dir_path = os.getcwd() + "/" + SET
 
         for data_dir in sorted(os.listdir(data_dir_path)):
-            stat_dir_path = os.getcwd() + "/" + data_dir
+            test_dir_path = os.getcwd() + "/" + data_dir
 
             tests[data_dir] = []
             id_num = 0
-            for test_dir in sorted(os.listdir(stat_dir_path)):
-                test_dir_path = stat_dir_path + "/" + test_dir
+            for test_dir in sorted(os.listdir(test_dir_path)):
+                stat_dir_path = test_dir_path + "/" + test_dir
 
-                add_test(tests[data_dir], test_dir_path, id_num)
+                add_test(tests[data_dir], stat_dir_path, id_num, IS_TEST)
                 id_num += 1
     else:
-        stat_dir_path = os.getcwd() + "/" + SET
+        test_dir_path = os.getcwd() + "/" + SET
 
         tests[""] = []
         id_num = 0
-        for test_dir in sorted(os.listdir(stat_dir_path)):
-            test_dir_path = stat_dir_path + "/" + test_dir
+        for test_dir in sorted(os.listdir(test_dir_path)):
+            stat_dir_path = test_dir_path + "/" + test_dir
 
-            add_test(tests[""], test_dir_path, id_num)
+            add_test(tests[""], stat_dir_path, id_num, IS_TEST)
             id_num += 1
 
     return tests
@@ -192,7 +319,10 @@ IS_TEST = True
 tests = get_tests(SET, IS_TEST, TRAINED_DIR)
 # ** NOW A DICTIONARY **
 
-new_tests = test_sort(tests, "processed_faces")
+new_tests = {}
+for key, value in tests.items():
+    new_tests[key] = test_sort(value, IS_TEST)
+
 while True:
     for test in new_tests:
         processed = int(test.data["results"]["processed_faces"])
