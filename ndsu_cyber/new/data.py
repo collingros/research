@@ -91,7 +91,7 @@ class Statistics:
             data_dir_path = os.getcwd() + "/" + "out2"
 
             for data_dir in sorted(os.listdir(data_dir_path)):
-                test_dir_path = os.getcwd() + "/" + data_dir
+                test_dir_path = data_dir_path + "/" + data_dir
 
                 tests[data_dir] = []
                 id_num = 0
