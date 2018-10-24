@@ -149,7 +149,7 @@ class Test:
         self.print_test()
 
         print("TYPE:\t{0}"
-              "".format(type(self.data["results"][result].items())))
+              "".format(type(self.data["results"]["c_names"].items())))
         for result in results_filter:
             for person, arr in self.data["results"][result].items():
                 # FIXME: i assumed that results[result] was a dict
