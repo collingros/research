@@ -223,7 +223,7 @@ class Test:
                             self.data["filters"][key] = value
                         else:
                             print("VALUE IS\t{0}".format(value))
-                            if "c_names" in value or "w_names" in value:
+                            if "c_names" in value or "w_names" in key:
                                 print("HAHAHAHHA OG")
                                 # have to make this str into a dict for later
                                 substr = value.split("\t")
