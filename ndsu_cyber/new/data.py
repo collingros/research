@@ -84,8 +84,7 @@ class Statistics:
         else:
             print("expert")
 
-        for test in self.tests:
-            test.print_test()
+        
 
 
     def init_tests(self):
