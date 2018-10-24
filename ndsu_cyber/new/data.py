@@ -51,26 +51,7 @@ import cv2
 from subprocess import call
 import time
 
-'''
-class Test:
-    def __init__(self):
-        self.gen_data = {
-                # general data: file paths
-                "imgs":[],
-                "path":"",
-                "id":-1,
-                "perc_detect":0,
-                "perc_skip":0,
-                "perc_img_detect":0,
-                "num_c":0
-            }
 
-        self.data = {
-                # scriptstat.txt statistics
-                "filters":{},
-                "results":{}
-            }
-'''
 class Statistics:
     def __init__(self, IS_TEST):
         # IS_TEST: True if the folder we want to view stats of is from tested
@@ -78,15 +59,6 @@ class Statistics:
 
         self.IS_TEST = IS_TEST
         self.tests = self.init_tests()
-
-        if not (len(self.tests)):
-            print("no tests")
-        else:
-            print("expert")
-
-        for data_dir, tests in self.tests.items():
-            for test in tests:
-                test.print_test()
 
 
     def init_tests(self):
@@ -127,7 +99,10 @@ class Statistics:
         tests.append(new_test)
 
 
-
+    def print_tests(self):
+        for data_dir, tests in self.tests.items():
+            for test in tests:
+                test.print_test()
 
 
 class Test:
@@ -157,6 +132,29 @@ class Test:
                 "filters":{},
                 "results":{}
             }
+
+
+    def print_correct(self):
+        results_filter = ["c_names", "w_names"]
+        num_c = 0
+        num_w = 0
+
+        for result in results_filter:
+            for person, arr in self.data["results"][result].items():
+                if result == "c_names":
+                    num_c += 1
+                else:
+                    num_w += 1
+
+                for conf_arr, len_of_arr in arr.items():
+                    if result == "c_names":
+                        num_c += len_of_arr
+                    else:
+                        num_w += len_of_arr
+
+        print("number of correctly identified images:\t{0}\n"
+              "number of incorrectly identified images:\t{1}"
+              "".format(num_c, num_w))
 
 
     def print_test(self):
@@ -223,162 +221,12 @@ class Test:
 IS_TEST = bool(input("is this test.py output (True/False)?:\t"))
 stats = Statistics(IS_TEST)
 
-
-'''
-def print_test(test):
-    filter_vars = ["sf", "mn", "test_height"]
-    result_vars = ["processed_faces", "skipped", "total_faces"]
-
-    test_id = test.gen_data["id"]
-    path = test.gen_data["path"]
-    print("\nTEST:\t{0}\nPATH:\t{1}".format(test_id, path))
-
-    for key, value in test.data.items():
-        print("{0}".format(key))
-        for key_2, value_2 in test.data[key].items():
-            if key_2 in result_vars or key_2 in filter_vars:
-                print("\t{0}:\t\t{1}".format(key_2, value_2))
-        print("\n\n")
+stats.print_tests()
 
 
-def disp_imgs(test):
-    test_id = test.gen_data["id"]
-    for img in test.gen_data["imgs"]:
-        loaded_img = cv2.imread(img, 1)
-        cv2.imshow("TEST:\t{0}".format(test_id), loaded_img)
-        cv2.waitKey(50)
-        cv2.destroyAllWindows()
 
 
-def test_sort(tests, IS_TEST):
-    # change test_sort arg2 to processed_faces for trained data, otherwise,
-    # keep at c_names
-    if IS_TEST:
-        tests.sort(key=lambda test: int(
-                   test.data["results"]["c_names"]
-                   ),
-                   reverse=False)
-    else:
-        tests.sort(key=lambda test: int(
-                   test.data["results"]["processed_faces"]),
-                   reverse=False)
-
-    return tests
 
 
-def add_test(tests, test_dir_path, id_num, IS_TEST):
-    new_test = Test()
-    new_test.gen_data["path"] = test_dir
-    new_test.gen_data["id"] = id_num
 
-    for item in sorted(os.listdir(test_dir_path)):
-        item_path = test_dir_path + "/" + item
-        item_substr = item.split(".")
-
-        # file extension
-        ext = item_substr[-1]
-
-        if ext == "txt":
-            with open(item_path, "r") as stats:
-                # stats file is split in two sections: results and filters
-                filters = 1
-                for line in stats:
-                    line_subs = line.strip("\n").split("\t")
-                    key = line_subs[0]
-
-                    if key.islower():
-                        # the options in the stat file are uppercase when
-                        # dealing with filters, lowercase otherwise
-                        filters = 0
-
-                    key = key.lower()
-                    value = line_subs[-1]
-
-                    if filters:
-                        new_test.data["filters"][key] = value
-                    else:
-                        new_test.data["results"][key] = value
-
-        elif ext == "JPG":
-            new_test.gen_data["imgs"].append(item_path)
-
-    if len(new_test.data["results"]) > 0:
-        processed = int(new_test.data["results"]["processed_faces"])
-        reviewed = int(new_test.data["results"]["reviewed"])
-        total_faces = int(new_test.data["results"]["total_faces"])
-        skipped = int(new_test.data["results"]["skipped"])
-
-        new_test.gen_data["perc_img_detect"] = round((total_faces/reviewed), 2)
-        new_test.gen_data["perc_skip"] = round((skipped/reviewed), 2)
-        new_test.gen_data["perc_detect"] = round((processed/reviewed), 2)
-
-    if 
-
-
-        tests.append(new_test)
-
-
-def get_tests(SET, IS_TEST, TRAINED_DIR):
-    tests = {}
-
-    if IS_TEST:
-        data_dir_path = os.getcwd() + "/" + SET
-
-        for data_dir in sorted(os.listdir(data_dir_path)):
-            test_dir_path = os.getcwd() + "/" + data_dir
-
-            tests[data_dir] = []
-            id_num = 0
-            for test_dir in sorted(os.listdir(test_dir_path)):
-                stat_dir_path = test_dir_path + "/" + test_dir
-
-                add_test(tests[data_dir], stat_dir_path, id_num, IS_TEST)
-                id_num += 1
-    else:
-        test_dir_path = os.getcwd() + "/" + SET
-
-        tests[""] = []
-        id_num = 0
-        for test_dir in sorted(os.listdir(test_dir_path)):
-            stat_dir_path = test_dir_path + "/" + test_dir
-
-            add_test(tests[""], stat_dir_path, id_num, IS_TEST)
-            id_num += 1
-
-    return tests
-
-
-SET = "out2"
-LENIENCY = 30
-
-IS_TEST = True
-# is the output from running test.py? the dir format and scripstat is then
-# different
-
-tests = get_tests(SET, IS_TEST, TRAINED_DIR)
-# ** NOW A DICTIONARY **
-
-new_tests = {}
-for key, value in tests.items():
-    new_tests[key] = test_sort(value, IS_TEST)
-
-while True:
-    for test in new_tests:
-        processed = int(test.data["results"]["processed_faces"])
-        actual = int(test.data["results"]["reviewed"])
-
-        if (processed > actual + LENIENCY or
-            processed < actual - LENIENCY):
-            # bad test results, according to leniency
-            continue
-
-        print_test(test)
-
-    print("select test ID to disp images")
-    choice = int(input("\t"))
-
-    for test in new_tests:
-        if test.gen_data["id"] == choice:
-            disp_imgs(test)
-'''
 
