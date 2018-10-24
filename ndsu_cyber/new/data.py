@@ -147,6 +147,8 @@ class Test:
 
         for result in results_filter:
             for person, arr in self.data["results"][result].items():
+                # FIXME: i assumed that results[result] was a dict
+                #        but is in fact just a printed dict, so a str...
                 if result == "c_names":
                     num_c += 1
                 else:
@@ -220,6 +222,11 @@ class Test:
                         if filters:
                             self.data["filters"][key] = value
                         else:
+                            if "c_names" in value or "w_names" in value:
+                                # have to make this str into a dict for later
+                                substr = value.split("\t")
+                                value = eval(substr[-1])
+
                             self.data["results"][key] = value
 
             elif ext == "JPG":
