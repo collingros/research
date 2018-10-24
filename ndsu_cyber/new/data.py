@@ -167,9 +167,9 @@ class Test:
         path = self.gen_data["path"]
         print("\nTEST:\t{0}\nPATH:\t{1}".format(test_id, path))
 
-        for key, value in test.data.items():
+        for key, value in self.data.items():
             print("{0}".format(key))
-            for key_2, value_2 in test.data[key].items():
+            for key_2, value_2 in self.data[key].items():
                 if key_2 in result_vars or key_2 in filter_vars:
                     print("\t{0}:\t\t{1}".format(key_2, value_2))
             print("\n\n")
