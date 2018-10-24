@@ -223,6 +223,7 @@ class Test:
                             self.data["filters"][key] = value
                         else:
                             if "c_names" in value or "w_names" in value:
+                                print("HAHAHAHHA OG")
                                 # have to make this str into a dict for later
                                 substr = value.split("\t")
                                 value = eval(substr[-1])
