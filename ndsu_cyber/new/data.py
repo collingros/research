@@ -104,6 +104,11 @@ class Statistics:
             for test in tests:
                 test.print_test()
 
+    def print_accs(self):
+        for test in tests:
+            test.print_acc()
+
+
 
 class Test:
     def __init__(self, IS_TEST):
@@ -134,7 +139,7 @@ class Test:
             }
 
 
-    def print_correct(self):
+    def print_acc(self):
         results_filter = ["c_names", "w_names"]
         num_c = 0
         num_w = 0
@@ -152,6 +157,9 @@ class Test:
                     else:
                         num_w += len_of_arr
 
+        print("test id:\t{0}\n"
+              "test path:\t{1}\n"
+              "".format(self.gen_data["id"], self.gen_data["path"]))
         print("number of correctly identified images:\t{0}\n"
               "number of incorrectly identified images:\t{1}"
               "".format(num_c, num_w))
@@ -221,7 +229,7 @@ class Test:
 IS_TEST = bool(input("is this test.py output (True/False)?:\t"))
 stats = Statistics(IS_TEST)
 
-stats.print_tests()
+stats.print_accs()
 
 
 
