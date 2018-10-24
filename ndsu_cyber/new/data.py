@@ -229,7 +229,7 @@ class Test:
 
                             print("key:\t{0}\n"
                                   "value type:\t{1}"
-                                  "".format(key, type(value))
+                                  "".format(key, type(value)))
                             self.data["results"][key] = value
 
             elif ext == "JPG":
