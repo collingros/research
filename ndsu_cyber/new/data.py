@@ -105,8 +105,9 @@ class Statistics:
                 test.print_test()
 
     def print_accs(self):
-        for test in tests:
-            test.print_acc()
+        for data_dir, tests in self.tests.items():
+            for test in tests:
+                test.print_acc()
 
 
 
