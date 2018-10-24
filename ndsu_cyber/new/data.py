@@ -87,6 +87,7 @@ class Statistics:
         for test in self.tests:
             test.print_test()
 
+
     def init_tests(self):
         tests = {}
 
@@ -216,6 +217,8 @@ class Test:
             elif ext == "JPG":
                 self.gen_data["imgs"].append(item_path)
 
+
+# MAIN
 IS_TEST = bool(input("is this test.py output (True/False)?:\t"))
 stats = Statistics(IS_TEST)
 
