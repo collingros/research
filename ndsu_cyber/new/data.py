@@ -115,6 +115,8 @@ class Statistics:
                 self.add_test(tests["TRAIN"], stat_dir_path, id_num, IS_TEST)
                 id_num += 1
 
+        print("returning tests:")
+        print(tests)
         return tests
 
 
