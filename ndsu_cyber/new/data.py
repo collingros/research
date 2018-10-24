@@ -84,7 +84,7 @@ class Statistics:
         else:
             print("expert")
 
-        for test in self.tests:
+        for data_dir, test in self.tests.items():
             test.print_test()
 
 
@@ -115,8 +115,6 @@ class Statistics:
                 self.add_test(tests["TRAIN"], stat_dir_path, id_num, IS_TEST)
                 id_num += 1
 
-        print("returning tests:")
-        print(tests)
         return tests
 
 
