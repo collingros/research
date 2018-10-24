@@ -231,11 +231,12 @@ class Test:
                             if "c_names" in value or "w_names" in key:
                                 # have to make this str into a dict for later
                                 substr = value.split("\t")
-                                value = eval(substr[-1])
+                                new_value = eval(substr[-1])
 
-                            print("key:\t{0}\n"
-                                  "value type:\t{1}"
-                                  "".format(key, type(value)))
+                                self.data["results"][key] = new_value
+
+                                continue
+
                             self.data["results"][key] = value
 
             elif ext == "JPG":
