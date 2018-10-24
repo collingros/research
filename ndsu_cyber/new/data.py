@@ -84,8 +84,9 @@ class Statistics:
         else:
             print("expert")
 
-        for data_dir, test in self.tests.items():
-            test.print_test()
+        for data_dir, tests in self.tests.items():
+            for test in tests:
+                test.print_test()
 
 
     def init_tests(self):
