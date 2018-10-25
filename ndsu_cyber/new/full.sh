@@ -66,7 +66,7 @@ reverse_all ()
         done
 
         cd ..
-    doneXX
+    done
 }
 
 reverse_all
