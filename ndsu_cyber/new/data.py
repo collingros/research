@@ -155,7 +155,7 @@ class Test:
                 else:
                     num_w += 1
 
-                for arr in arrs():
+                for arr in arrs:
                     if result == "c_names":
                         num_c += arr[1]
                     else:
