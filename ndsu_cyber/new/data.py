@@ -166,13 +166,6 @@ class Test:
 
         self.gen_data["acc"] = acc
 
-        print("test id:\t{0}\n"
-              "test path:\t{1}\n"
-              "".format(self.gen_data["id"], self.gen_data["path"]))
-        print("number of correctly identified images:\t{0}\n"
-              "number of incorrectly identified images:\t{1}"
-              "".format(num_c, num_w))
-
 
     def print_test(self):
         filter_vars = ["sf", "mn", "test_height"]
@@ -191,9 +184,8 @@ class Test:
 
         for key, value in self.gen_data.items():
             print("{0}".format(key))
-            for key_2, value_2 in self.gen_data[key].items():
-                if key_2 in result_vars or key_2 in filter_vars:
-                    print("\t{0}:\t\t{1}".format(key_2, value_2))
+            if key in result_vars or key in filter_vars:
+                print("\t{0}:\t\t{1}".format(key_2, value_2))
             print("\n\n")
 
 
