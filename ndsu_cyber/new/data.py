@@ -91,6 +91,11 @@ class Statistics:
         return tests
 
 
+    def sort_accs(self):
+        self.tests.sort(key=lambda test: test.gen_data["acc"]),
+                        reverse=False)
+
+
     def add_test(self, tests, path, id_num):
         new_test = Test(self.IS_TEST)
 
@@ -104,10 +109,10 @@ class Statistics:
             for test in tests:
                 test.print_test()
 
-    def print_accs(self):
+    def get_accs(self):
         for data_dir, tests in self.tests.items():
             for test in tests:
-                test.print_acc()
+                test.get_acc()
 
 
 
@@ -140,19 +145,24 @@ class Test:
             }
 
 
-    def print_acc(self):
+    def get_acc(self):
         results_filter = ["c_names", "w_names"]
         num_c = 0
         num_w = 0
 
         for result in results_filter:
-            print("result: {0}".format(result))
             for person, arrs in eval(self.data["results"][result]).items():
                 if result == "c_names":
                     num_c += 1 + arrs[1]
                 else:
                     num_w += 1 + arrs[1]
 
+        try:
+            acc = round((num_c / (num_c + num_w)), 2)
+        except:
+            acc = 0
+
+        self.gen_data["acc"] = acc
 
         print("test id:\t{0}\n"
               "test path:\t{1}\n"
@@ -164,7 +174,7 @@ class Test:
 
     def print_test(self):
         filter_vars = ["sf", "mn", "test_height"]
-        result_vars = ["total_faces"]
+        result_vars = ["acc"]
 
         test_id = self.gen_data["id"]
         path = self.gen_data["path"]
@@ -226,8 +236,10 @@ class Test:
 IS_TEST = bool(input("is this test.py output (True/False)?:\t"))
 stats = Statistics(IS_TEST)
 
-stats.print_accs()
+stats.get_accs()
+stats.sort_accs()
 
+stats.print_tests()
 
 
 
