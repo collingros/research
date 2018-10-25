@@ -189,6 +189,13 @@ class Test:
                     print("\t{0}:\t\t{1}".format(key_2, value_2))
             print("\n\n")
 
+        for key, value in self.gen_data.items():
+            print("{0}".format(key))
+            for key_2, value_2 in self.gen_data[key].items():
+                if key_2 in result_vars or key_2 in filter_vars:
+                    print("\t{0}:\t\t{1}".format(key_2, value_2))
+            print("\n\n")
+
 
     def disp_imgs(self):
         test_id = self.gen_data["id"]
