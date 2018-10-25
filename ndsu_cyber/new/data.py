@@ -185,7 +185,6 @@ class Test:
         for key, value in self.gen_data.items():
             if key in result_vars or key in filter_vars:
                 print("\t{0}:\t\t{1}".format(key, value))
-            print("\n\n")
 
 
     def disp_imgs(self):
