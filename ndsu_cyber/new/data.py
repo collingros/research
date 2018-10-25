@@ -163,6 +163,7 @@ class Test:
             acc = round((num_c / (num_c + num_w)), 2)
         except:
             acc = 0
+        acc *= 100
 
         self.gen_data["acc"] = acc
 
@@ -180,7 +181,7 @@ class Test:
             for key_2, value_2 in self.data[key].items():
                 if key_2 in result_vars or key_2 in filter_vars:
                     print("\t{0}:\t\t{1}".format(key_2, value_2))
-            print("\n\n")
+            print("\n")
 
         for key, value in self.gen_data.items():
             if key in result_vars or key in filter_vars:
