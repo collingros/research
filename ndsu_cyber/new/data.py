@@ -150,6 +150,7 @@ class Test:
             for person, arrs in eval(self.data["results"][result]).items():
                 # FIXME: i assumed that results[result] was a dict
                 #        but is in fact just a printed dict, so a str...
+                print("person: {0}\narrs: {1}".format(person, arrs))
                 if result == "c_names":
                     num_c += 1 + arrs[1][0]
                 else:
