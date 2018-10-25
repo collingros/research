@@ -44,17 +44,27 @@ reverse_all ()
         do
             cd $i
             for l in "pos_0" "pos_1" "pos_2" "pos_3" "pos_4"
-                do
+            do
                 cd $l
+
                 for x in "angle_1" "angle_2" "angle_3" "angle_4" "angle_5" "angle_6" "angle_7"
-                    do
-                        cd $x
-                            reverse
-                        cd ..
-                    done
-                cd ..
+                do
+                    cd $x
+
+                    reverse
+
+                    cd ..
+
                 done
+
+                cd ..
+
+            done
+
             cd ..
+
+        done
+
         cd ..
     done
 }
