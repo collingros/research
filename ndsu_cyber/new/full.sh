@@ -25,7 +25,7 @@ reverse ()
     for i in *.JPG
         do
         echo "moving $i to angle_$angle"
-        mv $i ./"angle_$angle"/$i
+        mv $i ../"angle_$angle"/$i
         if [ $(($x%5)) == 0 ]
         then
 	        ((angle--))
@@ -66,7 +66,7 @@ reverse_all ()
         done
 
         cd ..
-    done
+    doneXX
 }
 
 reverse_all
