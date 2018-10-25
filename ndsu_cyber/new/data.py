@@ -152,6 +152,7 @@ class Test:
               "".format(type(self.data["results"]["c_names"])))
         print("DICT:\t{0}".format(self.data["results"]["c_names"]))
         for result in results_filter:
+            print("result: {0}")
             for person, arr in self.data["results"][result].items():
                 # FIXME: i assumed that results[result] was a dict
                 #        but is in fact just a printed dict, so a str...
