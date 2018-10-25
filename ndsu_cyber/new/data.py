@@ -92,8 +92,10 @@ class Statistics:
 
 
     def sort_accs(self):
-        self.tests = sorted(self.tests, key=lambda test: test.gen_data["acc"],
-                            reverse=False)
+        for direct, test in self.tests.items():
+            self.tests[direct] = sorted(self.tests[direct],
+                                        key=lambda test: test.gen_data["acc"],
+                                        reverse=False)
 
 
     def add_test(self, tests, path, id_num):
