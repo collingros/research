@@ -147,7 +147,7 @@ class Test:
 
         for result in results_filter:
             print("result: {0}".format(result))
-            for person, arr in eval(self.data["results"][result]).items():
+            for person, arrs in eval(self.data["results"][result]).items():
                 # FIXME: i assumed that results[result] was a dict
                 #        but is in fact just a printed dict, so a str...
                 if result == "c_names":
@@ -155,11 +155,11 @@ class Test:
                 else:
                     num_w += 1
 
-                for conf_arr, len_of_arr in arr.items():
+                for arr in arrs():
                     if result == "c_names":
-                        num_c += len_of_arr
+                        num_c += arr[1]
                     else:
-                        num_w += len_of_arr
+                        num_w += arr[1]
 
         print("test id:\t{0}\n"
               "test path:\t{1}\n"
