@@ -145,12 +145,10 @@ class Test:
         num_c = 0
         num_w = 0
 
-        print("THIS TEST IS")
         self.print_test()
 
-        print("TYPE:\t{0}"
-              "".format(type(self.data["results"]["c_names"])))
-        print("DICT:\t{0}".format(self.data["results"]["c_names"]))
+        for key, item in self.data["results"].items():
+            print("key: {0}\titems: {1}".format(key, item))
         for result in results_filter:
             print("result: {0}".format(result))
             for person, arr in self.data["results"][result].items():
