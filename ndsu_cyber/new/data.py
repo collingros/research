@@ -145,15 +145,9 @@ class Test:
         num_c = 0
         num_w = 0
 
-        self.print_test()
-
-        for key, item in self.data["results"].items():
-            if key in results_filter:
-                item = eval(item)
-
         for result in results_filter:
             print("result: {0}".format(result))
-            for person, arr in self.data["results"][result].items():
+            for person, arr in eval(self.data["results"][result]).items():
                 # FIXME: i assumed that results[result] was a dict
                 #        but is in fact just a printed dict, so a str...
                 if result == "c_names":
