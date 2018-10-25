@@ -1,0 +1,26 @@
+Documentation for what I've been doing
+
+
+before we can draw conclusions from whether certain lighting or positions can
+be exploited by attackers to fool a recognition system, there are some settings
+that need to be tuned such that the recognition system is performing its best
+during the important testing.
+
+to do this, i took note of the settings that were program-specific:
+    casc (file used for the haar cascade classifier)
+    sf (scale factor)
+    mn (minimum neighbors)
+    res (height of the resolution to resize to)
+
+some constants were also used:
+    all of the images in the dataset are presented in JPG with a ratio w/h of
+    1:5. a res value of 480 represents the resolution (720 x 480)
+
+after noting these, i collected training data from the program using many
+variations of the program's variables:
+    casc: lbph_frontal.xml, and haar_default.xml
+    sf: 1.01, 1.05, 1.1, 1.2, 1.3, and 1.5
+    mn: 1, 3, 5, 7, and 10
+    res: 150, 480, 960, 1920, and 3456
+
+

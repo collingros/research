@@ -23,7 +23,7 @@ reverse ()
     x=1
     angle=7
     for i in *.JPG
-        do
+    do
         echo "moving $i to angle_$angle"
         mv $i ../"angle_$angle"/$i
         if [ $(($x%5)) == 0 ]
