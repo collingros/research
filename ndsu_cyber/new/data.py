@@ -169,7 +169,7 @@ class Test:
 
     def print_test(self):
         filter_vars = ["sf", "mn", "test_height"]
-        result_vars = ["acc"]
+        result_vars = ["acc", "id", "path"]
 
         test_id = self.gen_data["id"]
         path = self.gen_data["path"]
@@ -183,9 +183,8 @@ class Test:
             print("\n\n")
 
         for key, value in self.gen_data.items():
-            print("{0}".format(key))
             if key in result_vars or key in filter_vars:
-                print("\t{0}:\t\t{1}".format(key_2, value_2))
+                print("\t{0}:\t\t{1}".format(key, value))
             print("\n\n")
 
 
