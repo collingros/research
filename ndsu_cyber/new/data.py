@@ -151,15 +151,10 @@ class Test:
                 # FIXME: i assumed that results[result] was a dict
                 #        but is in fact just a printed dict, so a str...
                 if result == "c_names":
-                    num_c += 1
+                    num_c += 1 + arr[1]
                 else:
-                    num_w += 1
+                    num_w += 1 + arr[1]
 
-                for arr in arrs:
-                    if result == "c_names":
-                        num_c += arr[1]
-                    else:
-                        num_w += arr[1]
 
         print("test id:\t{0}\n"
               "test path:\t{1}\n"
