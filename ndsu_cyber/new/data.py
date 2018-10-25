@@ -148,11 +148,9 @@ class Test:
         self.print_test()
 
         for key, item in self.data["results"].items():
-            print("key: {0}\titems: {1}".format(key, item))
-            print("type of item: {0}".format(type(item)))
             if key in results_filter:
                 item = eval(item)
-            print("new type of item: {0}".format(type(item)))
+
         for result in results_filter:
             print("result: {0}".format(result))
             for person, arr in self.data["results"][result].items():
@@ -231,15 +229,6 @@ class Test:
                         if filters:
                             self.data["filters"][key] = value
                         else:
-                            if "c_names" in value or "w_names" in key:
-                                # have to make this str into a dict for later
-                                substr = value.split("\t")
-                                new_value = eval(substr[-1])
-
-                                self.data["results"][key] = new_value
-
-                                continue
-
                             self.data["results"][key] = value
 
             elif ext == "JPG":
