@@ -150,6 +150,9 @@ class Test:
         for key, item in self.data["results"].items():
             print("key: {0}\titems: {1}".format(key, item))
             print("type of item: {0}".format(type(item)))
+            if key in results_filter:
+                item = eval(item)
+            print("new type of item: {0}".format(type(item)))
         for result in results_filter:
             print("result: {0}".format(result))
             for person, arr in self.data["results"][result].items():
