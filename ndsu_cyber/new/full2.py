@@ -38,7 +38,7 @@ def refresh(path):
     for angle in angles:
         angle_path = "{0}{1}/".format(path, angle)
 
-        mk_dir(angle)
+        mk_dir(angle_path)
 
 
 def reverse_all(path, pos, angle):
