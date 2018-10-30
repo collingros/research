@@ -45,6 +45,7 @@ def reverse_imgs(path):
     pos_path = path.split("angle_")[-1]
     base_path = path.split("pos_")[-1]
 
+    print("path_substr: {0}\tpos_str: {1}".format(path_substr, pos_str))
     angle = int(angle_str[-1])
     pos = int(pos_str[-1])
 
