@@ -30,16 +30,16 @@ def reverse_all(path, pos, angle):
     for img in sorted(os.listdir(full_path)):
         src = "{0}{1}/".format(full_path, img)
 
-        if pos == 0:
+        if pos == "pos_0":
             dst = "{0}pos_4/".format(path)
-        elif pos == 1:
+        elif pos == "pos_1":
             dst = "{0}pos_3/".format(path)
 
-        if angle == 1:
+        if angle == "angle_1":
             dst = "{0}angle_7".format(dst)
-        elif angle == 2:
+        elif angle == "angle_2":
             dst = "{0}angle_6".format(dst)
-        elif angle == 3:
+        elif angle == "angle_3":
             dst = "{0}angle_5".format(dst)
 
         print("flopping\nsrc: {0}\ndst:{1}".format(src, dst))
