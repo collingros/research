@@ -9,13 +9,6 @@ def delete_dir(directory):
     output, error = process.communicate()
 
 
-def copy_img(src, dst):
-    cmd = "cp {0} {1}".format(src, dst)
-
-    process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
-
-
 def flop(src, dst):
     cmd = "convert -flop {0} {1}".format(src, dst)
 
@@ -23,43 +16,79 @@ def flop(src, dst):
     output, error = process.communicate()
 
 
-def reverse_imgs(path):
-    path_substr = path.split("glasses")
-    old_angle = path_substr.split("/")[-1]
-    old_pos = path_substr.split("/")[-2]
+def get_new_pos(pos, angle):
+    if pos == 0:
+        pos = 4
+    elif pos == 1:
+        pos = 3
 
+    if angle == 1:
+        angle = 7
+    elif angle == 2:
+        angle = 6
+    elif angle == 3:
+        angle = 5
+
+    return pos, angle
+
+        
+
+
+def reverse_imgs(path):
+    print("current path: {0}".format(path))
+
+    path_substr = path.split("glasses")
+
+    angle_str = path_substr.split("/")[-1]
+    pos_str = path_substr.split("/")[-2]
+
+    pos_path = path.split("angle")[-1]
+    base_path = path.split("pos")[-1]
+
+    angle = int(angle_str.split("_")[-1])
+    pos = int(pos_str.split("_")[-1])
+
+    if pos == 2:
+        print("center position, returning..")
+        return
+    elif pos == 3 or pos == 4:
+        print("pos_3 or pos_4: deleting..")
+        delete_dir(pos_path)
+
+    pos, angle = get_new_pos(pos, angle)
     for img in sorted(os.listdir(path)):
         img_path = path + "/" + img
+        new_path = "{0}pos_{1}/angle_{2}".format(base_path, pos, angle)
 
-        if old_pos == "pos_0":
-            flop(img_path, 
-
+        print("flopping from: {0}\tto: {1}".format(img_path, new_path))
+        flop(img_path, new_path)
 
 
 def navigate(path=os.getcwd()):
-    del_pos = ["pos_3", "pos_4"]
     pos = ["pos_0", "pos_1", "pos_3", "pos_4"]
 
     if os.path.isfile(path):
+        print("path is file: {0}".format(path))
         return
+
+    print("path is not file: {0}".format(path))
 
     os.chdir(path)
     cwd = os.getcwd()
     for item in sorted(os.listdir(cwd)):
         item_path = cwd + "/" + item
         if item in pos:
-            if item in del_pos:
-                delete_dir(item_path)
+            print("item \"{0}\" in pos".format(item))
 
             reverse_imgs(item_path)
             continue
 
+        print("navigate")
         navigate(item)
 
 
 navigate()
 
-reverse_imgs()
 
 
 
