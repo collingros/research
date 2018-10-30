@@ -78,7 +78,7 @@ def navigate(path=os.getcwd()):
     cwd = os.getcwd()
     for item in sorted(os.listdir(cwd)):
         item_path = cwd + "/" + item
-        if item in pos:
+        if item in pos and "angle" in item:
             print("item \"{0}\" in pos".format(item))
             print("item_path: {0}".format(item_path))
 
