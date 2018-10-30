@@ -37,16 +37,16 @@ def get_new_pos(pos, angle):
 def reverse_imgs(path):
     print("current path: {0}".format(path))
 
-    path_substr = path.split("glasses")
+    path_substr = path.split("/")
 
-    angle_str = "".join(path_substr).split("/")[-1]
-    pos_str = "".join(path_substr).split("/")[-2]
+    angle_str = path_substr[-1]
+    pos_str = path_substr[-2]
 
-    pos_path = path.split("angle")[-1]
-    base_path = path.split("pos")[-1]
+    pos_path = path.split("angle_")[-1]
+    base_path = path.split("pos_")[-1]
 
-    angle = int(angle_str.split("_")[-1])
-    pos = int(pos_str.split("_")[-1])
+    angle = int(angle_str[-1])
+    pos = int(pos_str[-1])
 
     if pos == 2:
         print("center position, returning..")
