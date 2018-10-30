@@ -42,11 +42,15 @@ def reverse_all(path, pos, angle):
         elif angle == 3:
             dst = "{0}angle_5".format(dst)
 
+        print("flopping\nsrc: {0}\ndst:{1}".format(src, dst))
         flop(src, dst)
 
 
 cwd = os.getcwd()
 for person in sorted(os.listdir(cwd)):
+    if os.path.isfile(person)
+        continue
+
     person_path = "{0}/{1}/".format(cwd, person)
 
     for base in sorted(os.listdir(person_path)):
