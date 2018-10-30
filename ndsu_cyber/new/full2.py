@@ -29,6 +29,18 @@ def rm_dir(path):
     run_cmd(cmd)
 
 
+def refresh(path):
+    rm_dir(path)
+    mk_dir(path)
+
+    angles = ["angle_1", "angle_2", "angle_3", "angle_4", "angle_5",
+              "angle_6", "angle_7"]
+    for angle in angles:
+        angle_path = "{0}{1}/".format(path, angle)
+
+        mk_dir(angle)
+
+
 def reverse_all(path, pos, angle):
     src = ""
     dst = ""
@@ -83,10 +95,7 @@ for person in sorted(os.listdir(cwd)):
             if pos == "pos_2":
                 continue
             elif pos == "pos_3" or pos == "pos_4":
-                print("removing {0}".format(pos_path))
-                rm_dir(pos_path)
-                print("creating {0}".format(pos_path))
-                mk_dir(pos_path)
+                refresh(pos_path)
 
             for angle in sorted(os.listdir(pos_path)):
                 reverse_all(base_path, pos, angle)
