@@ -48,7 +48,7 @@ def reverse_all(path, pos, angle):
 
 cwd = os.getcwd()
 for person in sorted(os.listdir(cwd)):
-    if os.path.isfile(person)
+    if os.path.isfile(person):
         continue
 
     person_path = "{0}/{1}/".format(cwd, person)
