@@ -39,8 +39,8 @@ def reverse_imgs(path):
 
     path_substr = path.split("glasses")
 
-    angle_str = path_substr.split("/")[-1]
-    pos_str = path_substr.split("/")[-2]
+    angle_str = "".join(path_substr).split("/")[-1]
+    pos_str = "".join(path_substr).split("/")[-2]
 
     pos_path = path.split("angle")[-1]
     base_path = path.split("pos")[-1]
