@@ -8,7 +8,14 @@ def run_cmd(cmd):
 
 
 def flop(src, dst):
-    cmd = "convert -flop {0} {1}".format(src, dst)
+    cmd = "convert -flop {0} tmp.JPG".format(src)
+    run_cmd(cmd)
+
+    move("tmp.JPG", dst)
+
+
+def move(src, dst):
+    cmd = "mv {0} {1}".format(src, dst)
     run_cmd(cmd)
 
 
