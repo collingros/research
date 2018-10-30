@@ -4,7 +4,7 @@ import subprocess
 
 def run_cmd(cmd):
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
-    output, error = process.communicate()
+    process.wait()
 
 
 def flop(src, dst):
