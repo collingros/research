@@ -43,7 +43,13 @@ reverse_all ()
         for i in "vanilla" "hat" "glasses"
         do
             cd $i
-            for l in "pos_0" "pos_1" "pos_2" "pos_3" "pos_4"
+
+            for l2 in "pos_3" "pos_4"
+            do
+                rm -r $l2
+            done
+
+            for l in "pos_0" "pos_1"
             do
                 cd $l
 
