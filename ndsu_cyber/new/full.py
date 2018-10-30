@@ -80,6 +80,7 @@ def navigate(path=os.getcwd()):
         item_path = cwd + "/" + item
         if item in pos:
             print("item \"{0}\" in pos".format(item))
+            print("item_path: {0}".format(item_path))
 
             reverse_imgs(item_path)
             continue
