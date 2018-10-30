@@ -62,9 +62,7 @@ for person in sorted(os.listdir(cwd)):
                 mk_dir(pos_path)
 
             for angle in sorted(os.listdir(pos_path)):
-                angle_path = "{0}{1}/".format(pos_path, angle)
-
-                reverse_all(angle_path, pos, angle)
+                reverse_all(base_path, pos, angle)
 
 
 
