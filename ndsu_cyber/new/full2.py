@@ -36,11 +36,25 @@ def reverse_all(path, pos, angle):
             dst = "{0}pos_3/".format(path)
 
         if angle == "angle_1":
-            dst = "{0}angle_7".format(dst)
+            dst = "{0}angle_7/{1}".format(dst, img)
+
         elif angle == "angle_2":
-            dst = "{0}angle_6".format(dst)
+            dst = "{0}angle_6/{1}".format(dst, img)
+
         elif angle == "angle_3":
-            dst = "{0}angle_5".format(dst)
+            dst = "{0}angle_5/{1}".format(dst, img)
+
+        elif angle == "angle_4":
+            continue
+
+        elif angle == "angle_5":
+            dst = "{0}angle_3/{1}".format(dst, img)
+
+        elif angle == "angle_6":
+            dst = "{0}angle_2/{1}".format(dst, img)
+
+        elif angle == "angle_7":
+            dst = "{0}angle_1/{1}".format(dst, img)
 
         print("flopping\nsrc: {0}\ndst:{1}".format(src, dst))
         flop(src, dst)
