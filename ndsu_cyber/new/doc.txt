@@ -23,4 +23,38 @@ variations of the program's variables:
     mn: 1, 3, 5, 7, and 10
     res: 150, 480, 960, 1920, and 3456
 
+each variation had its labels and training data saved in the folder in which
+it was used to create images.
+
+running the training took a long time (around 29 hours) on a fast computer.
+
+after using all possible variations between the selected option values, i had
+to write a parsing script that would let me easily see differences with stats
+between the different training settings.
+
+choosing the best training data to test with was difficult. i had the ability
+to sort all resulting tests by number of faces detected, number of images
+skipped (due to no face being detected), amongst other things, like total
+runtime.
+
+i decided that the most important value to look at was the number of faces
+detected, as too high of a number would greatly decrease recognition accuracy.
+
+i also discovered that ranking the tests purely by numbers was not enough.
+if exactly the same number of faces were detected as how many there actually
+was, there is no way to tell if the face is a legitimate face or not without
+human review (or experimental neural networking).
+
+to decide which tests had the best results, i first sorted the tests by
+number of faces detected and then manually reviewed each set of images from
+each test. i only picked the best 5 from a set of 14, as more than 5 would
+take an extremely long time to finish.
+
+i also collected general percentage values of detected faces for each setting.
+with this knowledge and the 5 tests that i chose, i was ready to start
+messing around with the testing program's settings.
+
+
+messing around
+
 
