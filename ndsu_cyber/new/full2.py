@@ -19,6 +19,11 @@ def move(src, dst):
     run_cmd(cmd)
 
 
+def copy(src, dst):
+    cmd = "cp {0} {1}".format(src, dst)
+    run_cmd(cmd)
+
+
 def mk_dir(path):
     cmd = "mkdir {0}".format(path)
     run_cmd(cmd)
@@ -64,6 +69,9 @@ def reverse_all(path, pos, angle):
             dst = "{0}angle_5/{1}".format(dst, img)
 
         elif angle == "angle_4":
+            dst = "{0}angle_4/{1}".format(dst, img)
+            copy(src, dst)
+
             continue
 
         elif angle == "angle_5":
