@@ -194,7 +194,7 @@ class Test:
         opt = self.gen_data["path"].split("/")[-1]
         for img in self.gen_data["imgs"]:
             loaded_img = cv2.imread(img, 1)
-            cv2.imshow("TEST:\t{0}".format(opt), loaded_img)
+            cv2.imshow("TEST:\t{0}\tOPT:{1}".format(test_id, opt), loaded_img)
             cv2.waitKey(50)
             cv2.destroyAllWindows()
 
