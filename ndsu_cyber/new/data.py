@@ -117,9 +117,9 @@ class Statistics:
                 test.get_acc()
 
 
-    def disp_img(self, test_id):
+    def disp_test(self, test_id):
         for test in tests:
-            if test.gen_data["id"] = int(test_id):
+            if test.gen_data["id"] = test_id:
                 test.disp_imgs()
 
 
@@ -250,7 +250,9 @@ stats.sort_accs()
 
 stats.print_tests()
 
-
+while True:
+    test_id = int(input("disp imgs for which test?\t"))
+    stats.disp_test(test_id)
 
 
 
