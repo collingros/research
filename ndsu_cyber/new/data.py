@@ -110,6 +110,7 @@ class Statistics:
         for data_dir, tests in self.tests.items():
             for test in tests:
                 test.print_test()
+                test.disp_imgs()
 
     def get_accs(self):
         for data_dir, tests in self.tests.items():
