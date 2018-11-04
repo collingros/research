@@ -119,7 +119,7 @@ class Statistics:
 
     def disp_test(self, test_id):
         for test in tests:
-            if test.gen_data["id"] = test_id:
+            if test.gen_data["id"] == test_id:
                 test.disp_imgs()
 
 
