@@ -118,9 +118,10 @@ class Statistics:
 
 
     def disp_test(self, test_id):
-        for test in tests:
-            if test.gen_data["id"] == test_id:
-                test.disp_imgs()
+        for data_dir, tests in self.tests.items():
+            for test in tests:
+                if test.gen_data["id"] == test_id:
+                    test.disp_imgs()
 
 
 
