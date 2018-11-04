@@ -192,7 +192,7 @@ class Test:
     def disp_imgs(self):
         test_id = self.gen_data["id"]
         opt = self.gen_data["path"].split("/")[-1]
-        data = self.gen_data["path"].split("/")[-1]
+        data = self.gen_data["path"].split("/")[-2]
         for img in self.gen_data["imgs"]:
             loaded_img = cv2.imread(img, 1)
             cv2.imshow("TEST: {0}\tOPT: {1}\tDATA: {2}".format(test_id, opt,
