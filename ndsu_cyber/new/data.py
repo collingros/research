@@ -95,7 +95,7 @@ class Statistics:
         for direct, test in self.tests.items():
             self.tests[direct] = sorted(self.tests[direct],
                                         key=lambda test: test.gen_data["acc"],
-                                        reverse=False)
+                                        reverse=True)
 
 
     def add_test(self, tests, path, id_num):
@@ -191,9 +191,10 @@ class Test:
 
     def disp_imgs(self):
         test_id = self.gen_data["id"]
+        opt = self.gen_data["path"].split("/")[-1]
         for img in self.gen_data["imgs"]:
             loaded_img = cv2.imread(img, 1)
-            cv2.imshow("TEST:\t{0}".format(test_id), loaded_img)
+            cv2.imshow("TEST:\t{0}".format(opt), loaded_img)
             cv2.waitKey(50)
             cv2.destroyAllWindows()
 
