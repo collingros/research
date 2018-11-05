@@ -67,11 +67,11 @@ class Statistics:
         if self.IS_TEST:
             data_dir_path = os.getcwd() + "/" + "out2"
 
+            id_num = 0
             for data_dir in sorted(os.listdir(data_dir_path)):
                 test_dir_path = data_dir_path + "/" + data_dir
 
                 tests[data_dir] = []
-                id_num = 0
                 for test_dir in sorted(os.listdir(test_dir_path)):
                     stat_dir_path = test_dir_path + "/" + test_dir
 
