@@ -54,7 +54,45 @@ i also collected general percentage values of detected faces for each setting.
 with this knowledge and the 5 tests that i chose, i was ready to start
 messing around with the testing program's settings.
 
+for each of the training tests that i selected (5 total), i tested the same
+variety of program settings on the test script. In theory, accuracy should
+always be 100% if the images used for training are the same ones used for
+testing. However, this is not the case when there are differences in settings
+between what the training set was created with and what is used in the testing
+script. For example, if the training set had the following settings:
 
-messing around
+SF: 1.1
+MN: 3
+H: 150
+
+but was used with a testing script with the following settings:
+SF: 1.5
+MN: 3
+H: 480
+
+There are going to be some inaccuracies. This can be a GOOD thing, as training
+data was created using EVERY detected "Face", even if the detected "Face"
+was not a face at all, which means, if the training program detects faces that
+really aren't faces, then you're going to see 100% recognition accuracy using
+the same testing settings (which can be bad since it recognized various
+rectangles across the screen that aren't faces as faces). Having a little bit of
+variation can act as a "Filter" for negating those false face detections.
+
+Let's say that when the program detects a face that isn't a real face, the face
+that is detected
+is called a "dummy face". If there are many dummy faces in the training data,
+recognition accuracy is going to be poor since the REAL faces detected for
+one subject are averaged with dummy faces, making it hard to recognize one
+subject's face over another. 
+
+however, if the testing program is using different settings, even though that
+some of the training data has dummy faces present, the testing program can make
+a more accurate prediction from using more strict face detection settings.
+
+
+
+
+
+
 
 
