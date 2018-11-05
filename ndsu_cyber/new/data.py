@@ -249,12 +249,12 @@ stats = Statistics(IS_TEST)
 stats.get_accs()
 stats.sort_accs()
 
-stats.print_tests()
+#stats.print_tests()
 
 
-#while True:
-#    test_id = int(input("disp imgs for which test?\t"))
-#    stats.disp_test(test_id)
+while True:
+    test_id = int(input("disp imgs for which test?\t"))
+    stats.disp_test(test_id)
 
 
 
