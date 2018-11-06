@@ -50,7 +50,7 @@ import os
 import cv2
 from subprocess import call
 import time
-import matplotlib.pyplot as plt
+import matplotlib
 
 
 class Statistics:
@@ -159,9 +159,10 @@ class Statistics:
             print("avg_accs after avgs")
             print(avg_accs)
 
-            plt.bar(range(len(avg_accs)), avg_accs.values(), align="center")
-            plt.xticks(range(len(avg_accs)), list(avg_accs.keys()))
-            plt.show()
+            matplotlib.pyplt.bar(range(len(avg_accs)), avg_accs.values(),
+                                 align="center")
+            matplotlib.pyplt.xticks(range(len(avg_accs)), list(avg_accs.keys()))
+            matplotlib.pyplt.show()
 
             input()
 
