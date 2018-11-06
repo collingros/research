@@ -133,7 +133,7 @@ class Statistics:
             num_val = 0
 
             for test in tests:
-                for key, val in test.data["filters"]:
+                for key, val in test.data["filters"].items():
                     if key in keys:
                         avg_accs[val] += test.data["results"]["acc"]
                         num_val += 1 
