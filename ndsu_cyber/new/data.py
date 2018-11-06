@@ -162,6 +162,8 @@ class Statistics:
                         if key == "test_height":
                         # key name was too long for the plot
                             key = "th"
+                        elif key == "cascade":
+                            key = "c"
 
                         key_name = "{0}_{1}".format(key, val)
 
@@ -299,6 +301,8 @@ class Test:
                         value = line_subs[-1]
 
                         if filters:
+                            if key == "cascade":
+                                value = value.split("_")[-1]
                             self.data["filters"][key] = value
                         else:
                             self.data["results"][key] = value
