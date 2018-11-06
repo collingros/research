@@ -142,6 +142,10 @@ class Statistics:
 
                 for key, val in test.data["filters"].items():
                     if key in keys:
+                        if key == "test_height":
+                        # key name was too long for the plot
+                            key = "th"
+
                         key_name = "{0}_{1}".format(key, val)
 
                         try:
@@ -156,6 +160,9 @@ class Statistics:
 
             for key, val in avg_accs.items():
                 avg = round(val/num_val, 2)
+
+                if "test_height" in key:
+                    val
                 avg_accs[key] = avg
 
             print("avg_accs after avgs")
