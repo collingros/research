@@ -146,7 +146,7 @@ class Statistics:
 
 
     def print_avg_accs(self):
-        keys = ["sf", "mn", "test_height"]
+        keys = ["sf", "mn", "test_height", "cascade"]
 
         for data_dir, tests in self.tests.items():
             print("\nNEW TRAINING DATA: {0}\n".format(data_dir))
@@ -241,7 +241,7 @@ class Test:
 
 
     def print_test(self):
-        filter_vars = ["sf", "mn", "test_height"]
+        filter_vars = ["sf", "mn", "test_height", "cascade"]
         result_vars = ["acc", "id", "path"]
 
         test_id = self.gen_data["id"]
