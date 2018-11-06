@@ -51,6 +51,7 @@ import cv2
 from subprocess import call
 import time
 import matplotlib
+import matplotlib.pyplot
 
 
 class Statistics:
