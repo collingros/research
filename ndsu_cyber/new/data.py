@@ -150,7 +150,7 @@ class Statistics:
             print(avg_accs)
 
             for key, val in avg_accs.items():
-                val = val / num_val
+                avg_accs[key] = val / num_val
 
             print("avg_accs after avgs")
             print(avg_accs)
