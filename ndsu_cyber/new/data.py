@@ -272,10 +272,11 @@ stats.sort_accs()
 
 #stats.print_tests()
 
+stats.print_avg_accs()
 
-while True:
-    test_id = int(input("disp imgs for which test?\t"))
-    stats.disp_test(test_id)
+#while True:
+#    test_id = int(input("disp imgs for which test?\t"))
+#    stats.disp_test(test_id)
 
 
 
