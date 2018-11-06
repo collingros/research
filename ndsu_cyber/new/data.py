@@ -133,6 +133,7 @@ class Statistics:
             num_val = 0
 
             for test in tests:
+                print("len_tests: {0}".format(len(tests)))
                 for key, val in test.data["filters"].items():
                     if key in keys:
                         key_name = "{0}_{1}".format(key, val)
