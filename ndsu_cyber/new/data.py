@@ -124,6 +124,27 @@ class Statistics:
                     test.disp_imgs()
 
 
+    def print_avg_accs(self):
+        keys = ["sf", "mn", "test_height"]
+        for data_dir, tests in self.tests.items():
+            print("NEW TRAINING DATA")
+
+            avg_accs = {}
+            num_val = 0
+
+            for test in tests:
+                for key, val in test.data["filters"]:
+                    if key in keys:
+                        avg_accs[val] += test.data["results"]["acc"]
+                        num_val += 1 
+
+            print("avg_accs before avgs")
+            print(avg_accs)
+
+            for key, val in avg_accs:
+                val = val / num_val
+
+
 
 class Test:
     def __init__(self, IS_TEST):
