@@ -130,12 +130,12 @@ class Statistics:
 
     def plot_dict(self, title, my_dict):
         matplotlib.rcParams.update({"font.size":5})
-        matplotlib.pyplot.title = title
 
         matplotlib.pyplot.bar(range(len(my_dict)), my_dict.values(),
                               align="center")
         matplotlib.pyplot.xticks(range(len(my_dict)),
                                  list(my_dict.keys()))
+        matplotlib.pyplot.figure().suptitle(title, fontsize=12)
 
         matplotlib.pyplot.show()
 
