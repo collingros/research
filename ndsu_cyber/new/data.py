@@ -128,6 +128,8 @@ class Statistics:
 
     def print_avg_accs(self):
         matplotlib.rcParams.update({"font.size":5})
+        matplotlib.pyplot.figure(num=None, figsize=(1366, 768), dpi=120,
+                                 facecolor='w', edgecolor='k')
         keys = ["sf", "mn", "test_height"]
 
         for data_dir, tests in self.tests.items():
