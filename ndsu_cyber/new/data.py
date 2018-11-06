@@ -50,8 +50,8 @@ import os
 import cv2
 from subprocess import call
 import time
-import matplotlib
-import matplotlib.pyplot
+
+import matplotlib.pyplot as plt
 from sortedcontainers import SortedDict
 
 
@@ -129,18 +129,12 @@ class Statistics:
 
 
     def plot_dict(self, title, my_dict):
-        matplotlib.rcParams.update({"font.size":5})
+        #matplotlib.rcParams.update({"font.size":5})
+        plt.plot(list(my_dict.keys()), list(my_dict.values()))
 
-        fig, ax = matplotlib.pyplot.subplots()
+        plt.suptitle(title)
 
-        ax.plot(list(my_dict.keys()), list(my_dict.values()))
-
-        fig.suptitle(title, fontsize=12)
-        ax.set_xlabel("setting_value", fontsize=10)
-        ax.set_ylabel("average accuracy percentage", fontsize=10)
-        ax.xaxis.label.set_size(20)
-
-        matplotlib.pyplot.draw()
+        plt.show()
 
 
     def print_faces(self):
