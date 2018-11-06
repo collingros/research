@@ -135,7 +135,9 @@ class Statistics:
             for test in tests:
                 for key, val in test.data["filters"].items():
                     if key in keys:
-                        avg_accs[str(val)] += test.data["results"]["acc"]
+                        print("val: {0}\tresults[acc]: {1}"
+                              "".format(val, test.data["results"]["acc"])
+                        avg_accs[val] += test.data["results"]["acc"]
                         num_val += 1 
 
             print("avg_accs before avgs")
