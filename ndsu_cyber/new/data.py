@@ -52,6 +52,7 @@ from subprocess import call
 import time
 import matplotlib
 import matplotlib.pyplot
+from sortedcontainers import SortedDict
 
 
 class Statistics:
@@ -160,9 +161,7 @@ class Statistics:
             print("avg_accs after avgs")
             print(avg_accs)
 
-            avg_accs = sorted(self.tests[direct],
-                              key=lambda test: test.gen_data["acc"],
-                              reverse=False)
+            avg_accs = SortedDict(avg_accs)
 
             matplotlib.pyplot.bar(range(len(avg_accs)), avg_accs.values(),
                                   align="center")
