@@ -188,7 +188,7 @@ class Statistics:
 
             avg_accs = SortedDict(avg_accs)
 
-            self.plot_dict(avg_accs)
+            self.plot_dict(data_dir, avg_accs)
 
 
 class Test:
