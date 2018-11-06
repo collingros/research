@@ -126,7 +126,9 @@ class Statistics:
 
 
     def print_avg_accs(self):
+        matplotlib.rcParams.update({"font.size":22})
         keys = ["sf", "mn", "test_height"]
+
         for data_dir, tests in self.tests.items():
             print("\nNEW TRAINING DATA: {0}\n".format(data_dir))
 
