@@ -131,15 +131,16 @@ class Statistics:
     def plot_dict(self, title, my_dict):
         matplotlib.rcParams.update({"font.size":5})
 
-        fig = matplotlib.pyplot.figure()
+        fig, ax = matplotlib.pyplot.subplots()
 
-        fig.bar(range(len(my_dict)), my_dict.values(),
-                              align="center")
-        fig.xticks(range(len(my_dict)),
-                                 list(my_dict.keys()))
+        fig.plot(list(my_dict.keys()), list(my_dict.values()))
+
         fig.suptitle(title, fontsize=12)
+        ax.set_xlabel("setting_value", fontsize=10)
+        ax.set_ylabel("average accuracy percentage", fontsize=10)
+        ax.xaxis.label.set_size(20)
 
-        fig.show()
+        matplotlib.pyplot.draw()
 
 
     def print_faces(self):
