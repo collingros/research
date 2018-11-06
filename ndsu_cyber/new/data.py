@@ -127,9 +127,7 @@ class Statistics:
 
 
     def print_avg_accs(self):
-        matplotlib.rcParams.update({"font.size":5})
-        matplotlib.pyplot.figure(num=None, figsize=(1366, 768), dpi=120,
-                                 facecolor='w', edgecolor='k')
+        matplotlib.rcParams.update({"font.size":8})
         keys = ["sf", "mn", "test_height"]
 
         for data_dir, tests in self.tests.items():
@@ -161,6 +159,10 @@ class Statistics:
 
             print("avg_accs after avgs")
             print(avg_accs)
+
+            avg_accs = sorted(self.tests[direct],
+                              key=lambda test: test.gen_data["acc"],
+                              reverse=False)
 
             matplotlib.pyplot.bar(range(len(avg_accs)), avg_accs.values(),
                                   align="center")
