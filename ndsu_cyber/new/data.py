@@ -130,7 +130,7 @@ class Statistics:
 
     def plot_dict(self, title, my_dict):
         #matplotlib.rcParams.update({"font.size":5})
-        plt.plot(list(my_dict.keys()), list(my_dict.values()))
+        plt.plot(list(my_dict.keys()), list(my_dict.values()), "ro")
 
         plt.suptitle(title)
 
