@@ -133,13 +133,14 @@ class Statistics:
             num_val = 0
 
             for test in tests:
-                print("len_tests: {0}".format(len(tests)))
+                num_val += 1 
+
                 for key, val in test.data["filters"].items():
                     if key in keys:
                         key_name = "{0}_{1}".format(key, val)
                         avg_accs[key_name] = test.gen_data["acc"]
 
-                        num_val += 1 
+
 
             print("avg_accs before avgs, num_val: {0}".format(num_val))
             print(avg_accs)
