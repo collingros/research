@@ -114,6 +114,7 @@ class Statistics:
             for test in tests:
                 test.print_test()
 
+
     def get_accs(self):
         for data_dir, tests in self.tests.items():
             for test in tests:
@@ -127,8 +128,25 @@ class Statistics:
                     test.disp_imgs()
 
 
-    def print_avg_accs(self):
+    def plot_dict(self, title, my_dict):
         matplotlib.rcParams.update({"font.size":5})
+        matplotlib.pyplot.title = title
+
+        matplotlib.pyplot.bar(range(len(my_dict)), my_dict.values(),
+                              align="center")
+        matplotlib.pyplot.xticks(range(len(my_dict)),
+                                 list(my_dict.keys()))
+
+        matplotlib.pyplot.show()
+
+
+    def print_faces(self):
+        keys = ["processed_faces"]
+
+        data_dir = "TRAIN"
+
+
+    def print_avg_accs(self):
         keys = ["sf", "mn", "test_height"]
 
         for data_dir, tests in self.tests.items():
@@ -170,14 +188,7 @@ class Statistics:
 
             avg_accs = SortedDict(avg_accs)
 
-            matplotlib.pyplot.bar(range(len(avg_accs)), avg_accs.values(),
-                                  align="center")
-            matplotlib.pyplot.xticks(range(len(avg_accs)),
-                                     list(avg_accs.keys()))
-            matplotlib.pyplot.show()
-
-            input()
-
+            self.plot_dict(avg_accs)
 
 
 class Test:
