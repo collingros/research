@@ -133,7 +133,7 @@ class Statistics:
 
         fig, ax = matplotlib.pyplot.subplots()
 
-        fig.plot(list(my_dict.keys()), list(my_dict.values()))
+        ax.plot(list(my_dict.keys()), list(my_dict.values()))
 
         fig.suptitle(title, fontsize=12)
         ax.set_xlabel("setting_value", fontsize=10)
