@@ -127,7 +127,7 @@ class Statistics:
     def print_avg_accs(self):
         keys = ["sf", "mn", "test_height"]
         for data_dir, tests in self.tests.items():
-            print("NEW TRAINING DATA")
+            print("\nNEW TRAINING DATA: {0}\n".format(data_dir))
 
             avg_accs = {}
             num_val = 0
@@ -140,7 +140,7 @@ class Statistics:
 
                         num_val += 1 
 
-            print("avg_accs before avgs")
+            print("avg_accs before avgs, num_val: {0}".format(num_val))
             print(avg_accs)
 
             for key, val in avg_accs.items():
