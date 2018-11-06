@@ -159,10 +159,11 @@ class Statistics:
             print("avg_accs after avgs")
             print(avg_accs)
 
-            matplotlib.pyplt.bar(range(len(avg_accs)), avg_accs.values(),
-                                 align="center")
-            matplotlib.pyplt.xticks(range(len(avg_accs)), list(avg_accs.keys()))
-            matplotlib.pyplt.show()
+            matplotlib.pyplot.bar(range(len(avg_accs)), avg_accs.values(),
+                                  align="center")
+            matplotlib.pyplot.xticks(range(len(avg_accs)),
+                                     list(avg_accs.keys()))
+            matplotlib.pyplot.show()
 
             input()
 
