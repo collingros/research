@@ -302,7 +302,9 @@ class Test:
 
                         if filters:
                             if key == "cascade":
-                                value = value.split("_")[-1]
+                                value = value.split("_")[0]
+                                # for the graph
+
                             self.data["filters"][key] = value
                         else:
                             self.data["results"][key] = value
