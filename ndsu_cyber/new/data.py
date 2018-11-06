@@ -159,6 +159,7 @@ class Statistics:
 
         plt.bar(range(len(avg_accs)), avg_accs.values(), align="center")
         plt.xticks(range(len(avg_accs)), list(avg_accs.keys()))
+        plt.show()
 
 
 
