@@ -132,6 +132,8 @@ class Statistics:
         #matplotlib.rcParams.update({"font.size":5})
         plt.plot(list(my_dict.keys()), list(my_dict.values()), "ro")
 
+        plt.tick_params(labelsize=5)
+
         plt.suptitle(title)
 
         plt.show()
