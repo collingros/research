@@ -15,8 +15,28 @@ import subprocess
 # train w + c, test w - h
 # train l + m + h, test w - h
 
+def call(cmd):
+    process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
+
 def train(settings):
-    pass
+    cmd = "python3 train.py -s {0} -n {1} -p {2} -w {3} -c {4} -l {5}"
+          " -m {6} -b {7} -e {8} -f {9} -v {10} -x {11} -a {12} -o {13}"
+          " -z {14} -g {15} -i {16} -j {17} -k {18}"
+          "".format(s, n, p, w, c, l, m, b, e, f, v, x,
+                    a, o, z, g, i, j, k)
+
+    for key, value in settings.items():
+        key_substr = key.split("_")
+        key = key_substr[0]
+
+        if key == "sf":
+
+    cmd = "python3 train.py -s {0} -n {1} -p {2} -w {3} -c {4} -l {5}"
+          " -m {6} -b {7} -e {8} -f {9} -v {10} -x {11} -a {12} -o {13}"
+          " -z {14} -g {15} -i {16} -j {17} -k {18}"
+          "".format(s, n, p, w, c, l, m, b, e, f, v, x,
+                    a, o, z, g, i, j, k)
+            
 
 
 def test(settings):
