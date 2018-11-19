@@ -1,0 +1,12 @@
+the goal:
+    run different testing sets against different training sets
+
+train cold
+test cold warm etc etc
+
+train(settings)
+    run train program based on given settings
+
+test(settings)
+    run test program based on given settings
+
