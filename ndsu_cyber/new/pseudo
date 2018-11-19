@@ -4,6 +4,18 @@ the goal:
 train cold
 test cold warm etc etc
 
+class "settings"
+    properties
+        sf
+        mn
+
+    def rotate_color(self)
+    # if currently cold, do warm, if warm, do low, if low, do med, etc
+
+    def rotate_filter(Self)
+    # etc
+
+
 train(settings)
     run train program based on given settings
 
