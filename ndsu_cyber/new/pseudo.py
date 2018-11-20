@@ -11,6 +11,7 @@ test cold warm etc etc
 
 class Settings:
     def __init__(self, is_test):
+        self.is_test = is_test
         self.prog = {
         # scale factor, minimum neighbors, resolution height, cascade file
             "sf":0,
@@ -55,7 +56,6 @@ class Settings:
 
 
         def already_trained(self):
-            
             return False
 
 
@@ -86,7 +86,31 @@ class Settings:
         pass
 
 
+def run_cmd(cmd):
+    process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
+    process.wait()
+
+
+def train(settings):
+    for key, value in settings.prog.items():
+        if key == "sf":
+            
+    pass
+
+
+def test(settings):
+    pass
+
+
 train_settings = Settings(False)
 test_settings = Settings(True)
+
+train(train_settings)
+test(test_settings)
+
+
+
+
+
 
 
