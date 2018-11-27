@@ -45,8 +45,14 @@ class Settings:
             "c":0
         }
         self.trained = []
+        self.id = 0
 
         self.init_states()
+
+        if is_test:
+            init_test()
+        else:
+            init_train()
 
 
         def init_states(self):
@@ -113,31 +119,43 @@ class Settings:
             return cmd
 
 
-        def pull_train(self):
-        # pull trained data from stockpile, copy it into testing dir
-            pass
-
+        def pull_train(self, train_path):
+        # "pull" trained data from stockpile, copy it into testing dir
+            cwd = os.getcwd()
+            cp(train_path, cwd)
+                    
 
         def save_train(self):
-        # copy fresh trained data into testing directory
-            pass
+        # move fresh trained data into testing directory
+            cwd = os.getcwd()
+
+            new_dir = "{0}/stockpile/{1}".format(cwd, self.id)
+            mkdir(new_dir)
+
+            train_path = cwd + "/" + "train.yml"
+            new_path = new_dir + "/train.yml"
+
+            mv(train_path, new_path)
 
 
         def train(self):
-            cmd = self.build_cmd()
-            # python3 train.py -blah blah blah
-
-            if self.already_trained():
+            trained_path = self.get_trained()
+            if trained_path != "":
             # if we already trained using these settings
-                self.pull_train()
+                self.pull_train(trained_path)
                 # pull the trained data from our stockpile of trained data
                 # and copy it into the testing directory
             else:
             # otherwise, if we didnt train using these settings
+                cmd = self.build_cmd()
+                # python3 train.py -blah blah blah
                 run_cmd(cmd)
                 # train using these settings
                 self.save_train()
-                # and copy it into the testing directory
+                # and copy it into the testing directory (cwd) (side effect
+                # of train.py)
+
+            self.id += 1
 
 
         def test(self):
@@ -149,8 +167,74 @@ class Settings:
             # run the test
 
 
-        def already_trained(self):
-            return False
+        def is_copy(path):
+        # open txt file specified at path, return true if the file represents
+        # our current settings, false otherwise
+            state = "prog"
+            copy = True
+            with open(path, "r") as info:
+                for line in info:
+                    line = line.rstrip()
+
+                    if state == "prog":
+                        # prog settings
+                        for key, value in self.prog.items():
+                            line_sub = line.split(":")
+                            if (line_sub[0] == key and
+                                line_sub[-1] != str(value)):
+                                copy = False
+                    elif state == "color"
+                        for key, value in self.color.items():
+                            line_sub = line.split(":")
+                            if (line_sub[0] == key and
+                                line_sub[-1] != str(value)):
+                                copy = False
+                    elif state == "occ":
+                        for key, value in self.occ.items():
+                            line_sub = line.split(":")
+                            if (line_sub[0] == key and
+                                line_sub[-1] != str(value)):
+                                copy = False
+                    elif state == "pos":
+                        for key, value in self.pos.items():
+                            line_sub = line.split(":")
+                            if (line_sub[0] == key and
+                                line_sub[-1] != str(value)):
+                                copy = False
+                    elif state == "light":
+                        for key, value in self.light.items():
+                            line_sub = line.split(":")
+                            if (line_sub[0] == key and
+                                line_sub[-1] != str(value)):
+                                copy = False
+
+                    if "color" in line:
+                        state = "color"
+                    elif "occ" in line:
+                        state = "occ"
+                    elif "pos" in line:
+                        state = "pos"
+                    elif "light" in line:
+                        state = "light"
+
+            return copy
+
+
+        def get_trained(self):
+        # path of trained data if data was already trained using our settings,
+        # otherwise empty str
+            trained_path = ""
+            cwd = os.getcwd()
+            pile_path = cwd + "/stockpile"
+
+            for directory in os.listdir(pile_path):
+                dir_path = pile_path + "/" + directory
+
+                info_path = dir_path + "/" + "info.txt"
+                if (self.is_copy(info_path)):
+                    trained_path = dir_path + "/" + "train.yml"
+
+            return trained_path
 
 
         def init_test(self):
@@ -167,12 +251,6 @@ class Settings:
             self.prog["mn"] = 1
             self.prog["res"] = 480
             self.prog["c"] = "haar_default.xml"
-
-
-        if is_test:
-            init_test()
-        else:
-            init_train()
 
 
     def rotate(self):
@@ -192,6 +270,12 @@ def mv(src, dst):
     run_cmd(cmd)
 
 
+def cp(src, dst):
+# (shell) cp cmd
+    cmd = "cp {0} {1}".format(src, dst)
+    run_cmd(cmd)
+
+
 def run_cmd(cmd):
 # run a shell cmd
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
@@ -205,8 +289,7 @@ def init_dirs():
 train_settings = Settings(False)
 test_settings = Settings(True)
 
-train(train_settings)
-test(test_settings)
+train_settings.train()
 
 
 
