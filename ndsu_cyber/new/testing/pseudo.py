@@ -118,8 +118,8 @@ class Settings:
             elif key == "c":
                 cmd += " -i " + str(value)
 
-        cmd += " -k /home/reu3/git/research/ndsu_cyber/new/testing/stockpile"
-               "/{0}".format(self.id)
+        cmd += (" -k /home/reu3/git/research/ndsu_cyber/new/testing/stockpile"
+                "/{0}".format(self.id))
         return cmd
 
 
