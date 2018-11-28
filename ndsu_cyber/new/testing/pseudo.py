@@ -321,7 +321,7 @@ def cp(src, dst):
 def run_cmd(cmd):
 # run a shell cmd
     print(cmd + "\n")
-    process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
+    process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
     process.wait()
 
 
