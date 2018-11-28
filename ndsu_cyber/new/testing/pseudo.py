@@ -165,9 +165,9 @@ class Settings:
         new_path = new_dir + "/labels.pickle"
         mv(label_path, new_path)
 
-        new_path = new_dir + "/" + ""
-        ls()
-        mv("*.JPG", new_path)
+        jpg_path = cwd + "/" + "*.JPG"
+        new_path = new_dir + "/"
+        mv(jpg_path, new_path)
 
         info_path = new_dir + "/info.txt"
         self.write_info(info_path)
@@ -294,13 +294,6 @@ class Settings:
         self.color["c"] = 1
 
 
-def ls():
-# (shell) ls cmd
-    cmd = "ls"
-    print("CWD: {0}".format(os.getcwd()))
-    run_cmd(cmd)
-
-
 def touch(name):
 # (shell) touch cmd
     cmd = "touch {0}".format(name)
@@ -327,7 +320,7 @@ def cp(src, dst):
 
 def run_cmd(cmd):
 # run a shell cmd
-    print(cmd)
+    print(cmd + "\n")
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
     process.wait()
 
