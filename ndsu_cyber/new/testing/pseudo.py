@@ -117,8 +117,6 @@ class Settings:
             elif key == "c":
                 cmd += " -i " + str(value)
 
-        cmd += (" -k /home/reu3/git/research/ndsu_cyber/new/testing/stockpile"
-                "/{0}".format(self.id))
         return cmd
 
 
@@ -142,6 +140,8 @@ class Settings:
         label_path = cwd + "/" + "labels.pickle"
         new_path = label_path + "/labels.pickle"
         mv(label_path, new_path)
+
+        mv("*.JPG", new_dir)
 
 
     def train(self):
