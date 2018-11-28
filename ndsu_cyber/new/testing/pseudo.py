@@ -293,6 +293,13 @@ class Settings:
         self.color["c"] = 1
 
 
+def ls():
+# (shell) ls cmd
+    cmd = "ls"
+    print("CWD: {0}".format(os.getcwd())
+    run_cmd(cmd)
+
+
 def touch(name):
 # (shell) touch cmd
     cmd = "touch {0}".format(name)
