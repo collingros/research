@@ -165,7 +165,8 @@ class Settings:
         new_path = new_dir + "/labels.pickle"
         mv(label_path, new_path)
 
-        mv("*.JPG", new_dir)
+        new_path = new_dir + "/" + ""
+        mv("*.JPG", new_path)
 
         info_path = new_dir + "/info.txt"
         self.write_info(info_path)
