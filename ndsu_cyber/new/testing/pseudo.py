@@ -117,6 +117,7 @@ class Settings:
             elif key == "c":
                 cmd += " -i " + str(value)
 
+        print(cmd)
         return cmd
 
 
@@ -138,7 +139,7 @@ class Settings:
         mv(train_path, new_path)
 
         label_path = cwd + "/" + "labels.pickle"
-        new_path = label_path + "/labels.pickle"
+        new_path = new_dir + "/labels.pickle"
         mv(label_path, new_path)
 
         mv("*.JPG", new_dir)
@@ -240,7 +241,6 @@ class Settings:
             if (self.is_copy(info_path)):
                 trained_path = dir_path + "/" + "train.yml"
 
-        print("returning trained path: {0}".format(trained_path))
         return trained_path
 
 
@@ -274,7 +274,6 @@ def touch(name):
 
 def mkdir(name):
 # (shell) mkdir cmd
-    print("mkdir {0}".format(name))
     cmd = "mkdir {0}".format(name)
     run_cmd(cmd)
 
@@ -293,6 +292,7 @@ def cp(src, dst):
 
 def run_cmd(cmd):
 # run a shell cmd
+    print(cmd)
     process = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
     process.wait()
 
