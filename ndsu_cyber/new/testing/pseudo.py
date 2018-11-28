@@ -167,7 +167,8 @@ class Settings:
 
         mv("*.JPG", new_dir)
 
-        self.write_info(new_dir)
+        info_path = new_dir + "/info.txt"
+        self.write_info(info_path)
 
 
     def train(self):
