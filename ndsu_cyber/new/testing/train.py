@@ -260,7 +260,7 @@ def add_face(SETTINGS, data, pic_path, name, dir_count):
 
             coords = [x, y, w, h]
             id_num = data["processed_faces"]
-            save_face(SETTINGS, coords, color_pic, name, id_num)
+            #save_face(SETTINGS, coords, color_pic, name, id_num)
 
             face = gray_pic[y:y+h, x:x+w]
             data["faces"].append(face)

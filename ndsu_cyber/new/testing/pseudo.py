@@ -118,6 +118,8 @@ class Settings:
             elif key == "c":
                 cmd += " -i " + str(value)
 
+        cmd += " -k /home/reu3/git/research/ndsu_cyber/new/testing/stockpile"
+               "/{0}".format(self.id)
         return cmd
 
 
@@ -136,8 +138,11 @@ class Settings:
 
         train_path = cwd + "/" + "train.yml"
         new_path = new_dir + "/train.yml"
-
         mv(train_path, new_path)
+
+        label_path = cwd + "/" + "labels.pickle"
+        new_path = label_path + "/labels.pickle"
+        mv(label_path, new_path)
 
 
     def train(self):
@@ -258,7 +263,8 @@ class Settings:
 
     def rotate(self):
     # if currently cold, do warm, if warm, do low, if low, do med, etc
-        pass
+        self.color["w"] = 0
+        self.color["c"] = 1
 
 
 def touch(name):
@@ -297,9 +303,10 @@ def init_dirs():
     pass
 
 train_settings = Settings(False)
-
 train_settings.train()
 
+train_settings.rotate()
+train_settings.train()
 
 
 
