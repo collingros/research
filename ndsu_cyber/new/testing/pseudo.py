@@ -166,6 +166,7 @@ class Settings:
         mv(label_path, new_path)
 
         new_path = new_dir + "/" + ""
+        ls()
         mv("*.JPG", new_path)
 
         info_path = new_dir + "/info.txt"
