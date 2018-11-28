@@ -296,7 +296,7 @@ class Settings:
 def ls():
 # (shell) ls cmd
     cmd = "ls"
-    print("CWD: {0}".format(os.getcwd())
+    print("CWD: {0}".format(os.getcwd()))
     run_cmd(cmd)
 
 
