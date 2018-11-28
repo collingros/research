@@ -124,7 +124,31 @@ class Settings:
     # "pull" trained data from stockpile, copy it into testing dir
         cwd = os.getcwd()
         cp(train_path, cwd)
-                
+               
+
+    def write_info(self, path):
+        with open(path, "w") as info:
+            info.write("prog\n")
+            for key, value in self.prog.items():
+                info.write("{0}:{1}\n".format(key, value))
+
+            info.write("color\n")
+            for key, value in self.color.items():
+                info.write("{0}:{1}\n".format(key, value))
+
+            info.write("occ\n")
+            for key, value in self.occ.items():
+                info.write("{0}:{1}\n".format(key, value))
+
+            info.write("pos\n")
+            for key, value in self.pos.items():
+                info.write("{0}:{1}\n".format(key, value))
+
+            info.write("light\n")
+            for key, value in self.light.items():
+                info.write("{0}:{1}\n".format(key, value))
+            
+ 
 
     def save_train(self):
     # move fresh trained data into testing directory
@@ -142,6 +166,8 @@ class Settings:
         mv(label_path, new_path)
 
         mv("*.JPG", new_dir)
+
+        self.write_info(new_dir)
 
 
     def train(self):
