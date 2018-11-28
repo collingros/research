@@ -74,7 +74,6 @@ class Settings:
             cmd += "python3 train.py "
 
         for key, value in self.prog.items():
-            print("cmd: {0}".format(cmd))
             if key == "sf":
                 cmd += " -s " + str(value)
             elif key == "mn":
