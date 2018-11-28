@@ -91,8 +91,8 @@ def get_settings():
 
     # TRAIN_DATA, TEST_DIR, RATIO are not set by the user
     "TRAIN_DATA":"train.yml",
-    "TRAIN_DIR":"train",
-    "TEST_DIR":"test",
+    "TRAIN_DIR":"/home/reu3/database/train",
+    "TEST_DIR":"/home/reu3/database/test",
     "RATIO":1.5,
     "LABELS":"labels.pickle"
     }
