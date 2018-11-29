@@ -124,7 +124,7 @@ class Settings:
     # "pull" trained data from stockpile, copy it into testing dir
         cwd = os.getcwd()
         cp(train_path, cwd)
-               
+
 
     def write_info(self, path):
         with open(path, "w") as info:
@@ -147,8 +147,7 @@ class Settings:
             info.write("light\n")
             for key, value in self.light.items():
                 info.write("{0}:{1}\n".format(key, value))
-            
- 
+
 
     def save_train(self):
     # move fresh trained data into testing directory
