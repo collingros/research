@@ -478,6 +478,6 @@ for te_color in colors:
         train_obj.set_color(list(tr_color))
         dir_path = train_obj.run()
 
-    test_obj.run(dir_path)
+        test_obj.run(dir_path)
 
 
