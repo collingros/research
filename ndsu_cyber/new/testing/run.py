@@ -395,7 +395,8 @@ class Train:
     def get_copy(self):
         stockpile = "./stockpile"
         for id_dir in os.listdir(stockpile):
-            for item in os.listdir(id_dir):
+            id_dir_path = stockpile + "/" + id_dir
+            for item in os.listdir(id_dir_path):
                 if item == "train_info.txt":
                     item_path = ("./stockpile/{0}/{1}"
                                  "".format(id_dir, item))
@@ -464,7 +465,7 @@ def mkdir(path):
 
 
 def run_cmd(cmd):
-#    print(cmd)
+    print("running: " + cmd)
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
     process.wait()
 
