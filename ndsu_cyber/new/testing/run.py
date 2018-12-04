@@ -410,7 +410,7 @@ class Train:
                     item_path = ("./stockpile/{0}/{1}"
                                  "".format(id_dir, item))
                     if self.is_copy(item_path):
-                        dir_path = "./stockpile/{0}"
+                        dir_path = "./stockpile/{0}".format(id_dir)
 
                         return dir_path
 
