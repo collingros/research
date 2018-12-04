@@ -389,7 +389,7 @@ def mv(src, dst):
 
 
 def mkdir(path):
-    cmd = "mkdir {0}".format(name)
+    cmd = "mkdir {0}".format(path)
     run_cmd(cmd)
 
 
