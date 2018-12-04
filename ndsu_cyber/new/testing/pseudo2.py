@@ -369,7 +369,7 @@ class Train:
 
 
 def reset_dict(my_dict):
-    for key, value in my_dict:
+    for key, value in my_dict.items():
         my_dict[key] = 0
 
 
