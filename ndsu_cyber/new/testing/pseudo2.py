@@ -464,9 +464,9 @@ def mkdir(path):
 
 
 def run_cmd(cmd):
-    print(cmd)
-#    process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-#    process.wait()
+#    print(cmd)
+    process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+    process.wait()
 
 
 train_obj = Train()
