@@ -169,6 +169,7 @@ class Test:
 
         test = self.build_cmd()
         run_cmd(test)
+        self.write_info()
 
         mv("./stats.txt", test_dir + "/stats.txt")
         mv("./test_info.txt", test_dir + "/test_info.txt")
@@ -411,6 +412,7 @@ class Train:
 
             train = self.build_cmd()
             run_cmd(train)
+            self.write_info()
 
             train_name = "/train.yml"
             mv("." + train_name, dir_path + train_name)
