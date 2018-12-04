@@ -409,11 +409,13 @@ for obj in objs:
 
 colors = ["w", "c", "l", "m", "h"]
 for te_color in colors:
+    dir_path = ""
+
     test_obj.set_color(list(te_color))
     for tr_color in colors:
         train_obj.set_color(list(tr_color))
-        train_obj.run()
+        dir_path = train_obj.run()
 
-    test_obj.run()
+    test_obj.run(dir_path)
 
 
