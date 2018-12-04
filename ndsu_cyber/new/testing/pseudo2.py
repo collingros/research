@@ -348,7 +348,7 @@ class Train:
         dir_path = ""
         dir_path = self.get_copy()
         if dir_path == "":
-            dir_path = "./stockpile/{0}".format(self_id)
+            dir_path = "./stockpile/{0}".format(self.id)
             mkdir(dir_path)
 
             train = self.build_cmd()
