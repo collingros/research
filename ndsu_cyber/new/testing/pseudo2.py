@@ -84,7 +84,7 @@ class Test:
 
 
 
-    def build_cmd(self):
+    def build_cmd(self, test_dir):
         cmd = "python3 test.py "
 
         for key, value in self.prog.items():
@@ -131,6 +131,7 @@ class Test:
             elif key == "c":
                 cmd += " -i " + str(value)
 
+        cmd += "-k {0} ".format(test_dir)
         cmd += " > stats.txt"
 
         return cmd
@@ -169,7 +170,7 @@ class Test:
         test_dir = "{0}/{1}".format(dir_path, self.id)
         mkdir(test_dir)
 
-        test = self.build_cmd()
+        test = self.build_cmd(test_dir)
         run_cmd(test)
         self.write_info()
 

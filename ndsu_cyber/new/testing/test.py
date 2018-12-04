@@ -79,8 +79,7 @@ def init(SETTINGS, data):
     face_rec = cv2.face.LBPHFaceRecognizer_create()
     data["face_rec"] = face_rec
 
-    out_dir = SETTINGS["OUT"]
-    trained_data = out_dir + "/" + SETTINGS["TRAIN_DATA"]
+    trained_data = SETTINGS["TRAIN_DATA"]
     try:
         face_rec.read(trained_data)
     except:
@@ -90,9 +89,7 @@ def init(SETTINGS, data):
 
 
 def get_labels(SETTINGS, data):
-    filename = SETTINGS["LABELS"]
-    out_dir = SETTINGS["OUT"]
-    file_path = os.getcwd() + "/" + out_dir + "/" + filename
+    file_path = SETTINGS["LABELS"]
 
     with open(file_path, "rb") as f:
         og_labels = pickle.load(f)
