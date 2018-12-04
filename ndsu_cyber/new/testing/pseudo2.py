@@ -334,8 +334,8 @@ class Train:
         for id_dir in os.listdir(stockpile):
             for item in os.listdir(id_dir):
                 if item == "train_info.txt":
-                    item_path = "./stockpile/{0}/{1}"
-                                "".format(id_dir, item)
+                    item_path = ("./stockpile/{0}/{1}"
+                                 "".format(id_dir, item))
                     if is_copy(item_path):
                         dir_path = "./stockpile/{0}"
 
