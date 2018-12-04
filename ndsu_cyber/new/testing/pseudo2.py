@@ -85,53 +85,53 @@ class Test:
 
 
     def build_cmd(self):
-    cmd = "python3 test.py "
+        cmd = "python3 test.py "
 
-    for key, value in self.prog.items():
-        if key == "sf":
-            cmd += " -s " + str(value)
-        elif key == "mn":
-            cmd += " -n " + str(value)
-        elif key == "res":
-            cmd += " -p " + str(value)
-        elif key == "c":
-            cmd += " -z " + str(value)
+        for key, value in self.prog.items():
+            if key == "sf":
+                cmd += " -s " + str(value)
+            elif key == "mn":
+                cmd += " -n " + str(value)
+            elif key == "res":
+                cmd += " -p " + str(value)
+            elif key == "c":
+                cmd += " -z " + str(value)
 
-    for key, value in self.color.items():
-        if key == "w":
-            cmd += " -w " + str(value)
-        elif key == "c":
-            cmd += " -c " + str(value)
-        elif key == "l":
-            cmd += " -l " + str(value)
-        elif key == "m":
-            cmd += " -m " + str(value)
-        elif key == "h":
-            cmd += " -b " + str(value)
+        for key, value in self.color.items():
+            if key == "w":
+                cmd += " -w " + str(value)
+            elif key == "c":
+                cmd += " -c " + str(value)
+            elif key == "l":
+                cmd += " -l " + str(value)
+            elif key == "m":
+                cmd += " -m " + str(value)
+            elif key == "h":
+                cmd += " -b " + str(value)
 
-    for key, value in self.occ.items():
-        if key == "v":
-            cmd += " -v " + str(value)
-        elif key == "h":
-            cmd += " -f " + str(value)
-        elif key == "g":
-            cmd += " -e " + str(value)
+        for key, value in self.occ.items():
+            if key == "v":
+                cmd += " -v " + str(value)
+            elif key == "h":
+                cmd += " -f " + str(value)
+            elif key == "g":
+                cmd += " -e " + str(value)
 
-    for key, value in self.pos.items():
-        if key == "p":
-            cmd += " -x " + str(value)
-        elif key == "a":
-            cmd += " -a " + str(value)
-        elif key == "c":
-            cmd += " -o " + str(value)
+        for key, value in self.pos.items():
+            if key == "p":
+                cmd += " -x " + str(value)
+            elif key == "a":
+                cmd += " -a " + str(value)
+            elif key == "c":
+                cmd += " -o " + str(value)
 
-    for key, value in self.light.items():
-        if key == "s":
-            cmd += " -g " + str(value)
-        elif key == "c":
-            cmd += " -i " + str(value)
+        for key, value in self.light.items():
+            if key == "s":
+                cmd += " -g " + str(value)
+            elif key == "c":
+                cmd += " -i " + str(value)
 
-    return cmd
+        return cmd
 
 
     def run(self, dir_path):
