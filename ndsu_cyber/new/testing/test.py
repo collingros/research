@@ -252,8 +252,8 @@ def save_face(SETTINGS, coords, pic, guess, name, id_num, conf, corr):
                 0.5, PURP, stroke, line_type)
 
     out_dir = SETTINGS["OUT"]
-    file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
-              str(id_num) + ".JPG")
+    file_path = (out_dir + "/" + name + "_" +
+                 str(id_num) + ".JPG")
     cv2.imwrite(file_path, pic)
 
     # FOR SHOWING THE FACE ONLY:
