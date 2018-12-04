@@ -433,7 +433,7 @@ class Train:
         cp(train_path, ".")
 
         labels_path = dir_path + "/labels.pickle"
-        cp(train_path, ".")
+        cp(labels_path, ".")
 
         return dir_path
 
