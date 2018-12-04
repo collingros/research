@@ -134,6 +134,35 @@ class Test:
         return cmd
 
 
+    def write_info(self):
+        state = "prog"
+        with open("test_info.txt", "w") as info:
+            info.write(state + "\n")
+            for key, value in self.prog.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "color"
+            for key, value in self.color.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "occ"
+            for key, value in self.occ.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "pos"
+            for key, value in self.pos.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "light"
+            for key, value in self.light.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+
     def run(self, dir_path):
         test_dir = "{0}/{1}".format(dir_path, self.id)
         mkdir(test_dir)
@@ -277,6 +306,35 @@ class Train:
                 cmd += " -i " + str(value)
 
         return cmd
+
+
+    def write_info(self):
+        state = "prog"
+        with open("train_info.txt", "w") as info:
+            info.write(state + "\n")
+            for key, value in self.prog.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "color"
+            for key, value in self.color.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "occ"
+            for key, value in self.occ.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "pos"
+            for key, value in self.pos.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
+
+            state = "light"
+            for key, value in self.light.items():
+                write_str = "{0}:{1}\n".format(key, value)
+                info.write(write_str)
 
 
     def is_copy(path):
