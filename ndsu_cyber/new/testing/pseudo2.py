@@ -131,6 +131,8 @@ class Test:
             elif key == "c":
                 cmd += " -i " + str(value)
 
+        cmd += " > stats.txt"
+
         return cmd
 
 
