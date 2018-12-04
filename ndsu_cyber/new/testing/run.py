@@ -180,6 +180,7 @@ class Test:
 
         mv("./stats.txt", test_dir + "/stats.txt")
         mv("./test_info.txt", test_dir + "/test_info.txt")
+        mv("./*.JPG", test_dir + "/")
 
         rm("./train.yml")
         rm("./labels.pickle")

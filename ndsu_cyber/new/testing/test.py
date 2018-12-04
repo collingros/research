@@ -194,7 +194,7 @@ def get_settings():
         SETTINGS["CASCADE"] = args.z
     if args.d: # CONFIDENCE CUTOFF THRESHOLD
         SETTINGS["CONF_CUTOFF"] = args.d
-    if args.k: # DIRECTORY TO SAVE CAPTURED FACES TO
+    if args.k: # DIRECTORY TO SAVE CAPTURED FACES TO (BROKEN, SAVES TO CWD)
         SETTINGS["OUT"] = args.k
     if args.q: # SIZE RESTRICTION ON DETECTED FACE AREA
                # (GOAL IS TO TRY TO MINIMIZE FALSE POSITIVES)
