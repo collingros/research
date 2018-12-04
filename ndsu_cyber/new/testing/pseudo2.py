@@ -177,6 +177,7 @@ class Test:
         mv("./test_info.txt", test_dir + "/test_info.txt")
 
         rm("./train.yml")
+        rm("./labels.pickle")
 
         self.id += 1
 
@@ -419,12 +420,18 @@ class Train:
             train_name = "/train.yml"
             mv("." + train_name, dir_path + train_name)
 
+            labels_name = "/labels.pickle"
+            mv("." + labels_name, dir_path + labels_name)
+
             train_info = "/train_info.txt"
             mv("." + train_info, dir_path + train_info)
 
             self.id += 1
 
         train_path = dir_path + "/train.yml"
+        cp(train_path, ".")
+
+        labels_path = dir_path + "/labels.pickle"
         cp(train_path, ".")
 
         return dir_path
