@@ -146,21 +146,25 @@ class Test:
                 info.write(write_str)
 
             state = "color"
+            info.write(state + "\n")
             for key, value in self.color.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
 
             state = "occ"
+            info.write(state + "\n")
             for key, value in self.occ.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
 
             state = "pos"
+            info.write(state + "\n")
             for key, value in self.pos.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
 
             state = "light"
+            info.write(state + "\n")
             for key, value in self.light.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
@@ -322,21 +326,25 @@ class Train:
                 info.write(write_str)
 
             state = "color"
+            info.write(state + "\n")
             for key, value in self.color.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
 
             state = "occ"
+            info.write(state + "\n")
             for key, value in self.occ.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
 
             state = "pos"
+            info.write(state + "\n")
             for key, value in self.pos.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
 
             state = "light"
+            info.write(state + "\n")
             for key, value in self.light.items():
                 write_str = "{0}:{1}\n".format(key, value)
                 info.write(write_str)
