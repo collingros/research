@@ -350,7 +350,7 @@ class Train:
                 info.write(write_str)
 
 
-    def is_copy(path):
+    def is_copy(self, path):
         state = "prog"
         copy = True
         with open(path, "r") as info:
@@ -408,7 +408,7 @@ class Train:
                 if item == "train_info.txt":
                     item_path = ("./stockpile/{0}/{1}"
                                  "".format(id_dir, item))
-                    if is_copy(item_path):
+                    if self.is_copy(item_path):
                         dir_path = "./stockpile/{0}"
 
                         return dir_path
