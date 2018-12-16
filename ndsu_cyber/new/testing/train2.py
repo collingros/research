@@ -1,5 +1,5 @@
 # Collin Gros
-# 12/11/18
+# 12/15/18
 
 
 # arg description
@@ -16,7 +16,8 @@ import time
 
 
 settings = {}
-data = {}
+people = {}
+faces = []
 labels = []
 
 cascade = None
@@ -58,98 +59,42 @@ def read_settings():
             settings[key] = args.key
 
 
-def init_data():
-    int_data = ["skipped", "viewed", "correct", "incorrect"]
-    for key in int_data:
-        data[key] = 0
-
-
 def load_data():
 # load training data
     xml = settings["cascade"]
     cascade = cv2.CascadeClassifier(xml)
 
-    trained_path = "./train.yml"
-    try:
-        face_rec.read(trained_path)
-    except:
-        print("error: no training data was found\nexiting...\n")
-        exit()
-
-    labels_path = "./labels.pickle"
-    with open(labels_path, "rb") as info:
-        og_labels = pickle.load(info)
-
-    labels = {v:k for k, v in og_labels.items()}
-
 
 def write_data():
-# write data dict in ./stat.txt
-    with open("stat.txt", "w") as info:
-        for key, value in data.items():
-            str = "{0}:{1}\n".format(key, value)
-            info.write(str)
+# train, save labels
+    train_path = "./train.yml"
+    face_rec.train(faces, np.array(labels))
+    face_rec.save(train_path)
+
+    labels_path = "./labels.pickle"
+    with open(labels_path, "w") as info:
+        pickle.dump(people, info)
 
 
-def draw(pic, name, conf, id, coords, str):
-# draw box and text over detected face, save to
-# ./{id}.JPG
-    if str == "green":
-        color = (0, 255, 0)
-    elif str == "red":
-        color = (0, 0, 255)
-
-    x = coords[0]
-    y = coords[1]
-    w = coords[2]
-    h = coords[3]
-
-    cv2.rectangle(pic, (x, y), (x+w, y+h), color, 2)
-    cv2.putText(pic, name, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX,
-                0.5, color, 2, cv2.LINE_AA)
-    cv2.putText(pic, conf, (x+w, y+h+10), cv2.FONT_HERSHEY_SIMPLEX,
-                0.5, color, 2, cv2.LINE_AA)
-
-    path = "./{0}.JPG".format(id)
-    cv2.imwrite(path)
-
-
-def guess(path, name):
+def add(path, dir_num):
 # guess whose face it is, record results
-    str_arr = path.split("/")
-    str_arr = pic_name[-1].split(".")
-    id = str_arr[0]
-
-    color_pic = cv2.imread(path, 1)
     gray_pic = cv2.imread(path, 0)
 
     height = settings["p"]
     width = height * 1.5
-    color_pic = cv2.resize(color_pic, (width, height))
     gray_pic = cv2.resize(gray_pic, (width, height))
 
     detected = cascade.detectMultiScale(gray_pic, scaleFactor=settings["sf"],
                                         minNeighbors=settings["mn"])
     if not len(detected):
     # no faces were detected
-        data["skipped"] += 1
         return
 
     for (x, y, w, h) in detected:
-        data["viewed"] += 1
-
         face = gray_pic[y:y+h, x:x+w]
-        label, conf = face_rec.predict(face)
 
-        guess = labels[label]
-        coords = [x, y, w, h]
-
-        if guess == name:
-            data["correct"] += 1
-            draw(color_pic, guess, conf, id, coords, "green")
-        else:
-            data["incorrect"] += 1
-            draw(color_pic, guess, conf, id, coords, "red")
+        faces.append(face)
+        labels.append(dir_num)
 
 
 def filter(name, name_type, num=0):
@@ -195,11 +140,14 @@ def filter(name, name_type, num=0):
     return 0
 
 
-def test():
-# for each filtered image, guess and record results
-    ids = "./test"
+def train():
+# for each filtered image, add to faces arr
+    dir_num = 0
+
+    ids = "./train"
     for id in os.listdir(ids):
 
+        people[id] = dir_num
         path = ids + "/" + id
         for occ in os.listdir(path):
             if not filter(occ, "occ"):
@@ -222,21 +170,15 @@ def test():
                             continue
 
                         path = path + "/" + color
-                        guess(path, id)
+                        add(path, dir_num)
 
                         num += 1
+        dir_num += 1
 
-
-start = time.time()
 
 read_settings()
-init_data()
 load_data()
 
-test()
-
-finish = time.time()
-data["time"] = start - finish
+train()
 
 write_data()
-

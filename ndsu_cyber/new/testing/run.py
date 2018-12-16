@@ -131,9 +131,6 @@ class Test:
             elif key == "c":
                 cmd += " -i " + str(value)
 
-        cmd += " -k {0} ".format(test_dir)
-        cmd += "> stats.txt"
-
         return cmd
 
 
