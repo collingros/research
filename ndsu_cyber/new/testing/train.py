@@ -96,8 +96,8 @@ def add(path, dir_num):
     gray_pic = cv2.resize(gray_pic, (width, height))
 
     global cascade
-    detected = cascade.detectMultiScale(gray_pic, scaleFactor=settings["sf"],
-                                        minNeighbors=settings["mn"])
+    detected = cascade.detectMultiScale(gray_pic, scaleFactor=settings["s"],
+                                        minNeighbors=settings["n"])
     if not len(detected):
     # no faces were detected
         return
