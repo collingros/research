@@ -65,8 +65,11 @@ def read_settings():
 def load_data():
 # load training data
     xml = settings["z"]
+
+    global cascade
     cascade = cv2.CascadeClassifier(xml)
 
+    global face_rec
     face_rec = cv2.face.LBPHFaceRecognizer_create()
 
 
@@ -74,6 +77,7 @@ def write_data():
 # train, save labels
     train_path = "./train.yml"
 
+    global face_rec
     face_rec.train(faces, np.array(labels))
     face_rec.save(train_path)
 
@@ -90,6 +94,7 @@ def add(path, dir_num):
     width = height * 1.5
     gray_pic = cv2.resize(gray_pic, (width, height))
 
+    global cascade
     detected = cascade.detectMultiScale(gray_pic, scaleFactor=settings["sf"],
                                         minNeighbors=settings["mn"])
     if not len(detected):
