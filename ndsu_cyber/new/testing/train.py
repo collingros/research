@@ -57,8 +57,8 @@ def read_settings():
     all_settings = int_settings + float_settings + str_settings
     for key in all_settings:
         attr = getattr(args, key)
-        if args.attr:
-            settings[key] = args.key
+        if attr:
+            settings[key] = attr
 
 
 def load_data():
