@@ -495,6 +495,7 @@ for te_color in colors:
         dir_path = train_obj.run()
 
         test_obj.run(dir_path)
+        exit()
 
 print("mixed color tests")
 tr_colors = [["w", "c"], ["l", "m", "b"]]
@@ -507,5 +508,6 @@ for te_color in te_colors:
         dir_path = train_obj.run()
 
         test_obj.run(dir_path)
+        exit()
 
 
