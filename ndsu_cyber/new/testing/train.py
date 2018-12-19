@@ -90,9 +90,8 @@ def add(path, dir_num):
 # guess whose face it is, record results
     gray_pic = cv2.imread(path, 0)
 
-    height = settings["p"]
-    width = int(height) * 1.5
-    width = int(width)
+    height = int(settings["p"])
+    width = int(height * 1.5)
 
     gray_pic = cv2.resize(gray_pic, (width, height))
 
