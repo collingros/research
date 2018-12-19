@@ -122,6 +122,9 @@ def filter(name, name_type, num=0):
         angled = ["1", "3"]
         central = ["2"]
 
+        str = name.split("_")
+        name = str[-1]
+
         if name in profile and settings["x"]:
             return 1
         elif name in angled and settings["a"]:
@@ -131,6 +134,9 @@ def filter(name, name_type, num=0):
     elif name_type == "light":
         shadows = ["1", "2", "3", "5", "6", "7"]
         central = ["4"]
+
+        str = name.split("_")
+        name = str[-1]
 
         if name in shadows and settings["g"]:
             return 1
