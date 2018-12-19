@@ -181,6 +181,9 @@ def train():
                             continue
 
                         pic_path = color_path + "/" + color
+
+                        print("add: pic_path: {0}\tdir_num: {1}"
+                              "".format(pic_path, dir_num))
                         add(pic_path, dir_num)
 
                         num += 1
