@@ -155,9 +155,8 @@ def train():
 # for each filtered image, add to faces arr
     dir_num = 0
 
-    print("TRAIN")
-
     ids = "/home/reu3/database/train"
+    print(os.listdir(ids))
     for id in os.listdir(ids):
 
         people[id] = dir_num
