@@ -92,7 +92,7 @@ def load_data():
 
 def write_data():
 # write data dict in ./stat.txt
-    with open("stat.txt", "w") as info:
+    with open("stats.txt", "w") as info:
         for key, value in data.items():
             str = "{0}:{1}\n".format(key, value)
             info.write(str)
