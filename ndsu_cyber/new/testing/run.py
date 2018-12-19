@@ -509,6 +509,5 @@ for te_color in te_colors:
         dir_path = train_obj.run()
 
         test_obj.run(dir_path)
-        exit()
 
 
