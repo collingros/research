@@ -123,7 +123,7 @@ def draw(pic, name, conf, id, coords, str):
 def guess(path, name):
 # guess whose face it is, record results
     str_arr = path.split("/")
-    str_arr = pic_name[-1].split(".")
+    str_arr = str_arr[-1].split(".")
     id = str_arr[0]
 
     color_pic = cv2.imread(path, 1)
