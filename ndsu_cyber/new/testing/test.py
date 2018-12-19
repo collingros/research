@@ -98,12 +98,12 @@ def write_data():
             info.write(str)
 
 
-def draw(pic, name, conf, id, coords, str):
+def draw(pic, name, conf, id, coords, color_str):
 # draw box and text over detected face, save to
 # ./{id}.JPG
-    if str == "green":
+    if color_str == "green":
         color = (0, 255, 0)
-    elif str == "red":
+    elif color_str == "red":
         color = (0, 0, 255)
 
     x = coords[0]
