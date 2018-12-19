@@ -82,6 +82,7 @@ def write_data():
     face_rec.train(faces, np.array(labels))
     face_rec.save(train_path)
 
+    global people
     labels_path = "./labels.pickle"
     with open(labels_path, "w") as info:
         pickle.dump(people, info)
