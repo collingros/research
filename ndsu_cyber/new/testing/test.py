@@ -13,14 +13,15 @@
 import cv2
 import os
 import time
-
+import argparse
+import pickle
 
 settings = {}
 data = {}
 labels = []
 
 cascade = None
-face_rec = cv2.face_LBPHFaceRecognizer_create()
+face_rec = None
 
 
 def read_settings():
@@ -54,8 +55,9 @@ def read_settings():
 
     all_settings = int_settings + float_settings + str_settings
     for key in all_settings:
-        if arg.key:
-            settings[key] = args.key
+        attr = getattr(args, key)
+        if attr:
+            settings[key] = attr
 
 
 def init_data():
@@ -66,9 +68,13 @@ def init_data():
 
 def load_data():
 # load training data
-    xml = settings["cascade"]
+    xml = settings["z"]
+
+    global cascade
     cascade = cv2.CascadeClassifier(xml)
 
+    global face_rec
+    face_rec = cv2.face.LBPHFaceRecognizer_create()
     trained_path = "./train.yml"
     try:
         face_rec.read(trained_path)
@@ -128,6 +134,7 @@ def guess(path, name):
     color_pic = cv2.resize(color_pic, (width, height))
     gray_pic = cv2.resize(gray_pic, (width, height))
 
+    global cascade
     detected = cascade.detectMultiScale(gray_pic, scaleFactor=settings["sf"],
                                         minNeighbors=settings["mn"])
     if not len(detected):
@@ -138,6 +145,7 @@ def guess(path, name):
     for (x, y, w, h) in detected:
         data["viewed"] += 1
 
+        global face_rec
         face = gray_pic[y:y+h, x:x+w]
         label, conf = face_rec.predict(face)
 
@@ -166,6 +174,9 @@ def filter(name, name_type, num=0):
         angled = ["1", "3"]
         central = ["2"]
 
+        str = name.split("_")
+        name = str[-1]
+
         if name in profile and settings["x"]:
             return 1
         elif name in angled and settings["a"]:
@@ -175,6 +186,9 @@ def filter(name, name_type, num=0):
     elif name_type == "light":
         shadows = ["1", "2", "3", "5", "6", "7"]
         central = ["4"]
+
+        str = name.split("_")
+        name = str[-1]
 
         if name in shadows and settings["g"]:
             return 1
@@ -192,6 +206,7 @@ def filter(name, name_type, num=0):
         elif num == 4 and settings["b"]:
             return 1
 
+    print("filter returning 0 for {0}:{1}".format(name, name_type))
     return 0
 
 
@@ -200,29 +215,30 @@ def test():
     ids = "./test"
     for id in os.listdir(ids):
 
-        path = ids + "/" + id
-        for occ in os.listdir(path):
+        id_path = ids + "/" + id
+        for occ in os.listdir(id_path):
             if not filter(occ, "occ"):
                 continue
 
-            path = path + "/" + occ
-            for pos in os.listdir(path):
+            occ_path = id_path + "/" + occ
+            for pos in os.listdir(occ_path):
                 if not filter(pos, "pos"):
                     continue
 
-                path = path + "/" + pos
-                for light in os.listdir(path):
+                light_path = occ_path + "/" + pos
+                for light in os.listdir(light_path):
                     if not filter(light, "light"):
                         continue
 
                     num = 0
-                    path = path + "/" + angle
-                    for color in os.listdir(path):
+                    color_path = light_path + "/" + light
+                    for color in os.listdir(color_path):
                         if not filter(color, "color", num):
                             continue
 
-                        path = path + "/" + color
-                        guess(path, id)
+                        pic_path = color_path + "/" + color
+                        print("guess: {0}:{1}".format(pic_path, id))
+                        guess(pic_path, id)
 
                         num += 1
 
