@@ -63,7 +63,7 @@ def read_settings():
 
 def load_data():
 # load training data
-    xml = settings["cascade"]
+    xml = settings["z"]
     cascade = cv2.CascadeClassifier(xml)
 
 
