@@ -84,7 +84,7 @@ def write_data():
 
     global people
     labels_path = "./labels.pickle"
-    with open(labels_path, "w") as info:
+    with open(labels_path, "wb") as info:
         pickle.dump(people, info)
 
 
