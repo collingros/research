@@ -183,7 +183,7 @@ def train():
                         continue
 
                     num = 0
-                    color_path = light_path + "/" + angle
+                    color_path = light_path + "/" + light
 
                     for color in os.listdir(color_path):
                         if not filter(color, "color", num):
