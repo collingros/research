@@ -162,11 +162,11 @@ def guess(path, name):
 def filter(name, name_type, num=0):
 # if we don't want to include the specified media, return 0
     if name_type == "occ":
-        if name == "vanilla" and settings["v"]:
+        if name == "vanilla" and int(settings["v"]):
             return 1
-        elif name == "glasses" and settings["e"]:
+        elif name == "glasses" and int(settings["e"]):
             return 1
-        elif name == "hat" and settings["f"]:
+        elif name == "hat" and int(settings["f"]):
             return 1
     elif name_type == "pos":
         profile = ["0", "4"]
@@ -176,11 +176,11 @@ def filter(name, name_type, num=0):
         str = name.split("_")
         name = str[-1]
 
-        if name in profile and settings["x"]:
+        if name in profile and int(settings["x"]):
             return 1
-        elif name in angled and settings["a"]:
+        elif name in angled and int(settings["a"]):
             return 1
-        elif name in central and settings["o"]:
+        elif name in central and int(settings["o"]):
             return 1
     elif name_type == "light":
         shadows = ["1", "2", "3", "5", "6", "7"]
@@ -189,20 +189,20 @@ def filter(name, name_type, num=0):
         str = name.split("_")
         name = str[-1]
 
-        if name in shadows and settings["g"]:
+        if name in shadows and int(settings["g"]):
             return 1
-        elif name in central and settings["i"]:
+        elif name in central and int(settings["i"]):
             return 1
     elif name_type == "color":
-        if num == 0 and settings["w"]:
+        if num == 0 and int(settings["w"]):
             return 1
-        elif num == 1 and settings["c"]:
+        elif num == 1 and int(settings["c"]):
             return 1
-        elif num == 2 and settings["l"]:
+        elif num == 2 and int(settings["l"]):
             return 1
-        elif num == 3 and settings["m"]:
+        elif num == 3 and int(settings["m"]):
             return 1
-        elif num == 4 and settings["b"]:
+        elif num == 4 and int(settings["b"]):
             return 1
 
     print("filter returning 0 for {0}:{1}".format(name, name_type))
