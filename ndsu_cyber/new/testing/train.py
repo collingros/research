@@ -91,7 +91,7 @@ def add(path, dir_num):
     gray_pic = cv2.imread(path, 0)
 
     height = settings["p"]
-    width = height * 1.5
+    width = int(height) * 1.5
     gray_pic = cv2.resize(gray_pic, (width, height))
 
     global cascade
