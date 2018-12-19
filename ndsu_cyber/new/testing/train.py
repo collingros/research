@@ -78,11 +78,9 @@ def write_data():
 # train, save labels
     train_path = "./train.yml"
 
-    global face_rec
     face_rec.train(faces, np.array(labels))
     face_rec.save(train_path)
 
-    global people
     labels_path = "./labels.pickle"
     with open(labels_path, "wb") as info:
         pickle.dump(people, info)
@@ -97,7 +95,6 @@ def add(path, dir_num):
 
     gray_pic = cv2.resize(gray_pic, (width, height))
 
-    global cascade
     detected = cascade.detectMultiScale(gray_pic, scaleFactor=float(settings["s"]),
                                         minNeighbors=int(settings["n"]))
     if not len(detected):

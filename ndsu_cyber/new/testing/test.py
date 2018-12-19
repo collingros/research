@@ -18,7 +18,7 @@ import pickle
 
 settings = {}
 data = {}
-labels = []
+labels = {}
 
 cascade = None
 face_rec = None
@@ -86,7 +86,8 @@ def load_data():
     with open(labels_path, "rb") as info:
         og_labels = pickle.load(info)
 
-    labels = {v:k for k, v in og_labels.items()}
+    for k, v in og_labels.items():
+        labels[v] = k
 
 
 def write_data():
@@ -134,7 +135,6 @@ def guess(path, name):
     color_pic = cv2.resize(color_pic, (width, height))
     gray_pic = cv2.resize(gray_pic, (width, height))
 
-    global cascade
     detected = cascade.detectMultiScale(gray_pic, scaleFactor=float(settings["s"]),
                                         minNeighbors=int(settings["n"]))
     if not len(detected):
@@ -145,7 +145,6 @@ def guess(path, name):
     for (x, y, w, h) in detected:
         data["viewed"] += 1
 
-        global face_rec
         face = gray_pic[y:y+h, x:x+w]
         label, conf = face_rec.predict(face)
 
