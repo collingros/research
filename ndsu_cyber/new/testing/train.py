@@ -1,372 +1,184 @@
 # Collin Gros
-#
-# TODO:
-# debug
-# change runscript and data parser to account for output format changes
-# fix line thinness on high res output images
-# <CG>
+# 12/15/18
 
-# IDEA:
-# only use first detected face, no others
-# <CG>
+
+# arg description
+# "s":scale_factor, "n":min_neighbors, "p":resolution_height, "z":cascade_xml,
+# "w":warm, "c":cold, "l":low, "m":medium, "b":high,
+# "v":vanilla_set, "f":hat_set, "e":glasses_set,
+# "x":profile_pictures, "a":angled_pictures, "o":central_pictures,
+# "g":shadows, "i":central_lighting
+
 
 import cv2
 import os
-import csv
-import pickle
-import numpy as np
-import argparse
 import time
 
 
-def dump(data):
-    data["cascade"] = None
-    data["face_rec"] = None
-    data["faces"] = []
-    data["labels"] = []
-    data["people"] = {}
+settings = {}
+people = {}
+faces = []
+labels = []
+
+cascade = None
+face_rec = cv2.face_LBPHFaceRecognizer_create()
 
 
-def print_all(SETTINGS, data):
-    for k, v in sorted(SETTINGS.items()):
-        print(str(k) + "\t" + str(v))
+def read_settings():
+# set appropriate settings from argument input
+    int_settings = ["n", "p", "w", "c", "l",
+                    "m", "b", "v", "f", "e",
+                    "x", "a", "o", "g", "i"]
+    float_settings = ["s"]
+    str_settings = ["z"]
 
-    print("\n")
+    parser = argparse.ArgumentParser()
+    for key in int_settings:
+        settings[key] = 0
 
-    for k, v in sorted(data.items()):
-        print(str(k) + "\t" + str(v))
+        cmd_str = "-{0}".format(key)
+        parser.add_argument(cmd_str)
 
+    for key in float_settings:
+        settings[key] = 0.0
 
-def init(SETTINGS, data):
-    cascade = SETTINGS["CASCADE"]
-    data["face_rec"] = cv2.face.LBPHFaceRecognizer_create()
-    data["cascade"] = cv2.CascadeClassifier(cascade)
+        cmd_str = "-{0}".format(key)
+        parser.add_argument(cmd_str)
 
+    for key in str_settings:
+        settings[key] = ""
 
-def save_labels(SETTINGS, data):
-    filename = SETTINGS["LABELS"]
-    out_dir = SETTINGS["OUT"]
-    file_path = os.getcwd() + "/" + out_dir + "/" + filename
-
-    people = data["people"]
-    with open(file_path, "wb") as f:
-        pickle.dump(people, f)
-
-
-def save_train(SETTINGS, data):
-    faces = data["faces"]
-    labels = data["labels"]
-    filename = SETTINGS["TRAIN_DATA"]
-    out_dir = SETTINGS["OUT"]
-    face_rec = data["face_rec"]
-    file_path = os.getcwd() + "/" + out_dir + "/" + filename
-
-    face_rec.train(faces, np.array(labels))
-    face_rec.save(file_path)
-
-
-def get_settings():
-    SETTINGS = {
-    "SF":0,
-    "MN":0,
-    "TEST_HEIGHT":0,
-    "WARM":0,
-    "COLD":0,
-    "LOW":0,
-    "MED":0,
-    "HIGH":0,
-    "GLASSES":0,
-    "HAT":0,
-    "VANILLA":0,
-    "PROFILES":0,
-    "ANGLED":0,
-    "CENTER":0,
-    "CASCADE":"",
-    "CONF_CUTOFF":0,
-    "SHADOWS":0,
-    "CENTER_SHADOW":0,
-    "BEARDS":0,
-    "OUT":"",
-    "RESTRICT_SIZE":0,
-
-    # TRAIN_DATA, TEST_DIR, RATIO are not set by the user
-    "TRAIN_DATA":"train.yml",
-    "TRAIN_DIR":"/home/reu3/database/train",
-    "TEST_DIR":"/home/reu3/database/test",
-    "RATIO":1.5,
-    "LABELS":"labels.pickle"
-    }
-
-    parser = argparse.ArgumentParser(description="testing LBPH")
-    parser.add_argument("-s", help="testing scale factor", type=float)
-    parser.add_argument("-n", help="testing min neighbors", type=int)
-    parser.add_argument("-p", help="resized height", type=int)
-    parser.add_argument("-t", help="target", type=str)
-    parser.add_argument("-w", help="warm", type=str)
-    parser.add_argument("-c", help="cold", type=str)
-    parser.add_argument("-l", help="low", type=str)
-    parser.add_argument("-m", help="medium", type=str)
-    parser.add_argument("-b", help="high", type=str)
-    parser.add_argument("-e", help="include glasses pictures", type=int)
-    parser.add_argument("-f", help="include hat pictures", type=int)
-    parser.add_argument("-v", help="include vanilla pictures", type=int)
-    parser.add_argument("-x", help="include profile positions", type=int)
-    parser.add_argument("-a", help="include angled positions", type=int)
-    parser.add_argument("-o", help="include central positions", type=int)
-    parser.add_argument("-z", help="cascade path", type=str)
-    parser.add_argument("-d", help="confidence threshold", type=int)
-    parser.add_argument("-g", help="include shadows", type=int)
-    parser.add_argument("-i", help="include center lighting angle", type=int)
-    parser.add_argument("-j", help="include people with large beards", type=int)
-    parser.add_argument("-k", help="pic out dir", type=str)
-    parser.add_argument("-q", help="enable size restriction (pixels)", type=int)
+        cmd_str = "-{0}".format(key)
+        parser.add_argument(cmd_str)
 
     args = parser.parse_args()
 
-    if args.s: # SCALE FACTOR
-        SETTINGS["SF"] = args.s
-    if args.n: # MINIMUM NEIGHBORS
-        SETTINGS["MN"] = args.n
-    if args.p: # TEST HEIGHT
-        SETTINGS["TEST_HEIGHT"] = args.p
-    if args.w: # INCLUDE WARM PICTURES?
-        SETTINGS["WARM"] = args.w
-    if args.c: # INCLUDE COLD PICTURES?
-        SETTINGS["COLD"] = args.c
-    if args.l: # INCLUDE LOW PICTURES?
-        SETTINGS["LOW"] = args.l
-    if args.m: # INCLUDE MED PICTURES?
-        SETTINGS["MED"] = args.m
-    if args.b: # INCLUDE HIGH PICTURES?
-        SETTINGS["HIGH"] = args.b
-    if args.e: # INCLUDE GLASSES PICTURES?
-        SETTINGS["GLASSES"] = args.e
-    if args.f: # INCLUDE HAT PICTURES?
-        SETTINGS["HAT"] = args.f
-    if args.v: # INCLUDE VANILLA PICTURES?
-        SETTINGS["VANILLA"] = args.v
-    if args.x: # INCLUDE PROFILES PICTURES?
-        SETTINGS["PROFILES"] = args.x
-    if args.a: # INCLUDE ANGLED POS PICTURES?
-        SETTINGS["ANGLED"] = args.a
-    if args.o: # INCLUDE CENTER POS PICTURES?
-        SETTINGS["CENTER"] = args.o
-    if args.g: # INCLUDE SHADOWS LIGHTING ANGLES?
-        SETTINGS["SHADOWS"] = args.g
-    if args.i: # INCLUDE CENTER LIGHTING ANGLES?
-        SETTINGS["CENTER_SHADOW"] = args.i
-    if args.j: # INCLUDE CENTER LIGHTING ANGLES?
-        SETTINGS["BEARDS"] = args.j
-    if args.z: # CASCADE FILE, HAAR OR LBPH (XML)
-        SETTINGS["CASCADE"] = args.z
-    if args.d: # CONFIDENCE CUTOFF THRESHOLD
-        SETTINGS["CONF_CUTOFF"] = args.d
-    if args.k: # DIRECTORY TO SAVE CAPTURED FACES TO
-        SETTINGS["OUT"] = args.k
-    if args.q: # SIZE RESTRICTION ON DETECTED FACE AREA
-               # (GOAL IS TO TRY TO MINIMIZE FALSE POSITIVES)
-
-               # MAKE SURE TO SET RESTRICT_SIZE RELATIVE TO
-               # WHAT YOU THINK THE AREA OF A FACE WOULD BE
-               # AT 100 x 150 RESOLUTION (e.g., 30)
-        SETTINGS["RESTRICT_SIZE"] = args.q
-
-    return SETTINGS
+    all_settings = int_settings + float_settings + str_settings
+    for key in all_settings:
+        if arg.key:
+            settings[key] = args.key
 
 
-def save_face(SETTINGS, coords, pic, name, id_num):
-    ratio = SETTINGS["RATIO"]
-    origin_height = SETTINGS["TEST_HEIGHT"]
-    origin_width = int(origin_height * SETTINGS["RATIO"])
-    resized_height = 300
-    resized_width = int(resized_height * ratio)
-
-    x = int(coords[0] * (resized_width / origin_width))
-    y = int(coords[1] * (resized_height / origin_height))
-    w = int(coords[2] * (resized_width / origin_width))
-    h = int(coords[3] * (resized_height / origin_height))
-    resized = [x, y, w, h]
-
-    BLUE = (255, 0, 0)
-    GREEN = (0, 255, 0)
-    RED = (0, 0, 255)
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    stroke = 2
-    line_type = cv2.LINE_AA
-
-    pic = cv2.resize(pic, (int(300 * ratio), 300))
-
-    # for drawing the rectangle around the person's face
-    cv2.rectangle(pic, (x, y), (x + w, y + h), BLUE, stroke)
-
-    # for drawing the persons' name on the screen
-    cv2.putText(pic, name, (x, y - 10), font,
-                0.5, RED, stroke, line_type)
-
-    # for drawing area value on screen
-    cv2.putText(pic, str(w * h), (x, y + h + 10), font,
-                0.5, GREEN, stroke, line_type)
-
-    out_dir = SETTINGS["OUT"]
-    file_path = (os.getcwd() + "/" + out_dir + "/" + name + "_" +
-              str(id_num) + ".JPG")
-    cv2.imwrite(file_path, pic)
-
-    # FOR SHOWING THE FACE ONLY:
-    #cv2.imshow("pic", pic)
-    #cv2.waitKey(50)
-    #cv2.destroyAllWindows()
+def load_data():
+# load training data
+    xml = settings["cascade"]
+    cascade = cv2.CascadeClassifier(xml)
 
 
-def add_face(SETTINGS, data, pic_path, name, dir_count):
-    color_pic = cv2.imread(pic_path, 1) # opens in color
-    gray_pic = cv2.imread(pic_path, 0) # opens in grayscale
+def write_data():
+# train, save labels
+    train_path = "./train.yml"
+    face_rec.train(faces, np.array(labels))
+    face_rec.save(train_path)
 
-    # BE AWARE THAT THIS MAY GIVE AN UNEVEN ASPECT RATIO (int roundoff)
-    ratio = SETTINGS["RATIO"]
-    resized_height = SETTINGS["TEST_HEIGHT"]
-    resized_width = int(resized_height * ratio)
-    color_pic = cv2.resize(color_pic, (resized_width, resized_height))
-    gray_pic = cv2.resize(gray_pic, (resized_width, resized_height))
-
-    cascade = data["cascade"]
-    detected_faces = cascade.detectMultiScale(gray_pic,
-                                              scaleFactor=SETTINGS["SF"],
-					                          minNeighbors=SETTINGS["MN"]);
-    if not len(detected_faces):
-        data["skipped"] += 1
-
-    else:
-        data["total_faces"] += 1
-
-        # could potentially just use the first face detected, but nah
-        for (x, y, w, h) in detected_faces:
-            restrict_area = SETTINGS["RESTRICT_SIZE"]
-            if restrict_area > 0:
-                # we have to adjust area according to the height ratio
-                # adjusted_area = (res_height / ratio_height)^2 * restrict_area
-                actual_area = w * h
-                adjusted_area = pow((resized_height / 100), 2) * restrict_area
-
-                # for leniency on small variances between detected face
-                # measurements and theoretical face measurements
-                close_perc = (100 * ((adjusted_area - (abs(adjusted_area -
-                             actual_area) / adjusted_area))))
-                if close_perc < 80:
-                    data["size_skipped"] += 1
-                    continue
-
-            data["processed_faces"] += 1
-
-            coords = [x, y, w, h]
-            id_num = data["processed_faces"]
-            save_face(SETTINGS, coords, color_pic, name, id_num)
-
-            face = gray_pic[y:y+h, x:x+w]
-            data["faces"].append(face)
-            data["labels"].append(int(dir_count))
+    labels_path = "./labels.pickle"
+    with open(labels_path, "w") as info:
+        pickle.dump(people, info)
 
 
-def train_data(SETTINGS, data):
-    dir_count = 0
+def add(path, dir_num):
+# guess whose face it is, record results
+    gray_pic = cv2.imread(path, 0)
 
-    train_dir = SETTINGS["TRAIN_DIR"]
-    dir_test = sorted(os.listdir(train_dir))
-    for pic_owner in dir_test:
-        name = pic_owner
-        pic_owner_path = train_dir + "/" + pic_owner
+    height = settings["p"]
+    width = height * 1.5
+    gray_pic = cv2.resize(gray_pic, (width, height))
 
-        if pic_owner == "1" or pic_owner == "2" and not SETTINGS["BEARDS"]:
-            continue
+    detected = cascade.detectMultiScale(gray_pic, scaleFactor=settings["sf"],
+                                        minNeighbors=settings["mn"])
+    if not len(detected):
+    # no faces were detected
+        return
 
-        data["people"][pic_owner] = dir_count
-        pics = sorted(os.listdir(pic_owner_path))
-        for pic_type in pics:
-            dir_pos_path = pic_owner_path + "/" + pic_type
+    for (x, y, w, h) in detected:
+        face = gray_pic[y:y+h, x:x+w]
 
-            if pic_type == "glasses" and not SETTINGS["GLASSES"]:
-                continue
-            if pic_type == "hat" and not SETTINGS["HAT"]:
-                continue
-            if pic_type == "vanilla" and not SETTINGS["VANILLA"]:
+        faces.append(face)
+        labels.append(dir_num)
+
+
+def filter(name, name_type, num=0):
+# if we don't want to include the specified media, return 0
+    if name_type == "occ":
+        if name == "vanilla" and settings["v"]:
+            return 1
+        elif name == "glasses" and settings["e"]:
+            return 1
+        elif name == "hat" and settings["f"]:
+            return 1
+    elif name_type == "pos":
+        profile = ["0", "4"]
+        angled = ["1", "3"]
+        central = ["2"]
+
+        if name in profile and settings["x"]:
+            return 1
+        elif name in angled and settings["a"]:
+            return 1
+        elif name in central and settings["o"]:
+            return 1
+    elif name_type == "light":
+        shadows = ["1", "2", "3", "5", "6", "7"]
+        central = ["4"]
+
+        if name in shadows and settings["g"]:
+            return 1
+        elif name in central and settings["i"]:
+            return 1
+    elif name_type == "color":
+        if num == 0 and settings["w"]:
+            return 1
+        elif num == 1 and settings["c"]:
+            return 1
+        elif num == 2 and settings["l"]:
+            return 1
+        elif num == 3 and settings["m"]:
+            return 1
+        elif num == 4 and settings["b"]:
+            return 1
+
+    return 0
+
+
+def train():
+# for each filtered image, add to faces arr
+    dir_num = 0
+
+    ids = "./train"
+    for id in os.listdir(ids):
+
+        people[id] = dir_num
+        path = ids + "/" + id
+        for occ in os.listdir(path):
+            if not filter(occ, "occ"):
                 continue
 
-            dir_pos = sorted(os.listdir(dir_pos_path))
-            for pos in dir_pos:
-                dir_angle_path = dir_pos_path + "/" + pos
-
-                if ((pos == "pos_0" or pos == "pos_4") and not
-                    SETTINGS["PROFILES"]):
-                    continue
-                if ((pos == "pos_1" or pos == "pos_3") and not
-                    SETTINGS["ANGLED"]):
-                    continue
-                if pos == "pos_2" and not SETTINGS["CENTER"]:
+            path = path + "/" + occ
+            for pos in os.listdir(path):
+                if not filter(pos, "pos"):
                     continue
 
-                dir_angle = sorted(os.listdir(dir_angle_path))
-                for angle in dir_angle:
-                    dir_img_path = dir_angle_path + "/" + angle
-
-                    if angle == "angle_4" and not SETTINGS["CENTER_SHADOW"]:
-                        continue
-                    if angle != "angle_4" and not SETTINGS["SHADOWS"]:
+                path = path + "/" + pos
+                for light in os.listdir(path):
+                    if not filter(light, "light"):
                         continue
 
-                    dir_img = sorted(os.listdir(dir_img_path))
-                    img_num = 0
-                    for img in dir_img:
-                        pic_path = ""
-                        img_path = dir_img_path + "/" + img
+                    num = 0
+                    path = path + "/" + angle
+                    for color in os.listdir(path):
+                        if not filter(color, "color", num):
+                            continue
 
-                        if img_num == 0 and SETTINGS["WARM"]:
-                            pic_path = img_path
-                        elif img_num == 1 and SETTINGS["COLD"]:
-                            pic_path = img_path
-                        elif img_num == 2 and SETTINGS["LOW"]:
-                            pic_path = img_path
-                        elif img_num == 3 and SETTINGS["MED"]:
-                            pic_path = img_path
-                        elif img_num == 4 and SETTINGS["HIGH"]:
-                            pic_path = img_path
+                        path = path + "/" + color
+                        add(path, dir_num)
 
-                        if pic_path:
-                            data["reviewed"] += 1
-                            add_face(SETTINGS, data, pic_path, name, dir_count)
-
-                        img_num += 1
-        dir_count += 1
+                        num += 1
+        dir_num += 1
 
 
-data = {
-    "time":0,
-    "skipped":0, # number of pictures where a face wasn't detected
-    "reviewed":0, # number of pictures reviewed (filtered images)
-    "total_faces":0, # total of detected faces (to tell if multiple are detected
-                     # in a single image)
-    "size_skipped":0, # detected faces skipped due to size restriction
-    "processed_faces":0, # number of faces predicted
-    "people":{}, # for keeping track of who each label corresponds with
-    "labels":[], # for keeping track of detected faces' labels
-    "faces":[], # for keeping track of the coordinates of detected faces
-    "face_rec":cv2.face_LBPHFaceRecognizer, # for training data using LBPH
-    "cascade":cv2.CascadeClassifier # for detecting faces using a classifier
-}
+read_settings()
+load_data()
 
-start_time = time.time()
+train()
 
-SETTINGS = get_settings()
-init(SETTINGS, data)
-
-train_data(SETTINGS, data)
-
-finish_time = time.time()
-data["time"] = round((finish_time - start_time), 2)
-
-save_labels(SETTINGS, data)
-save_train(SETTINGS, data)
-
-dump(data) # need to empty the arrs/dicts for clean printing of important stats
-
-print_all(SETTINGS, data)
-
+write_data()
