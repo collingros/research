@@ -188,6 +188,7 @@ def train():
 
                     for color in sorted(os.listdir(color_path)):
                         if not filter(color, "color", num):
+                            num += 1
                             continue
 
                         pic_path = color_path + "/" + color
