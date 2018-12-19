@@ -154,7 +154,7 @@ def filter(name, name_type, num=0):
         elif num == 4 and int(settings["b"]):
             return 1
 
-    print("filter returning 0 for {0}:{1}".format(name, name_type))
+    print("filter returning 0 for {0}:{1}:{2}".format(name, name_type, num))
     return 0
 
 
