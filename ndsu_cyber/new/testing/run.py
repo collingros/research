@@ -170,6 +170,8 @@ class Test:
 
     def run(self, dir_path):
         test_dir = "{0}/{1}".format(dir_path, self.id)
+
+        rm(test_dir)
         mkdir(test_dir)
 
         test = self.build_cmd(test_dir)
@@ -452,12 +454,12 @@ def reset_dict(my_dict):
 
 
 def rm(path):
-    cmd = "rm {0}".format(path)
+    cmd = "rm -r {0}".format(path)
     run_cmd(cmd)
 
 
 def cp(src, dst):
-    cmd = "cp {0} {1}".format(src, dst)
+    cmd = "cp -r {0} {1}".format(src, dst)
     run_cmd(cmd)
 
 
