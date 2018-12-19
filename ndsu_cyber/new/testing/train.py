@@ -110,6 +110,8 @@ def add(path, dir_num):
 
 def filter(name, name_type, num=0):
 # if we don't want to include the specified media, return 0
+    print("filter: {0}:{1}".format(name, name_type))
+    print(type(settings["v"]))
     if name_type == "occ":
         if name == "vanilla" and settings["v"]:
             return 1
