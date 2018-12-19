@@ -148,6 +148,7 @@ def filter(name, name_type, num=0):
         elif num == 4 and settings["b"]:
             return 1
 
+    print("filter returning 0 for {0}:{1}".format(name, name_type))
     return 0
 
 
@@ -172,10 +173,8 @@ def train():
 
                 light_path = occ_path + "/" + pos
                 for light in os.listdir(light_path):
-                    print("before if")
                     if not filter(light, "light"):
                         continue
-                    print("after if")
 
                     num = 0
                     color_path = light_path + "/" + angle
