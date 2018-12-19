@@ -492,8 +492,8 @@ for te_color in colors:
 
     test_obj.set_color(list(te_color))
     for tr_color in colors:
-        train_obj.set_color(list(tr_color))
-        dir_path = train_obj.run()
+#        train_obj.set_color(list(tr_color))
+#        dir_path = train_obj.run()
 
         test_obj.run(dir_path)
         exit()
