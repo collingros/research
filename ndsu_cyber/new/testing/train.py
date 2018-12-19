@@ -150,29 +150,29 @@ def train():
     for id in os.listdir(ids):
 
         people[id] = dir_num
-        path = ids + "/" + id
-        for occ in os.listdir(path):
+        id_path = ids + "/" + id
+        for occ in os.listdir(id_path):
             if not filter(occ, "occ"):
                 continue
 
-            path = path + "/" + occ
-            for pos in os.listdir(path):
+            occ_path = id_path + "/" + occ
+            for pos in os.listdir(occ_path):
                 if not filter(pos, "pos"):
                     continue
 
-                path = path + "/" + pos
-                for light in os.listdir(path):
+                light_path = occ_path + "/" + pos
+                for light in os.listdir(light_path):
                     if not filter(light, "light"):
                         continue
 
                     num = 0
-                    path = path + "/" + angle
-                    for color in os.listdir(path):
+                    color_path = light_path + "/" + angle
+                    for color in os.listdir(color_path):
                         if not filter(color, "color", num):
                             continue
 
-                        path = path + "/" + color
-                        add(path, dir_num)
+                        pic_path = color_path + "/" + color
+                        add(pic_path, dir_num)
 
                         num += 1
         dir_num += 1
