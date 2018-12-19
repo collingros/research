@@ -164,29 +164,29 @@ def train():
 
 #    ids = "/home/reu3/database/train"
     ids = "./train"
-    for id in os.listdir(ids):
+    for id in sorted(os.listdir(ids)):
 
         people[id] = dir_num
         id_path = ids + "/" + id
 
-        for occ in os.listdir(id_path):
+        for occ in sorted(os.listdir(id_path)):
             if not filter(occ, "occ"):
                 continue
 
             occ_path = id_path + "/" + occ
-            for pos in os.listdir(occ_path):
+            for pos in sorted(os.listdir(occ_path)):
                 if not filter(pos, "pos"):
                     continue
 
                 light_path = occ_path + "/" + pos
-                for light in os.listdir(light_path):
+                for light in sorted(os.listdir(light_path)):
                     if not filter(light, "light"):
                         continue
 
                     num = 0
                     color_path = light_path + "/" + light
 
-                    for color in os.listdir(color_path):
+                    for color in sorted(os.listdir(color_path)):
                         if not filter(color, "color", num):
                             continue
 
