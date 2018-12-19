@@ -156,11 +156,12 @@ def train():
     dir_num = 0
 
     ids = "/home/reu3/database/train"
-    print(os.listdir(ids))
     for id in os.listdir(ids):
 
         people[id] = dir_num
         id_path = ids + "/" + id
+
+        print(os.listdir(id_path))
         for occ in os.listdir(id_path):
             if not filter(occ, "occ"):
                 continue
