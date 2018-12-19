@@ -114,7 +114,7 @@ def draw(pic, name, conf, id, coords, str):
     cv2.rectangle(pic, (x, y), (x+w, y+h), color, 2)
     cv2.putText(pic, name, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX,
                 0.5, color, 2, cv2.LINE_AA)
-    cv2.putText(pic, conf, (x+w, y+h+10), cv2.FONT_HERSHEY_SIMPLEX,
+    cv2.putText(pic, str(conf), (x+w, y+h+10), cv2.FONT_HERSHEY_SIMPLEX,
                 0.5, color, 2, cv2.LINE_AA)
 
     path = "./{0}.JPG".format(id)
