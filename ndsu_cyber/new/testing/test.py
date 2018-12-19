@@ -118,7 +118,7 @@ def draw(pic, name, conf, id, coords, color_str):
                 0.5, color, 2, cv2.LINE_AA)
 
     path = "./{0}.JPG".format(id)
-    cv2.imwrite(pic, path)
+    cv2.imwrite(path, pic)
 
 
 def guess(path, name):
