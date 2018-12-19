@@ -67,15 +67,13 @@ def load_data():
     xml = settings["z"]
     cascade = cv2.CascadeClassifier(xml)
 
+    face_rec = cv2.face.LBPHFaceRecognizer_create()
+
 
 def write_data():
 # train, save labels
     train_path = "./train.yml"
-    print("faces")
-    print(faces)
-    print("\n")
-    print("labels")
-    print(np.array(labels))
+
     face_rec.train(faces, np.array(labels))
     face_rec.save(train_path)
 
