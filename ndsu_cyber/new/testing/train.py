@@ -71,8 +71,10 @@ def load_data():
 def write_data():
 # train, save labels
     train_path = "./train.yml"
+    print("faces")
     print(faces)
     print("\n")
+    print("labels")
     print(np.array(labels))
     face_rec.train(faces, np.array(labels))
     face_rec.save(train_path)
