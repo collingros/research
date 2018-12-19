@@ -172,13 +172,14 @@ def train():
 
                 light_path = occ_path + "/" + pos
                 for light in os.listdir(light_path):
+                    print("before if")
                     if not filter(light, "light"):
                         continue
+                    print("after if")
 
                     num = 0
                     color_path = light_path + "/" + angle
 
-                    print(os.listdir(color_path))
                     for color in os.listdir(color_path):
                         if not filter(color, "color", num):
                             continue
