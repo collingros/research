@@ -56,7 +56,7 @@ def read_settings():
 
     all_settings = int_settings + float_settings + str_settings
     for key in all_settings:
-        if args.key:
+        if args."{0}".format(key):
             settings[key] = args.key
 
 
