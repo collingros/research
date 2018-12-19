@@ -161,7 +161,6 @@ def train():
         people[id] = dir_num
         id_path = ids + "/" + id
 
-        print(os.listdir(id_path))
         for occ in os.listdir(id_path):
             if not filter(occ, "occ"):
                 continue
@@ -178,6 +177,8 @@ def train():
 
                     num = 0
                     color_path = light_path + "/" + angle
+
+                    print(os.listdir(color_path))
                     for color in os.listdir(color_path):
                         if not filter(color, "color", num):
                             continue
