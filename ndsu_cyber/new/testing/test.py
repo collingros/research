@@ -135,8 +135,8 @@ def guess(path, name):
     gray_pic = cv2.resize(gray_pic, (width, height))
 
     global cascade
-    detected = cascade.detectMultiScale(gray_pic, scaleFactor=settings["sf"],
-                                        minNeighbors=settings["mn"])
+    detected = cascade.detectMultiScale(gray_pic, float(scaleFactor=settings["s"]),
+                                        int(minNeighbors=settings["n"]))
     if not len(detected):
     # no faces were detected
         data["skipped"] += 1
