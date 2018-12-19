@@ -129,8 +129,8 @@ def guess(path, name):
     color_pic = cv2.imread(path, 1)
     gray_pic = cv2.imread(path, 0)
 
-    height = settings["p"]
-    width = height * 1.5
+    height = int(settings["p"])
+    width = int(height * 1.5)
     color_pic = cv2.resize(color_pic, (width, height))
     gray_pic = cv2.resize(gray_pic, (width, height))
 
