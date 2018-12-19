@@ -23,7 +23,7 @@ faces = []
 labels = []
 
 cascade = None
-face_rec = cv2.face_LBPHFaceRecognizer
+face_rec = None
 
 
 def read_settings():
