@@ -487,7 +487,7 @@ for obj in objs:
     obj.set_occ(["v"])
     obj.set_pos(["c"])
 
-print("basic color tests")
+print("basic color tests\n")
 colors = ["w", "c", "l", "m", "h"]
 for te_color in colors:
     dir_path = ""
@@ -499,7 +499,7 @@ for te_color in colors:
 
         test_obj.run(dir_path)
 
-print("mixed color tests")
+print("mixed color tests\n")
 tr_colors = [["w", "c"], ["l", "m", "b"]]
 te_colors = ["w", "c", "l", "m", "h"]
 for te_color in te_colors:
