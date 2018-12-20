@@ -99,9 +99,11 @@ def add(path, dir_num):
                                         minNeighbors=int(settings["n"]))
     if not len(detected):
     # no faces were detected
+        print("undetected")
         return
 
     for (x, y, w, h) in detected:
+        print("detected")
         face = gray_pic[y:y+h, x:x+w]
 
         faces.append(face)
