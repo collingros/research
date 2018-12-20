@@ -205,7 +205,7 @@ def filter(name, name_type, num=0):
         elif num == 4 and int(settings["b"]):
             return 1
 
-    print("filter returning 0 for {0}:{1}".format(name, name_type))
+    print("filter returning 0 for {0}:{1}:{2}".format(name, name_type, num))
     return 0
 
 
@@ -233,6 +233,7 @@ def test():
                     color_path = light_path + "/" + light
                     for color in sorted(os.listdir(color_path)):
                         if not filter(color, "color", num):
+                            num += 1
                             continue
 
                         pic_path = color_path + "/" + color
