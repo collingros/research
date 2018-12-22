@@ -61,7 +61,7 @@ def read_settings():
 
 
 def init_data():
-    int_data = ["skipped", "viewed", "correct", "incorrect"]
+    int_data = ["skipped", "viewed", "correct", "incorrect", "total", "time"]
     for key in int_data:
         data[key] = 0
 
@@ -92,8 +92,8 @@ def load_data():
 
 def write_data():
 # write data dict in ./stats.txt
-    with open("stats.txt", "w") as info:
-        for key, value in data.items():
+    with open("test_stats.txt", "w") as info:
+        for key, value in sorted(data.items()):
             str = "{0}:{1}\n".format(key, value)
             info.write(str)
 
@@ -123,6 +123,7 @@ def draw(pic, name, conf, id, coords, color_str):
 
 def guess(path, name):
 # guess whose face it is, record results
+    data["total"] += 1
     str_arr = path.split("/")
     str_arr = str_arr[-1].split(".")
     id = str_arr[0]

@@ -20,6 +20,7 @@ import pickle
 
 settings = {}
 people = {}
+data = {}
 faces = []
 labels = []
 
@@ -73,6 +74,10 @@ def load_data():
     global face_rec
     face_rec = cv2.face.LBPHFaceRecognizer_create()
 
+    int_data = ["skipped", "viewed", "total", "time"]
+    for key in int_data:
+        data[key] = 0
+
 
 def write_data():
 # train, save labels
@@ -85,29 +90,60 @@ def write_data():
     with open(labels_path, "wb") as info:
         pickle.dump(people, info)
 
+    with open("train_stats.txt", "w") as info:
+        for key, value in sorted(data.items()):
+            str = "{0}:{1}\n".format(key, value)
+            info.write(str)
+
+
+def draw(pic, coords):
+# draw box and text over detected face, save to
+# ./{id}.JPG
+    color = (48, 48, 48)
+
+    x = coords[0]
+    y = coords[1]
+    w = coords[2]
+    h = coords[3]
+
+    cv2.rectangle(pic, (x, y), (x+w, y+h), color, 2)
+
 
 def add(path, dir_num):
 # guess whose face it is, record results
+    data["total"] += 1
+    str_arr = path.split("/")
+    str_arr = str_arr[-1].split(".")
+    id = str_arr[0]
+
+    color_pic = cv2.imread(path, 1)
     gray_pic = cv2.imread(path, 0)
 
     height = int(settings["p"])
     width = int(height * 1.5)
 
     gray_pic = cv2.resize(gray_pic, (width, height))
+    color_pic = cv2.resize(color_pic, (width, height))
 
     detected = cascade.detectMultiScale(gray_pic, scaleFactor=float(settings["s"]),
                                         minNeighbors=int(settings["n"]))
     if not len(detected):
     # no faces were detected
-        print("undetected")
+        data["skipped"] += 1
         return
 
     for (x, y, w, h) in detected:
-        print("detected")
+        data["viewed"] += 1
         face = gray_pic[y:y+h, x:x+w]
+
+        coords = [x, y, w, h]
+        draw(color_pic, coords)
 
         faces.append(face)
         labels.append(dir_num)
+
+    path = "./{0}.JPG".format(id)
+    cv2.imwrite(path, color_pic)
 
 
 def filter(name, name_type, num=0):
@@ -202,9 +238,15 @@ def train():
         dir_num += 1
 
 
+start = time.time()
+
 read_settings()
 load_data()
 
 train()
 
+finish = time.time()
+data["time"] = round(finish - start, 2)
+
 write_data()
+

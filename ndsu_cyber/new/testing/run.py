@@ -2,7 +2,6 @@
 # 11/29/18 - 12/04/18(current date)
 import os
 import subprocess
-import argparse
 
 
 class Test:
@@ -16,7 +15,7 @@ class Test:
         }
         self.color = {
         # include warm, cold, low, medium, or high images
-            "w":1,
+            "w":0,
             "c":0,
             "l":0,
             "m":0,
@@ -24,7 +23,7 @@ class Test:
         }
         self.occ = {
         # include vanilla, hat, or glasses occlusion sets
-            "v":1,
+            "v":0,
             "h":0,
             "g":0
         }
@@ -32,17 +31,14 @@ class Test:
         # include profiles, angled, or central positions
             "p":0,
             "a":0,
-            "c":1
+            "c":0
         }
         self.light = {
         # include angled lighting, or central lighting positions
             "s":0,
-            "c":1
+            "c":0
         }
         self.id = 0
-
-        self.init_prog()
-        # set testing prog values
 
 
     def set_pos(self, pos_l):
@@ -77,12 +73,11 @@ class Test:
                     self.color[key] = 1
 
 
-    def init_prog(self):
+    def default_prog(self):
         self.prog["sf"] = 1.3
         self.prog["mn"] = 10
         self.prog["res"] = 480
         self.prog["c"] = "haar_default.xml"
-
 
 
     def build_cmd(self, test_dir):
@@ -170,17 +165,20 @@ class Test:
 
     def run(self, dir_path):
         test_dir = "{0}/{1}".format(dir_path, self.id)
-
-        rm(test_dir)
         mkdir(test_dir)
 
         test = self.build_cmd(test_dir)
         run_cmd(test)
         self.write_info()
 
-        mv("./stats.txt", test_dir + "/stats.txt")
-        mv("./test_info.txt", test_dir + "/test_info.txt")
-        mv("./*.JPG", test_dir + "/")
+        stat_name = "/test_stats.txt"
+        mv("." + stat_name, test_dir + stat_name)
+
+        pic_name = "/*.JPG"
+        mv("." + pic_name, test_dir + "/")
+
+        test_info = "/test_info.txt"
+        mv("." + test_info, test_dir + test_info)
 
         rm("./train.yml")
         rm("./labels.pickle")
@@ -199,7 +197,7 @@ class Train:
         }
         self.color = {
         # include warm, cold, low, medium, or high images
-            "w":1,
+            "w":0,
             "c":0,
             "l":0,
             "m":0,
@@ -207,7 +205,7 @@ class Train:
         }
         self.occ = {
         # include vanilla, hat, or glasses occlusion sets
-            "v":1,
+            "v":0,
             "h":0,
             "g":0
         }
@@ -215,18 +213,15 @@ class Train:
         # include profiles, angled, or central positions
             "p":0,
             "a":0,
-            "c":1
+            "c":0
         }
         self.light = {
         # include angled lighting, or central lighting positions
             "s":0,
-            "c":1
+            "c":0
         }
 
         self.id = 0
-
-        self.init_prog()
-        # set training prog values
 
 
     def set_pos(self, pos_l):
@@ -261,7 +256,7 @@ class Train:
                     self.color[key] = 1
 
 
-    def init_prog(self):
+    def default_prog(self):
         self.prog["sf"] = 1.01
         self.prog["mn"] = 1
         self.prog["res"] = 480
@@ -428,6 +423,12 @@ class Train:
             run_cmd(train)
             self.write_info()
 
+            pic_name = "/*.JPG"
+            mv("." + pic_name, dir_path + "/")
+
+            stat_name = "/train_stats.txt"
+            mv("." + stat_name, dir_path + stat_name)
+
             train_name = "/train.yml"
             mv("." + train_name, dir_path + train_name)
 
@@ -446,6 +447,28 @@ class Train:
         cp(labels_path, ".")
 
         return dir_path
+
+
+class Data:
+# data.py
+    def __init__(self):
+        self.id = 0
+
+
+    def build_cmd(self, var_type):
+        cmd = "python3 data.py -i {0}".format(var_type)
+
+        return cmd
+
+
+    def run(self, var_type):
+        cmd = self.build_cmd(var_type)
+        run_cmd(cmd)
+
+        name = "./graphs/{0}.png".format(self.id)
+        mv("./data.png", name)
+
+        self.id += 1
 
 
 def reset_dict(my_dict):
@@ -483,11 +506,65 @@ train_obj = Train()
 test_obj = Test()
 objs = [train_obj, test_obj]
 
+data_obj = Data()
+
+# OPTIMIZATION
+#
+# using vanilla, center and angled pos, center lighting, medium color (all)
+# first: without any combination of changes
+train_obj.set_occ(["v"])
+train_obj.set_pos(["c", "a"])
+train_obj.set_light(["c"])
+train_obj.set_color(["m"])
+
+sf_l = [1.01, 1.05, 1.1, 1.2, 1.3, 1.4, 1.5]
+mn_l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+res_l = [96, 112, 128, 144, 160, 176, 192,
+        208, 224, 240, 256, 272, 288, 304,
+        320, 336, 352, 368, 384, 400, 416,
+        432, 448, 464, 480]
+# multiples of 16
+cascs = ["lbph_frontal.xml", "haar_default.xml"]
+run_cmd("./reset.sh")
+
+train_obj.default_prog()
+for sf in sf_l:
+    train_obj.prog["sf"] = sf
+    train_obj.run()
+data_obj.run("sf")
+run_cmd("./reset.sh")
+
+train_obj.default_prog()
+for mn in mn_l:
+    train_obj.prog["mn"] = mn
+    train_obj.run()
+data_obj.run("mn")
+run_cmd("./reset.sh")
+
+train_obj.default_prog()
+for res in res_l:
+    train_obj.prog["res"] = res
+    train_obj.run()
+data_obj.run("res")
+run_cmd("./reset.sh")
+
+train_obj.default_prog()
+for casc in cascs:
+    train_obj.prog["c"] = casc
+    train_obj.run()
+data_obj.run("c")
+
+'''
+# MAIN TESTING
+train_obj.default_prog()
+test_obj.default_prog()
+
 for obj in objs:
     obj.set_occ(["v"])
     obj.set_pos(["c"])
+    obj.set_light(["c", "s"])
 
-print("basic color tests\n")
+print("\nbasic color tests\n")
 colors = ["w", "c", "l", "m", "h"]
 for te_color in colors:
     dir_path = ""
@@ -499,7 +576,7 @@ for te_color in colors:
 
         test_obj.run(dir_path)
 
-print("mixed color tests\n")
+print("\nmixed color tests\n")
 tr_colors = [["w", "c"], ["l", "m", "b"]]
 te_colors = ["w", "c", "l", "m", "h"]
 for te_color in te_colors:
@@ -510,5 +587,5 @@ for te_color in te_colors:
         dir_path = train_obj.run()
 
         test_obj.run(dir_path)
-
+'''
 
