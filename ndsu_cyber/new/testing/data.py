@@ -1,4 +1,10 @@
+# Collin Gros
+# 12/21/18
+#
+# Draw graph for each tests' train_stats.txt file
+#
 import os
+import matplotlib.pyplot as plt
 import argparse
 
 
@@ -6,6 +12,9 @@ def read_info(item, var_type):
     with open(item, "r") as info:
         for line in info:
             line_substr = line.split(":")
+            if len(line_substr) < 2:
+                continue
+
             cur_type = line_substr[0]
             cur_val = line_substr[1]
 
@@ -16,7 +25,7 @@ def read_info(item, var_type):
 
 
 parser = argparse.ArgumentParser()
-pasrer.add_argument("-i")
+parser.add_argument("-i")
 
 args = parser.parse_args()
 if not args.i:
@@ -24,22 +33,35 @@ if not args.i:
     exit()
 
 var_type = args.i
+fig = plt.figure()
+plt.rc("xtick", labelsize=6)
+plt.rc("ytick", labelsize=6)
+x = []
+y = []
 # graph x axis' name is var_type (set up here)
 # graph y axis' name is range 0 to (num of images)
 
 tests = "./stockpile"
-for test in os.listdir(tests):
-    for item in os.listdir(test):
-        if item == "train_info.txt":
-            cur_val = read_info(item, var_type)
-            cur_viewed = read_info(item, "viewed")
-            cur_skipped = read_info(item, "skipped")
-            cur_diff = abs(cur_viewed - cur_skipped)
+for test in sorted(os.listdir(tests)):
+    test_path = tests + "/" + test
+    info_path = test_path + "/" + "train_info.txt"
 
-# for each training directory
-#     get the variable to look for changes from prog args
-#     get the variable's used value from train_info.txt
-#     get number of faces detected
-#     draw graph based showing each test by num faces detected vs variable value
-#     output as data.png in cwd
+    try:
+        cur_val = int(read_info(info_path, var_type))
+    except:
+        cur_val = str(read_info(info_path, var_type))
 
+    stats_path = test_path + "/" + "train_stats.txt"
+    cur_viewed = int(read_info(stats_path, "viewed"))
+    cur_total = int(read_info(stats_path, "total"))
+
+    cur_diff = abs(cur_viewed - cur_total)
+
+    x.append(cur_val)
+    y.append(cur_diff)
+
+x = sorted(x)
+y = sorted(y)
+plt.plot(x, y)
+
+fig.savefig("./data.png")

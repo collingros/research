@@ -465,7 +465,7 @@ class Data:
         cmd = self.build_cmd(var_type)
         run_cmd(cmd)
 
-        name = "./graphs/{0}.png".format(self.id)
+        name = "./graphs/{0}.png".format(var_type)
         mv("./data.png", name)
 
         self.id += 1
@@ -517,7 +517,7 @@ train_obj.set_pos(["c", "a"])
 train_obj.set_light(["c"])
 train_obj.set_color(["m"])
 
-sf_l = [1.01, 1.05, 1.1, 1.2, 1.3, 1.4, 1.5]
+sf_l = [1.01, 1.02, 1.05, 1.08, 1.1, 1.15, 1.2, 1.3, 1.5, 1.9]
 mn_l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 res_l = [96, 112, 128, 144, 160, 176, 192,
         208, 224, 240, 256, 272, 288, 304,
