@@ -465,8 +465,12 @@ class Data:
         cmd = self.build_cmd(var_type)
         run_cmd(cmd)
 
-        name = "./graphs/{0}.png".format(var_type)
+        my_dir = "./graphs/{0}".format(var_type)
+        name = "{0}.png".format(my_dir)
         mv("./data.png", name)
+
+        name = "{0}.txt".format(my_dir)
+        mv("./score.txt", name)
 
         self.id += 1
 
@@ -531,6 +535,7 @@ train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
     train_obj.run()
+run_cmd("python3 rev.py")
 data_obj.run("sf")
 run_cmd("./reset.sh")
 
@@ -538,6 +543,7 @@ train_obj.default_prog()
 for mn in mn_l:
     train_obj.prog["mn"] = mn
     train_obj.run()
+run_cmd("python3 rev.py")
 data_obj.run("mn")
 run_cmd("./reset.sh")
 
@@ -545,6 +551,7 @@ train_obj.default_prog()
 for res in res_l:
     train_obj.prog["res"] = res
     train_obj.run()
+run_cmd("python3 rev.py")
 data_obj.run("res")
 run_cmd("./reset.sh")
 
@@ -552,6 +559,7 @@ train_obj.default_prog()
 for casc in cascs:
     train_obj.prog["c"] = casc
     train_obj.run()
+run_cmd("python3 rev.py")
 data_obj.run("c")
 
 '''
