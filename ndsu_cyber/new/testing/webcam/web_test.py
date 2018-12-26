@@ -18,11 +18,11 @@ def draw(pic, name, conf, coords, color_str):
     w = coords[2]
     h = coords[3]
 
-    cv2.rectangle(pic, (x, y), (x+w, y+h), color, 2)
+    cv2.rectangle(pic, (x, y), (x+w, y+h), color, 1)
     cv2.putText(pic, name, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX,
-                0.5, color, 2, cv2.LINE_AA)
+                0.5, color, 1, cv2.LINE_AA)
     cv2.putText(pic, str(conf), (x+w, y+h+10), cv2.FONT_HERSHEY_SIMPLEX,
-                0.5, color, 2, cv2.LINE_AA)
+                0.5, color, 1, cv2.LINE_AA)
 
 
 def guess(color_pic):
@@ -31,12 +31,13 @@ def guess(color_pic):
     width = 160
 
     gray_pic = cv2.cvtColor(color_pic, cv2.COLOR_BGR2GRAY)
+    color_pic = cv2.resize(color_pic, (width, height))
     gray_pic = cv2.resize(gray_pic, (width, height))
 
     detected = cascade.detectMultiScale(gray_pic, scaleFactor=1.01,
                                         minNeighbors=10)
     if not len(detected):
-        return gray_pic
+        return color_pic
 
     for (x, y, w, h) in detected:
         face = gray_pic[y:y+h, x:x+w]
@@ -45,9 +46,9 @@ def guess(color_pic):
         guess = labels[label]
         coords = [x, y, w, h]
 
-        draw(gray_pic, guess, conf, coords, "green")
+        draw(color_pic, guess, conf, coords, "green")
 
-    return gray_pic
+    return color_pic
 
 
 def load():
@@ -65,6 +66,7 @@ while(True):
     ret, frame = cap.read()
 
     frame = guess(frame)
+    frame = cv2.resize(frame, (640, 480))
     cv2.imshow("frame", frame)
 
     c = cv2.waitKey(1)
