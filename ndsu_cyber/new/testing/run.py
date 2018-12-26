@@ -81,7 +81,7 @@ class Test:
 
 
     def build_cmd(self, test_dir):
-        cmd = "python3 test.py "
+        cmd = "python3 ./progs/test.py "
 
         for key, value in self.prog.items():
             if key == "sf":
@@ -264,7 +264,7 @@ class Train:
 
 
     def build_cmd(self):
-        cmd = "python3 train.py "
+        cmd = "python3 ./progs/train.py "
 
         for key, value in self.prog.items():
             if key == "sf":
@@ -495,43 +495,42 @@ train_obj.set_color(["m"])
 
 sf_l = [1.005, 1.01, 1.015, 1.02, 1.025, 1.03, 1.05, 1.08,
         1.1, 1.15, 1.2, 1.3, 1.5, 1.9]
-mn_l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
-        18, 19, 20]
+mn_l = [1, 2, 4, 8, 16, 32, 64, 128]
 res_l = [96, 112, 128, 144, 160, 176, 192,
         208, 224, 240, 256, 272, 288, 304,
         320, 336, 352, 368, 384, 400, 416,
         432, 448, 464, 480, 720, 1920]
 # multiples of 16
 cascs = ["lbph_frontal.xml", "haar_default.xml"]
-run_cmd("./reset.sh")
+run_cmd("./progs/reset.sh")
 
 train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
     train_obj.run()
-run_cmd("python3 cp.py -i sf")
-run_cmd("./reset.sh")
+run_cmd("python3 ./progs/cp.py -i sf")
+run_cmd("./progs/reset.sh")
 
 train_obj.default_prog()
 for mn in mn_l:
     train_obj.prog["mn"] = mn
     train_obj.run()
-run_cmd("python3 cp.py -i mn")
-run_cmd("./reset.sh")
+run_cmd("python3 ./progs/cp.py -i mn")
+run_cmd("./progs/reset.sh")
 
 train_obj.default_prog()
 for res in res_l:
     train_obj.prog["res"] = res
     train_obj.run()
-run_cmd("python3 cp.py -i res")
-run_cmd("./reset.sh")
+run_cmd("python3 ./progs/cp.py -i res")
+run_cmd("./progs/reset.sh")
 
 train_obj.default_prog()
 for casc in cascs:
     train_obj.prog["c"] = casc
     train_obj.run()
-run_cmd("python3 cp.py -i c")
-run_cmd("./reset.sh")
+run_cmd("python3 ./progs/cp.py -i c")
+run_cmd("./progs/reset.sh")
 
 '''
 # MAIN TESTING

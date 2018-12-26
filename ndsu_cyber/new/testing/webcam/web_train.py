@@ -40,7 +40,7 @@ def add(path, dir_num, num):
     width = 160
 
     gray_pic = cv2.resize(gray_pic, (width, height))
-    detected = cascade.detectMultiScale(gray_pic, scaleFactor=1.01,
+    detected = cascade.detectMultiScale(gray_pic, scaleFactor=1.005,
                                         minNeighbors=10)
     if not len(detected):
         print("skipped: {0}".format(path))

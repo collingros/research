@@ -34,8 +34,8 @@ def guess(color_pic):
     color_pic = cv2.resize(color_pic, (width, height))
     gray_pic = cv2.resize(gray_pic, (width, height))
 
-    detected = cascade.detectMultiScale(gray_pic, scaleFactor=1.01,
-                                        minNeighbors=10)
+    detected = cascade.detectMultiScale(gray_pic, scaleFactor=1.005,
+                                        minNeighbors=100)
     if not len(detected):
         return color_pic
 
