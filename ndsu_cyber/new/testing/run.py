@@ -504,6 +504,16 @@ res_l = [96, 112, 128, 144, 160, 176, 192,
 cascs = ["lbph_frontal.xml", "haar_default.xml"]
 run_cmd("./progs/reset.sh")
 
+for obj in objs:
+    obj.prog["sf"] = 1.3
+    obj.prog["mn"] = 90
+    obj.prog["res"] = 260
+    obj.prog["c"] = "haar_default.xml"
+
+train_obj.run()
+run_cmd("python3 ./progs/cp.py -i sf)
+
+'''
 train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
@@ -531,7 +541,7 @@ for casc in cascs:
     train_obj.run()
 run_cmd("python3 ./progs/cp.py -i c")
 run_cmd("./progs/reset.sh")
-
+'''
 '''
 # MAIN TESTING
 train_obj.default_prog()
