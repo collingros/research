@@ -509,28 +509,28 @@ train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
     train_obj.run()
-run_cmd("python3 copy.py -i sf")
+run_cmd("python3 cp.py -i sf")
 run_cmd("./reset.sh")
 
 train_obj.default_prog()
 for mn in mn_l:
     train_obj.prog["mn"] = mn
     train_obj.run()
-run_cmd("python3 copy.py -i mn")
+run_cmd("python3 cp.py -i mn")
 run_cmd("./reset.sh")
 
 train_obj.default_prog()
 for res in res_l:
     train_obj.prog["res"] = res
     train_obj.run()
-run_cmd("python3 copy.py -i res")
+run_cmd("python3 cp.py -i res")
 run_cmd("./reset.sh")
 
 train_obj.default_prog()
 for casc in cascs:
     train_obj.prog["c"] = casc
     train_obj.run()
-run_cmd("python3 copy.py -i c")
+run_cmd("python3 cp.py -i c")
 run_cmd("./reset.sh")
 
 '''
