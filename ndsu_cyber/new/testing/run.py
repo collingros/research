@@ -493,9 +493,10 @@ train_obj.set_pos(["c", "a"])
 train_obj.set_light(["c"])
 train_obj.set_color(["m"])
 
-sf_l = [1.005, 1.01, 1.015, 1.02, 1.025, 1.03, 1.05, 1.08,
-        1.1, 1.15, 1.2, 1.3, 1.5, 1.9]
-mn_l = [1, 2, 4, 8, 16, 32, 64, 128]
+sf_l = [1.005, 1.01, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5,
+        1.55, 1.6, 1.65, 1.7, 1.75, 1.8]
+mn_l = [1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55,
+        60, 65, 70, 75, 80, 85, 90, 95, 100, 150, 200, 250, 300]
 res_l = [96, 112, 128, 144, 160, 176, 192,
         208, 224, 240, 256, 272, 288, 304,
         320, 336, 352, 368, 384, 400, 416,
@@ -504,6 +505,7 @@ res_l = [96, 112, 128, 144, 160, 176, 192,
 cascs = ["lbph_frontal.xml", "haar_default.xml"]
 run_cmd("./progs/reset.sh")
 
+'''
 for obj in objs:
     obj.prog["sf"] = 1.3
     obj.prog["mn"] = 90
@@ -512,8 +514,8 @@ for obj in objs:
 
 train_obj.run()
 run_cmd("python3 ./progs/cp.py -i sf)
-
 '''
+
 train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
@@ -541,7 +543,7 @@ for casc in cascs:
     train_obj.run()
 run_cmd("python3 ./progs/cp.py -i c")
 run_cmd("./progs/reset.sh")
-'''
+
 '''
 # MAIN TESTING
 train_obj.default_prog()
