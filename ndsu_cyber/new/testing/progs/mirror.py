@@ -18,7 +18,7 @@ def mirror(path):
     idx = sub.index("full")
     sub[idx] = "mirrored"
 
-    new_path = "".join(sub)
+    new_path = "/".join(sub)
     cvt_mirror(path, new_path)
 
 
