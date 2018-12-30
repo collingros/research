@@ -31,6 +31,9 @@ for id in sorted(os.listdir(cwd)):
         occ_path = "{0}/{1}".format(id_path, occ)
         for pos in sorted(os.listdir(occ_path)):
             pos_path = "{0}/{1}".format(occ_path, pos)
+            if ("0" in pos) or ("1" in pos) or ("2" in pos):
+                continue
+
             for light in sorted(os.listdir(pos_path)):
                 light_path = "{0}/{1}".format(pos_path, light)
                 for color in sorted(os.listdir(light_path)):
