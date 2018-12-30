@@ -8,9 +8,8 @@ def cvt_mirror(src, dst):
 
 
 def run_cmd(cmd):
-    print("running:\t{0}".format(cmd))
-#    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-#    process.wait()
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+    process.wait()
 
 
 def mirror(path):
