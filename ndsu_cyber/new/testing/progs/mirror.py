@@ -12,13 +12,22 @@ def run_cmd(cmd):
     process.wait()
 
 
-def mirror(path):
+def cp(src, dst):
+    cmd = "cp -r {0} {1}".format(src, dst)
+    run_cmd(cmd)
+
+
+def mirror(path, copy):
     sub = path.split("/")
     idx = sub.index("full")
     sub[idx] = "mirrored"
 
     new_path = "/".join(sub)
-    cvt_mirror(path, new_path)
+
+    if copy:
+        cp(path, new_path)
+    else:
+        cvt_mirror(path, new_path)
 
 
 blacklisted = ["pos_0", "pos_1", "pos_2"]
@@ -32,12 +41,14 @@ for id in sorted(os.listdir(cwd)):
         occ_path = "{0}/{1}".format(id_path, occ)
         for pos in sorted(os.listdir(occ_path)):
             pos_path = "{0}/{1}".format(occ_path, pos)
+
+            copy = False
             if pos in blacklisted:
-                continue
+                copy = True
 
             for light in sorted(os.listdir(pos_path)):
                 light_path = "{0}/{1}".format(pos_path, light)
                 for color in sorted(os.listdir(light_path)):
                     color_path = "{0}/{1}".format(light_path, color)
 
-                    mirror(color_path)
+                    mirror(color_path, copy)
