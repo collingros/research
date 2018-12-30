@@ -2,7 +2,7 @@ import os
 import subprocess
 
 
-def cvt_mirror(src):
+def cvt_mirror(src, dst):
     cmd = "convert {0} -flop {1}".format(src, dst)
     run_cmd(cmd)
 
