@@ -21,6 +21,7 @@ def mirror(path):
     cvt_mirror(path, new_path)
 
 
+blacklisted = ["pos_0", "pos_1", "pos_2"]
 cwd = os.getcwd()
 for id in sorted(os.listdir(cwd)):
     if os.path.isfile(id):
@@ -31,7 +32,7 @@ for id in sorted(os.listdir(cwd)):
         occ_path = "{0}/{1}".format(id_path, occ)
         for pos in sorted(os.listdir(occ_path)):
             pos_path = "{0}/{1}".format(occ_path, pos)
-            if ("0" in pos) or ("1" in pos) or ("2" in pos):
+            if pos in blacklisted:
                 continue
 
             for light in sorted(os.listdir(pos_path)):
