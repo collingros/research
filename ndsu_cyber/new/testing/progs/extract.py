@@ -17,7 +17,7 @@ def cp_pic(path):
 
     cp(path, new_path)
 
-
+blacklisted = ["pos_3", "pos_4"]
 cwd = os.getcwd()
 for id in sorted(os.listdir(cwd)):
     if os.path.isfile(id):
@@ -28,6 +28,9 @@ for id in sorted(os.listdir(cwd)):
         occ_path = "{0}/{1}".format(id_path, occ)
         for pos in sorted(os.listdir(occ_path)):
             pos_path = "{0}/{1}".format(occ_path, pos)
+            if pos in blacklisted:
+                continue
+
             for light in sorted(os.listdir(pos_path)):
                 light_path = "{0}/{1}".format(pos_path, light)
                 for color in sorted(os.listdir(light_path)):
