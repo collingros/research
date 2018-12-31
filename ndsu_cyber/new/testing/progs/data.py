@@ -41,6 +41,7 @@ y = []
 # graph x axis' name is var_type (set up here)
 # graph y axis' name is range 0 to (num of images)
 
+cur_total = 0
 tests = "./stockpile"
 for test in sorted(os.listdir(tests)):
     test_path = tests + "/" + test
@@ -70,7 +71,7 @@ print("\n")
 
 goal = y
 for i in range (0, len(goal)):
-    goal[i] = 9
+    goal[i] = cur_total
 print(x)
 print(goal)
 plt.plot(x, goal)
