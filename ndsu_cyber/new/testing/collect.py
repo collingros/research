@@ -3,7 +3,7 @@ import subprocess
 
 
 def reset():
-    cmd = "./reset.sh"
+    cmd = "./progs/reset.sh"
     run_cmd(cmd)
 
 
