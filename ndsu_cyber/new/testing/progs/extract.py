@@ -13,11 +13,7 @@ def cp(src, dst):
 
 
 def cp_pic(path):
-    sub = path.split("/")
-    idx = sub.index("full")
-    sub[idx] = "mirrored"
-
-    new_path = "/".join(sub)
+    new_path = "../../dump/"
 
     cp(path, new_path)
 
