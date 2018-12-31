@@ -13,7 +13,7 @@ def cp(src, dst):
 
 
 def cp_pic(path):
-    new_path = "../../dump/"
+    new_path = "../dump/"
 
     cp(path, new_path)
 
