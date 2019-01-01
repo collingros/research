@@ -537,7 +537,7 @@ train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
     for mn in mn_l:
-        train_obj.prog["mn"] = sf
+        train_obj.prog["mn"] = mn
         train_obj.run()
     run_cmd("python3 ./progs/cp.py -i mn_sf_{0}".format(num))
     run_cmd("python3 ./progs/reset.sh")
