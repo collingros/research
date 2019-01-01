@@ -489,9 +489,9 @@ objs = [train_obj, test_obj]
 # using vanilla, center and angled pos, center lighting, medium color (all)
 # first: without any combination of changes
 train_obj.set_occ(["v"])
-train_obj.set_pos(["c", "a"])
+train_obj.set_pos(["c"])
 train_obj.set_light(["c"])
-train_obj.set_color(["m"])
+train_obj.set_color(["c", "w", "l", "m", "h"])
 
 sf_l = [1.005, 1.01, 1.03, 1.05, 1.07, 1.1, 1.2,
         1.3, 1.4, 1.5]
