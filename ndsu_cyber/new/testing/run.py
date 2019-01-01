@@ -257,9 +257,9 @@ class Train:
 
 
     def default_prog(self):
-        self.prog["sf"] = 1.01
-        self.prog["mn"] = 1
-        self.prog["res"] = 480
+        self.prog["sf"] = 1.05
+        self.prog["mn"] = 3
+        self.prog["res"] = 300
         self.prog["c"] = "haar_default.xml"
 
 
@@ -531,6 +531,17 @@ for casc in cascs:
     train_obj.run()
 run_cmd("python3 ./progs/cp.py -i c")
 run_cmd("./progs/reset.sh")
+
+num = 0
+for sf in sf_l:
+    train_obj.prog["sf"] = sf
+    for mn in mn_l:
+        train_obj.prog["mn"] = sf
+        train_obj.run()
+    run_cmd("python3 ./progs/cp.py -i mn_sf_{0}".format(num))
+    run_cmd("python3 ./progs/reset.sh")
+
+    num += 1
 
 '''
 # MAIN TESTING
