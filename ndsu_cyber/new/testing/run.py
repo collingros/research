@@ -533,6 +533,7 @@ run_cmd("python3 ./progs/cp.py -i c")
 run_cmd("./progs/reset.sh")
 
 num = 0
+train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
     for mn in mn_l:
