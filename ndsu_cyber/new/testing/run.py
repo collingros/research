@@ -502,35 +502,30 @@ res_l = [96, 112, 128, 144, 160, 176, 192,
         432, 448, 464, 480, 720, 1920]
 # multiples of 16
 cascs = ["lbph_frontal.xml", "haar_default.xml"]
-run_cmd("./progs/reset.sh")
 
 train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
     train_obj.run()
-run_cmd("python3 ./progs/cp.py -i sf")
-run_cmd("./progs/reset.sh")
+run_cmd("python3 ./progs/mv.py -i sf")
 
 train_obj.default_prog()
 for mn in mn_l:
     train_obj.prog["mn"] = mn
     train_obj.run()
-run_cmd("python3 ./progs/cp.py -i mn")
-run_cmd("./progs/reset.sh")
+run_cmd("python3 ./progs/mv.py -i mn")
 
 train_obj.default_prog()
 for res in res_l:
     train_obj.prog["res"] = res
     train_obj.run()
-run_cmd("python3 ./progs/cp.py -i res")
-run_cmd("./progs/reset.sh")
+run_cmd("python3 ./progs/mv.py -i res")
 
 train_obj.default_prog()
 for casc in cascs:
     train_obj.prog["c"] = casc
     train_obj.run()
-run_cmd("python3 ./progs/cp.py -i c")
-run_cmd("./progs/reset.sh")
+run_cmd("python3 ./progs/mv.py -i c")
 
 num = 0
 train_obj.default_prog()
@@ -539,8 +534,7 @@ for sf in sf_l:
     for mn in mn_l:
         train_obj.prog["mn"] = mn
         train_obj.run()
-    run_cmd("python3 ./progs/cp.py -i mn_sf_{0}".format(num))
-    run_cmd("python3 ./progs/reset.sh")
+    run_cmd("python3 ./progs/mv.py -i mn_sf_{0}".format(num))
 
     num += 1
 
