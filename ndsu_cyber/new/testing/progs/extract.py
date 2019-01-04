@@ -17,7 +17,7 @@ def cp_pic(path, new_path):
     cp(path, new_path)
 
 
-num = 0
+num = 100
 names = []
 blacklisted = ["pos_3", "pos_4"]
 cwd = os.getcwd()
