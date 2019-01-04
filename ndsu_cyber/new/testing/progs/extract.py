@@ -12,9 +12,7 @@ def cp(src, dst):
     run_cmd(cmd)
 
 
-def cp_pic(path):
-    new_path = "../dump/"
-
+def cp_pic(path, new_path):
     cp(path, new_path)
 
 
@@ -37,12 +35,20 @@ for id in sorted(os.listdir(cwd)):
             for light in sorted(os.listdir(pos_path)):
                 light_path = "{0}/{1}".format(pos_path, light)
                 for color in sorted(os.listdir(light_path)):
+                    '''
                     num += 1
 
                     if color in names:
-                        color = "{0}_{1}".format(color, num)
-                    names.append(color)
+                        new_path = "../dump/{0}_{1}".format(color, num)
+                        cp(color, new_path)
 
+                        continue
+
+                    names.append(color)
+                    '''
+
+                    num += 1
+                    new_path = "../dump/{0}_{1}".format(num, color)
                     color_path = "{0}/{1}".format(light_path, color)
 
-                    cp_pic(color_path)
+                    cp_pic(color_path, new_path)
