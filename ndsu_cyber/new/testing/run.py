@@ -493,8 +493,8 @@ train_obj.set_pos(["c"])
 train_obj.set_light(["c"])
 train_obj.set_color(["c", "w", "l", "m", "h"])
 
-sf_l = [1.005, 1.01, 1.03, 1.05, 1.07, 1.1, 1.2,
-        1.3, 1.4, 1.5]
+sf_l = [1.005, 1.01, 1.015, 1.2, 1.25, 1.3, 1.35,
+        1.4, 1.45, 1.5]
 mn_l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 res_l = [96, 112, 128, 144, 160, 176, 192,
         208, 224, 240, 256, 272, 288, 304,
@@ -507,36 +507,40 @@ train_obj.default_prog()
 for sf in sf_l:
     train_obj.prog["sf"] = sf
     train_obj.run()
-run_cmd("python3 ./progs/mv.py -i sf")
+run_cmd("python3 ./progs/mv.py -i sf_only")
 
 train_obj.default_prog()
 for mn in mn_l:
     train_obj.prog["mn"] = mn
     train_obj.run()
-run_cmd("python3 ./progs/mv.py -i mn")
+run_cmd("python3 ./progs/mv.py -i mn_only")
 
 train_obj.default_prog()
 for res in res_l:
     train_obj.prog["res"] = res
     train_obj.run()
-run_cmd("python3 ./progs/mv.py -i res")
+run_cmd("python3 ./progs/mv.py -i res_only")
 
 train_obj.default_prog()
 for casc in cascs:
     train_obj.prog["c"] = casc
     train_obj.run()
-run_cmd("python3 ./progs/mv.py -i c")
+run_cmd("python3 ./progs/mv.py -i c_only")
 
 num = 0
 train_obj.default_prog()
-for sf in sf_l:
-    train_obj.prog["sf"] = sf
-    for mn in mn_l:
-        train_obj.prog["mn"] = mn
-        train_obj.run()
-    run_cmd("python3 ./progs/mv.py -i mn_sf_{0}".format(num))
+for casc in cascs:
+    train_obj.prog["c"] = casc
+    for res in res_l:
+        train_obj.prog["res"] = res
+        for sf in sf_l:
+            train_obj.prog["sf"] = sf
+            for mn in mn_l:
+                train_obj.prog["mn"] = mn
+                train_obj.run()
 
-    num += 1
+                run_cmd("python3 ./progs/mv.py -i combo_{0}".format(num))
+                num += 1
 
 '''
 # MAIN TESTING
