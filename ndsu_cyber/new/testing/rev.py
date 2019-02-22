@@ -28,7 +28,7 @@ for test in sorted(os.listdir(stockpile_path)):
         if substr[-1] != "JPG":
             continue
 
-        cmd = "feh {0}".format(item_path)
+        cmd = "feh --scale-down {0}".format(item_path)
         run_cmd(cmd)
 
     rating = input("")
