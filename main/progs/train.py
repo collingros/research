@@ -110,7 +110,7 @@ def draw(pic, coords):
 
 
 def add(path, dir_num):
-# guess whose face it is, record results
+# detect a face, store it
     data["total"] += 1
     str_arr = path.split("/")
     str_arr = str_arr[-1].split(".")
@@ -199,7 +199,7 @@ def filter(name, name_type, num=0):
 def train():
 # for each filtered image, add to faces arr
     dir_num = 0
-    ids = "./train"
+    ids = "./pics"
     for id in sorted(os.listdir(ids)):
 
         people[id] = dir_num
@@ -228,8 +228,6 @@ def train():
                             continue
 
                         pic_path = color_path + "/" + color
-
-                        print("add: {0}:{1}".format(pic_path, dir_num))
                         add(pic_path, dir_num)
 
                         num += 1
