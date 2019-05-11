@@ -22,8 +22,13 @@ class Run:
         self.run(cmd)
 
 
+    def rm(self, src):
+        cmd = "rm -r {0}".format(src)
+        self.run(cmd)
+
+
     def cp(self, src, dst):
-        cmd = "cp {0} {1}".format(src, dst)
+        cmd = "cp -r -p {0} {1}".format(src, dst)
         self.run(cmd)
 
 
