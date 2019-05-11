@@ -1,7 +1,0 @@
-test
-10_vanilla_pos_0
-14_glasses_pos_2
-
-train
-10_vanilla_pos_0
-14_glasses_pos_2
