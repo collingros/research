@@ -211,7 +211,7 @@ def filter(name, name_type, num=0):
 
 def test():
 # for each filtered image, guess and record results
-    ids = "./tests"
+    ids = "./test"
     for id in sorted(os.listdir(ids)):
 
         id_path = ids + "/" + id

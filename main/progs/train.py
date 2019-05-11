@@ -1,5 +1,5 @@
-# Collin Gros
-# 12/15/18
+# collin gros
+# 05/11/2019
 
 
 # arg description
@@ -199,9 +199,7 @@ def filter(name, name_type, num=0):
 def train():
 # for each filtered image, add to faces arr
     dir_num = 0
-
-    ids = "./pics"
-#    ids = "./train"
+    ids = "./train"
     for id in sorted(os.listdir(ids)):
 
         people[id] = dir_num
