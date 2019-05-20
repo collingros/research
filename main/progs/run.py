@@ -145,6 +145,7 @@ class Test:
             elif key == "c":
                 cmd += " -i " + str(value)
 
+        print(cmd)
         return cmd
 
 
