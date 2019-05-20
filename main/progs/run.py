@@ -319,9 +319,9 @@ train_obj = Test(True)
 train_obj.set_occ(["v"])
 train_obj.set_pos(["c"])
 train_obj.set_light(["c"])
-train_obj.set_color(["c", "w", "l", "m", "h"])
+train_obj.set_color(["c"])
 
-
+train_obj.run()
 
 
 
