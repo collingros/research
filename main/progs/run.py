@@ -313,80 +313,13 @@ class Test:
             self.id += 1
 
 
-
-
-#bash = bash.Run()
-#bash.mkdir("hi")
-
-
 test_obj = Test(False)
 train_obj = Test(True)
 
-# OPTIMIZATION
-#
-# using vanilla, center and angled pos, center lighting, medium color (all)
-# first: without any combination of changes
 train_obj.set_occ(["v"])
 train_obj.set_pos(["c"])
 train_obj.set_light(["c"])
 train_obj.set_color(["c", "w", "l", "m", "h"])
-
-SF_L = [1.005, 1.01, 1.015, 1.2, 1.25, 1.3, 1.35,
-        1.4, 1.45, 1.5]
-MN_L = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-RES_L = [96, 112, 128, 144, 160, 176, 192,
-        208, 224, 240, 256, 272, 288, 304,
-        320, 336, 352, 368, 384, 400, 416,
-        432, 448, 464, 480, 720, 1920]
-# multiples of 16
-CASCS = ["lbph_frontal.xml", "haar_default.xml"]
-
-train_obj.set_default()
-for sf in SF_L:
-    train_obj.prog["sf"] = sf
-    train_obj.run()
-cmd = "python3 ./mv.py -i sf_only"
-train_obj.bash.run(cmd)
-
-train_obj.set_default()
-for mn in MN_L:
-    train_obj.prog["mn"] = mn
-    train_obj.run()
-cmd = "python3 ./mv.py -i mn_only"
-train_obj.bash.run(cmd)
-
-train_obj.set_default()
-for res in RES_L:
-    train_obj.prog["res"] = res
-    train_obj.run()
-cmd = "python3 ./mv.py -i res_only"
-train_obj.bash.run(cmd)
-
-train_obj.set_default()
-for casc in CASCS:
-    train_obj.prog["c"] = casc
-    train_obj.run()
-cmd = "python3 ./mv.py -i c_only"
-train_obj.bash.run(cmd)
-
-num = 0
-train_obj.set_default()
-for casc in CASCS:
-    train_obj.prog["c"] = casc
-    for res in RES_L:
-        train_obj.prog["res"] = res
-        for sf in SF_L:
-            train_obj.prog["sf"] = sf
-            for mn in MN_L:
-                train_obj.prog["mn"] = mn
-                train_obj.run()
-
-                cmd = "python3 ./progs/mv.py -i combo_{0}".format(num)
-                train_obj.bash.run(cmd)
-
-                num += 1
-
-
 
 
 
