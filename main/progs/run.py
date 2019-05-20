@@ -317,6 +317,7 @@ class Test:
 test_obj = Test(False)
 train_obj = Test(True)
 
+train_obj.set_default()
 train_obj.set_occ(["v"])
 train_obj.set_pos(["c"])
 train_obj.set_light(["c"])
