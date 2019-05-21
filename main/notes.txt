@@ -1,0 +1,9 @@
+should i test as much data as i can, or just limit it so that one variable
+changes at a time?
+
+for example:
+    train on warm (with hat and glasses), test on cold (with hat and glasses)
+or instead:
+    train on warm (with only vanilla), test on cold (with only vanilla)
+
+using other positions could help too, but profiles might damage the results

@@ -323,20 +323,23 @@ class Test:
 # potential data loss
 bash.rm("./stockpile")
 bash.mkdir("./stockpile")
+bash.rm("./tests")
+bash.mkdir("./tests")
 
 test_obj = Test(False)
 train_obj = Test(True)
 
+# ./tests/colors
 # train on cold, test on warm cold low medium high
 train_obj.set_default()
-train_obj.set_occ(["v"])
-train_obj.set_pos(["c"])
-train_obj.set_light(["c"])
+train_obj.set_occ(["v", "h", "g"])
+train_obj.set_pos(["c", "p", "a"])
+train_obj.set_light(["c", "s"])
 
 test_obj.set_default()
-test_obj.set_occ(["v"])
-test_obj.set_pos(["c"])
-test_obj.set_light(["c"])
+test_obj.set_occ(["v", "h", "g"])
+test_obj.set_pos(["c", "p", "a"])
+test_obj.set_light(["c", "s"])
 
 colors = [["w"], ["c"], ["l"], ["m"], ["h"]]
 for color_1 in colors:
@@ -346,18 +349,102 @@ for color_1 in colors:
         test_obj.set_color(color_2)
         test_obj.run(dir_path)
 
+bash.mv("./stockpile", "./tests/colors")
+bash.mkdir("./stockpile")
 
+# ./tests/colors_comb
+# train on cold and warm, test on warm cold low medium high,
+# train on low, medium, high, test on warm cold low medium high,
+train_obj.set_default()
+train_obj.set_occ(["v", "h", "g"])
+train_obj.set_pos(["c", "p", "a"])
+train_obj.set_light(["c", "s"])
 
+test_obj.set_default()
+test_obj.set_occ(["v", "h", "g"])
+test_obj.set_pos(["c", "p", "a"])
+test_obj.set_light(["c", "s"])
 
+colors = [["w"], ["c"], ["l"], ["m"], ["h"]]
+colors_comb = [["w", "c"], ["l", "m", "h"]]
+for color_comb in colors_comb:
+    train_obj.set_color(color_comb)
+    dir_path = train_obj.run()
+    for color in colors:
+        test_obj.set_color(color)
+        test_obj.run(dir_path)
 
+bash.mv("./stockpile", "./tests/colors_comb")
+bash.mkdir("./stockpile")
 
+# ./tests/occs
+# train on vanilla, test on hat glasses
+# train on hat, test on vanilla glasses
+# train on glasses, test on vanilla hat
+train_obj.set_default()
+train_obj.set_color(["w", "c", "l", "m", "h"])
+train_obj.set_pos(["c", "p", "a"])
+train_obj.set_light(["c", "s"])
 
+test_obj.set_default()
+test_obj.set_color(["w", "c", "l", "m", "h"])
+test_obj.set_pos(["c", "p", "a"])
+test_obj.set_light(["c", "s"])
 
+occs = [["v"], ["h"], ["g"]]
+for occ_1 in occs:
+    train_obj.set_occ(occ_1)
+    dir_path = train_obj.run()
+    for occ_2 in occs:
+        test_obj.set_occ(occ_2)
+        test_obj.run(dir_path)
 
+bash.mv("./stockpile", "./tests/occs")
+bash.mkdir("./stockpile")
 
+# ./tests/pos
+# train on each position, test on each position
+train_obj.set_default()
+train_obj.set_color(["w", "c", "l", "m", "h"])
+train_obj.set_occ(["v", "h", "g"])
+train_obj.set_light(["c", "s"])
 
+test_obj.set_default()
+test_obj.set_color(["w", "c", "l", "m", "h"])
+test_obj.set_light(["c", "s"])
 
+positions = [["c"], ["p"], ["a"]]
+for pos_1 in positions:
+    train_obj.set_pos(pos_1)
+    dir_path = train_obj.run()
+    for pos_2 in positions:
+        test_obj.set_pos(pos_2)
+        test_obj.run(dir_path)
 
+bash.mv("./stockpile", "./tests/pos")
+bash.mkdir("./stockpile")
 
+# ./tests/pos_comb
+# train on each position combination, test on each position
+train_obj.set_default()
+train_obj.set_color(["w", "c", "l", "m", "h"])
+train_obj.set_occ(["v", "h", "g"])
+train_obj.set_light(["c", "s"])
+
+test_obj.set_default()
+test_obj.set_color(["w", "c", "l", "m", "h"])
+test_obj.set_light(["c", "s"])
+
+positions = [["c", "p", "a"], ["c", "a"]]
+all_pos = [["c"], ["p"], ["a"]]
+for pos_1 in positions:
+    train_obj.set_pos(pos_1)
+    dir_path = train_obj.run()
+    for pos_2 in all_pos:
+        test_obj.set_pos(pos_2)
+        test_obj.run(dir_path)
+
+bash.mv("./stockpile", "./tests/pos_comb")
+bash.mkdir("./stockpile")
 
 
