@@ -296,7 +296,7 @@ class Test:
             test_dir = "{0}/{1}".format(dir_path, self.id)
             self.bash.mkdir(test_dir)
 
-            test = self.build_cmd(test_dir)
+            test = self.build_cmd()
             self.bash.run(test)
             self.write_info()
 
