@@ -4,9 +4,9 @@ from bash import bash
 import os
 
 
+bash = bash.Run()
 class Test:
     def __init__(self, train):
-        self.bash = bash.Run()
         self.train = train
         self.prog = {
         # scale factor, minimum neighbors, resolution height, cascade file
@@ -261,56 +261,56 @@ class Test:
             dir_path = self.get_copy()
             if dir_path == "":
                 dir_path = "./stockpile/{0}".format(self.id)
-                self.bash.mkdir(dir_path)
+                bash.mkdir(dir_path)
 
                 train = self.build_cmd()
-                self.bash.run(train)
+                bash.run(train)
                 self.write_info()
 
                 pic_name = "/*.JPG"
-                self.bash.mv("." + pic_name, dir_path + "/")
+                bash.mv("." + pic_name, dir_path + "/")
 
                 stat_name = "/train_stats.txt"
-                self.bash.mv("." + stat_name, dir_path + stat_name)
+                bash.mv("." + stat_name, dir_path + stat_name)
 
                 train_name = "/train.yml"
-                self.bash.mv("." + train_name, dir_path + train_name)
+                bash.mv("." + train_name, dir_path + train_name)
 
                 labels_name = "/labels.pickle"
-                self.bash.mv("." + labels_name, dir_path + labels_name)
+                bash.mv("." + labels_name, dir_path + labels_name)
 
                 train_info = "/train_info.txt"
-                self.bash.mv("." + train_info, dir_path + train_info)
+                bash.mv("." + train_info, dir_path + train_info)
 
                 self.id += 1
 
             train_path = dir_path + "/train.yml"
-            self.bash.cp(train_path, ".")
+            bash.cp(train_path, ".")
 
             labels_path = dir_path + "/labels.pickle"
-            self.bash.cp(labels_path, ".")
+            bash.cp(labels_path, ".")
 
             return dir_path
 
         else:
             test_dir = "{0}/{1}".format(dir_path, self.id)
-            self.bash.mkdir(test_dir)
+            bash.mkdir(test_dir)
 
             test = self.build_cmd()
-            self.bash.run(test)
+            bash.run(test)
             self.write_info()
 
             stat_name = "/test_stats.txt"
-            self.bash.mv("." + stat_name, test_dir + stat_name)
+            bash.mv("." + stat_name, test_dir + stat_name)
 
             pic_name = "/*.JPG"
-            self.bash.mv("." + pic_name, test_dir + "/")
+            bash.mv("." + pic_name, test_dir + "/")
 
             test_info = "/test_info.txt"
-            self.bash.mv("." + test_info, test_dir + test_info)
+            bash.mv("." + test_info, test_dir + test_info)
 
-            self.bash.rm("./train.yml")
-            self.bash.rm("./labels.pickle")
+            bash.rm("./train.yml")
+            bash.rm("./labels.pickle")
 
             self.id += 1
 
