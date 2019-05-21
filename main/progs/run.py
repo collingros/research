@@ -296,6 +296,11 @@ class Test:
             test_dir = "{0}/{1}".format(dir_path, self.id)
             bash.mkdir(test_dir)
 
+            train_path = "{0}/{1}".format(dir_path, "train.yml")
+            labels_path = "{0}/{1}".format(dir_path, "labels.pickle")
+            bash.cp(train_path, ".")
+            bash.cp(labels_path, ".")
+
             test = self.build_cmd()
             bash.run(test)
             self.write_info()
