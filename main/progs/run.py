@@ -315,6 +315,10 @@ class Test:
             self.id += 1
 
 
+# potential data loss
+bash.rm("./stockpile")
+bash.mkdir("./stockpile")
+
 test_obj = Test(False)
 train_obj = Test(True)
 
