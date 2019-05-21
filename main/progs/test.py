@@ -153,10 +153,10 @@ def guess(path, name):
 
         if guess == name:
             data["correct"] += 1
-            draw(color_pic, guess, conf, id, coords, "green")
+            draw(color_pic, name, conf, id, coords, "green")
         else:
             data["incorrect"] += 1
-            draw(color_pic, guess, conf, id, coords, "red")
+            draw(color_pic, name, conf, id, coords, "red")
 
 
 def filter(name, name_type, num=0):
