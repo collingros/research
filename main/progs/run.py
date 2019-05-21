@@ -327,23 +327,24 @@ bash.mkdir("./stockpile")
 test_obj = Test(False)
 train_obj = Test(True)
 
-train_obj.set_default()
 # train on cold, test on warm cold low medium high
+train_obj.set_default()
 train_obj.set_occ(["v"])
 train_obj.set_pos(["c"])
 train_obj.set_light(["c"])
-train_obj.set_color(["c"])
-dir_path = train_obj.run()
 
 test_obj.set_default()
 test_obj.set_occ(["v"])
 test_obj.set_pos(["c"])
 test_obj.set_light(["c"])
 
-colors = [["c"], ["w"], ["l"], ["m"], ["h"]]
-for color in colors:
-    test_obj.set_color(color)
-    test_obj.run(dir_path)
+colors = [["w"], ["c"], ["l"], ["m"], ["h"]]
+for color_1 in colors:
+    train_obj.set_color(color_1)
+    dir_path = train_obj.run()
+    for color_2 in colors:
+        test_obj.set_color(color_2)
+        test_obj.run(dir_path)
 
 
 
