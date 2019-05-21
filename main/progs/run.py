@@ -291,6 +291,7 @@ class Test:
             self.bash.cp(labels_path, ".")
 
             return dir_path
+
         else:
             test_dir = "{0}/{1}".format(dir_path, self.id)
             self.bash.mkdir(test_dir)
@@ -318,12 +319,22 @@ test_obj = Test(False)
 train_obj = Test(True)
 
 train_obj.set_default()
+# train on cold, test on warm cold low medium high
 train_obj.set_occ(["v"])
 train_obj.set_pos(["c"])
 train_obj.set_light(["c"])
 train_obj.set_color(["c"])
+dir_path = train_obj.run()
 
-train_obj.run()
+test_obj.set_default()
+test_obj.set_occ(["v"])
+test_obj.set_pos(["c"])
+test_obj.set_light(["c"])
+
+colors = [["c"], ["w"], ["l"], ["m"], ["h"]]
+for color in colors:
+    test_obj.set_color([color])
+    test_obj.run(dir_path)
 
 
 
