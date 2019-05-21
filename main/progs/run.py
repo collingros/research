@@ -84,12 +84,12 @@ class Test:
     def set_default(self):
         if self.train:
             self.prog["sf"] = 1.05
-            self.prog["mn"] = 3
-            self.prog["res"] = 300
+            self.prog["mn"] = 5
+            self.prog["res"] = 480
             self.prog["c"] = "haar_default.xml"
         else:
             self.prog["sf"] = 1.3
-            self.prog["mn"] = 10
+            self.prog["mn"] = 5
             self.prog["res"] = 480
             self.prog["c"] = "haar_default.xml"
 
