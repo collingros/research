@@ -305,7 +305,7 @@ class Test:
             bash.run(test)
             self.write_info()
 
-            stat_name = "./test_stats.txt"
+            stat_name = "/test_stats.txt"
             bash.mv("." + stat_name, test_dir + stat_name)
 
             pic_name = "/*.JPG"
@@ -342,7 +342,7 @@ test_obj.set_light(["c"])
 
 colors = [["c"], ["w"], ["l"], ["m"], ["h"]]
 for color in colors:
-    test_obj.set_color([color])
+    test_obj.set_color(color)
     test_obj.run(dir_path)
 
 
