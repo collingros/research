@@ -305,7 +305,7 @@ class Test:
             bash.run(test)
             self.write_info()
 
-            stat_name = "/test_stats.txt"
+            stat_name = "./test_stats.txt"
             bash.mv("." + stat_name, test_dir + stat_name)
 
             pic_name = "/*.JPG"
