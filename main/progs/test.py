@@ -161,7 +161,7 @@ def guess(path, name):
 
 def filter(name, name_type, num=0):
 # if we don't want to include the specified media, return 0
-    print("*filter* name: {0}\tname_type: {1}".format(name, name_type))
+#    print("*filter* name: {0}\tname_type: {1}".format(name, name_type))
     if name_type == "occ":
         if name == "vanilla" and int(settings["v"]):
             return 1
@@ -206,7 +206,7 @@ def filter(name, name_type, num=0):
         elif num == 4 and int(settings["b"]):
             return 1
 
-    print("filter returning 0 for {0}:{1}:{2}".format(name, name_type, num))
+#    print("filter returning 0 for {0}:{1}:{2}".format(name, name_type, num))
     return 0
 
 
@@ -238,7 +238,7 @@ def test():
                             continue
 
                         pic_path = color_path + "/" + color
-                        print("guess: {0}:{1}".format(pic_path, id))
+#                        print("guess: {0}:{1}".format(pic_path, id))
                         guess(pic_path, id)
 
                         num += 1
