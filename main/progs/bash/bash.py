@@ -20,7 +20,8 @@ class Run:
             line = process.stdout.readline()
             print(line)
 
-        print process.stdout.read()
+        line = process.stdout.read()
+        print(line)
 
 
     def mkdir(self, name):
