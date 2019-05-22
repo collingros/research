@@ -17,11 +17,12 @@ class Run:
 
         # print live output while process is running
         while process.poll() is None:
-            line = process.stdout.readline()
-            print(line)
+            pass
+#            line = process.stdout.readline()
+#            print(line)
 
-        line = process.stdout.read()
-        print(line)
+#        line = process.stdout.read()
+#        print(line)
 
 
     def mkdir(self, name):
