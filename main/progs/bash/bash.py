@@ -14,7 +14,13 @@ class Run:
 
     def run(self, cmd):
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-        process.wait()
+
+        # print live output while process is running
+        while process.poll() is None:
+            line = process.stdout.readline()
+            print(line)
+
+        print process.stdout.read()
 
 
     def mkdir(self, name):

@@ -161,6 +161,7 @@ def guess(path, name):
 
 def filter(name, name_type, num=0):
 # if we don't want to include the specified media, return 0
+    print("*filter* name: {0}\tname_type: {1}".format(name, name_type))
     if name_type == "occ":
         if name == "vanilla" and int(settings["v"]):
             return 1
