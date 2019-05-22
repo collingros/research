@@ -145,7 +145,7 @@ class Test:
             elif key == "c":
                 cmd += " -i " + str(value)
 
-        print(cmd)
+        print("\t" + cmd)
         return cmd
 
 
@@ -325,12 +325,16 @@ bash.rm("./stockpile")
 bash.mkdir("./stockpile")
 bash.rm("./tests")
 bash.mkdir("./tests")
+bash.rm("*.JPG train.yml labels.pickle")
 
 test_obj = Test(False)
 train_obj = Test(True)
 
-# ./tests/colors
-# train on cold, test on warm cold low medium high
+# ./tests/color
+# train on cold and warm, test on warm cold low medium high,
+# train on low, medium, high, test on warm cold low medium high,
+print("color tests")
+
 train_obj.set_default()
 train_obj.set_occ(["v", "h", "g"])
 train_obj.set_pos(["c", "p", "a"])
@@ -341,7 +345,7 @@ test_obj.set_occ(["v", "h", "g"])
 test_obj.set_pos(["c", "p", "a"])
 test_obj.set_light(["c", "s"])
 
-colors = [["w"], ["c"], ["l"], ["m"], ["h"]]
+colors = [["w", "c"], ["l", "m", "h"], ["w"], ["c"], ["l"], ["m"], ["h"]]
 for color_1 in colors:
     train_obj.set_color(color_1)
     dir_path = train_obj.run()
@@ -349,38 +353,15 @@ for color_1 in colors:
         test_obj.set_color(color_2)
         test_obj.run(dir_path)
 
-bash.mv("./stockpile", "./tests/colors")
+bash.mv("./stockpile", "./tests/color")
 bash.mkdir("./stockpile")
 
-# ./tests/colors_comb
-# train on cold and warm, test on warm cold low medium high,
-# train on low, medium, high, test on warm cold low medium high,
-train_obj.set_default()
-train_obj.set_occ(["v", "h", "g"])
-train_obj.set_pos(["c", "p", "a"])
-train_obj.set_light(["c", "s"])
-
-test_obj.set_default()
-test_obj.set_occ(["v", "h", "g"])
-test_obj.set_pos(["c", "p", "a"])
-test_obj.set_light(["c", "s"])
-
-colors = [["w"], ["c"], ["l"], ["m"], ["h"]]
-colors_comb = [["w", "c"], ["l", "m", "h"]]
-for color_comb in colors_comb:
-    train_obj.set_color(color_comb)
-    dir_path = train_obj.run()
-    for color in colors:
-        test_obj.set_color(color)
-        test_obj.run(dir_path)
-
-bash.mv("./stockpile", "./tests/colors_comb")
-bash.mkdir("./stockpile")
-
-# ./tests/occs
+# ./tests/occ
 # train on vanilla, test on hat glasses
 # train on hat, test on vanilla glasses
 # train on glasses, test on vanilla hat
+print("occ tests")
+
 train_obj.set_default()
 train_obj.set_color(["w", "c", "l", "m", "h"])
 train_obj.set_pos(["c", "p", "a"])
@@ -391,7 +372,8 @@ test_obj.set_color(["w", "c", "l", "m", "h"])
 test_obj.set_pos(["c", "p", "a"])
 test_obj.set_light(["c", "s"])
 
-occs = [["v"], ["h"], ["g"]]
+occs = [["v", "h", "g"], ["v", "h"], ["v", "g"], ["h", "g"],
+        ["v"], ["h"], ["g"]]
 for occ_1 in occs:
     train_obj.set_occ(occ_1)
     dir_path = train_obj.run()
@@ -399,11 +381,13 @@ for occ_1 in occs:
         test_obj.set_occ(occ_2)
         test_obj.run(dir_path)
 
-bash.mv("./stockpile", "./tests/occs")
+bash.mv("./stockpile", "./tests/occ")
 bash.mkdir("./stockpile")
 
 # ./tests/pos
-# train on each position, test on each position
+# train on each position combination, test on each position
+print("pos tests")
+
 train_obj.set_default()
 train_obj.set_color(["w", "c", "l", "m", "h"])
 train_obj.set_occ(["v", "h", "g"])
@@ -413,7 +397,7 @@ test_obj.set_default()
 test_obj.set_color(["w", "c", "l", "m", "h"])
 test_obj.set_light(["c", "s"])
 
-positions = [["c"], ["p"], ["a"]]
+positions = [["c", "p", "a"], ["c", "a"], ["c"], ["p"], ["a"]]
 for pos_1 in positions:
     train_obj.set_pos(pos_1)
     dir_path = train_obj.run()
@@ -424,27 +408,28 @@ for pos_1 in positions:
 bash.mv("./stockpile", "./tests/pos")
 bash.mkdir("./stockpile")
 
-# ./tests/pos_comb
-# train on each position combination, test on each position
+# ./tests/light
+# train on each lighting, test on each lighting
+print("light tests")
+
 train_obj.set_default()
 train_obj.set_color(["w", "c", "l", "m", "h"])
 train_obj.set_occ(["v", "h", "g"])
-train_obj.set_light(["c", "s"])
+train_obj.set_pos(["c", "p", "a"])
 
 test_obj.set_default()
 test_obj.set_color(["w", "c", "l", "m", "h"])
-test_obj.set_light(["c", "s"])
+test_obj.set_occ(["v", "h", "g"])
+test_obj.set_pos(["c", "p", "a"])
 
-positions = [["c", "p", "a"], ["c", "a"]]
-all_pos = [["c"], ["p"], ["a"]]
-for pos_1 in positions:
-    train_obj.set_pos(pos_1)
+lights = [["c"], ["s"], ["c", "s"]]
+for light_1 in lights:
+    train_obj.set_light(light_1)
     dir_path = train_obj.run()
-    for pos_2 in all_pos:
-        test_obj.set_pos(pos_2)
+    for light_2 in lights:
+        test_obj.set_light(light_2)
         test_obj.run(dir_path)
 
-bash.mv("./stockpile", "./tests/pos_comb")
+bash.mv("./stockpile", "./tests/light")
 bash.mkdir("./stockpile")
-
 
