@@ -22,11 +22,9 @@ def print_train(path):
                 continue
 
             name = line_sub[0]
-            val = int(line_sub[-1])
-            if val:
-                train_str = "{0}, {1} ".format(train_str, name)
+            train_str = "{0}, {1} ".format(train_str, name)
 
-    print(train_str)
+    print("\t" + train_str)
 
 
 def print_test(path):
