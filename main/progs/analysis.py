@@ -13,7 +13,7 @@ bash = bash.Run()
 
 cwd = os.getcwd()
 tests = "{0}/tests".format(cwd)
-for test_type in tests:
+for test_type in os.listdir(tests):
     print(test_type)
 
     path = "{0}/{1}".format(tests, test_type)
