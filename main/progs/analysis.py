@@ -15,20 +15,19 @@ cwd = os.getcwd()
 tests = "{0}/tests".format(cwd)
 for test_type in os.listdir(tests):
     path = "{0}/{1}".format(tests, test_type)
-
     print(test_type)
     for train in os.listdir(path):
         path = "{0}/{1}".format(path, train)
-
         print("\t" + train)
         for test in os.listdir(path):
-            path = "{0}/{1}".format(path, test)
-            if os.path.isfile(path):
+            test_path = "{0}/{1}".format(path, test)
+            if os.path.isfile(test_path):
                 if test == "train_info.txt":
                     print("\t\ttrain info!!")
 
                 continue
 
+            path = "{0}/{1}".format(path, test)
             print("\t\t" + test)
             for item in os.listdir(path):
                 print("\t\t\t" + item)
