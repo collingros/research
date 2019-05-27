@@ -14,13 +14,13 @@ bash = bash.Run()
 cwd = os.getcwd()
 tests = "{0}/tests".format(cwd)
 for test_type in os.listdir(tests):
-    path = "{0}/{1}".format(tests, test_type)
+    type_path = "{0}/{1}".format(tests, test_type)
     print(test_type)
-    for train in os.listdir(path):
-        path = "{0}/{1}".format(path, train)
+    for train in os.listdir(type_path):
+        train_path = "{0}/{1}".format(type_path, train)
         print("\t" + train)
-        for test in os.listdir(path):
-            test_path = "{0}/{1}".format(path, test)
+        for test in os.listdir(train_path):
+            test_path = "{0}/{1}".format(train_path, test)
             if os.path.isfile(test_path):
                 if test == "train_info.txt":
                     print("\t\ttrain info!!")
