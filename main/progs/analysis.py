@@ -14,15 +14,17 @@ bash = bash.Run()
 def print_train(path):
 # read train_info.txt, print what was trained
     train_str = ""
+    prog = ["sf", "mn", "res", "c"]
     with open(path, "r") as info:
         for line in info:
             line = line.rstrip()
             line_sub = line.split(":")
-            if len(line_sub) < 2:
+            key = line_sub[0]
+
+            if len(line_sub) < 2 or key in prog:
                 continue
 
-            name = line_sub[0]
-            train_str = "{0}, {1} ".format(train_str, name)
+            train_str = "{0}, {1}".format(train_str, line)
 
     print("\t" + train_str)
 
