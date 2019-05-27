@@ -25,7 +25,8 @@ for test_type in os.listdir(tests):
             if os.path.isfile(test):
                 if test == "train_info.txt":
                     print("\t\ttrain info!!")
-                    continue
+
+                continue
 
             print("\t\t" + test)
 
