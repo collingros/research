@@ -24,7 +24,11 @@ def print_train(path):
             if len(line_sub) < 2 or key in prog:
                 continue
 
-            train_str = "{0}, {1}".format(train_str, line)
+            val = int(line_sub[-1])
+            if not val:
+                continue
+
+            train_str += line + " "
 
     print("\t" + train_str)
 
