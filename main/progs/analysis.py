@@ -13,7 +13,18 @@ bash = bash.Run()
 
 def print_train(path):
 # read train_info.txt, print what was trained
-    print("\t\t" + path)
+    train_str = ""
+    with open(path, "r") as info:
+        for line in info:
+            line = line.rstrip()
+            line_sub = line.split(":")
+            name = line_sub[0]
+            val = int(line_sub[-1])
+
+            if val:
+                train_str = "{0}, {1} ".format(train_str, name)
+
+    print(train_str)
 
 
 def print_test(path):
