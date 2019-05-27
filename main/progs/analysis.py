@@ -21,6 +21,7 @@ for test_type in os.listdir(tests):
         print("\t" + train)
 
         path = "{0}/{1}".format(path, train)
+        print(path)
         for test in os.listdir(path):
             if os.path.isfile(test):
                 if test == "train_info.txt":
