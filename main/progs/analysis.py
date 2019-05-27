@@ -22,7 +22,7 @@ for test_type in tests:
 
         path = "{0}/{1}".format(path, train)
         for test in os.listdir(path):
-            if os.isfile(test):
+            if os.path.isfile(test):
                 if test == "train_info.txt":
                     print("\t\ttrain info!!")
                     continue
