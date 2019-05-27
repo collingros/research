@@ -11,6 +11,21 @@ import os
 bash = bash.Run()
 
 
+def print_train(path):
+# read train_info.txt, print what was trained
+    print("\t\t" + path)
+
+
+def print_test(path):
+# read test_info.txt, print what was tested
+    print("\t\t\t" + path)
+
+
+def print_stats(path):
+# read test_stats.txt, print accuracy, skipped percentages
+    print("\t\t\t" + path)
+
+
 cwd = os.getcwd()
 tests = "{0}/tests".format(cwd)
 for test_type in os.listdir(tests):
@@ -23,16 +38,17 @@ for test_type in os.listdir(tests):
             test_path = "{0}/{1}".format(train_path, test)
             if os.path.isfile(test_path):
                 if test == "train_info.txt":
-                    print("\t\ttrain info!!")
+                    print_train(test_path)
 
                 continue
 
             print("\t\t" + test)
             for item in os.listdir(test_path):
+                item_path = "{0}/{1}".format(test_path, item)
                 if item == "test_info.txt":
-                    print("\t\t\ttest info!!")
+                    print_test(item_path)
                 elif item == "test_stats.txt":
-                    print("\t\t\ttest stats!!")
+                    print_stats(item_path)
     print()
 #   for each type of test ran
 #       print test type
