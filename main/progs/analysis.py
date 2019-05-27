@@ -18,9 +18,11 @@ def print_train(path):
         for line in info:
             line = line.rstrip()
             line_sub = line.split(":")
+            if len(line_sub) < 2:
+                continue
+
             name = line_sub[0]
             val = int(line_sub[-1])
-
             if val:
                 train_str = "{0}, {1} ".format(train_str, name)
 
