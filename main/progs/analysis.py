@@ -27,10 +27,12 @@ for test_type in os.listdir(tests):
 
                 continue
 
-            path = "{0}/{1}".format(path, test)
             print("\t\t" + test)
-            for item in os.listdir(path):
-                print("\t\t\t" + item)
+            for item in os.listdir(test_path):
+                if item == "test_info.txt":
+                    print("\t\t\ttest info!!")
+                elif item == "test_stats.txt":
+                    print("\t\t\ttest stats!!")
     print()
 #   for each type of test ran
 #       print test type
