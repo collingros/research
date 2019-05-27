@@ -13,6 +13,26 @@ bash = bash.Run()
 
 cwd = os.getcwd()
 tests = "{0}/tests".format(cwd)
+for test_type in tests:
+    print(test_type)
+
+    path = "{0}/{1}".format(tests, test_type)
+    for train in os.listdir(path):
+        print("\t" + train)
+
+        path = "{0}/{1}".format(path, train)
+        for test in os.listdir(path):
+            if os.isfile(test):
+                if test == "train_info.txt":
+                    print("\t\ttrain info!!")
+                    continue
+
+                print("\t\t" + test)
+
+                path = "{0}/{1}".format(path, test)
+                for item in os.listdir(path):
+                    print("\t\t\t" + item)
+    print()
 #   for each type of test ran
 #       print test type
 #
