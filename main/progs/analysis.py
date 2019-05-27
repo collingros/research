@@ -21,18 +21,17 @@ for test_type in os.listdir(tests):
         print("\t" + train)
 
         path = "{0}/{1}".format(path, train)
-        print(path)
         for test in os.listdir(path):
             if os.path.isfile(test):
                 if test == "train_info.txt":
                     print("\t\ttrain info!!")
                     continue
 
-                print("\t\t" + test)
+            print("\t\t" + test)
 
-                path = "{0}/{1}".format(path, test)
-                for item in os.listdir(path):
-                    print("\t\t\t" + item)
+            path = "{0}/{1}".format(path, test)
+            for item in os.listdir(path):
+                print("\t\t\t" + item)
     print()
 #   for each type of test ran
 #       print test type
