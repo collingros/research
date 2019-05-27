@@ -35,11 +35,32 @@ def print_train(path):
 
 def print_test(path):
 # read test_info.txt, print what was tested
-    print("\t\t\t" + path)
+    test_str = ""
+    prog = ["sf", "mn", "res", "c"]
+    with open(path, "r") as info:
+        for line in info:
+            line = line.rstrip()
+            line_sub = line.split(":")
+            key = line_sub[0]
+
+            if len(line_sub) < 2 or key in prog:
+                continue
+
+            val = int(line_sub[-1])
+            if not val:
+                continue
+
+            test_str += line + " "
+
+    print("\t\t\t" + test_str)
 
 
 def print_stats(path):
 # read test_stats.txt, print accuracy, skipped percentages
+    with open(path, "r") as info:
+        for line in info:
+            line = line.rstrip()
+            line_sub = line.split(":")
     print("\t\t\t" + path)
 
 
@@ -50,7 +71,6 @@ for test_type in os.listdir(tests):
     print(test_type)
     for train in os.listdir(type_path):
         train_path = "{0}/{1}".format(type_path, train)
-        print("\t" + train)
         for test in os.listdir(train_path):
             test_path = "{0}/{1}".format(train_path, test)
             if os.path.isfile(test_path):
@@ -59,7 +79,6 @@ for test_type in os.listdir(tests):
 
                 continue
 
-            print("\t\t" + test)
             for item in os.listdir(test_path):
                 item_path = "{0}/{1}".format(test_path, item)
                 if item == "test_info.txt":
