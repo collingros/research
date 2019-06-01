@@ -41,7 +41,7 @@ def print_test(path, test_type):
             if len(line_sub) < 2:
                 continue
 
-            val = int(line_sub[-1])
+            val = line_sub[-1]
 
             test_str += "{0}:{1} ".format(key, val)
 
