@@ -87,8 +87,6 @@ def print_stats(path, test_type):
             line_sub = line.split(":")
             key = line_sub[0]
 
-            print(line)
-            print(key)
             if key == "correct":
                 cor = int(line_sub[-1])
                 continue
@@ -96,8 +94,8 @@ def print_stats(path, test_type):
                 tot = int(line_sub[-1])
                 continue
             elif not cor or not tot:
+                print("elif! cor: {0}\ttot: {1}".format(cor, tot))
                 continue
-            print("div!")
 
             acc = cor / tot
 
