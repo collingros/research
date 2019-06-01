@@ -50,6 +50,7 @@ def print_test(path, test_type):
 
 def print_stats(path, test_type):
 # read test_stats.txt, print accuracy, skipped percentages
+    print("\t\t\tprint_stats! path: {0}".format(path))
     acc = -1
     with open(path, "r") as info:
         cor = 0
