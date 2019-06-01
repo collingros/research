@@ -15,10 +15,10 @@ occ = ["v", "h", "g"]
 pos = ["p", "a", "c"]
 light = ["s", "c"]
 
-dict = ["w":"warm", "c":"cold", "l":"low", "m":"medium",
+dict = {"w":"warm", "c":"cold", "l":"low", "m":"medium",
         "h":"high", "v":"vanilla", "h":"hat", "g":"glasses",
         "p":"profiles", "a":"noncentral_angles", "c":"central_angle",
-        "s":"angled_light", "c":"central_light"]
+        "s":"angled_light", "c":"central_light"}
 
 
 def print_train(path, test_type):
