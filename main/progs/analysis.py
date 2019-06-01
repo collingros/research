@@ -15,6 +15,11 @@ occ = ["v", "h", "g"]
 pos = ["p", "a", "c"]
 light = ["s", "c"]
 
+dict = ["w":"warm", "c":"cold", "l":"low", "m":"medium",
+        "h":"high", "v":"vanilla", "h":"hat", "g":"glasses",
+        "p":"profiles", "a":"noncentral_angles", "c":"central_angle",
+        "s":"angled_light", "c":"central_light"]
+
 
 def print_train(path, test_type):
 # read train_info.txt, print what was trained
@@ -41,7 +46,7 @@ def print_train(path, test_type):
             elif test_type == "light" and key not in light:
                 continue
 
-            train_str += line + " "
+            train_str += dict[key] + " "
 
     print("\t" + train_str)
 
@@ -71,7 +76,7 @@ def print_test(path, test_type):
             elif test_type == "light" and key not in light:
                 continue
 
-            test_str += line + " "
+            test_str += dict[key] + " "
 
     print("\t\t\t" + test_str)
 
