@@ -46,7 +46,7 @@ def print_train(path, test_type):
             elif test_type == "light" and key not in light:
                 continue
 
-            train_str += "{0}:{1}, ".format(dict[key], value)
+            train_str += "{0}:{1}, ".format(dict[key], val)
 
     print("\t" + train_str)
 
