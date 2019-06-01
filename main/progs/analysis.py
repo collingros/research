@@ -48,7 +48,7 @@ def print_test(path, test_type):
 
             val = int(line_sub[-1])
 
-            train_str += "{0}:{1}".format(key, val)
+            test_str += "{0}:{1}".format(key, val)
 
     print("\t\t" + test_str)
 
