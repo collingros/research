@@ -34,8 +34,8 @@ def print_train(path, test_type):
                 continue
 
             val = int(line_sub[-1])
-            if not val:
-                continue
+#            if not val:
+#                continue
 
             if test_type == "color" and key not in color:
                 continue
@@ -46,7 +46,7 @@ def print_train(path, test_type):
             elif test_type == "light" and key not in light:
                 continue
 
-            train_str += dict[key] + " "
+            train_str += "{0}:{1}, ".format(dict[key], value)
 
     print("\t" + train_str)
 
@@ -141,3 +141,6 @@ for test_type in os.listdir(tests):
 #               get the percent accuracy and skipped
 #
 #       print newline
+
+# ex:
+#
