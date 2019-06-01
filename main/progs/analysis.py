@@ -94,7 +94,7 @@ def print_stats(path, test_type):
             elif key == "viewed":
                 tot = int(line_sub[-1])
                 continue
-            elif not tot and not cor:
+            elif not tot or not cor:
                 continue
             print("div!")
 
