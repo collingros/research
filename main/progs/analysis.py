@@ -79,21 +79,26 @@ def print_test(path, test_type):
 def print_stats(path, test_type):
 # read test_stats.txt, print accuracy, skipped percentages
     with open(path, "r") as info:
+        acc = -1
+        cor = 0
+        tot = 0
         for line in info:
             line = line.rstrip()
             line_sub = line.split(":")
             key = line_sub[0]
 
-            if len(line_sub) < 2 or key in prog:
+            if key == "correct":
+                cor = int(line_sub[-1])
+                continue
+            elif key == "viewed":
+                tot = int(line_sub[-1])
+                continue
+            elif not tot and not cor:
                 continue
 
-            val = int(line_sub[-1])
-            if not val:
-                continue
+            acc = cor / tot
 
-            
-
-    print("\t\t\t" + path)
+    print("\t\t\t" + str(acc))
 
 
 cwd = os.getcwd()
