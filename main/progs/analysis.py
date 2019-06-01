@@ -97,6 +97,8 @@ def print_stats(path, test_type):
 
             acc = cor / tot
 
+    acc *= 100
+    round(acc, 2)
     print("\t\t\t" + str(acc))
 
 
