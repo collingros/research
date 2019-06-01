@@ -78,8 +78,8 @@ def print_test(path, test_type):
 
 def print_stats(path, test_type):
 # read test_stats.txt, print accuracy, skipped percentages
+    acc = -1
     with open(path, "r") as info:
-        acc = -1
         cor = 0
         tot = 0
         for line in info:
@@ -88,13 +88,14 @@ def print_stats(path, test_type):
             key = line_sub[0]
 
             print(line)
+            print(key)
             if key == "correct":
                 cor = int(line_sub[-1])
                 continue
             elif key == "viewed":
                 tot = int(line_sub[-1])
                 continue
-            elif not tot or not cor:
+            elif not cor or not tot:
                 continue
             print("div!")
 
