@@ -9,11 +9,6 @@ import os
 
 
 bash = bash.Run()
-prog = ["sf", "mn", "res", "c"]
-color = ["w", "c", "l", "m", "h"]
-occ = ["v", "h", "g"]
-pos = ["p", "a", "c"]
-light = ["s", "c"]
 
 def print_train(path, test_type):
 # read train_info.txt, print what was trained
@@ -24,7 +19,7 @@ def print_train(path, test_type):
             line_sub = line.split(":")
             key = line_sub[0]
 
-            if len(line_sub) < 2 or key in prog:
+            if len(line_sub) < 2:
                 continue
 
             val = line_sub[1]
@@ -43,7 +38,7 @@ def print_test(path, test_type):
             line_sub = line.split(":")
             key = line_sub[0]
 
-            if len(line_sub) < 2 or key in prog:
+            if len(line_sub) < 2:
                 continue
 
             val = int(line_sub[-1])
