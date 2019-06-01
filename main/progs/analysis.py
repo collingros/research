@@ -85,7 +85,6 @@ for test_type in os.listdir(tests):
         print("train_path: {0}".format(train_path))
         for test in os.listdir(train_path):
             test_path = "{0}/{1}".format(train_path, test)
-            print("test_path: {0}".format(test_path))
             if os.path.isfile(test_path):
                 if test == "train_info.txt":
                     print_train(test_path, test_type)
