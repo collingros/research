@@ -47,21 +47,10 @@ def print_test(path, test_type):
                 continue
 
             val = int(line_sub[-1])
-            if not val:
-                continue
 
-            if test_type == "color" and key not in color:
-                continue
-            elif test_type == "occ" and key not in occ:
-                continue
-            elif test_type == "pos" and key not in pos:
-                continue
-            elif test_type == "light" and key not in light:
-                continue
+            train_str += "{0}:{1}".format(key, val)
 
-            test_str += dict[key] + " "
-
-    print("\t\t\t" + test_str)
+    print("\t\t" + test_str)
 
 
 def print_stats(path, test_type):
