@@ -1,294 +1,426 @@
 light
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:0 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:0 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/20/126/test_stats.txt
 			85.45
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/20/128/test_stats.txt
 			95.87
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:0 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/20/127/test_stats.txt
 			100.0
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:0 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/21/129/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:0 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/21/130/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/21/131/test_stats.txt
 			100.0
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:0 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:0 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/19/124/test_stats.txt
 			65.97
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/19/125/test_stats.txt
 			75.64
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:0 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/light/19/123/test_stats.txt
 			100.0
 
 occ
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/12/90/test_stats.txt
 			38.14
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/12/88/test_stats.txt
 			60.6
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/12/86/test_stats.txt
 			54.61
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/12/85/test_stats.txt
 			77.73
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/12/89/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/12/87/test_stats.txt
 			80.13
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/12/84/test_stats.txt
 			70.98
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/9/64/test_stats.txt
 			91.62
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/9/66/test_stats.txt
 			86.92
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/9/65/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/9/67/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/9/69/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/9/68/test_stats.txt
 			80.73
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/9/63/test_stats.txt
 			93.05
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/13/96/test_stats.txt
 			31.22
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/13/93/test_stats.txt
 			60.52
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/13/94/test_stats.txt
 			53.31
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/13/95/test_stats.txt
 			46.15
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/13/92/test_stats.txt
 			39.66
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/13/91/test_stats.txt
 			49.96
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/13/97/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/11/82/test_stats.txt
 			80.98
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/11/80/test_stats.txt
 			77.98
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/11/79/test_stats.txt
 			92.43
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/11/77/test_stats.txt
 			88.3
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/11/81/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/11/83/test_stats.txt
 			71.65
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/11/78/test_stats.txt
 			91.73
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/8/57/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/8/61/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/8/56/test_stats.txt
 			94.81
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/8/60/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/8/62/test_stats.txt
 			69.59
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/8/59/test_stats.txt
 			90.23
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/8/58/test_stats.txt
 			91.88
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/10/71/test_stats.txt
 			84.09
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/10/75/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/10/73/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/10/70/test_stats.txt
 			86.81
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/10/72/test_stats.txt
 			79.37
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/10/76/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/10/74/test_stats.txt
 			71.86
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/7/55/test_stats.txt
 			100.0
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/7/53/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/7/49/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/7/50/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/7/52/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:1 g:0 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/7/54/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/occ/7/51/test_stats.txt
 			100.0
 
 pos
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:0 a:0 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/16/112/test_stats.txt
 			22.22
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:0 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/16/110/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/16/108/test_stats.txt
 			88.66
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/16/109/test_stats.txt
 			89.06
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:0 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/16/111/test_stats.txt
 			50.0
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/14/98/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:0 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/14/101/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/14/102/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:0 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/14/100/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/14/99/test_stats.txt
 			100.0
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:0 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/15/107/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:0 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/15/105/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/15/103/test_stats.txt
 			99.48
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/15/104/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:0 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/15/106/test_stats.txt
 			50.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/18/118/test_stats.txt
 			32.47
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:0 a:1 c:0 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/18/122/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:0 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/18/121/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:0 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/18/120/test_stats.txt
 			20.61
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/18/119/test_stats.txt
 			31.77
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:0 c:0 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/17/113/test_stats.txt
 			5.67
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:0 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/17/115/test_stats.txt
 			5.45
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/17/117/test_stats.txt
 			-100
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:0 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/17/114/test_stats.txt
 			4.69
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:1 m:1 h:1 v:0 h:0 g:1 p:1 a:0 c:0 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/pos/17/116/test_stats.txt
 			100.0
 
 color
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/6/47/test_stats.txt
 			81.43
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/6/43/test_stats.txt
 			88.76
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/6/45/test_stats.txt
 			83.84
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/6/42/test_stats.txt
 			83.08
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/6/46/test_stats.txt
 			83.16
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/6/48/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/6/44/test_stats.txt
 			82.33
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/3/23/test_stats.txt
 			81.9
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/3/27/test_stats.txt
 			80.72
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/3/26/test_stats.txt
 			84.39
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/3/24/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/3/25/test_stats.txt
 			86.32
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/3/21/test_stats.txt
 			90.89
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/3/22/test_stats.txt
 			83.58
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/1/12/test_stats.txt
 			100.0
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/1/9/test_stats.txt
 			90.52
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/1/13/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/1/11/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/1/8/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/1/10/test_stats.txt
 			91.7
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/1/7/test_stats.txt
 			91.11
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/2/16/test_stats.txt
 			100.0
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/2/20/test_stats.txt
 			79.52
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/2/14/test_stats.txt
 			90.89
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/2/15/test_stats.txt
 			81.66
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/2/18/test_stats.txt
 			86.84
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/2/19/test_stats.txt
 			79.75
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/2/17/test_stats.txt
 			81.66
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/5/36/test_stats.txt
 			90.68
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/5/35/test_stats.txt
 			84.6
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/5/37/test_stats.txt
 			81.9
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/5/39/test_stats.txt
 			87.37
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/5/40/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/5/41/test_stats.txt
 			84.34
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/5/38/test_stats.txt
 			87.34
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/0/6/test_stats.txt
 			87.55
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/0/3/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/0/1/test_stats.txt
 			88.91
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/0/2/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/0/5/test_stats.txt
 			86.92
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/0/0/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/0/4/test_stats.txt
 			93.16
 	sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:1 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/4/29/test_stats.txt
 			81.51
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/4/28/test_stats.txt
 			75.49
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:1 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/4/32/test_stats.txt
 			100.0
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:1 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/4/33/test_stats.txt
 			76.79
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:1 c:0 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/4/30/test_stats.txt
 			75.43
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:0 l:0 m:0 h:1 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/4/34/test_stats.txt
 			71.89
 		sf:1.3 mn:5 res:480 c:haar_default.xml w:0 c:1 l:0 m:0 h:0 v:1 h:1 g:1 p:1 a:1 c:1 s:1 c:1 
+			print_stats! path: /home/reu3/Documents/research/main/progs/tests/color/4/31/test_stats.txt
 			75.55
 
