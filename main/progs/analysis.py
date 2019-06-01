@@ -87,15 +87,20 @@ def print_stats(path, test_type):
             line_sub = line.split(":")
             key = line_sub[0]
 
+            print("key: {0}".format(key))
             if key == "correct":
+                print("key correct!")
                 cor = int(line_sub[-1])
                 continue
             elif key == "viewed":
+                print("key viewed!")
                 tot = int(line_sub[-1])
                 continue
             elif not cor or not tot:
                 print("elif! cor: {0}\ttot: {1}".format(cor, tot))
                 continue
+
+            print("div! cor: {0}\ttot: {1}".format(cor, tot))
 
             acc = cor / tot
 
