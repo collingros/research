@@ -50,7 +50,6 @@ def print_test(path, test_type):
 
 def print_stats(path, test_type):
 # read test_stats.txt, print accuracy, skipped percentages
-    print("\t\t\tprint_stats! path: {0}".format(path))
     acc = -1
     with open(path, "r") as info:
         cor = 0
@@ -82,9 +81,11 @@ for test_type in os.listdir(tests):
 
     type_path = "{0}/{1}".format(tests, test_type)
     for train in os.listdir(type_path):
+        print("train_path: {0}".format(train_path))
         train_path = "{0}/{1}".format(type_path, train)
         for test in os.listdir(train_path):
             test_path = "{0}/{1}".format(train_path, test)
+            print("test_path: {0}".format(test_path))
             if os.path.isfile(test_path):
                 if test == "train_info.txt":
                     print_train(test_path, test_type)
