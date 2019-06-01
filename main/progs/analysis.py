@@ -15,12 +15,6 @@ occ = ["v", "h", "g"]
 pos = ["p", "a", "c"]
 light = ["s", "c"]
 
-dict = {"w":"warm", "c":"cold", "l":"low", "m":"medium",
-        "h":"high", "v":"vanilla", "h":"hat", "g":"glasses",
-        "p":"profiles", "a":"noncentral_angles", "c":"central_angle",
-        "s":"angled_light", "c":"central_light"}
-
-
 def print_train(path, test_type):
 # read train_info.txt, print what was trained
     train_str = ""
@@ -33,20 +27,9 @@ def print_train(path, test_type):
             if len(line_sub) < 2 or key in prog:
                 continue
 
-            val = int(line_sub[-1])
-#            if not val:
-#                continue
+            val = line_sub[1]
 
-            if test_type == "color" and key not in color:
-                continue
-            elif test_type == "occ" and key not in occ:
-                continue
-            elif test_type == "pos" and key not in pos:
-                continue
-            elif test_type == "light" and key not in light:
-                continue
-
-            train_str += "{0}:{1}, ".format(dict[key], val)
+            train_str += "{0}:{1}".format(key, val)
 
     print("\t" + train_str)
 
