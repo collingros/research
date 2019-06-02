@@ -81,15 +81,10 @@ for test_type in sorted(os.listdir(tests)):
 
     type_path = "{0}/{1}".format(tests, test_type)
     for train in sorted(os.listdir(type_path)):
-        train_split = train.split(".")
-        ext = train_split[-1]
-        if ext == "JPG":
-            continue
-
         print("\t{0}".format(train))
+
         train_path = "{0}/{1}".format(type_path, train)
         for test in sorted(os.listdir(train_path)):
-
             test_path = "{0}/{1}".format(train_path, test)
 #            print(test_path)
             if os.path.isfile(test_path):
