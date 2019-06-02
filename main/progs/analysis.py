@@ -84,14 +84,19 @@ for test_type in sorted(os.listdir(tests)):
         print("\t{0}".format(train))
         train_path = "{0}/{1}".format(type_path, train)
         for test in sorted(os.listdir(train_path)):
-            print("\t\t{0}".format(test))
             test_path = "{0}/{1}".format(train_path, test)
 #            print(test_path)
             if os.path.isfile(test_path):
+                test_split = test.split(".")
+                ext = test_split[-1]
+                if ext == "JPG":
+                    continue
 #                if test == "train_info.txt":
 #                    print_train(test_path, test_type)
+                print("\t\t{0}".format(test))
 
                 continue
+            print("\t\t{0}".format(test))
 
             for item in sorted(os.listdir(test_path)):
                 print("\t\t\t{0}".format(item))
