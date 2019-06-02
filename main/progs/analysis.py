@@ -78,37 +78,22 @@ cwd = os.getcwd()
 tests = "{0}/tests".format(cwd)
 for test_type in sorted(os.listdir(tests)):
     print(test_type)
-
     type_path = "{0}/{1}".format(tests, test_type)
     for train in sorted(os.listdir(type_path)):
         print("\t{0}".format(train))
-
         train_path = "{0}/{1}".format(type_path, train)
         for test in sorted(os.listdir(train_path)):
             test_path = "{0}/{1}".format(train_path, test)
-#            print(test_path)
-            if os.path.isfile(test_path):
-                test_split = test.split(".")
-                ext = test_split[-1]
-                if ext == "JPG":
-                    continue
-#                if test == "train_info.txt":
-#                    print_train(test_path, test_type)
-                print("\t\t{0}".format(test))
-
-                continue
+            if not os.path.isfile(test_path):
+                for item in sorted(os.listdir(test_path)):
+                    item_path = "{0}/{1}".format(test_path, item)
+                    if item == "test_info.txt":
+                        print_test(item_path, test_type)
+                    elif item == "test_stats.txt":
+                        print_stats(item_path, test_type)
             else:
-                print("NOT FILE! {0}".format(test_path))
-
-            print("\t\t{0}".format(test))
-
-            for item in sorted(os.listdir(test_path)):
-                print("\t\t\t{0}".format(item))
-                item_path = "{0}/{1}".format(test_path, item)
-#                if item == "test_info.txt":
-#                    print_test(item_path, test_type)
-#                elif item == "test_stats.txt":
-#                    print_stats(item_path, test_type)
+                if test == "train_info.txt":
+                    print_train(test_path, test_type)
     print()
 #   for each type of test ran
 #       print test type
