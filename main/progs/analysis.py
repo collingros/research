@@ -81,22 +81,25 @@ for test_type in os.listdir(tests):
 
     type_path = "{0}/{1}".format(tests, test_type)
     for train in os.listdir(type_path):
+        print("\t{0}".format(train))
         train_path = "{0}/{1}".format(type_path, train)
         for test in os.listdir(train_path):
+            print("\t\t{0}".format(test))
             test_path = "{0}/{1}".format(train_path, test)
-            print(test_path)
+#            print(test_path)
             if os.path.isfile(test_path):
-                if test == "train_info.txt":
-                    print_train(test_path, test_type)
+#                if test == "train_info.txt":
+#                    print_train(test_path, test_type)
 
                 continue
 
             for item in os.listdir(test_path):
+                print("\t\t\t{0}".format(item))
                 item_path = "{0}/{1}".format(test_path, item)
-                if item == "test_info.txt":
-                    print_test(item_path, test_type)
-                elif item == "test_stats.txt":
-                    print_stats(item_path, test_type)
+#                if item == "test_info.txt":
+#                    print_test(item_path, test_type)
+#                elif item == "test_stats.txt":
+#                    print_stats(item_path, test_type)
     print()
 #   for each type of test ran
 #       print test type
