@@ -1,5 +1,6 @@
 color
 	0
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/0/0
 		0
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -443,6 +444,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/0/1
 		1
 			IMG_0020.JPG
 			IMG_0021.JPG
@@ -1087,6 +1089,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/0/2
 		2
 			IMG_0017.JPG
 			IMG_0047.JPG
@@ -1313,6 +1316,7 @@ color
 			IMG_9404.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/0/3
 		3
 			IMG_0018.JPG
 			IMG_0048.JPG
@@ -1533,6 +1537,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/0/4
 		4
 			IMG_0049.JPG
 			IMG_0054.JPG
@@ -1721,6 +1726,7 @@ color
 			IMG_9406.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/0/5
 		5
 			IMG_0020.JPG
 			IMG_0050.JPG
@@ -1950,6 +1956,7 @@ color
 			IMG_9407.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/0/6
 		6
 			IMG_0021.JPG
 			IMG_0051.JPG
@@ -2188,6 +2195,7 @@ color
 		train_info.txt
 		train_stats.txt
 	1
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/1/10
 		10
 			IMG_0018.JPG
 			IMG_0048.JPG
@@ -2408,6 +2416,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/1/11
 		11
 			IMG_0049.JPG
 			IMG_0054.JPG
@@ -2596,6 +2605,7 @@ color
 			IMG_9406.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/1/12
 		12
 			IMG_0020.JPG
 			IMG_0050.JPG
@@ -2825,6 +2835,7 @@ color
 			IMG_9407.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/1/13
 		13
 			IMG_0021.JPG
 			IMG_0051.JPG
@@ -3058,6 +3069,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/1/7
 		7
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -3501,6 +3513,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/1/8
 		8
 			IMG_0020.JPG
 			IMG_0021.JPG
@@ -4145,6 +4158,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/1/9
 		9
 			IMG_0017.JPG
 			IMG_0047.JPG
@@ -4376,6 +4390,7 @@ color
 		train_info.txt
 		train_stats.txt
 	2
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/2/14
 		14
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -4819,6 +4834,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/2/15
 		15
 			IMG_0020.JPG
 			IMG_0021.JPG
@@ -5463,6 +5479,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/2/16
 		16
 			IMG_0017.JPG
 			IMG_0047.JPG
@@ -5689,6 +5706,7 @@ color
 			IMG_9404.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/2/17
 		17
 			IMG_0018.JPG
 			IMG_0048.JPG
@@ -5909,6 +5927,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/2/18
 		18
 			IMG_0049.JPG
 			IMG_0054.JPG
@@ -6097,6 +6116,7 @@ color
 			IMG_9406.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/2/19
 		19
 			IMG_0020.JPG
 			IMG_0050.JPG
@@ -6326,6 +6346,7 @@ color
 			IMG_9407.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/2/20
 		20
 			IMG_0021.JPG
 			IMG_0051.JPG
@@ -6564,6 +6585,7 @@ color
 		train_info.txt
 		train_stats.txt
 	3
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/3/21
 		21
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -7007,6 +7029,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/3/22
 		22
 			IMG_0020.JPG
 			IMG_0021.JPG
@@ -7651,6 +7674,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/3/23
 		23
 			IMG_0017.JPG
 			IMG_0047.JPG
@@ -7877,6 +7901,7 @@ color
 			IMG_9404.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/3/24
 		24
 			IMG_0018.JPG
 			IMG_0048.JPG
@@ -8097,6 +8122,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/3/25
 		25
 			IMG_0049.JPG
 			IMG_0054.JPG
@@ -8285,6 +8311,7 @@ color
 			IMG_9406.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/3/26
 		26
 			IMG_0020.JPG
 			IMG_0050.JPG
@@ -8514,6 +8541,7 @@ color
 			IMG_9407.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/3/27
 		27
 			IMG_0021.JPG
 			IMG_0051.JPG
@@ -8752,6 +8780,7 @@ color
 		train_info.txt
 		train_stats.txt
 	4
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/4/28
 		28
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -9195,6 +9224,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/4/29
 		29
 			IMG_0020.JPG
 			IMG_0021.JPG
@@ -9839,6 +9869,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/4/30
 		30
 			IMG_0017.JPG
 			IMG_0047.JPG
@@ -10065,6 +10096,7 @@ color
 			IMG_9404.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/4/31
 		31
 			IMG_0018.JPG
 			IMG_0048.JPG
@@ -10285,6 +10317,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/4/32
 		32
 			IMG_0049.JPG
 			IMG_0054.JPG
@@ -10473,6 +10506,7 @@ color
 			IMG_9406.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/4/33
 		33
 			IMG_0020.JPG
 			IMG_0050.JPG
@@ -10702,6 +10736,7 @@ color
 			IMG_9407.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/4/34
 		34
 			IMG_0021.JPG
 			IMG_0051.JPG
@@ -10940,6 +10975,7 @@ color
 		train_info.txt
 		train_stats.txt
 	5
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/5/35
 		35
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -11383,6 +11419,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/5/36
 		36
 			IMG_0020.JPG
 			IMG_0021.JPG
@@ -12027,6 +12064,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/5/37
 		37
 			IMG_0017.JPG
 			IMG_0047.JPG
@@ -12253,6 +12291,7 @@ color
 			IMG_9404.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/5/38
 		38
 			IMG_0018.JPG
 			IMG_0048.JPG
@@ -12473,6 +12512,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/5/39
 		39
 			IMG_0049.JPG
 			IMG_0054.JPG
@@ -12661,6 +12701,7 @@ color
 			IMG_9406.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/5/40
 		40
 			IMG_0020.JPG
 			IMG_0050.JPG
@@ -12890,6 +12931,7 @@ color
 			IMG_9407.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/5/41
 		41
 			IMG_0021.JPG
 			IMG_0051.JPG
@@ -13128,6 +13170,7 @@ color
 		train_info.txt
 		train_stats.txt
 	6
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/6/42
 		42
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -13571,6 +13614,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/6/43
 		43
 			IMG_0020.JPG
 			IMG_0021.JPG
@@ -14215,6 +14259,7 @@ color
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/6/44
 		44
 			IMG_0017.JPG
 			IMG_0047.JPG
@@ -14441,6 +14486,7 @@ color
 			IMG_9404.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/6/45
 		45
 			IMG_0018.JPG
 			IMG_0048.JPG
@@ -14661,6 +14707,7 @@ color
 			IMG_9405.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/6/46
 		46
 			IMG_0049.JPG
 			IMG_0054.JPG
@@ -14849,6 +14896,7 @@ color
 			IMG_9406.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/6/47
 		47
 			IMG_0020.JPG
 			IMG_0050.JPG
@@ -15078,6 +15126,7 @@ color
 			IMG_9407.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/color/6/48
 		48
 			IMG_0021.JPG
 			IMG_0051.JPG
@@ -15318,6 +15367,7 @@ color
 
 light
 	19
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/19/123
 		123
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -15623,6 +15673,7 @@ light
 			IMG_9403.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/19/124
 		124
 			IMG_0047.JPG
 			IMG_0048.JPG
@@ -16405,6 +16456,7 @@ light
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/19/125
 		125
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -17494,6 +17546,7 @@ light
 		train_info.txt
 		train_stats.txt
 	20
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/20/126
 		126
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -17799,6 +17852,7 @@ light
 			IMG_9403.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/20/127
 		127
 			IMG_0047.JPG
 			IMG_0048.JPG
@@ -18581,6 +18635,7 @@ light
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/20/128
 		128
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -19670,6 +19725,7 @@ light
 		train_info.txt
 		train_stats.txt
 	21
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/21/129
 		129
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -19975,6 +20031,7 @@ light
 			IMG_9403.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/21/130
 		130
 			IMG_0047.JPG
 			IMG_0048.JPG
@@ -20757,6 +20814,7 @@ light
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/light/21/131
 		131
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -21848,6 +21906,7 @@ light
 
 occ
 	10
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/10/70
 		70
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -22932,6 +22991,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/10/71
 		71
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -23828,6 +23888,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/10/72
 		72
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -24526,6 +24587,7 @@ occ
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/10/73
 		73
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -25103,6 +25165,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/10/74
 		74
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -25613,6 +25676,7 @@ occ
 			IMG_9199.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/10/75
 		75
 			IMG_0228.JPG
 			IMG_0232.JPG
@@ -26002,6 +26066,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/10/76
 		76
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -26198,6 +26263,7 @@ occ
 		train_info.txt
 		train_stats.txt
 	11
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/11/77
 		77
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -27282,6 +27348,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/11/78
 		78
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -28178,6 +28245,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/11/79
 		79
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -28876,6 +28944,7 @@ occ
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/11/80
 		80
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -29453,6 +29522,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/11/81
 		81
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -29963,6 +30033,7 @@ occ
 			IMG_9199.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/11/82
 		82
 			IMG_0228.JPG
 			IMG_0232.JPG
@@ -30352,6 +30423,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/11/83
 		83
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -30548,6 +30620,7 @@ occ
 		train_info.txt
 		train_stats.txt
 	12
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/12/84
 		84
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -31632,6 +31705,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/12/85
 		85
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -32528,6 +32602,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/12/86
 		86
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -33226,6 +33301,7 @@ occ
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/12/87
 		87
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -33803,6 +33879,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/12/88
 		88
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -34313,6 +34390,7 @@ occ
 			IMG_9199.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/12/89
 		89
 			IMG_0228.JPG
 			IMG_0232.JPG
@@ -34702,6 +34780,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/12/90
 		90
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -34898,6 +34977,7 @@ occ
 		train_info.txt
 		train_stats.txt
 	13
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/13/91
 		91
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -35982,6 +36062,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/13/92
 		92
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -36878,6 +36959,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/13/93
 		93
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -37576,6 +37658,7 @@ occ
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/13/94
 		94
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -38153,6 +38236,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/13/95
 		95
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -38663,6 +38747,7 @@ occ
 			IMG_9199.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/13/96
 		96
 			IMG_0228.JPG
 			IMG_0232.JPG
@@ -39052,6 +39137,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/13/97
 		97
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -39248,6 +39334,7 @@ occ
 		train_info.txt
 		train_stats.txt
 	7
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/7/49
 		49
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -40332,6 +40419,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/7/50
 		50
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -41228,6 +41316,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/7/51
 		51
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -41926,6 +42015,7 @@ occ
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/7/52
 		52
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -42503,6 +42593,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/7/53
 		53
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -43013,6 +43104,7 @@ occ
 			IMG_9199.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/7/54
 		54
 			IMG_0228.JPG
 			IMG_0232.JPG
@@ -43402,6 +43494,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/7/55
 		55
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -43598,6 +43691,7 @@ occ
 		train_info.txt
 		train_stats.txt
 	8
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/8/56
 		56
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -44682,6 +44776,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/8/57
 		57
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -45578,6 +45673,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/8/58
 		58
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -46276,6 +46372,7 @@ occ
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/8/59
 		59
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -46853,6 +46950,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/8/60
 		60
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -47363,6 +47461,7 @@ occ
 			IMG_9199.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/8/61
 		61
 			IMG_0228.JPG
 			IMG_0232.JPG
@@ -47752,6 +47851,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/8/62
 		62
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -47948,6 +48048,7 @@ occ
 		train_info.txt
 		train_stats.txt
 	9
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/9/63
 		63
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -49032,6 +49133,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/9/64
 		64
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -49928,6 +50030,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/9/65
 		65
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -50626,6 +50729,7 @@ occ
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/9/66
 		66
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -51203,6 +51307,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/9/67
 		67
 			IMG_0017.JPG
 			IMG_0018.JPG
@@ -51713,6 +51818,7 @@ occ
 			IMG_9199.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/9/68
 		68
 			IMG_0228.JPG
 			IMG_0232.JPG
@@ -52102,6 +52208,7 @@ occ
 			IMG_9408.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/occ/9/69
 		69
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -52300,6 +52407,7 @@ occ
 
 pos
 	14
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/14/100
 		100
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -52468,11 +52576,13 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/14/101
 		101
 			IMG_3726.JPG
 			IMG_8940.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/14/102
 		102
 			IMG_0773.JPG
 			IMG_1099.JPG
@@ -52497,6 +52607,7 @@ pos
 			IMG_9271.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/14/98
 		98
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -52688,6 +52799,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/14/99
 		99
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -52882,6 +52994,7 @@ pos
 		train_info.txt
 		train_stats.txt
 	15
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/15/103
 		103
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -53073,6 +53186,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/15/104
 		104
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -53262,6 +53376,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/15/105
 		105
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -53430,11 +53545,13 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/15/106
 		106
 			IMG_3726.JPG
 			IMG_8940.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/15/107
 		107
 			IMG_0773.JPG
 			IMG_1099.JPG
@@ -53464,6 +53581,7 @@ pos
 		train_info.txt
 		train_stats.txt
 	16
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/16/108
 		108
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -53655,6 +53773,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/16/109
 		109
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -53844,6 +53963,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/16/110
 		110
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -54012,11 +54132,13 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/16/111
 		111
 			IMG_3726.JPG
 			IMG_8940.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/16/112
 		112
 			IMG_0773.JPG
 			IMG_1099.JPG
@@ -54046,6 +54168,7 @@ pos
 		train_info.txt
 		train_stats.txt
 	17
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/17/113
 		113
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -54237,6 +54360,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/17/114
 		114
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -54426,6 +54550,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/17/115
 		115
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -54594,11 +54719,13 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/17/116
 		116
 			IMG_3726.JPG
 			IMG_8940.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/17/117
 		117
 			IMG_0773.JPG
 			IMG_1099.JPG
@@ -54628,6 +54755,7 @@ pos
 		train_info.txt
 		train_stats.txt
 	18
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/18/118
 		118
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -54819,6 +54947,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/18/119
 		119
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -55008,6 +55137,7 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/18/120
 		120
 			IMG_0153.JPG
 			IMG_0156.JPG
@@ -55176,11 +55306,13 @@ pos
 			IMG_9295.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/18/121
 		121
 			IMG_3726.JPG
 			IMG_8940.JPG
 			test_info.txt
 			test_stats.txt
+NOT FILE! /home/reu3/Documents/research/main/progs/tests/pos/18/122
 		122
 			IMG_0773.JPG
 			IMG_1099.JPG
