@@ -76,14 +76,14 @@ def print_stats(path, test_type):
 
 cwd = os.getcwd()
 tests = "{0}/tests".format(cwd)
-for test_type in os.listdir(tests):
+for test_type in sorted(os.listdir(tests)):
     print(test_type)
 
     type_path = "{0}/{1}".format(tests, test_type)
-    for train in os.listdir(type_path):
+    for train in sorted(os.listdir(type_path)):
         print("\t{0}".format(train))
         train_path = "{0}/{1}".format(type_path, train)
-        for test in os.listdir(train_path):
+        for test in sorted(os.listdir(train_path)):
             print("\t\t{0}".format(test))
             test_path = "{0}/{1}".format(train_path, test)
 #            print(test_path)
@@ -93,7 +93,7 @@ for test_type in os.listdir(tests):
 
                 continue
 
-            for item in os.listdir(test_path):
+            for item in sorted(os.listdir(test_path)):
                 print("\t\t\t{0}".format(item))
                 item_path = "{0}/{1}".format(test_path, item)
 #                if item == "test_info.txt":
