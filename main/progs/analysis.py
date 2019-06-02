@@ -97,6 +97,9 @@ for test_type in sorted(os.listdir(tests)):
                 print("\t\t{0}".format(test))
 
                 continue
+            else:
+                print("NOT FILE! {0}".format(test_path))
+
             print("\t\t{0}".format(test))
 
             for item in sorted(os.listdir(test_path)):
